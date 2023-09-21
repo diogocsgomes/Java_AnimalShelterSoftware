@@ -18,7 +18,7 @@
 ## Team
 
 - Diogo Gomes 2021137427
-- Student B
+- Diogo Fatia 2020152804
 - Bruno Fonseca 2021129658
 
 ***
