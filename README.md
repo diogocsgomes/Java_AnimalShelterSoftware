@@ -19,7 +19,7 @@
 
 - Diogo Gomes 2021137427
 - Student B
-- Student C
+- Bruno Fonseca 2021129658
 
 ***
 
