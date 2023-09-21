@@ -18,7 +18,7 @@
 ## Team
 
 - Diogo Gomes 2021137427
-- Student B
+- Ana Cardoso 2021133158
 - Bruno Fonseca 2021129658
 
 ***
