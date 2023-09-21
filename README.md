@@ -17,7 +17,7 @@
 
 ## Team
 
-- Student A
+- Diogo Gomes
 - Student B
 - Student C
 
