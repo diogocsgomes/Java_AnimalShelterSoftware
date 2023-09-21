@@ -18,7 +18,11 @@
 ## Team
 
 - Diogo Gomes 2021137427
+<<<<<<< HEAD
 - Diogo Fatia 2020152804
+=======
+- Ana Cardoso 2021133158
+>>>>>>> d43ae1be6a787a6f71d19a32c648387d07e32ffe
 - Bruno Fonseca 2021129658
 
 ***
