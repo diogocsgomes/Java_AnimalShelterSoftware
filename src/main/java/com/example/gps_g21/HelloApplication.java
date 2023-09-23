@@ -11,7 +11,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("Calculadora");
         stage.setScene(scene);
         stage.show();
     }
@@ -25,10 +25,23 @@ public class HelloApplication extends Application {
             float num1 = Float.parseFloat(parts[0]);//Tranformar a string em float
             float num2 = Float.parseFloat(parts[1]);
             char operation = input.replaceAll("[0-9.]", "").charAt(0);//Limpa todos os numeros e '.' da string deixando apenas o operador
-            if(operation == '+')
+
+            switch(operation){
+                case '+':
                     return num1 + num2;
-            else
-                return 0;
+
+                case '/':
+                    if(num2 != 0){
+                        return num1 / num2;
+                    } else{
+                        System.out.println("Nao pode dividir por zero.");
+                        return 0;
+                    }
+
+                default:
+                    System.out.println("Operador invalido.");
+                    return 0;
+            }
 
         }catch(NumberFormatException e){
             return 0;
@@ -46,10 +59,16 @@ public class HelloApplication extends Application {
             input = in.nextLine();
             if(input.equalsIgnoreCase("sair"))
                 break;
+
+            /*
             if(isValidInput(input) != 0)
-                System.out.println("Input valido : " + isValidInput(input));
+                System.out.println("Resultado: " + isValidInput(input));
             else
-                System.out.println("Input invalido : " + input);
+                System.out.println("Input invalido: " + input);
+             */
+
+            float result = isValidInput(input);
+            System.out.println("Resultado: " + result);
         }
 
         System.out.println("Sai");
