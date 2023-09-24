@@ -38,6 +38,9 @@ public class HelloApplication extends Application {
                         return 0;
                     }
 
+                case '*'://by Diogo Gomes
+                    return  num1 * num2;
+
                 default:
                     System.out.println("Operador invalido.");
                     return 0;
