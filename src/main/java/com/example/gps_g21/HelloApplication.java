@@ -27,6 +27,10 @@ public class HelloApplication extends Application {
             char operation = input.replaceAll("[0-9.]", "").charAt(0);//Limpa todos os numeros e '.' da string deixando apenas o operador
 
             switch(operation){
+                
+                case '^':
+                    return (float) Math.pow(num1, num2);
+
                 case '+':
                     return num1 + num2;
 
