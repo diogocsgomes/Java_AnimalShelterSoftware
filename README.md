@@ -50,11 +50,10 @@ manager," "CTO," "senior manager"). The needs of each stakeholder are described 
 
 
 ##### Users
-
-- Organização Sem Fins Lucrativos
-- Voluntários
-- Investidores/Financiadores/Doadores
-- Adotantes
+- Organização Sem Fins Lucrativos.
+- Voluntários (sendo estes os utilizadores principais uma vez que estariam a trabalhar no abrigo para animais).
+- Investidores/Financiadores/Doadores.
+- Adotantes.
 
 This is a bulleted list of the users. As with the stakeholders, each user can either be referred to by name or role ("
 support rep," "call quality auditor," "home web site user")however, if there are many users, it is usually inefficient
@@ -75,8 +74,6 @@ writing down their needs; by this time, a concrete understanding of the project 
 
 ##### List of features
 - Gestão dos voluntários (Adicionar, Remover, Editar);
-- Marcação de um horário para fazer voluntariado e cuidar do animal;
-- Atribuição de um animal a um voluntário, de modo a garantir que todos os animais e voluntários têm acesso;
 - Notificações para os voluntários sobre os afazeres;
 - Perfis dos animais na associação;
 - Gestão dos animais (Adicionar, Remover, Editar);
@@ -114,7 +111,7 @@ during the review of the document because it allows everyone to agree on the exc
 
 
 ##### Risk
-- Se houver um erro na aplicação, a vida do animal pode ser colocada em risco;
+- Se houver um erro na aplicação, o bem estar de um animal pode ser posto em risco;
 - A informação dos voluntários e dos animais deve ser mantida em segurança;
 
 Risks are potential uncertainties or adverse events that can impact the achievement of objectives and require proactive
