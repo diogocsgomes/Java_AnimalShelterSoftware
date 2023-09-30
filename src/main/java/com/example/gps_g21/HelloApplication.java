@@ -15,70 +15,78 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
-
-    public static float isValidInput(String input){
-        String[] parts = input.split("[+\\-*/^]");
-        if (parts.length != 2)//Verifica se tem dois números ou não
-            return 0;
-
-        try{
-            float num1 = Float.parseFloat(parts[0]);//Tranformar a string em float
-            float num2 = Float.parseFloat(parts[1]);
-            char operation = input.replaceAll("[0-9.]", "").charAt(0);//Limpa todos os numeros e '.' da string deixando apenas o operador
-
-            switch(operation){
-                
-                case '^':
-                    return (float) Math.pow(num1, num2);
-
-                case '+':
-                    return num1 + num2;
-
-                case '/':
-                    if(num2 != 0){
-                        return num1 / num2;
-                    } else{
-                        System.out.println("Nao pode dividir por zero.");
-                        return 0;
-                    }
-
-                case '*'://by Diogo Gomes
-                    return  num1 * num2;
-
-                default:
-                    System.out.println("Operador invalido.");
-                    return 0;
-            }
-
-        }catch(NumberFormatException e){
-            return 0;
-        }
-    }
-
     public static void main(String[] args) {
         //launch();
         Scanner in = new Scanner(System.in);
         String input = new String();
+        int opcao = 1;
+        float resultFlo = 0;
+        String resultStr = new String();
 
         while (true)
         {
+            System.out.print("\n\n->0:Terminar\n");
+            System.out.print("->1:Operacoes basicas calculadora\n");
+            System.out.print("->2:Add/subtract days to a date\n");
+            System.out.print("->3:Difference between dates\n");
+            System.out.print("->4:Binary to hexadecimal conversion\n");
+            System.out.print("->5:Hexadecimal to binary conversion\n");
+            System.out.print("->6:Fibonacci number\n");
+            System.out.print("->7:Factorial\n");
+            System.out.print("->8:Volume of a cylinder\n");
+            System.out.print("->9:Volume of a cone\n");
             System.out.print("\n-> ");
-            input = in.nextLine();
-            if(input.equalsIgnoreCase("sair"))
-                break;
+            opcao = in.nextInt();
 
-            /*
-            if(isValidInput(input) != 0)
-                System.out.println("Resultado: " + isValidInput(input));
-            else
-                System.out.println("Input invalido: " + input);
-             */
-
-            float result = isValidInput(input);
-            System.out.println("Resultado: " + result);
+            switch (opcao){
+                case 1:
+                    in.nextLine();
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    resultFlo = operacoesCalculadora.operacoesBasicas(input); //Retorna float
+                    System.out.println("Resultado: " + resultFlo);
+                    break;
+                case 2:
+                    in.nextLine();
+                    System.out.print("Introduza a data (01/01/2023)-> ");
+                    input = in.nextLine();
+                    System.out.print("Introduza os dias a somar ou subtrair (2 || -2)-> ");
+                    int days = in.nextInt();
+                    resultStr = operacoesCalculadora.addSubtractDaysToDate(input, days); //Retorna string
+                    System.out.println("Resultado: " + resultStr);
+                    break;
+                case 3:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 4:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 5:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 6:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 7:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 8:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                case 9:
+                    System.out.print("-> ");
+                    input = in.nextLine();
+                    break;
+                default:
+                    System.exit(0);
+                    break;
+            }
         }
-
-        System.out.println("Sai");
-        System.exit(0);
     }
 }
