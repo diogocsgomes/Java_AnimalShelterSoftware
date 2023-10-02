@@ -94,23 +94,35 @@ public class operacoesCalculadora {
     }
 
     //Calcular Fibonacci
-    public static int fibonacci(int n) {
-        //Não faço a minima ideia de como fazer isto
-        return 0;
+    public static long fibonacci(int n) {
+        if (n < 2) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
 
     //Calcular fatorial
     public static int factorial(int n) {
-        return 0;
+        int r = 1;
+
+        if(n == 0)
+            return r;
+
+        for (int i = n; i > 0; i--){
+            r *= i;
+        }
+
+        return r;
     }
 
     //Volume cilindro
     public static double volumeOfCylinder(double radius, double height) {
-        return 0.0;
+        return (Math.PI* Math.pow(radius,2)) * height;
     }
 
     //Volume cone
     public static double volumeOfCone(double radius, double height) {
-        return 0.0;
+        return ((Math.PI* Math.pow(radius,2)) * height ) / 3;
     }
 }
