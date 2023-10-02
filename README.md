@@ -113,6 +113,7 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 ***
 
 ##### User Story 1
+**Organização Sem Fins Lucrativos**
 
 As ..., I want ..., so ...
 
@@ -129,10 +130,27 @@ A prototype of user story 1 should be here. You can see in (#use-case-diagram) h
 ***
 
 ##### User Story 2
+**Voluntários**
+
+Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, quais os animais existentes dentro da instituição e bem como o estado de saúde dos mesmos, para isso preciso de ter acesso á informação sobre total dos animais.
+
+###### Acceptance Criteria
+> - Quando o voluntário entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais;
+> - Este tem de ter a possibilidade de selecionar um animal, caso pretenda ter mais informações a cerca do mesmo;
+> - O voluntário tem de ter acesso a informar os veterinários no sistema, que existe um animal doente;
 
 ***
 
 ##### User Story 3
+**Investidores/Financiadores/Doadores**
+
+As ..., I want ..., so ...
+
+###### Acceptance Criteria
+
+```
+An acceptance test should be written here
+```
 
 ***
 
