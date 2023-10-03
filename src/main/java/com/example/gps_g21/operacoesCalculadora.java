@@ -3,6 +3,9 @@ package com.example.gps_g21;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.text.ParseException;
 
 public class operacoesCalculadora {
 
@@ -69,17 +72,18 @@ public class operacoesCalculadora {
     }
 
     //Diferença entre duas datas
+    /*
     public static int differenceBetweenDates(String date1, String date2) {
         try {
             String[] parts = date1.split("[/]");
             String[] parts2 = date2.split("[/]");
-            if (parts[0].length() != 2  parts[1].length() != 2  parts[2].length() != 4
-            parts2[0].length() != 2  parts2[1].length() != 2 || parts2[2].length() != 4){
+            if (parts[0].length() != 2 || parts[1].length() != 2 || parts[2].length() != 4 ||
+            parts2[0].length() != 2 || parts2[1].length() != 2 || parts2[2].length() != 4){
                 throw new Exception();
             }
             int days, days2;
-            days = (Integer.parseInt(parts[2])365) + (Integer.parseInt(parts[1])30) + Integer.parseInt(parts[0]);
-            days2 = (Integer.parseInt(parts2[2])365) + (Integer.parseInt(parts2[1])30) + Integer.parseInt(parts2[0]);
+            days = (Integer.parseInt(parts[2])/365) + (Integer.parseInt(parts[1])/30) + Integer.parseInt(parts[0]);
+            days2 = (Integer.parseInt(parts2[2])/365) + (Integer.parseInt(parts2[1])/30) + Integer.parseInt(parts2[0]);
             if(days2>days) {
                 return days2 - days;
             }else{
@@ -89,6 +93,23 @@ public class operacoesCalculadora {
             return 0;
         }
     }
+    */
+
+    public static int differenceBetweenDates(String date1, String date2) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date firstDate = sdf.parse(date1);
+            Date secondDate = sdf.parse(date2);
+            long timeDifference = Math.abs(firstDate.getTime() - secondDate.getTime());
+            long daysDifference = timeDifference / (24 * 60 * 60 * 1000);
+            return (int) daysDifference;
+        } catch (ParseException e) {
+            //no caso de erro a dar parse
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
     //Binário - Hexadecimal
     public static String binaryToHexadecimal(String binary) {
         try {
@@ -111,34 +132,71 @@ public class operacoesCalculadora {
 
     //Calcular Fibonacci
     public static long fibonacci(int n) {
-        if (n < 2) {
-            return n;
-        } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
+        try {
+            if (n < 0) {
+                throw new IllegalArgumentException("O numero não pode ser negativo.");
+            } else if (n < 2) {
+                return n;
+            } else {
+                return fibonacci(n - 1) + fibonacci(n - 2);
+            }
+        } catch(IllegalArgumentException e){
+            System.err.println(e.getMessage());
+            return -1;
         }
     }
 
     //Calcular fatorial
     public static int factorial(int n) {
-        int r = 1;
+        try {
+            int r = 1;
 
-        if(n == 0)
-            return r;
-
-        for (int i = n; i > 0; i--){
-            r *= i;
+            if (n < 0) {
+                throw new IllegalArgumentException("O número não pode ser negativo.");
+            } else if (n == 0) {
+                return r;
+            } else {
+                for (int i = n; i > 0; i--) {
+                    r *= i;
+                }
+                return r;
+            }
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+            return -1; // or another appropriate value to indicate an error
         }
-
-        return r;
     }
 
     //Volume cilindro
     public static double volumeOfCylinder(double radius, double height) {
-        return (Math.PI* Math.pow(radius,2)) * height;
+        try{
+            if(radius < 0 || height < 0){
+                throw new IllegalArgumentException("Pelo menos um dos valores é negativo.");
+            } else{
+                double volume = (Math.PI* Math.pow(radius,2)) * height;
+
+                //arredonda p 2 casas
+                return Math.round(volume * 100.0) / 100.0;
+            }
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+            return -1; // or another appropriate value to indicate an error
+        }
     }
 
     //Volume cone
     public static double volumeOfCone(double radius, double height) {
-        return ((Math.PI* Math.pow(radius,2)) * height ) / 3;
+        try{
+            if(radius < 0 || height < 0){
+                throw new IllegalArgumentException("Pelo menos um dos valores é negativo.");
+            } else{
+                double volume = ((Math.PI* Math.pow(radius,2)) * height ) / 3;
+
+                return Math.round(volume * 100.0) / 100.0;
+            }
+        } catch (IllegalArgumentException e) {
+            System.err.println(e.getMessage());
+            return -1; // or another appropriate value to indicate an error
+        }
     }
 }
