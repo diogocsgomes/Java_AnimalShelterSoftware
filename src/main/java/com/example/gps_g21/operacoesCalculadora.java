@@ -70,9 +70,25 @@ public class operacoesCalculadora {
 
     //Diferença entre duas datas
     public static int differenceBetweenDates(String date1, String date2) {
-        return 0;
+        try {
+            String[] parts = date1.split("[/]");
+            String[] parts2 = date2.split("[/]");
+            if (parts[0].length() != 2  parts[1].length() != 2  parts[2].length() != 4
+            parts2[0].length() != 2  parts2[1].length() != 2 || parts2[2].length() != 4){
+                throw new Exception();
+            }
+            int days, days2;
+            days = (Integer.parseInt(parts[2])365) + (Integer.parseInt(parts[1])30) + Integer.parseInt(parts[0]);
+            days2 = (Integer.parseInt(parts2[2])365) + (Integer.parseInt(parts2[1])30) + Integer.parseInt(parts2[0]);
+            if(days2>days) {
+                return days2 - days;
+            }else{
+                return days - days2;
+            }
+        }catch (Exception e) {
+            return 0;
+        }
     }
-
     //Binário - Hexadecimal
     public static String binaryToHexadecimal(String binary) {
         try {

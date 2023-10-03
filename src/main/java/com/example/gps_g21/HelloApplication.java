@@ -56,8 +56,15 @@ public class HelloApplication extends Application {
                     System.out.println("Resultado: " + resultStr);
                     break;
                 case 3:
-                    System.out.print("-> ");
+                    in.nextLine();
+                    System.out.print("Introduza a primeira data (dd/mm/yyyy)-> ");
                     input = in.nextLine();
+                    String input2 = new String();
+                    System.out.print("Introduza a segunda data (dd/mm/yyyy)-> ");
+                    input2 = in.nextLine();
+                    resultFlo = operacoesCalculadora.differenceBetweenDates(input, input2);
+                    System.out.println("Resultado:"+resultFlo+" dias de diferença");
+
                     break;
                 case 4:
                     System.out.print("-> ");
