@@ -115,13 +115,12 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 ##### User Story 1
 **Organização Sem Fins Lucrativos**
 
-As ..., I want ..., so ...
+Como organização pretendo ajudar o máximo de animais que estão em risco de vida ou a sofrer maltratos, quero poder gerir os voluntários, as doações e os financiadores de forma a ter acesso a todos os dados e de forma a que a organização prospere. Para isso necessito de ter acesso a todos os dados da organização.
+
 
 ###### Acceptance Criteria
+> - Quando o administrador entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais, de todos os voluntários, de todos os investimentos, de todos os doadores, dos veterinários, stock de alimentos/medicamentos/utensilios, de todos os pedidos de ajuda que a organização recebe e dos que já recebeu.
 
-```
-An acceptance test should be written here
-```
 
 ###### Prototype
 
@@ -132,7 +131,7 @@ A prototype of user story 1 should be here. You can see in (#use-case-diagram) h
 ##### User Story 2
 **Voluntários**
 
-Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, quais os animais existentes dentro da instituição e bem como o estado de saúde dos mesmos, para isso preciso de ter acesso á informação sobre total dos animais.
+Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, quais os animais existentes dentro da instituição e bem como o estado de saúde dos mesmos, para isso preciso de ter acesso à informação total sobre dos animais.
 
 ###### Acceptance Criteria
 > - Quando o voluntário entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais;
@@ -144,13 +143,14 @@ Como voluntário desta organização quero ter a possibilidade de controlar a al
 ##### User Story 3
 **Investidores/Financiadores/Doadores**
 
-As ..., I want ..., so ...
+Como doador ou investidor quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades e do que a organização precisa. Além disso quero ter a possibilidade de saber onde estão a ser gastos os meus investimentos. Para isso preciso de ter acesso às necessidades da organização.
+
 
 ###### Acceptance Criteria
 
-```
-An acceptance test should be written here
-```
+> - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
+> - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização.
+
 
 ***
 
