@@ -119,12 +119,20 @@ Como organização pretendo ajudar o máximo de animais que estão em risco de v
 
 
 ###### Acceptance Criteria
-> - Quando o administrador entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais, de todos os voluntários, de todos os investimentos, de todos os doadores, dos veterinários, stock de alimentos/medicamentos/utensilios, de todos os pedidos de ajuda que a organização recebe e dos que já recebeu.
+> - Quando o administrador entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais, de todos os voluntários, de todos os investimentos, de todos os doadores, dos veterinários, stock de alimentos/medicamentos/utensílios, de todos os pedidos de ajuda que a organização recebe e dos que já recebeu;
+> - Aceder à lista de todos os animais, incluindo detalhes;
+> - Aceder à lista de todos os voluntários, incluindo detalhes;
+> - Aceder à lista de todos os investimentos, incluindo informações;
+> - Aceder à lista de todos os doadores, incluindo informações e histórico de doações;
+> - Aceder às informações sobre veterinários colaboradores;
+> - Fazer uma gestão do estoque de alimentos, medicamentos e utensílios;
+> - Aceder à lista de todos os pedidos de ajuda recebidos, incluindo detalhes sobre casos;
+> - Aceder às informações sobre os pedidos de ajuda atendidos, incluindo detalhes sobre os casos;
 
 
 ###### Prototype
 
-A prototype of user story 1 should be here. You can see in (#use-case-diagram) how to import an image.
+
 
 ***
 
@@ -137,6 +145,10 @@ Como voluntário desta organização quero ter a possibilidade de controlar a al
 > - Quando o voluntário entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais;
 > - Este tem de ter a possibilidade de selecionar um animal, caso pretenda ter mais informações a cerca do mesmo;
 > - O voluntário tem de ter acesso a informar os veterinários no sistema, que existe um animal doente;
+> - Este tem a possibilidade de registar uma nova adoção e vem como um novo animal:
+
+###### Prototype
+
 
 ***
 
@@ -149,7 +161,10 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 ###### Acceptance Criteria
 
 > - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
-> - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização.
+> - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
+> - Receber atualizações sobre o progresso dos investimentos feitos;
+
+###### Prototype
 
 
 ***
