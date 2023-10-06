@@ -129,10 +129,8 @@ Como organização pretendo ajudar o máximo de animais que estão em risco de v
 > - Aceder à lista de todos os pedidos de ajuda recebidos, incluindo detalhes sobre casos;
 > - Aceder às informações sobre os pedidos de ajuda atendidos, incluindo detalhes sobre os casos;
 
-
 ###### Prototype
-
-
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Administrador.png)
 
 ***
 
@@ -148,7 +146,7 @@ Como voluntário desta organização quero ter a possibilidade de controlar a al
 > - Este tem a possibilidade de registar uma nova adoção e vem como um novo animal:
 
 ###### Prototype
-
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Voluntarios.png)
 
 ***
 
@@ -165,7 +163,7 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 > - Receber atualizações sobre o progresso dos investimentos feitos;
 
 ###### Prototype
-
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Doadores.png)
 
 ***
 
