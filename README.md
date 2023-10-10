@@ -62,15 +62,11 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 > - Secção de Adotante na aplicação.
 > - Implementação de um sistema distribuido (Vários clientes para um servidor).
 
-##### Risk
-> - Se houver um erro na aplicação, o bem estar de um animal pode ser posto em risco.
-> - A informação dos voluntários, animais, veterinários, doadores e adotantes deve ser mantida em segurança.
-> - Risco de inserção de dados incorretos ou imprecisos devido a erros de entrada por parte dos utilizadores da aplicação.
-
+### Risk
 **Threshhold of Sucess**
-> - (metas ao longo dos sprints)
-> -
-> -
+- (metas ao longo dos sprints)
+-
+-
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
@@ -78,7 +74,7 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 - RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
 
-**Mitigation Actions*
+**Mitigation Actions**
 - RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planejamento do tempo investido durante essas verificações
 - RSK2 - AS: Pesquisa prévia de projetos que usem o mesmo tipo de tecnologia e implementam componentes semelhantes aos da nossa aplicação
 - RSK3 - MS: Comunicação contínua sobre o desenvolvimento do projeto com o cliente, de modo a confirmar que tudo está dentro do planejado
