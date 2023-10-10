@@ -59,6 +59,8 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 > - Processamento de pagamentos das doações.
 > - Gestão de stock (Alimentação, Medicamentos, etc).
 > - Criação de um website para marketing do software. 
+> - Secção de Adotante na aplicação.
+> - Implementação de um sistema distribuido (Vários clientes para um servidor).
 
 ##### Risk
 > - Se houver um erro na aplicação, o bem estar de um animal pode ser posto em risco.
