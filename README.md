@@ -170,8 +170,7 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 ## Architecture and Design
 
 #### Domain Model
-
-A domain model should be here. You can see in (#use-case-diagram) how to import an image.
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/ModeloDominio.png)
 
 ***
 
