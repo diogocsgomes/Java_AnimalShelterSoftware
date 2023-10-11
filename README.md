@@ -207,36 +207,44 @@ Interface visual implementada e base de dados dos diferentes usuários da plataf
 //
 
 ##### Release
-V0.1
+V0
 
 ##### Goal
-Planejamento e mockups da interface completos
+Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
 
 #### Sprint 2
 ##### Dates
-
+19 de novembro a 2 de dezembro, 2 semanas
 
 ##### Weight
+//
 
 ##### Release
+V0.1
 
 ##### Goal
+> - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
+> - Desenvolvimento das funcionalidades simples da aplicação
 
 ***
 
 ### Release 2
 #### Goal
-MVP - Description
+Conclusão da aplicação
 
 #### Sprint 3
 ##### Dates 
-From X to Y, N weeks
+3 a 24 de dezembro, 3 semanas
 
 ##### Weight
+//
 
 ##### Release
+V1.0
 
 ##### Goal
+> - Conclusão das funcionalidades finais da aplicação para cada usuário
+> - Testes extensos das funcionalidades para uso final
 
 ***
 
