@@ -62,7 +62,17 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 > - Secção de Adotante na aplicação.
 > - Implementação de um sistema distribuido (Vários clientes para um servidor).
 
-### Risk
+
+
+
+##### Assumptions
+> - A primeira versão da aplicação será um protótipo de uma aplicação desktop.
+> - Os voluntários estão dispostos a usar a aplicação.
+> - As associações já têm os meios necessários para usar a aplicação, como acesso a internet e dispositivos.
+
+***
+
+#### Risk
 **Threshhold of Sucess**
 - (metas ao longo dos sprints)
 -
@@ -79,14 +89,6 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 - RSK2 - AS: Pesquisa prévia de projetos que usem o mesmo tipo de tecnologia e implementam componentes semelhantes aos da nossa aplicação
 - RSK3 - MS: Comunicação contínua sobre o desenvolvimento do projeto com o cliente, de modo a confirmar que tudo está dentro do planejado
 - RSK4 - MS: Fazer um planejamento da arquitetura adequado ao projeto antes de começar a trabalhar diretamente no mesmo
-
-
-
-
-##### Assumptions
-> - A primeira versão da aplicação será um protótipo de uma aplicação desktop.
-> - Os voluntários estão dispostos a usar a aplicação.
-> - As associações já têm os meios necessários para usar a aplicação, como acesso a internet e dispositivos.
 
 
 ***
