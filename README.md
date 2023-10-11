@@ -7,6 +7,9 @@
     - [User stories and prototypes](#user-stories-and-prototypes)
 - [Architecture and Design](#architecture-and-design)
     - [Domain Model](#domain-model)
+- [Release Plan](#release-plan)
+    - [Release 1](#release-1)
+    - [Release 2](#release-2)
 - [Implementation](#implementation)
     - [Product Increment 1](#product-increment-1)
     - [Product Increment 2](#product-increment-2)
@@ -197,7 +200,7 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 ## Release Plan
 ### Release 1
 #### Goal
-Interface visual implementada e base de dados dos diferentes usuários da plataforma
+- Interface visual implementada e base de dados dos diferentes usuários da plataforma
 
 #### Sprint 1
 ##### Dates 
@@ -210,7 +213,7 @@ Interface visual implementada e base de dados dos diferentes usuários da plataf
 V0
 
 ##### Goal
-Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
+- Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
 
 #### Sprint 2
 ##### Dates
@@ -223,8 +226,8 @@ Planejamento e mockups da interface completos, com início da implementação do
 V0.1
 
 ##### Goal
-> - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
-> - Desenvolvimento das funcionalidades simples da aplicação
+- Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
+- Desenvolvimento das funcionalidades simples da aplicação
 
 ***
 
@@ -243,8 +246,8 @@ Conclusão da aplicação
 V1.0
 
 ##### Goal
-> - Conclusão das funcionalidades finais da aplicação para cada usuário
-> - Testes extensos das funcionalidades para uso final
+- Conclusão das funcionalidades finais da aplicação para cada usuário
+- Testes extensos das funcionalidades para uso final
 
 ***
 
