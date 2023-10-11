@@ -70,25 +70,6 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 > - Os voluntários estão dispostos a usar a aplicação.
 > - As associações já têm os meios necessários para usar a aplicação, como acesso a internet e dispositivos.
 
-***
-
-#### Risk
-**Threshhold of Sucess**
-- (metas ao longo dos sprints)
--
--
-
-**Risk List**
-- RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
-- RSK2 - PxI: 2x5=12; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
-- RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
-- RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
-
-**Mitigation Actions**
-- RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planejamento do tempo investido durante essas verificações
-- RSK2 - AS: Pesquisa prévia de projetos que usem o mesmo tipo de tecnologia e implementam componentes semelhantes aos da nossa aplicação
-- RSK3 - MS: Comunicação contínua sobre o desenvolvimento do projeto com o cliente, de modo a confirmar que tudo está dentro do planejado
-- RSK4 - MS: Fazer um planejamento da arquitetura adequado ao projeto antes de começar a trabalhar diretamente no mesmo
 
 
 ***
@@ -190,6 +171,26 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 
 #### Domain Model
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/ModeloDominio.png)
+
+***
+
+#### Risk
+**Threshhold of Sucess**
+- (metas ao longo dos sprints)
+-
+-
+
+**Risk List**
+- RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
+- RSK2 - PxI: 2x5=12; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
+- RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
+- RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
+
+**Mitigation Actions**
+- RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planejamento do tempo investido durante essas verificações
+- RSK2 - AS: Pesquisa prévia de projetos que usem o mesmo tipo de tecnologia e implementam componentes semelhantes aos da nossa aplicação
+- RSK3 - MS: Comunicação contínua sobre o desenvolvimento do projeto com o cliente, de modo a confirmar que tudo está dentro do planejado
+- RSK4 - MS: Fazer um planejamento da arquitetura adequado ao projeto antes de começar a trabalhar diretamente no mesmo
 
 ***
 
