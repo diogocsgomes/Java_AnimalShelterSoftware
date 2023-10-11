@@ -194,6 +194,48 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 
 ***
 
+## Release Plan
+### Release 1
+#### Goal
+MVP - Description
+
+#### Sprint 1
+##### Dates 
+From X to Y, N weeks
+
+##### Weight
+
+##### Release
+
+##### Goal
+
+#### Sprint 2
+##### Dates
+
+##### Weight
+
+##### Release
+
+##### Goal
+
+***
+
+### Release 2
+#### Goal
+MVP - Description
+
+#### Sprint 3
+##### Dates 
+From X to Y, N weeks
+
+##### Weight
+
+##### Release
+
+##### Goal
+
+***
+
 ## Implementation
 
 #### Product Increment 1
