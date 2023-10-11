@@ -197,20 +197,24 @@ Como doador ou investidor quero ter a possibilidade de analisar os recursos em f
 ## Release Plan
 ### Release 1
 #### Goal
-MVP - Description
+Interface visual implementada e base de dados dos diferentes usuários da plataforma
 
 #### Sprint 1
 ##### Dates 
-From X to Y, N weeks
+5 a 18 de novembro, 2 semanas
 
 ##### Weight
+//
 
 ##### Release
+V0.1
 
 ##### Goal
+Planejamento e mockups da interface completos
 
 #### Sprint 2
 ##### Dates
+
 
 ##### Weight
 
