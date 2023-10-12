@@ -1,9 +1,9 @@
-#Reuniões
+# Reuniões
 Apontamentos das reuniões feitas ao longo do projeto
 
-##Reunião 1
+## Reunião 1
 
-###12/10/2023 - 15h25:
+### 12/10/2023 - 15h25:
 Pontos debatidos:
 - Adicionar o email aos nomes no readme
 - Tirar do project background a solução 
@@ -36,6 +36,6 @@ Pontos debatidos:
 
 ***
 
-##Reunião 2:
+## Reunião 2:
 
-###19/10/2023 - ?h?:
+### 19/10/2023 - ?h?:
