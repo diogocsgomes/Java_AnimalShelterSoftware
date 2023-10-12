@@ -1,4 +1,4 @@
-# Project Title
+# Shelter Wise
 ## Contents
 - [Team](#team)
 - [Vision and Scope](#vision-and-scope)
@@ -17,46 +17,44 @@
     - [Product Increment 4](#product-increment-4)
 
 ## Team
-- Diogo Gomes - 2021137427
-- Diogo Fatia - 2020152804
-- Ana Cardoso - 2021133158
-- Bruno Fonseca - 2021129658
-- Ricardo Tavares - 2021144581
+- Diogo Gomes - 2021137427 - a2021137427@isec.pt
+- Diogo Fatia - 2020152804 - diogofatia@gmail.com
+- Ana Cardoso - 2021133158 - cardosinha2003@gmail.com
+- Bruno Fonseca - 2021129658 - brunofonseca2003@gmail.com
+- Ricardo Tavares - 2021144581 - a2021144581@isec.pt
 
 ***
 
 ## Vision and Scope
 #### Problem Statement
 ##### Project background
-Atualmente existem muitas organizações de proteção animal sem fins lucrativos que operam com recursos limitados e dependem muito do voluntariado. No entanto, a gestão de todos os animais resgatados pelas mesmas pode se tornar um processo complexo, uma vez que muitas das vezes estas não têm acesso a sistemas de gestão elaborados e eficazes o que pode pôr em risco o espaço e os animais. Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel fundamental muito importante para estas visto que para além de ajudar numa melhor gestão dos animais, irá permitir às mesmas ajudar outros animais que também estejam a precisar de algum suporte e gerir melhor a organização.
+Atualmente existem muitas organizações de proteção animal sem fins lucrativos que operam com recursos limitados e dependem muito do voluntariado. No entanto, a gestão de todos os animais resgatados pelas mesmas pode se tornar um processo complexo, uma vez que muitas das vezes estas não têm acesso a sistemas de gestão elaborados e eficazes o que pode pôr em risco o espaço e os animais.
 
 ##### Stakeholders
 > - Organizações Sem Fins Lucrativos: necessidade de um software de gestão que facilite o acompanhamento e a administração eficaz de projetos, tarefas e voluntários.
 > - Voluntários: necessidade de uma plataforma que simplifique a gestão de tarefas, projetos e horários do voluntariado.
 > - Animais: melhorias no suporte e na eficácia das organizações/voluntários, resultando em uma maior qualidade de serviço e um alcance mais amplo, bem como o melhor fornecimento de condições de apoio.
-> - Investidores/Financiadores/Doadores: necessidade de uma ferramenta que mostre onde estão a ser usados os seus donativos da organização em questão, vem como uma plataforma para gerir todos os “supporters”. 
+> - Doadores: necessidade de uma ferramenta que mostre onde estão a ser usados os seus donativos da organização em questão, vem como uma plataforma para gerir todos os “supporters”. 
 > - Adotantes: necessidade de um sistema onde seja possível ver as pessoas que adotaram animais na instituição, para fazer um historial do animal.
 > - Veterinários: necessidade de um sistema de notifcações para quando necessário informar os veterinários que certo animal está com problemas.
 
 ##### Users
 > - Organização Sem Fins Lucrativos.
 > - Voluntários (sendo estes os utilizadores principais uma vez que estariam a trabalhar no abrigo para animais).
-> - Investidores/Financiadores/Doadores.
+> - Doadores.
 
 ***
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-O objetivo visa facilitar a coordenação entre voluntários que pretendam cuidar dos animais, membros da associação que cuida dos animais, veterinários e famílias temporárias de animais. Assim, o software visa melhorar a condição de vida dos animais, bem como fomentar a adoção e facilitar o trabalho dos contribuintes da associação.
+Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel fundamental para as organizações que para além de ajudar numa melhor gestão dos animais, irá permitir às mesmas ajudar outros animais que também estejam a precisar de algum suporte e gerir melhor a organização, através da gestão de voluntários e doações. Assim, o software visa melhorar a condição de vida dos animais, bem como fomentar a adoção e facilitar o trabalho dos contribuintes da associação.
 
 ##### List of features
-> - Gestão dos voluntários (Adicionar, Remover, Editar).
-> - Notificações para os voluntários sobre os afazeres.
-> - Perfis dos animais na associação.
-> - Gestão dos animais (Adicionar, Remover, Editar).
-> - Registo de adoções dos animais.
-> - Registo de doações.
-> - Notificações para os veterinários sobre problemas nos animais ou a necessidade de dar vacinas/medicamentos.
+> - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
+> - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
+> - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
+> - Lista de veterinários e informações sobre o mesmos.
+> - Lista de casotas e informação da sua ocupação;
 
 ##### Features that will not be developed
 > - Processamento de pagamentos das doações.
@@ -64,6 +62,7 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 > - Criação de um website para marketing do software. 
 > - Secção de Adotante na aplicação.
 > - Implementação de um sistema distribuido (Vários clientes para um servidor).
+> - Gestão dos pedidos de ajuda.
 
 
 
@@ -118,45 +117,84 @@ O objetivo visa facilitar a coordenação entre voluntários que pretendam cuida
 ##### User Story 1
 **Organização Sem Fins Lucrativos**
 
-Como organização pretendo ajudar o máximo de animais que estão em risco de vida ou a sofrer maltratos, quero poder gerir os voluntários, as doações e os financiadores de forma a ter acesso a todos os dados e de forma a que a organização prospere. Para isso necessito de ter acesso a todos os dados da organização.
+Como organização pretendo ajudar o máximo de animais que estão à responsabilidade da organização, e por isso quero poder gerir os voluntários.
+
+###### Acceptance Criteria
+> - Aceder à lista de todos os voluntários, incluindo detalhes;
+
+
+***
+
+
+#### User Story 2
+**Organização Sem Fins Lucrativos**
+
+Como organização, pretendo visualizar as doações de forma a ter acesso a todos os dados e de forma a que a organização prospere, e para isso necessito de ter acesso a todos os dados da organização.
+
+###### Acceptance Criteria
+> - Aceder à lista de todas as doações efetuadas.
+> - Aceder a lista de doadores incluindo informações e histórico de doações.
+
+***
+
+#### User Story 3
+**Organização Sem Fins Lucrativos**
+
+Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
 
 
 ###### Acceptance Criteria
-> - Quando o administrador entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais, de todos os voluntários, de todos os investimentos, de todos os doadores, dos veterinários, stock de alimentos/medicamentos/utensílios, de todos os pedidos de ajuda que a organização recebe e dos que já recebeu;
-> - Aceder à lista de todos os animais, incluindo detalhes;
-> - Aceder à lista de todos os voluntários, incluindo detalhes;
-> - Aceder à lista de todos os investimentos, incluindo informações;
-> - Aceder à lista de todos os doadores, incluindo informações e histórico de doações;
-> - Aceder às informações sobre veterinários colaboradores;
-> - Fazer uma gestão do estoque de alimentos, medicamentos e utensílios;
-> - Aceder à lista de todos os pedidos de ajuda recebidos, incluindo detalhes sobre casos;
-> - Aceder às informações sobre os pedidos de ajuda atendidos, incluindo detalhes sobre os casos;
+> - Aceder à lista de todas as boxes, e a informação da sua ocupação.
 
 ###### Prototype
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Administrador.png)
 
 ***
 
-##### User Story 2
+##### User Story 3
 **Voluntários**
 
-Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, quais os animais existentes dentro da instituição e bem como o estado de saúde dos mesmos, para isso preciso de ter acesso à informação total sobre dos animais.
+Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, para isso preciso de ter acesso à informação total sobre dos animais.
 
 ###### Acceptance Criteria
-> - Quando o voluntário entra no sistema deverá ter a possibilidade de analisar a lista de todos os animais;
-> - Este tem de ter a possibilidade de selecionar um animal, caso pretenda ter mais informações a cerca do mesmo;
-> - O voluntário tem de ter acesso a informar os veterinários no sistema, que existe um animal doente;
-> - Este tem a possibilidade de registar uma nova adoção e vem como um novo animal:
+> - Aceder à informação sobre a alimentação do animal (horário de alimentação, bem como se já foi alimentado).
+
+***
+
+#### User Story 4
+**Voluntarios**
+
+Como voluntário quero saber quais os animais existentes dentro da instituição, e para isso preciso de acesso à lista com a informação dos mesmos.
+
+###### Acceptance Criteria
+> - Aceder à lista de animais presentes na organização.
+
+***
+
+#### User Story 4
+**Voluntarios**
+
+Como voluntário quero saber a informação de cada animal, e para isso preciso de acesso à lista com a informação dos mesmos.
+
+###### Acceptance Criteria
+> - Aceder à informação dos animais presentes na lista.
 
 ###### Prototype
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Voluntarios.png)
 
 ***
 
-##### User Story 3
-**Investidores/Financiadores/Doadores**
+##### User Story 4
+**Doadores**
 
-Como doador ou investidor quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades e do que a organização precisa. Além disso quero ter a possibilidade de saber onde estão a ser gastos os meus investimentos. Para isso preciso de ter acesso às necessidades da organização.
+Como doador quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades, para isso preciso de ter acesso às necessidades da organização.
+
+***
+
+#### User Story 5
+**Doadores**
+
+Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
 
 
 ###### Acceptance Criteria
