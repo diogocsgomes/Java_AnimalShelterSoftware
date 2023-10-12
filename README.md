@@ -126,7 +126,7 @@ Como organização pretendo ajudar o máximo de animais que estão à responsabi
 ***
 
 
-#### User Story 2
+##### User Story 2
 **Organização Sem Fins Lucrativos**
 
 Como organização, pretendo visualizar as doações de forma a ter acesso a todos os dados e de forma a que a organização prospere, e para isso necessito de ter acesso a todos os dados da organização.
@@ -137,7 +137,7 @@ Como organização, pretendo visualizar as doações de forma a ter acesso a tod
 
 ***
 
-#### User Story 3
+##### User Story 3
 **Organização Sem Fins Lucrativos**
 
 Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
@@ -151,7 +151,7 @@ Como organização, pretendo ter informação sobre as casotas, e por isso preci
 
 ***
 
-##### User Story 3
+##### User Story 4
 **Voluntários**
 
 Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, para isso preciso de ter acesso à informação total sobre dos animais.
@@ -161,7 +161,7 @@ Como voluntário desta organização quero ter a possibilidade de controlar a al
 
 ***
 
-#### User Story 4
+##### User Story 5
 **Voluntarios**
 
 Como voluntário quero saber quais os animais existentes dentro da instituição, e para isso preciso de acesso à lista com a informação dos mesmos.
@@ -184,14 +184,14 @@ Como voluntário quero saber a informação de cada animal, e para isso preciso 
 
 ***
 
-##### User Story 4
+##### User Story 6
 **Doadores**
 
 Como doador quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades, para isso preciso de ter acesso às necessidades da organização.
 
 ***
 
-#### User Story 5
+##### User Story 7
 **Doadores**
 
 Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
