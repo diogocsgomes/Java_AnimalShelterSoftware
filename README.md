@@ -7,6 +7,11 @@
     - [User stories and prototypes](#user-stories-and-prototypes)
 - [Architecture and Design](#architecture-and-design)
     - [Domain Model](#domain-model)
+- [Pre Game](#pre-game)
+  - [Sprin 0 Plan](#sprint-0-plan)
+  - [Sprin 1 Plan](#sprint-1-plan)
+  - [Sprin 2 Plan](#sprint-2-plan)
+  - [Sprin 3 Plan](#sprint-3-plan)
 - [Release Plan](#release-plan)
     - [Release 1](#release-1)
     - [Release 2](#release-2)
@@ -31,7 +36,7 @@
 Atualmente existem muitas organizações de proteção animal sem fins lucrativos que operam com recursos limitados e dependem muito do voluntariado. No entanto, a gestão de todos os animais resgatados pelas mesmas pode se tornar um processo complexo, uma vez que muitas das vezes estas não têm acesso a sistemas de gestão elaborados e eficazes o que pode pôr em risco o espaço e os animais.
 
 ##### Stakeholders
-> - Organizações Sem Fins Lucrativos: necessidade de um software de gestão que facilite o acompanhamento e a administração eficaz de projetos, tarefas e voluntários.
+> - Organizações: necessidade de um software de gestão que facilite o acompanhamento e a administração eficaz de projetos, tarefas, voluntários, animais e doadores.
 > - Voluntários: necessidade de uma plataforma que simplifique a gestão de tarefas, projetos e horários do voluntariado.
 > - Animais: melhorias no suporte e na eficácia das organizações/voluntários, resultando em uma maior qualidade de serviço e um alcance mais amplo, bem como o melhor fornecimento de condições de apoio.
 > - Doadores: necessidade de uma ferramenta que mostre onde estão a ser usados os seus donativos da organização em questão, vem como uma plataforma para gerir todos os “supporters”. 
@@ -39,9 +44,9 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 > - Veterinários: necessidade de um sistema de notifcações para quando necessário informar os veterinários que certo animal está com problemas.
 
 ##### Users
-> - Organização Sem Fins Lucrativos.
-> - Voluntários (sendo estes os utilizadores principais uma vez que estariam a trabalhar no abrigo para animais).
-> - Doadores.
+> - Organizações
+> - Voluntários
+> - Doadores
 
 ***
 
@@ -82,70 +87,47 @@ Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel f
 
 ***
 
-##### Use Case 1
-- Actor: Actor x
-- Description: Description of use case number 1
-- Preconditions:
-    - Precondition 1
-    - Precondition 2
-    - Without preconditions
-- Postconditions:
-    - Postcondition 1
-    - Postcondition 2
-    - Without postcondition
-- Normal flow:
-    - The user ...
-    - The user ...
-- Alternative flows:
-    - The user ...
-    - The user ...
+### Mockups
 
 ***
 
-##### Use Case 2
+### User Stories
+- User story 1 (link to issue card)
+- User story 2 (link to issue card)
+- User story 3 (link to issue card)
 
 ***
 
-##### Use Case 3
+## Definition of done
+(This section is already written, do not edit)
+It is a collection of criteria that must be completed for a User Story to be considered “done.”
+
+1. All tasks done:
+- CI – built, tested (Junit), reviewed (SonarCloud)
+- Merge request to qa (code review)
+2. Acceptance tests passed
+3. Accepted by the client
+4. Code merged to main
 
 ***
-
-#### User Stories and Prototypes
-
-***
-
 ##### User Story 1
 **Organização Sem Fins Lucrativos**
-
 Como organização pretendo ajudar o máximo de animais que estão à responsabilidade da organização, e por isso quero poder gerir os voluntários.
-
 ###### Acceptance Criteria
 > - Aceder à lista de todos os voluntários, incluindo detalhes;
-
-
 ***
-
-
 ##### User Story 2
 **Organização Sem Fins Lucrativos**
-
 Como organização, pretendo visualizar as doações de forma a ter acesso a todos os dados e de forma a que a organização prospere, e para isso necessito de ter acesso a todos os dados da organização.
-
 ###### Acceptance Criteria
 > - Aceder à lista de todas as doações efetuadas.
 > - Aceder a lista de doadores incluindo informações e histórico de doações.
-
 ***
-
 ##### User Story 3
 **Organização Sem Fins Lucrativos**
-
 Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
-
-
 ###### Acceptance Criteria
 > - Aceder à lista de todas as boxes, e a informação da sua ocupação.
-
 ###### Prototype
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Administrador.png)
 
@@ -153,32 +135,21 @@ Como organização, pretendo ter informação sobre as casotas, e por isso preci
 
 ##### User Story 4
 **Voluntários**
-
 Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, para isso preciso de ter acesso à informação total sobre dos animais.
-
 ###### Acceptance Criteria
 > - Aceder à informação sobre a alimentação do animal (horário de alimentação, bem como se já foi alimentado).
-
 ***
-
 ##### User Story 5
 **Voluntarios**
-
 Como voluntário quero saber quais os animais existentes dentro da instituição, e para isso preciso de acesso à lista com a informação dos mesmos.
-
 ###### Acceptance Criteria
 > - Aceder à lista de animais presentes na organização.
-
 ***
-
 #### User Story 4
 **Voluntarios**
-
 Como voluntário quero saber a informação de cada animal, e para isso preciso de acesso à lista com a informação dos mesmos.
-
 ###### Acceptance Criteria
 > - Aceder à informação dos animais presentes na lista.
-
 ###### Prototype
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Voluntarios.png)
 
@@ -186,35 +157,26 @@ Como voluntário quero saber a informação de cada animal, e para isso preciso 
 
 ##### User Story 6
 **Doadores**
-
 Como doador quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades, para isso preciso de ter acesso às necessidades da organização.
-
 ***
-
 ##### User Story 7
 **Doadores**
-
-Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
-
-
+Como doador quero ter a possibilidade de saber onde são gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
 ###### Acceptance Criteria
-
 > - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
 > - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
 > - Receber atualizações sobre o progresso dos investimentos feitos;
-
 ###### Prototype
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Doadores.png)
 
 ***
 
 ## Architecture and Design
-
 #### Domain Model
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/ModeloDominio.png)
 
 ***
-#### Risk
+### Risk Plan
 ***
 
 **Threshhold of Sucess**
@@ -229,12 +191,13 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
 
 **Mitigation Actions (threats>=20)**
-- RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planejamento do tempo investido durante essas verificações
+- RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planeamento do tempo investido durante essas verificações
 
 **Nota:** _Contingency Plan (CP), Avoidance Strategy (AS) or Minimization Strategy (MS)_
 
 ***
 ## Pre Game
+***
 ### Sprint 0 Plan
 - Goal: description
 - Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
@@ -279,9 +242,9 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 ## Release Plan
 ### Release 1
 - Goal: (MVP - description) 
-  - Interface visual implementada e base de dados dos diferentes usuários da plataforma
-  - Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
-  - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
+  - Interface visual implementada e base de dados dos diferentes utilizadores da plataforma
+  - Planeamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
+  - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes utilizadores (voluntários, administradores)
   - Desenvolvimento das funcionalidades simples da aplicação
 - Dates: [teams 0] 21-24/Nov | [teams1] 28-30/Nov
 - Release: V1.0
@@ -290,7 +253,7 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 
 ### Release 2
 - Goal: (Final release – description​)
-  - Conclusão das funcionalidades finais da aplicação para cada usuário
+  - Conclusão das funcionalidades finais da aplicação para cada utilizador
   - Testes extensos das funcionalidades para uso final
 - Date: [teams 0+1] 12-15/Dec
 - Release: V2.0
@@ -298,7 +261,7 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 ***
 
 ## Increments
-### Sprint 1
+#### Sprint 1
 ##### Sprint Plan
 - Goal: what’s the goal for this sprint
 - Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
