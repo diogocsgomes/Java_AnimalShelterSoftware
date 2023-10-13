@@ -5,7 +5,7 @@ Apontamentos das reuniões feitas ao longo do projeto
 ### 12/10/2023 - 15h25:
 Pontos debatidos:
 - Adicionar o email aos nomes no readme :white_check_mark:
-- Tirar do project background a solução 
+- Tirar do project background a solução :white_check_mark:
 - Reiterar a lista dos users para incluir apenas a organização, voluntários e doadores; :white_check_mark:
 - Elaborar o vision statement para explicar quais as exatas funcionalidades da aplicação e com que fim estão a ser feitas (+ potencialmente incluir um desenho que explica a linha de pensamento de cada funcionalidade: ex. ligação entre um voluntário e um animal que explica o que cada um faz)
 - Alterações ao que planeamos fazer ou não; :white_check_mark:
