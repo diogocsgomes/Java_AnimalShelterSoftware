@@ -214,8 +214,9 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/ModeloDominio.png)
 
 ***
-
 #### Risk
+***
+
 **Threshhold of Sucess**
 - (metas ao longo dos sprints)
 -
@@ -227,90 +228,98 @@ Como doador quero ter a possibilidade de saber onde estão a ser gastos os meus 
 - RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
 
-**Mitigation Actions**
+**Mitigation Actions (threats>=20)**
 - RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planejamento do tempo investido durante essas verificações
-- RSK2 - AS: Pesquisa prévia de projetos que usem o mesmo tipo de tecnologia e implementam componentes semelhantes aos da nossa aplicação
-- RSK3 - MS: Comunicação contínua sobre o desenvolvimento do projeto com o cliente, de modo a confirmar que tudo está dentro do planejado
-- RSK4 - MS: Fazer um planejamento da arquitetura adequado ao projeto antes de começar a trabalhar diretamente no mesmo
 
+**Nota:** _Contingency Plan (CP), Avoidance Strategy (AS) or Minimization Strategy (MS)_
+
+***
+## Pre Game
+### Sprint 0 Plan
+- Goal: description
+- Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
+- Sprint 0 Backlog (don't edit this list):
+    - Task1 – Write Team
+    - Task2 – Write V&S
+    - Task3 – Write Requirements
+    - Task4 – Write DoD
+    - Task5 – Write Architecture&Design
+    - Task6 – Write Risk Plan
+    - Task7 – Write Pre-Gane
+    - Task8 – Write Release Plan
+    - Task9 – Write Product Increments
+    - Task10 – Create Product Board
+    - Task11 – Create Sprint 0 Board
+    - Task12 – Write US in PB, estimate (SML), prioritize (MoSCoW), sort
+    - Task13 – Create repository with “GPS Git” Workflow
+
+***
+### Sprint 1 Plan
+- Goal: description
+- Dates: ...
+- Sprint 1 Backlog:
+    - Task1 – Write Team
+
+***
+### Sprint 2 Plan
+- Goal: description
+- Dates: ...
+- Sprint 2 Backlog:
+    - Task1 – Write Team
+
+***
+### Sprint 3 Plan
+- Goal: description
+- Dates: ...
+- Sprint 3 Backlog:
+    - Task1 – Write Team
+    
 ***
 
 ## Release Plan
 ### Release 1
-#### Goal
-- Interface visual implementada e base de dados dos diferentes usuários da plataforma
-
-#### Sprint 1
-##### Dates 
-5 a 18 de novembro, 2 semanas
-
-##### Weight
-//
-
-##### Release
-V0
-
-##### Goal
-- Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
-
-#### Sprint 2
-##### Dates
-19 de novembro a 2 de dezembro, 2 semanas
-
-##### Weight
-//
-
-##### Release
-V0.1
-
-##### Goal
-- Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
-- Desenvolvimento das funcionalidades simples da aplicação
+- Goal: (MVP - description) 
+  - Interface visual implementada e base de dados dos diferentes usuários da plataforma
+  - Planejamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
+  - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes usuários (voluntários, administradores)
+  - Desenvolvimento das funcionalidades simples da aplicação
+- Dates: [teams 0] 21-24/Nov | [teams1] 28-30/Nov
+- Release: V1.0
 
 ***
 
 ### Release 2
-#### Goal
-Conclusão da aplicação
-
-#### Sprint 3
-##### Dates 
-3 a 24 de dezembro, 3 semanas
-
-##### Weight
-//
-
-##### Release
-V1.0
-
-##### Goal
-- Conclusão das funcionalidades finais da aplicação para cada usuário
-- Testes extensos das funcionalidades para uso final
+- Goal: (Final release – description​)
+  - Conclusão das funcionalidades finais da aplicação para cada usuário
+  - Testes extensos das funcionalidades para uso final
+- Date: [teams 0+1] 12-15/Dec
+- Release: V2.0
 
 ***
 
-## Implementation
+## Increments
+### Sprint 1
+##### Sprint Plan
+- Goal: what’s the goal for this sprint
+- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
+- To do:
+  - (list of US or Tasks from the PB)
+  - US1: As … I want … so that …
+  - Task1: Some task
+- Story Points: 2S+3M+3X+2H
+- Analysis: short analysis of the planning meeting
 
-#### Product Increment 1
-
-##### Sprint Goal
-
-The sprint goal was ...
-
-##### Planned vs Implemented
-
-For this iteration we planned to implement the:
-
-- Feature 1
-- Feature 2
-
-For this iteration we implemented the:
-
-- Feature 1
-- Feature 2
+##### Sprint Review
+- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Story Points: 2S+1M+2X+2H
+- Version: 0.1 
+- Client analysis: client feedback
+- Conclusions: what to add/review
 
 ##### Sprint Retrospective
-
 - What we did well:
     - A
 - What we did less well:
@@ -320,14 +329,62 @@ For this iteration we implemented the:
 
 ***
 
-#### Product Increment 2
+#### Sprint 2
+##### Sprint Plan
+- Goal: what’s the goal for this sprint
+- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
+- To do:
+  - (list of US or Tasks from the PB)
+  - US1: As … I want … so that …
+  - Task1: Some task
+- Story Points: 2S+3M+3X+2H
+- Analysis: short analysis of the planning meeting
 
+##### Sprint Review
+- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Story Points: 2S+1M+2X+2H
+- Version: 0.1 
+- Client analysis: client feedback
+- Conclusions: what to add/review
+
+##### Sprint Retrospective
+- What we did well:
+    - A
+- What we did less well:
+    - B
+- How to improve to the next sprint:
+    - C
 ***
 
-#### Product Increment 3
+#### Sprint 3
+##### Sprint Plan
+- Goal: what’s the goal for this sprint
+- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
+- To do:
+  - (list of US or Tasks from the PB)
+  - US1: As … I want … so that …
+  - Task1: Some task
+- Story Points: 2S+3M+3X+2H
+- Analysis: short analysis of the planning meeting
 
-***
+##### Sprint Review
+- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Story Points: 2S+1M+2X+2H
+- Version: 0.1 
+- Client analysis: client feedback
+- Conclusions: what to add/review
 
-#### Product Increment 4
-
+##### Sprint Retrospective
+- What we did well:
+    - A
+- What we did less well:
+    - B
+- How to improve to the next sprint:
+    - C
 ***
