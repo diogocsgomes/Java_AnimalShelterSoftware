@@ -129,7 +129,7 @@ Como organização, pretendo ter informação sobre as casotas, e por isso preci
 ###### Acceptance Criteria
 > - Aceder à lista de todas as boxes, e a informação da sua ocupação.
 ###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Administrador.png)
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
 
 ***
 
@@ -151,7 +151,7 @@ Como voluntário quero saber a informação de cada animal, e para isso preciso 
 ###### Acceptance Criteria
 > - Aceder à informação dos animais presentes na lista.
 ###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Voluntarios.png)
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
 
 ***
 
@@ -167,13 +167,13 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 > - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
 > - Receber atualizações sobre o progresso dos investimentos feitos;
 ###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/Doadores.png)
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
 
 ***
 
 ## Architecture and Design
 #### Domain Model
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/imgUseCase/ModeloDominio.png)
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/ModeloDominio.png)
 
 ***
 ### Risk Plan
