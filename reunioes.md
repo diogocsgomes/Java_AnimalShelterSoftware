@@ -14,7 +14,7 @@ Pontos debatidos:
 - Criar um caso de uso generalizado para várias user stories que possam falar sobre um mesmo user; :white_check_mark:
 - Alterações ao risk plan para alterar o thresshold of sucess de modo a ser alinhado com os riscos;
 
-- Alterações à list of features:
+- Alterações à list of features: :white_check_mark:
 > - lista e informações de cada animal (raça, onde se encontra, etc.);
 > - lista e informações sobre cada voluntário e de que animal é que trata;
 > - os voluntários devem ser separados em categorias (tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza, etc);
