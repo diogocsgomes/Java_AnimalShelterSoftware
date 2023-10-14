@@ -181,6 +181,9 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 
 **Threshhold of Sucess**
 - (metas ao longo dos sprints)
+- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro sprint.
+- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint.
+- Receber feedback positivo dos testes de software até ao final do terceiro sprint.
 -
 -
 
