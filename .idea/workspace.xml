@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/VoluntariosApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/VoluntariosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-view.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/starter-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/starter-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,8 @@
       <updated>1697325120301</updated>
       <workItem from="1697325123172" duration="434000" />
       <workItem from="1697443851366" duration="72000" />
-      <workItem from="1697444060475" duration="3972000" />
+      <workItem from="1697444060475" duration="4038000" />
+      <workItem from="1697449942521" duration="184000" />
     </task>
     <servers />
   </component>

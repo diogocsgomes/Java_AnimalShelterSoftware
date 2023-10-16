@@ -204,6 +204,9 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 ### Sprint 0 Plan
 - Goal: description
 - Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
 - Sprint 0 Backlog (don't edit this list):
     - Task1 – Write Team
     - Task2 – Write V&S
@@ -223,6 +226,9 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 ### Sprint 1 Plan
 - Goal: description
 - Dates: ...
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
 - Sprint 1 Backlog:
     - Task1 – Write Team
 
@@ -230,6 +236,9 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 ### Sprint 2 Plan
 - Goal: description
 - Dates: ...
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
 - Sprint 2 Backlog:
     - Task1 – Write Team
 
@@ -237,6 +246,9 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 ### Sprint 3 Plan
 - Goal: description
 - Dates: ...
+- Roles:
+  - Product Owner: name
+  - Scrum Master: name
 - Sprint 3 Backlog:
     - Task1 – Write Team
     
