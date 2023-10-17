@@ -52,14 +52,19 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel fundamental para as organizações que para além de ajudar numa melhor gestão dos animais, irá permitir às mesmas ajudar outros animais que também estejam a precisar de algum suporte e gerir melhor a organização, através da gestão de voluntários e doações. Assim, o software visa melhorar a condição de vida dos animais, bem como fomentar a adoção e facilitar o trabalho dos contribuintes da associação.
+O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestão dos animais é feita por parte das organizações de animais, para isto será necessária uma aplicação/software simples e eficaz. Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o software visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
 
 ##### List of features
-> - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
-> - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
-> - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
-> - Lista de veterinários e informações sobre o mesmos.
-> - Lista de casotas e informação da sua ocupação;
+> - **Gestão de Voluntários**
+>   - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
+> - **Gestão de Animais**
+>   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e vem como a ultima vez que o mesmo comeu;
+>   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
+>   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
+> - **Gestão de Voluntários**
+>   - Lista de veterinários e informações sobre o mesmos.
+> - **Gestão de instalações**
+>   - Lista de casotas e informação da sua ocupação;
 
 ##### Features that will not be developed
 > - Processamento de pagamentos das doações.
@@ -68,8 +73,6 @@ Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel f
 > - Secção de Adotante na aplicação.
 > - Implementação de um sistema distribuido (Vários clientes para um servidor).
 > - Gestão dos pedidos de ajuda.
-
-
 
 
 ##### Assumptions
@@ -83,7 +86,14 @@ Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel f
 
 ## Requirements
 #### Use Case Diagram
-![Use case diagram](imgs/UML_use_case_example-800x707.png)
+**Administrador**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
+
+**Voluntários**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
+
+**Doadores**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
 
 ***
 
@@ -128,8 +138,6 @@ Como organização, pretendo visualizar as doações de forma a ter acesso a tod
 Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
 ###### Acceptance Criteria
 > - Aceder à lista de todas as boxes, e a informação da sua ocupação.
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
 
 ***
 
@@ -150,8 +158,6 @@ Como voluntário quero saber quais os animais existentes dentro da instituição
 Como voluntário quero saber a informação de cada animal, e para isso preciso de acesso à lista com a informação dos mesmos.
 ###### Acceptance Criteria
 > - Aceder à informação dos animais presentes na lista.
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
 
 ***
 
@@ -166,8 +172,6 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 > - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
 > - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
 > - Receber atualizações sobre o progresso dos investimentos feitos;
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
 
 ***
 
@@ -200,9 +204,8 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 
 ***
 ## Pre Game
-***
 ### Sprint 0 Plan
-- Goal: description
+- Goal: Terminar o README e as Mockups
 - Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
 - Roles:
   - Product Owner: name
@@ -221,37 +224,6 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
     - Task11 – Create Sprint 0 Board
     - Task12 – Write US in PB, estimate (SML), prioritize (MoSCoW), sort
     - Task13 – Create repository with “GPS Git” Workflow
-
-***
-### Sprint 1 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 1 Backlog:
-    - Task1 – Write Team
-
-***
-### Sprint 2 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 2 Backlog:
-    - Task1 – Write Team
-
-***
-### Sprint 3 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 3 Backlog:
-    - Task1 – Write Team
-    
 ***
 
 ## Release Plan
