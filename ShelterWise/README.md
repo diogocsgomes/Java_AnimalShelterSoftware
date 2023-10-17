@@ -135,18 +135,17 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 **Threshhold of Sucess**
-- (metas ao longo dos sprints)
 - Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro sprint.
 - Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint.
 - Receber feedback positivo dos testes de software até ao final do terceiro sprint.
--
--
+- **Completar**
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
 - RSK2 - PxI: 2x5=12; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
-- RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
+- RSK3 - PxI: 2x5=10; Pode haver falhas de segurança que podem vir a comprometer a segurança da informação da organização
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
+- RSK5 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
 
 **Mitigation Actions (threats>=20)**
 - RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planeamento do tempo investido durante essas verificações
@@ -182,7 +181,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: (MVP - description) 
   - Interface visual implementada e base de dados dos diferentes utilizadores da plataforma
   - Planeamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
-  - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes utilizadores (voluntários, administradores)
   - Desenvolvimento das funcionalidades simples da aplicação
 - Dates: [teams 0] 21-24/Nov | [teams1] 28-30/Nov
 - Release: V1.0
@@ -207,10 +205,8 @@ It is a collection of criteria that must be completed for a User Story to be con
   - Product Owner: name
   - Scrum Master: name
 - To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
   - Task1: Some task
-- Story Points: 2S+3M+3X+2H
+- Story Points (Small: 1, Medium: 2, Large: 3): 1S+2M+3L
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
