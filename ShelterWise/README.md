@@ -102,9 +102,14 @@ O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestã
 ***
 
 ### User Stories
-- User story 1 (link to issue card)
-- User story 2 (link to issue card)
-- User story 3 (link to issue card)
+- [US1 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/1)
+- [US2 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/2)
+- [US3 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/3)
+- [US4 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/4)
+- [US5 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
+- [US6 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
+- [US7 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
+- [US8 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
 
 ***
 
@@ -118,60 +123,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 2. Acceptance tests passed
 3. Accepted by the client
 4. Code merged to main
-
-***
-##### User Story 1
-**Organização Sem Fins Lucrativos**
-Como organização pretendo ajudar o máximo de animais que estão à responsabilidade da organização, e por isso quero poder gerir os voluntários.
-###### Acceptance Criteria
-> - Aceder à lista de todos os voluntários, incluindo detalhes;
-***
-##### User Story 2
-**Organização Sem Fins Lucrativos**
-Como organização, pretendo visualizar as doações de forma a ter acesso a todos os dados e de forma a que a organização prospere, e para isso necessito de ter acesso a todos os dados da organização.
-###### Acceptance Criteria
-> - Aceder à lista de todas as doações efetuadas.
-> - Aceder a lista de doadores incluindo informações e histórico de doações.
-***
-##### User Story 3
-**Organização Sem Fins Lucrativos**
-Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
-###### Acceptance Criteria
-> - Aceder à lista de todas as boxes, e a informação da sua ocupação.
-
-***
-
-##### User Story 4
-**Voluntários**
-Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, para isso preciso de ter acesso à informação total sobre dos animais.
-###### Acceptance Criteria
-> - Aceder à informação sobre a alimentação do animal (horário de alimentação, bem como se já foi alimentado).
-***
-##### User Story 5
-**Voluntarios**
-Como voluntário quero saber quais os animais existentes dentro da instituição, e para isso preciso de acesso à lista com a informação dos mesmos.
-###### Acceptance Criteria
-> - Aceder à lista de animais presentes na organização.
-***
-#### User Story 4
-**Voluntarios**
-Como voluntário quero saber a informação de cada animal, e para isso preciso de acesso à lista com a informação dos mesmos.
-###### Acceptance Criteria
-> - Aceder à informação dos animais presentes na lista.
-
-***
-
-##### User Story 6
-**Doadores**
-Como doador quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades, para isso preciso de ter acesso às necessidades da organização.
-***
-##### User Story 7
-**Doadores**
-Como doador quero ter a possibilidade de saber onde são gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
-###### Acceptance Criteria
-> - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
-> - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
-> - Receber atualizações sobre o progresso dos investimentos feitos;
 
 ***
 
