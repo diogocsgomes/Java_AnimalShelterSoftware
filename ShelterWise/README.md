@@ -52,14 +52,19 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel fundamental para as organizações que para além de ajudar numa melhor gestão dos animais, irá permitir às mesmas ajudar outros animais que também estejam a precisar de algum suporte e gerir melhor a organização, através da gestão de voluntários e doações. Assim, o software visa melhorar a condição de vida dos animais, bem como fomentar a adoção e facilitar o trabalho dos contribuintes da associação.
+O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestão dos animais é feita por parte das organizações de animais, para isto será necessária uma aplicação/software simples e eficaz. Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o software visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
 
 ##### List of features
-> - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
-> - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
-> - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
-> - Lista de veterinários e informações sobre o mesmos.
-> - Lista de casotas e informação da sua ocupação;
+> - **Gestão de Voluntários**
+>   - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
+> - **Gestão de Animais**
+>   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e vem como a ultima vez que o mesmo comeu;
+>   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
+>   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
+> - **Gestão de Voluntários**
+>   - Lista de veterinários e informações sobre o mesmos.
+> - **Gestão de instalações**
+>   - Lista de casotas e informação da sua ocupação;
 
 ##### Features that will not be developed
 > - Processamento de pagamentos das doações.
@@ -68,8 +73,6 @@ Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel f
 > - Secção de Adotante na aplicação.
 > - Implementação de um sistema distribuido (Vários clientes para um servidor).
 > - Gestão dos pedidos de ajuda.
-
-
 
 
 ##### Assumptions
@@ -83,18 +86,46 @@ Neste contexto, uma aplicação para uma gestão qualificada iria ter um papel f
 
 ## Requirements
 #### Use Case Diagram
-![Use case diagram](imgs/UML_use_case_example-800x707.png)
+**Administrador**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
+
+**Voluntários**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
+
+**Doadores**
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
 
 ***
 
 ### Mockups
+**Login**
+![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/948f84d01c5ddb5c22145b28ada64c1e.png)
 
+**Painel de Administrador**
+![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89a3ff465213e3f67020c4a968708d4e.png)
+
+**Painel de voluntário**
+![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89f6506e749cd0b2eaa78f38717efd8c.png)
+
+**Lista de Voluntários**
+![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/41e90f652d91e53f68d8421189d1b238.png)
+
+**Lista de Animais**
+![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png)
+
+**Lista de Veterinários**
+![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/712d17d1c6a722c6c9608cd8853dd55c.png)
 ***
 
 ### User Stories
-- User story 1 (link to issue card)
-- User story 2 (link to issue card)
-- User story 3 (link to issue card)
+- [US1 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/1)
+- [US2 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/2)
+- [US3 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/3)
+- [US4 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/4)
+- [US5 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
+- [US6 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
+- [US7 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
+- [US8 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
 
 ***
 
@@ -110,66 +141,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 4. Code merged to main
 
 ***
-##### User Story 1
-**Organização Sem Fins Lucrativos**
-Como organização pretendo ajudar o máximo de animais que estão à responsabilidade da organização, e por isso quero poder gerir os voluntários.
-###### Acceptance Criteria
-> - Aceder à lista de todos os voluntários, incluindo detalhes;
-***
-##### User Story 2
-**Organização Sem Fins Lucrativos**
-Como organização, pretendo visualizar as doações de forma a ter acesso a todos os dados e de forma a que a organização prospere, e para isso necessito de ter acesso a todos os dados da organização.
-###### Acceptance Criteria
-> - Aceder à lista de todas as doações efetuadas.
-> - Aceder a lista de doadores incluindo informações e histórico de doações.
-***
-##### User Story 3
-**Organização Sem Fins Lucrativos**
-Como organização, pretendo ter informação sobre as casotas, e por isso preciso de ter acesso à lista de todas as casotas na minha organização, bem como informação da sua ocupação.
-###### Acceptance Criteria
-> - Aceder à lista de todas as boxes, e a informação da sua ocupação.
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
-
-***
-
-##### User Story 4
-**Voluntários**
-Como voluntário desta organização quero ter a possibilidade de controlar a alimentação dos animais, para isso preciso de ter acesso à informação total sobre dos animais.
-###### Acceptance Criteria
-> - Aceder à informação sobre a alimentação do animal (horário de alimentação, bem como se já foi alimentado).
-***
-##### User Story 5
-**Voluntarios**
-Como voluntário quero saber quais os animais existentes dentro da instituição, e para isso preciso de acesso à lista com a informação dos mesmos.
-###### Acceptance Criteria
-> - Aceder à lista de animais presentes na organização.
-***
-#### User Story 4
-**Voluntarios**
-Como voluntário quero saber a informação de cada animal, e para isso preciso de acesso à lista com a informação dos mesmos.
-###### Acceptance Criteria
-> - Aceder à informação dos animais presentes na lista.
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
-
-***
-
-##### User Story 6
-**Doadores**
-Como doador quero ter a possibilidade de analisar os recursos em falta da organização para poder contribuir da melhor forma dentro das minhas possiblidades, para isso preciso de ter acesso às necessidades da organização.
-***
-##### User Story 7
-**Doadores**
-Como doador quero ter a possibilidade de saber onde são gastos os meus investimentos, para isso preciso de ter acesso à gestão dos recursos da organização.
-###### Acceptance Criteria
-> - Quando o doador entra no sistema deverá ter a possibilidade de analisar a lista de todos os investimentos feitos pelo mesmo;
-> - Este tem de ter a possibilidade obter informação à cerca dos recursos em falta da organização;
-> - Receber atualizações sobre o progresso dos investimentos feitos;
-###### Prototype
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
-
-***
 
 ## Architecture and Design
 #### Domain Model
@@ -180,18 +151,17 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 ***
 
 **Threshhold of Sucess**
-- (metas ao longo dos sprints)
-- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro sprint.
-- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint.
+- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK4) e atrasar o desenvolvimento do projeto.
+- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
 - Receber feedback positivo dos testes de software até ao final do terceiro sprint.
--
--
+- **Completar**
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
 - RSK2 - PxI: 2x5=12; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
-- RSK3 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
+- RSK3 - PxI: 2x5=10; Pode haver falhas de segurança que podem vir a comprometer a segurança da informação da organização
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
+- RSK5 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
 
 **Mitigation Actions (threats>=20)**
 - RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planeamento do tempo investido durante essas verificações
@@ -200,9 +170,8 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 
 ***
 ## Pre Game
-***
 ### Sprint 0 Plan
-- Goal: description
+- Goal: Terminar o README e as Mockups
 - Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
 - Roles:
   - Product Owner: name
@@ -221,37 +190,6 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
     - Task11 – Create Sprint 0 Board
     - Task12 – Write US in PB, estimate (SML), prioritize (MoSCoW), sort
     - Task13 – Create repository with “GPS Git” Workflow
-
-***
-### Sprint 1 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 1 Backlog:
-    - Task1 – Write Team
-
-***
-### Sprint 2 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 2 Backlog:
-    - Task1 – Write Team
-
-***
-### Sprint 3 Plan
-- Goal: description
-- Dates: ...
-- Roles:
-  - Product Owner: name
-  - Scrum Master: name
-- Sprint 3 Backlog:
-    - Task1 – Write Team
-    
 ***
 
 ## Release Plan
@@ -259,7 +197,6 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
 - Goal: (MVP - description) 
   - Interface visual implementada e base de dados dos diferentes utilizadores da plataforma
   - Planeamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
-  - Finalização do desenvolvimento e implementação de todos os aspetos visuais da aplicação e das bases de dados com os diferentes utilizadores (voluntários, administradores)
   - Desenvolvimento das funcionalidades simples da aplicação
 - Dates: [teams 0] 21-24/Nov | [teams1] 28-30/Nov
 - Release: V1.0
@@ -284,10 +221,8 @@ Como doador quero ter a possibilidade de saber onde são gastos os meus investim
   - Product Owner: name
   - Scrum Master: name
 - To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
   - Task1: Some task
-- Story Points: 2S+3M+3X+2H
+- Story Points (Small: 1, Medium: 2, Large: 3): 1S+2M+3L
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
