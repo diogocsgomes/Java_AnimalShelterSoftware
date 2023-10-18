@@ -52,13 +52,13 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestão dos animais é feita por parte das organizações de animais, para isto será necessária uma aplicação/software simples e eficaz. Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o software visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
+O ponto focal do nosso projeto consiste em melhorar e inovar a forma como a gestão dos animais é feita por parte das organizações de animais, para isto será necessária uma aplicação simples e eficaz. Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o aplicação visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
 
 ##### List of features
 > - **Gestão de Voluntários**
 >   - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
 > - **Gestão de Animais**
->   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e vem como a ultima vez que o mesmo comeu;
+>   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
 >   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
 >   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
 > - **Gestão de Voluntários**
@@ -152,14 +152,14 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 **Threshhold of Sucess**
-- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK4) e atrasar o desenvolvimento do projeto.
-- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
+- Concluir pelo menos 70% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK5) e atrasar o desenvolvimento do projeto.
+- Alcançar uma taxa de resolução de bugs de pelo menos 80% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
 - Receber feedback positivo dos testes de software até ao final do terceiro sprint.
 - **Completar**
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Falhar a conclusão das metas autopropostas no planeamento atempadamente devido à falta de experiência da equipa com projetos deste tipo
-- RSK2 - PxI: 2x5=12; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
+- RSK2 - PxI: 2x4=8; Potenciais problemas de compatibilidade no desenvolvimento devido à tecnologia escolhida para o projeto (JavaFx)
 - RSK3 - PxI: 2x5=10; Pode haver falhas de segurança que podem vir a comprometer a segurança da informação da organização
 - RSK4 - PxI: 2x5=10; Erros técnicos em fases críticas do projeto que podem implicar numa necessidade de revisão de grandes partes do projeto numa fase mais avançada, o que pode causar uma grande perda de tempo
 - RSK5 - PxI: 2x4=8; Alterações ao projeto inicial durante o desenvolvimento podem causar um atraso no processo
@@ -175,8 +175,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: Terminar o README e as Mockups
 - Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
 - Roles:
-  - Product Owner: name
-  - Scrum Master: name
+  - Product Owner: Ricardo Tavares
+  - Scrum Master: Diogo Fatia
 - Sprint 0 Backlog (don't edit this list):
     - Task1 – Write Team
     - Task2 – Write V&S
