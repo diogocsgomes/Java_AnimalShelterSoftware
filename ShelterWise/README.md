@@ -98,7 +98,23 @@ O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestã
 ***
 
 ### Mockups
+**Login**
+![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/948f84d01c5ddb5c22145b28ada64c1e.png)
 
+**Painel de Administrador**
+![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89a3ff465213e3f67020c4a968708d4e.png)
+
+**Painel de voluntário**
+![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89f6506e749cd0b2eaa78f38717efd8c.png)
+
+**Lista de Voluntários**
+![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/41e90f652d91e53f68d8421189d1b238.png)
+
+**Lista de Animais**
+![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png)
+
+**Lista de Veterinários**
+![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png?ref_type=heads)
 ***
 
 ### User Stories
