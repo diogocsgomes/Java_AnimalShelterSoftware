@@ -89,14 +89,6 @@ O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestã
 
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Todo.jpg)
 
-**Administrador**
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
-
-**Voluntários**
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Voluntarios.png)
-
-**Doadores**
-![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Doadores.png)
 
 ***
 
