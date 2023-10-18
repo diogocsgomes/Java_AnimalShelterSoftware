@@ -86,6 +86,9 @@ O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestã
 
 ## Requirements
 #### Use Case Diagram
+
+![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Todo.jpg)
+
 **Administrador**
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/Administrador.png)
 
