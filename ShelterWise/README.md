@@ -135,8 +135,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 **Threshhold of Sucess**
-- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro sprint.
-- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint.
+- Concluir pelo menos 80% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK4) e atrasar o desenvolvimento do projeto.
+- Alcançar uma taxa de resolução de bugs de pelo menos 90% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
 - Receber feedback positivo dos testes de software até ao final do terceiro sprint.
 - **Completar**
 
