@@ -114,7 +114,7 @@ O ponto focal do nosso projeto consiste em melhorar/inovar a forma como a gestã
 ![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png)
 
 **Lista de Veterinários**
-![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png?ref_type=heads)
+![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/712d17d1c6a722c6c9608cd8853dd55c.png)
 ***
 
 ### User Stories
