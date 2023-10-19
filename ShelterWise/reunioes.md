@@ -12,7 +12,7 @@ Pontos debatidos:
 - Discutir o ponto sobre adoção dos animais por um voluntário; :white_check_mark:
 - Atualizar a user story 3 para apenas conter uma user story; :white_check_mark:
 - Criar um caso de uso generalizado para várias user stories que possam falar sobre um mesmo user; :white_check_mark:
-- Alterações ao risk plan para alterar o thresshold of sucess de modo a ser alinhado com os riscos;
+- Alterações ao risk plan para alterar o thresshold of sucess de modo a ser alinhado com os riscos; :white_check_mark:
 
 - Alterações à list of features: :white_check_mark:
 > - lista e informações de cada animal (raça, onde se encontra, etc.);
