@@ -59,14 +59,14 @@ Esta aplicação além de auxiliar na gestão dos animais, também permitirá qu
 ##### List of features
 > - **Gestão de Voluntários**
 >   - Lista e informações sobre cada voluntário (separados por categorias como tratadores, participam em campanhas, participam com mão de obra na construção de casas para os animais ou fazem limpeza - eventualmente permitir apenas certas categorias de voluntários fazerem alterações às informações do animal);
+>   - Lista de veterinários e informações sobre o mesmos.
 > - **Gestão de Animais**
 >   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
 >   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
 >   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
-> - **Gestão de Voluntários**
->   - Lista de veterinários e informações sobre o mesmos.
 > - **Gestão de instalações**
 >   - Lista de casotas e informação da sua ocupação;
+>   - Lista de stock;
 
 ##### Features that will not be developed
 > - Processamento de pagamentos das doações.
