@@ -39,15 +39,14 @@
 Atualmente existem muitas organizações de proteção animal sem fins lucrativos que operam com recursos limitados e dependem muito do voluntariado. No entanto, a gestão de todos os animais resgatados pelas mesmas pode se tornar um processo complexo, uma vez que muitas das vezes estas não têm acesso a sistemas de gestão elaborados e eficazes o que pode pôr em risco o espaço e os animais.
 
 ##### Stakeholders
-> - Organizações: necessidade de um software de gestão que facilite o acompanhamento e a administração eficaz de projetos, tarefas, voluntários, animais e doadores.
+> - Administrador: necessidade de um software de gestão que facilite o acompanhamento e a administração eficaz de projetos, tarefas, voluntários, animais e doadores.
 > - Voluntários: necessidade de uma plataforma que simplifique a gestão de tarefas, projetos e horários do voluntariado.
-> - Animais: melhorias no suporte e na eficácia das organizações/voluntários, resultando em uma maior qualidade de serviço e um alcance mais amplo, bem como o melhor fornecimento de condições de apoio.
 > - Doadores: necessidade de uma ferramenta que mostre onde estão a ser usados os seus donativos da organização em questão, vem como uma plataforma para gerir todos os “supporters”. 
 > - Adotantes: necessidade de um sistema onde seja possível ver as pessoas que adotaram animais na instituição, para fazer um historial do animal.
 > - Veterinários: necessidade de um sistema de notifcações para quando necessário informar os veterinários que certo animal está com problemas.
 
 ##### Users
-> - Organizações
+> - Administrador
 > - Voluntários
 > - Doadores
 
@@ -55,7 +54,7 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-O ponto focal do nosso projeto consiste em melhorar e inovar a forma como a gestão dos animais é feita por parte das organizações de animais, para isto será necessária uma aplicação simples e eficaz. Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o aplicação visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
+Esta aplicação além de auxiliar na gestão dos animais, também permitirá que elas auxiliem outros animais que necessitem de suporte, bem como melhorem a administração da organização, incluindo a gestão de voluntários e doações. Portanto, o aplicação visa aprimorar a qualidade de vida dos animais, promover a adoção e facilitar o trabalho dos contribuintes da associação.
 
 ##### List of features
 > - **Gestão de Voluntários**
@@ -176,7 +175,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 ## Pre Game
 ### Sprint 0 Plan
 - Goal: Terminar o README e as Mockups
-- Dates: from 10-13/Oct to 24-27/Oct, 2 weeks
+- Dates: from 12/Oct to 26/Oct, 2 weeks
 - Roles:
   - Product Owner: Ricardo Tavares
   - Scrum Master: Diogo Fatia
@@ -202,7 +201,7 @@ It is a collection of criteria that must be completed for a User Story to be con
   - Interface visual implementada e base de dados dos diferentes utilizadores da plataforma
   - Planeamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
   - Desenvolvimento das funcionalidades simples da aplicação
-- Dates: [teams 0] 21-24/Nov | [teams1] 28-30/Nov
+- Dates: 30/Nov
 - Release: V1.0
 
 ***
@@ -211,7 +210,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: (Final release – description​)
   - Conclusão das funcionalidades finais da aplicação para cada utilizador
   - Testes extensos das funcionalidades para uso final
-- Date: [teams 0+1] 12-15/Dec
+- Date: [teams 0+1] 14/Dec
 - Release: V2.0
 
 ***
