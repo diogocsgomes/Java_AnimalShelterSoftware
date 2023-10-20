@@ -63,8 +63,8 @@ Esta aplicação além de auxiliar na gestão dos animais, também permitirá qu
 > - **Gestão de Animais**
 >   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
 >   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
->   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
-> - **Gestão de instalações**
+>   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal;
+> - **Gestão de Instalações**
 >   - Lista de casotas e informação da sua ocupação;
 >   - Lista de stock;
 
@@ -156,7 +156,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 **Threshhold of Sucess**
 - Concluir pelo menos 70% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK5) e atrasar o desenvolvimento do projeto.
 - Alcançar uma taxa de resolução de bugs de pelo menos 80% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
-- Receber feedback positivo dos testes de software até ao final do terceiro sprint.
 - **Completar**
 
 **Risk List**
@@ -198,19 +197,17 @@ It is a collection of criteria that must be completed for a User Story to be con
 ## Release Plan
 ### Release 1
 - Goal: (MVP - description) 
-  - Interface visual implementada e base de dados dos diferentes utilizadores da plataforma
-  - Planeamento e mockups da interface completos, com início da implementação dos principais e lineup inicial das bases de dados
-  - Desenvolvimento das funcionalidades simples da aplicação
-- Dates: 30/Nov
+  - Para a primeira release iremos ter a possibilidade a parte da gestão das boxes dos animais, gestão de atividades dos animais e o estado da adoção do animal;
+- Dates: 28-30/Nov
 - Release: V1.0
 
 ***
 
 ### Release 2
 - Goal: (Final release – description​)
-  - Conclusão das funcionalidades finais da aplicação para cada utilizador
-  - Testes extensos das funcionalidades para uso final
-- Date: [teams 0+1] 14/Dec
+  - Conclusão das funcionalidades finais da aplicação para cada utilizador;
+  - Testes extensos das funcionalidades para uso final;
+- Date: 12-15/Dec
 - Release: V2.0
 
 ***
