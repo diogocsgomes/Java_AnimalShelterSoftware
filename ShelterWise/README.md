@@ -121,14 +121,14 @@ Esta aplicação além de auxiliar na gestão dos animais, também permitirá qu
 ***
 
 ### User Stories
-- [US1 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/1)
-- [US2 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/2)
-- [US3 - Organização Sem Fins Lucrativos](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/3)
-- [US4 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/4)
-- [US5 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
-- [US6 - Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
-- [US7 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
-- [US8 - Doadores](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
+- [US1 - Adminstrador (Gerir voluntários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/1)
+- [US2 - Administrador (Mostrar doações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/2)
+- [US3 - Administrador (Gerir instalações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/3)
+- [US4 - Voluntários (Gerir a atividade dos animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/4)
+- [US5 - Voluntários (Gerir animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
+- [US6 - Voluntários (Gerir informação do animal)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
+- [US7 - Doadores (Gerir recursos organização)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
+- [US8 - Doadores (Gerir historial das doações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
 
 ***
 
