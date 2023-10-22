@@ -54,7 +54,7 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-"Este projeto é um investimento estratégico na transformação da gestão de um abrigo de animais. Ambicionamos otimizar o cuidado com os animais, a coordenação dos voluntários, a manutenção das instalações, a gestão de recursos e a interação com os doadores. O tempo e recursos financeiros investidos são fundamentais para alcançar uma operação mais eficiente e sustentável, que não apenas melhora a qualidade de vida dos animais, mas também facilita a adoção e fortalece a colaboração comunitária.
+Este projeto é um investimento estratégico na transformação da gestão de um abrigo de animais. Ambicionamos otimizar o cuidado com os animais, a coordenação dos voluntários, a manutenção das instalações, a gestão de recursos e a interação com os doadores. O tempo e recursos financeiros investidos são fundamentais para alcançar uma operação mais eficiente e sustentável, que não apenas melhora a qualidade de vida dos animais, mas também facilita a adoção e fortalece a colaboração comunitária.
 
 ##### List of features
 > - **Gestão de Voluntários**
