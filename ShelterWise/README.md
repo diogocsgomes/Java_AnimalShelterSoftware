@@ -173,7 +173,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 ## Pre Game
 ### Sprint 0 Plan
-- Goal: Terminar o README e as Mockups
+- Goal: Terminar o README as Mockups e os boards
 - Dates: from 12/Oct to 26/Oct, 2 weeks
 - Roles:
   - Product Owner: Ricardo Tavares
