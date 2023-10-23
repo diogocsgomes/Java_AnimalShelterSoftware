@@ -63,10 +63,13 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 > - **Gestão de Animais**
 >   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
 >   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
->   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal;
+>   - Adotar animal;
 > - **Gestão de Instalações**
 >   - Lista de casotas e informação da sua ocupação;
 >   - Lista de stock;
+> - **Gestão de Adoções e Doações**
+>   - Registo de adoções dos animais e das doações no mesmo local (quem doa dinheiro aparece no mesmo local que quem adotou um animal);
+
 
 ##### Features that will not be developed
 > - Processamento de pagamentos das doações.
