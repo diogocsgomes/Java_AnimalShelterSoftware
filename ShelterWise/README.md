@@ -159,7 +159,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Garantir que o programa na sua primeira release já é intuitivo o suficiente com a informação do feedback para 80% dos usuários (RSK6)
 - Garantir que o programa na release final está protegido contra toads as vulnerabilidades conhecidas para o tipo de tecnologias que o programa usa (RSK3)
 - Garantir que o programa na release final já suporta números elevados de usuários ao mesmo tempo
-- **Completar**
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Devido à falta de experiência da equipa com este tipo de projetos, pode acontecer uma falha na conclusão das metas propostas
