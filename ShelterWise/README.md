@@ -231,13 +231,23 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US3 - Administrador (Gerir instalações)**
     - Task1: Visualizar informação sobre as boxes do estabelecimento.
     - Task2: Visualizar quais são os animais dentro de cada boxe.
+    - Task3: Alterar, remover ou adicionar informações das boxes.  
   - **US4 - Voluntários (Gerir a atividade dos animais)**
     - Task1: Visualizar uma lista com todos os animais.
     - Task2: Visualizar o historial da alimentação do mesmo. 
-  - **US6 - Voluntários (Gerir informação do animal)**
+    - Task3: Alterar, remover ou adicionar informações dos animais.  
+  - **US9 - Voluntários (Gerir adoções)** 
+    - Task1: Visualizar uma lista com todos os animais não adotados.
+    - Task2: Inserir os dados do adotante.
+  - **US1 - Administrador (Gerir voluntários)**
+    - Task1: Visualizar a lista de voluntários
+    - Task2: Alterar, remover ou adicionar informações dos voluntários
+  - **US5 - Voluntários (Gerir animais)**
     - Task1: Visualizar uma lista com todos os animais.
-    - Task2: Visualizar a informação em especifico de um determinado animal.
-- Story Points: 
+    - Task2: Alterar, remover ou adicionar informações dos animais
+
+
+- Story Points: 3H+2H+3H+2H+6H+3H+2H+3H+2H+3H+2H+3H = 34H
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
