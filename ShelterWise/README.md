@@ -54,7 +54,7 @@ Atualmente existem muitas organizações de proteção animal sem fins lucrativo
 
 #### Vision & Scope of the Solution
 ##### Vision statement
-Este projeto é um investimento estratégico na transformação da gestão de um abrigo de animais. Ambicionamos otimizar o cuidado com os animais, a coordenação dos voluntários, a manutenção das instalações, a gestão de recursos e a interação com os doadores. O tempo e recursos financeiros investidos são fundamentais para alcançar uma operação mais eficiente e sustentável, que não apenas melhora a qualidade de vida dos animais, mas também facilita a adoção e fortalece a colaboração comunitária.
+Este projeto é um investimento para transformar a gestão de um abrigo de animais. Ambicionamos otimizar o cuidado com os animais, a coordenação dos voluntários, a manutenção das instalações, a gestão de recursos e a interação com os doadores. Para isso, temos a visão de gerir os voluntários de forma a coordenar o que cada um tem de fazer e gerir os doadores para que a organização saiba quem é que doa o que e para o que. Além disso queremos gerir os animais, de forma a saber as informações de cada um, bem como gerir stock, medicamentos e instalações. 
 
 ##### List of features
 > - **Gestão de Voluntários**
@@ -220,7 +220,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 #### Sprint 1
 ##### Sprint Plan
 - Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov, 3 weeks
+- Dates: from 26/Oct to 16/Nov, 3 weeks
 - Roles:
   - Product Owner: **Por escolher**
   - Scrum Master: **Por escolher**
@@ -234,7 +234,7 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US6 - Voluntários (Gerir informação do animal)**
     - Task1: Visualizar uma lista com todos os animais.
     - Task2: Visualizar a informação em especifico de um determinado animal.
-- Story Points (Small: 1, Medium: 2, Large: 3): 
+- Story Points: 
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
