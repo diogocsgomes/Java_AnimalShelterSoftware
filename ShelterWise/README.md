@@ -220,13 +220,18 @@ It is a collection of criteria that must be completed for a User Story to be con
 #### Sprint 1
 ##### Sprint Plan
 - Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Dates: from 24-27/Oct to 7-10/Nov, 3 weeks
 - Roles:
   - Product Owner: name
   - Scrum Master: name
 - To do:
-  - Task1: Some task
-- Story Points (Small: 1, Medium: 2, Large: 3): 1S+2M+3L
+  - US1 - name
+    - Task1: Some task
+    - Task2: Some task
+  - US2 - name
+    - Task1: Some task
+    - Task2: Some task
+- Story Points (Small: 1, Medium: 2, Large: 3): 
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
