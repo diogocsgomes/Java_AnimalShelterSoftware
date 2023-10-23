@@ -6,7 +6,7 @@ Apontamentos das reuniões feitas ao longo do projeto
 - Adicionar o email aos nomes no readme ✅
 - Tirar do project background a solução ✅
 - Reiterar a lista dos users para incluir apenas a organização, voluntários e doadores; ✅
-- Elaborar o vision statement para explicar quais as exatas funcionalidades da aplicação e com que fim estão a ser feitas (+ potencialmente incluir um desenho que explica a linha de pensamento de cada funcionalidade: ex. ligação entre um voluntário e um animal que explica o que cada um faz)
+- Elaborar o vision statement para explicar quais as exatas funcionalidades da aplicação e com que fim estão a ser feitas (+ potencialmente incluir um desenho que explica a linha de pensamento de cada funcionalidade: ex. ligação entre um voluntário e um animal que explica o que cada um faz) ✅
 - Alterações ao que planeamos fazer ou não; ✅
 - Discutir o ponto sobre adoção dos animais por um voluntário; ✅
 - Atualizar a user story 3 para apenas conter uma user story; ✅
@@ -33,7 +33,7 @@ Apontamentos das reuniões feitas ao longo do projeto
 ### 19/10/2023 - 15h15:
 - Remover Animais dos Stakeholders; ✅
 - Remover a primeira frase do Vision statement; ✅
-- Simplificar/Melhorar o Vision statement; (gerir os animais, gerir os voluntários, gerir as instalações, gerir o material, gerir doadores);
+- Simplificar/Melhorar o Vision statement; (gerir os animais, gerir os voluntários, gerir as instalações, gerir o material, gerir doadores); ✅
 - Adicionar um campo para o estado de saude do animal e um espaço para comentários;
 - Fazer uma lista mais simplificada da listas todas (mockups) e sim posteriormente mostrar uma informação mais complexa; 
 - Procurar o animal pelo nome, e por outros critérios (tipo animal, local onde se encontra);
@@ -41,9 +41,9 @@ Apontamentos das reuniões feitas ao longo do projeto
 - Criar uma label para cada US (US1, US2, US3, etc); ✅
 - Melhorar os criterios de aceitação (simplificar), tentar explicitar melhor os campos como por exemplo informações pessoais (nome, morada, telemovel);
 - Rever as user story;
-- Acresentar pelo menos +3 Threshold of Sucess;
-- Melhorar o Risk List, (Devido à falta de experiência da equipa com projetos deste tipo, pode levar a falhar a conclusão das metas autropropostas);
-- Melhorar a Mitigation Actions que temos (caso não consigamos comprir o prazo presuposto das metas autopropostas, falar com o cliente para negociar melhor as US a serem desenvolvidas);
+- Acresentar pelo menos +3 Threshold of Sucess; ✅
+- Melhorar o Risk List, (Devido à falta de experiência da equipa com projetos deste tipo, pode levar a falhar a conclusão das metas autropropostas); ✅
+- Melhorar a Mitigation Actions que temos (caso não consigamos comprir o prazo presuposto das metas autopropostas, falar com o cliente para negociar melhor as US a serem desenvolvidas); ✅
 - Adicionar no Goal do Sprint 0 Plan, as boards tambem;
 - Mudar o nome das US; ✅
 - Remover as open e close dos boards; ✅
