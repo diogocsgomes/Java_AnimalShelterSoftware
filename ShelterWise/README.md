@@ -180,8 +180,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: Terminar o README as Mockups e os boards
 - Dates: from 12/Oct to 26/Oct, 2 weeks
 - Roles:
-  - Product Owner: Ricardo Tavares
-  - Scrum Master: Diogo Fatia
+  - Product Owner: **Ricardo Tavares**
+  - Scrum Master: **Diogo Fatia**
 - Sprint 0 Backlog (don't edit this list):
     - Task1 – Write Team
     - Task2 – Write V&S
@@ -222,15 +222,18 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: what’s the goal for this sprint
 - Dates: from 24-27/Oct to 7-10/Nov, 3 weeks
 - Roles:
-  - Product Owner: name
-  - Scrum Master: name
+  - Product Owner: **Por escolher**
+  - Scrum Master: **Por escolher**
 - To do:
-  - US1 - name
-    - Task1: Some task
-    - Task2: Some task
-  - US2 - name
-    - Task1: Some task
-    - Task2: Some task
+  - **US3 - Administrador (Gerir instalações)**
+    - Task1: Visualizar informação sobre as boxes do estabelecimento.
+    - Task2: Visualizar quais são os animais dentro de cada boxe.
+  - **US4 - Voluntários (Gerir a atividade dos animais)**
+    - Task1: Visualizar uma lista com todos os animais.
+    - Task2: Visualizar o historial da alimentação do mesmo. 
+  - **US6 - Voluntários (Gerir informação do animal)**
+    - Task1: Visualizar uma lista com todos os animais.
+    - Task2: Visualizar a informação em especifico de um determinado animal.
 - Story Points (Small: 1, Medium: 2, Large: 3): 
 - Analysis: short analysis of the planning meeting
 
@@ -256,8 +259,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: what’s the goal for this sprint
 - Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
 - Roles:
-  - Product Owner: name
-  - Scrum Master: name
+  - Product Owner: **Por escolher**
+  - Scrum Master: **Por escolher**
 - To do:
   - (list of US or Tasks from the PB)
   - US1: As … I want … so that …
@@ -286,8 +289,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: what’s the goal for this sprint
 - Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
 - Roles:
-  - Product Owner: name
-  - Scrum Master: name
+  - Product Owner: **Por escolher**
+  - Scrum Master: **Por escolher**
 - To do:
   - (list of US or Tasks from the PB)
   - US1: As … I want … so that …
