@@ -154,30 +154,23 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 **Threshhold of Sucess**
-- Concluir pelo menos 70% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK5) e atrasar o desenvolvimento do projeto.
-- Alcançar uma taxa de resolução dos bugs detetados ao longo do primeiro e segundo sprints em 80% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK2).
-- Garantir que o programa na sua primeira release já é intuitivo o suficiente com a informação do feedback para 80% dos usuários (RSK6)
-- Garantir que o programa na release final está protegido contra toads as vulnerabilidades conhecidas para o tipo de tecnologias que o programa usa (RSK3)
-- Garantir que o programa na release final já suporta números elevados de usuários ao mesmo tempo
+- Concluir pelo menos 70% das funcionalidades planeadas até ao primeiro release, com atenção aos possíveis riscos técnicos que possam surgir (RSK6) e atrasar o desenvolvimento do projeto.
+- Alcançar uma taxa de resolução dos bugs detetados ao longo do primeiro e segundo sprints em 80% até o final do segundo sprint, através de testes contínuos para evitar problemas de compatibilidade (RSK5).
+- Garantir que o programa na sua primeira release já é intuitivo o suficiente com a informação do feedback para 80% dos utilizadores (RSK8)
+- Garantir que o programa na release final está protegido contra toads as vulnerabilidades conhecidas para o tipo de tecnologias que o programa usa (RSK2)
+- Garantir que o programa na release final já suporta números elevados de utilizadores ao mesmo tempo
 
 **Risk List**
 - RSK1 - PxI: 4x5=20; Devido à falta de experiência da equipa com este tipo de projetos, pode acontecer uma falha na conclusão das metas propostas
-- RSK2 - PxI: 2x4=8; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas, podem surgir erros de compatibilidade com o nosso planejamento
-- RSK3 - PxI: 2x5=10; Devido a possíveis falhas de segurança na implementação do projeto, podem acontecer vulnerabilidades que comprometam a segurança da informação dos usuários do programa
-- RSK4 - PxI: 2x5=10;  Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto, pode surgir a necessidade de fazer refactor a grande parte do código
-- RSK5 - PxI: 2x4=8; Devido a alterações ao planejamento inicial, podem acontecer atrasos no desenvolvimento
-- RSK6 - PxI: 2x4=8; Devido à falta de user feedback suficiente, o programa pode não ser intuitivo que chegue e a taxa de adoção ao programa ser baixa
-- RSK7 - PxI = 2x5=10; Devido à falta de testes suficientes, o programa pode não aguentar o overload de usuários quando em uso
+- RSK2 - PxI: 2x5=10; Devido a possíveis falhas de segurança na implementação do projeto, podem acontecer vulnerabilidades que comprometam a segurança da informação dos utilizadores do programa
+- RSK3 - PxI: 2x5=10;  Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto, pode surgir a necessidade de fazer refactor a grande parte do código
+- RSK4 - PxI = 2x5=10; Devido à falta de testes suficientes, o programa pode não aguentar o overload de utilizadores quando em uso
+- RSK5 - PxI: 2x4=8; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas, podem surgir erros de compatibilidade com o nosso planejamento
+- RSK6 - PxI: 2x4=8; Devido a alterações ao planejamento inicial, podem acontecer atrasos no desenvolvimento
+- RSK7 - PxI: 2x4=8; Devido à falta de user feedback suficiente, o programa pode não ser intuitivo que chegue e a taxa de adoção ao programa ser baixa
 
 **Mitigation Actions (threats>=20)**
 - RSK1 - MS: Verificar durante os sprints se estamos dentro das metas previstas e considerar mudanças no planeamento do tempo investido durante essas verificações
-- RSK2 - AS: Executar uma investigação prévia às tecnologias que pretendemos usar e quão bem se adaptam ao projeto que queremos fazer
-- RSK3 - AS: Fazer diversos testes ao longo do desenvolvimento para minimizar os riscos de existirem vulnerabilidades no programa
-- RSK4 - MS: Garantir que o planejamento da arquitetura inicial é o mais correto possível para o projeto que pretendemos desenvolver ser executado da melhor maneira
-- RSK5 - MS: Realizar reuniões com o cliente para garantir que o projeto a desenvolver se alinha com o pretendido em todas as etapas
-- RSK6 - CP: Requisitar user feedback constantemente de modo a garantir que o programa é o mais fácil de usar e intuitivo possível
-- RSK7 - AS: Realizar stress tests ao programa para garantir que a sua performance se mantém com diversos usuários simultâneos
-
 
 **Nota:** _Contingency Plan (CP), Avoidance Strategy (AS) or Minimization Strategy (MS)_
 
