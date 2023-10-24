@@ -132,6 +132,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US6 - Voluntários (Gerir informação do animal)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
 - [US7 - Doadores (Gerir recursos organização)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
 - [US8 - Doadores (Gerir historial das doações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
+- [US9 - Voluntários (Gerir adoações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/9)
 
 ***
 
@@ -205,7 +206,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 ### Release 1
 - Goal: (MVP - description) 
   - Para a primeira release iremos ter a possibilidade a parte da gestão das boxes dos animais, gestão de atividades dos animais e o estado da adoção do animal;
-- Dates: 28-30/Nov
+- Dates: 30/Nov
 - Release: V1.0
 
 ***
@@ -214,7 +215,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: (Final release – description​)
   - Conclusão das funcionalidades finais da aplicação para cada utilizador;
   - Testes extensos das funcionalidades para uso final;
-- Date: 12-15/Dec
+- Date: 14/Dec
 - Release: V2.0
 
 ***
