@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisInfoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/3967a40f65af05a846e0113317cdae0c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/41e90f652d91e53f68d8421189d1b238.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/712d17d1c6a722c6c9608cd8853dd55c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89a3ff465213e3f67020c4a968708d4e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/89f6506e749cd0b2eaa78f38717efd8c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/948f84d01c5ddb5c22145b28ada64c1e.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JavaFXApplication" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -37,25 +47,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "dev",
+    "last_directory_selection": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21/ShelterWise/src/main/java/com",
+    "last_opened_file_path": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21/ShelterWise/src/main/resources/com/example/shelterwise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.shelterwise" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -69,7 +87,10 @@
       <workItem from="1697325123172" duration="434000" />
       <workItem from="1697443851366" duration="72000" />
       <workItem from="1697444060475" duration="4038000" />
-      <workItem from="1697449942521" duration="184000" />
+      <workItem from="1697449942521" duration="256000" />
+      <workItem from="1697582094329" duration="432000" />
+      <workItem from="1697625369862" duration="1093000" />
+      <workItem from="1698170197615" duration="4519000" />
     </task>
     <servers />
   </component>
