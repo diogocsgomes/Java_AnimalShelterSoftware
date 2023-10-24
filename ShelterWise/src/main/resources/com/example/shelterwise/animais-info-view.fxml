@@ -17,7 +17,7 @@
          <children>
             <Text fill="WHITE" focusTraversable="true" layoutX="213.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Animal" textAlignment="CENTER">
                <font>
-                  <Font name="Warownia" size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
             <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="580.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">

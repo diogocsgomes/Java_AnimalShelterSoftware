@@ -175,10 +175,10 @@ It is a collection of criteria that must be completed for a User Story to be con
 **Risk List**
 - RSK1 - PxI: 4x5=20; Devido à falta de experiência da equipa com este tipo de projetos, pode acontecer uma falha na conclusão das metas propostas
 - RSK2 - PxI: 2x5=10; Devido a possíveis falhas de segurança na implementação do projeto, podem acontecer vulnerabilidades que comprometam a segurança da informação dos utilizadores do programa
-- RSK3 - PxI: 2x5=10;  Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto, pode surgir a necessidade de fazer refactor a grande parte do código
+- RSK3 - PxI: 2x5=10; Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto, pode surgir a necessidade de fazer refactor a grande parte do código
 - RSK4 - PxI = 2x5=10; Devido à falta de testes suficientes, o programa pode não aguentar o overload de utilizadores quando em uso
-- RSK5 - PxI: 2x4=8; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas, podem surgir erros de compatibilidade com o nosso planejamento
-- RSK6 - PxI: 2x4=8; Devido a alterações ao planejamento inicial, podem acontecer atrasos no desenvolvimento
+- RSK5 - PxI: 2x4=8; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas, podem surgir erros de compatibilidade com o nosso planeamento
+- RSK6 - PxI: 2x4=8; Devido a alterações ao planeamento inicial, podem acontecer atrasos no desenvolvimento
 - RSK7 - PxI: 2x4=8; Devido à falta de user feedback suficiente, o programa pode não ser intuitivo que chegue e a taxa de adoção ao programa ser baixa
 
 **Mitigation Actions (threats>=20)**
