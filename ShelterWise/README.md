@@ -124,7 +124,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 
 **Info Animais**
 
-![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_animais_info.png)
+![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_animais.png)
 
 **Lista de Veterinários**
 
