@@ -115,6 +115,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 ![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_voluntarios.png)
 
 - **Info Voluntários**
+
 ![Info Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_voluntarios.jpg)
 
 - **Lista de Animais**
@@ -130,6 +131,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 ![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_veterinarios.png)
 
 - **Info Veterinários**
+
 ![Info Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/blob/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_veterinarios.jpg)
 ***
 
