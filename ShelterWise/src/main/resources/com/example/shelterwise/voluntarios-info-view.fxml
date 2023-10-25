@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #282828;">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <Text fill="WHITE" focusTraversable="true" layoutX="213.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Voluntário" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="622.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
+                     <children>
+                        <Text fill="WHITE" layoutX="127.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Rui Cardoso">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="128.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: 3000-225">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="123.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 987 801 116">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="351.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 008">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="351.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: voluntario@gmail.com">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="351.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento: 01/01/2000">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="imgAnimal1" fitHeight="120.0" fitWidth="117.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true">
+                           <clip>
+                              <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
+                           </clip>
+                           <image>
+                              <Image url="@GPS-projeto/gps_g21(1)/gps_g21/ShelterWise/imgUsingApp/users_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="127.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: 18h-20h">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="355.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ativo:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <Circle fill="RED" layoutX="416.0" layoutY="206.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                     </children>
+                  </Pane>
+                  <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>
