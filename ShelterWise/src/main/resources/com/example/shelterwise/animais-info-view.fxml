@@ -57,7 +57,7 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="319.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado Saude: ">
+                  <Text fill="WHITE" layoutX="43.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 001">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -77,6 +77,11 @@
                         <Image url="@../../../../../../imgUsingApp/dog.jpg" />
                      </image>
                   </ImageView>
+                  <Text fill="WHITE" layoutX="329.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado Saude: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
                </children>
             </Pane>
             <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
