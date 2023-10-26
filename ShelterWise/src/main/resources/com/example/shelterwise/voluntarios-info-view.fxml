@@ -85,14 +85,6 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <ImageView fx:id="imgAnimal1" fitHeight="120.0" fitWidth="117.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true">
-                           <clip>
-                              <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
-                           </clip>
-                           <image>
-                              <Image url="@GPS-projeto/gps_g21(1)/gps_g21/ShelterWise/imgUsingApp/users_icon.png" />
-                           </image>
-                        </ImageView>
                         <Text fill="WHITE" layoutX="127.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: 18h-20h">
                            <font>
                               <Font name="System Bold" size="14.0" />
@@ -104,6 +96,11 @@
                            </font>
                         </Text>
                         <Circle fill="RED" layoutX="416.0" layoutY="206.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="14.0" layoutY="22.0">
+                           <image>
+                              <Image url="@../../../../../../imgUsingApp/users_icon.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </Pane>
                   <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
