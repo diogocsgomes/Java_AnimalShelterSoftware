@@ -235,7 +235,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 ## Increments
 #### Sprint 1
 ##### Sprint Plan
-- Goal: what’s the goal for this sprint
+- Goal: Criar as funcionalidades básicas para os Administradores e Voluntários
 - Dates: from 26/Oct to 16/Nov, 3 weeks
 - Roles:
   - Product Owner: **Por escolher**
@@ -261,7 +261,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 
 - Story Points: 3H+2H+3H+2H+6H+3H+2H+3H+2H+3H+2H+3H = 34H
-- Analysis: short analysis of the planning meeting
+- Analysis: 
 
 ##### Sprint Review
 - Analysis: what was not done or what was added (Link to US or Task from the PB)
