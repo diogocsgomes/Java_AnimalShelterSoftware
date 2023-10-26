@@ -33,12 +33,7 @@
             </Pane>
             <Pane fx:id="pnlInfoAnimal" layoutX="11.0" layoutY="121.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
                <children>
-                  <Text fill="WHITE" layoutX="83.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id: 1">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                  <Text fill="WHITE" layoutX="99.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -57,12 +52,7 @@
             </Pane>
             <Pane fx:id="pnlInfoAnimal1" layoutX="11.0" layoutY="174.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
                <children>
-                  <Text fill="WHITE" layoutX="83.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id: 2">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                  <Text fill="WHITE" layoutX="98.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -81,12 +71,7 @@
             </Pane>
             <Pane fx:id="pnlInfoAnimal2" layoutX="11.0" layoutY="228.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
                <children>
-                  <Text fill="WHITE" layoutX="83.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id: 3">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                  <Text fill="WHITE" layoutX="97.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
@@ -105,12 +90,7 @@
             </Pane>
             <Pane fx:id="pnlInfoAnimal11" layoutX="10.0" layoutY="282.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
                <children>
-                  <Text fill="WHITE" layoutX="83.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id: 4">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-                  <Text fill="WHITE" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                  <Text fill="WHITE" layoutX="103.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>

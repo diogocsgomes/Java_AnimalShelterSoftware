@@ -50,3 +50,14 @@ Apontamentos das reuniões feitas ao longo do projeto
 - Editar section do product backlog; ✅
 - Release Plan (dizer o que deve estar pronto, sem estar ligado a programação, exemplo: Toda a parte da gestão das instalações, etc); ✅
 - Definir metas para a sprint 0 (US, a serem apresentadas)
+
+***
+
+## Tópicos Reunião
+### Reunião 26/10:
+- Mockups completos com o novo modelo pedido - agora já existe uma lista extensa dos animais ou voluntários com uma caixa de pesquisa, também existe um campo para a saúde do animal e espaço para comentários;
+- Critérios de aceitação das US resolvidos - está na maneira correta do given/when/then;
+- Reestruturação do risk plan: threshhold ajustado, risk list escrita da maneira correta, mitigation actions corrijidas;
+- Datas dos 2 release plans corrijidas, objetivos definidos;
+- Sprint backlog da sprint 1 completo;
+- Product backlog colocado no sítio certo (Plan > Issue Boards)
