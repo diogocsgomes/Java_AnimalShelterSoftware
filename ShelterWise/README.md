@@ -247,8 +247,8 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US4 - Voluntários (Gerir a atividade dos animais)**
     - Task1: Visualizar uma lista com todos os animais.
     - Task2: Visualizar o historial da alimentação e banhos do mesmo. 
-    - Task4: Visualizar o estado de saúde deste. 
-    - Task5: Alterar, remover ou adicionar informações dos animais.  
+    - Task3: Visualizar o estado de saúde deste. 
+    - Task4: Alterar, remover ou adicionar informações dos animais.  
   - **US9 - Voluntários (Gerir adoções)** 
     - Task1: Visualizar uma lista com todos os animais não adotados.
     - Task2: Inserir os dados do adotante.
