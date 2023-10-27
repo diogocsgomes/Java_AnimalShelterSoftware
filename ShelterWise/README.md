@@ -246,8 +246,9 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task3: Alterar, remover ou adicionar informações das boxes.  
   - **US4 - Voluntários (Gerir a atividade dos animais)**
     - Task1: Visualizar uma lista com todos os animais.
-    - Task2: Visualizar o historial da alimentação do mesmo. 
-    - Task3: Alterar, remover ou adicionar informações dos animais.  
+    - Task2: Visualizar o historial da alimentação e banhos do mesmo. 
+    - Task4: Visualizar o estado de saúde deste. 
+    - Task5: Alterar, remover ou adicionar informações dos animais.  
   - **US9 - Voluntários (Gerir adoções)** 
     - Task1: Visualizar uma lista com todos os animais não adotados.
     - Task2: Inserir os dados do adotante.
@@ -259,7 +260,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task2: Alterar, remover ou adicionar informações dos animais
 
 
-- Story Points: 4H+3H+4H+3H+7H+4H+3H+4H+3H+4H+3H+4H = 46H
+- Story Points: 4H+3H+4H+3H+8H+3H+4H+3H+4H+3H+4H+3H+4H = 50H
 - Analysis: 
 
 ##### Sprint Review
