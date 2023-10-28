@@ -48,22 +48,22 @@
 - Definir metas para a sprint 0 (US, a serem apresentadas) ✅
 
 ## Reunião 3 - 26/10/2023 ás 15h50:
-- Threshold of Sucess tirar os 70% e especificar quais são as task (US) e remover os "70%" (Meter as task que tiverem com a label must have);
-- Se possivel não falar com percentagens mas sim com (US) (TASK´S);
-- Ser mais concreto nos riscos;
-- Rever os riscos, a falar de coisas que sejam de verdade no momento (remover o risco 6, 7, porque não começamos a desenvolver nada ainda);
-- Rescrever o Mitigation Action;
+- Threshold of Sucess tirar os 70% e especificar quais são as task (US) e remover os "70%" (Meter as task que tiverem com a label must have); ✅
+- Se possivel não falar com percentagens, mas sim com (US) (TASK´S); ✅
+- Ser mais concreto nos riscos; ✅
+- Rever os riscos, a falar de coisas que sejam de verdade no momento (remover o risco 6, 7, porque não começamos a desenvolver nada ainda); ✅
+- Rescrever o Mitigation Action; ✅
 - Remover as tasks da sprint 0 do close backlog; ✅
 - Mover as US que são para fazer para os in progress backlog; ✅
-- Falta os criterios de aceitação para a sprint 1;
+- Faltam os criterios de aceitação para a sprint 1;
 - Adicionar os criterios de aceitação no sprint backlog;
 - Fazer uma tabela com todos os utilizadores e vem como as tarefas que cada um pode desenvolver;
 - Clarificar sprint 1;
 - Clarificar US;
 - Substituir os nomes das labels; ✅
-- Usar o método do planning pocker para estimar as US/TASK´S;
 - US no backlog; ✅
 - Criar os cartoes de criterios de aceitação;
+- Usar o método do planning pocker para estimar as US/TASK´S; (FAZER REUNIÃO PARA ESTIMAR AS US/TASK´S);
 
 ## Reunião 4 - ../../2023 ás 15h..:
 ***

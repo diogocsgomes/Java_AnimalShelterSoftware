@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_animais.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_animais.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/REUNIOES.md" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/REUNIOES.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,8 @@
       <workItem from="1697625369862" duration="1093000" />
       <workItem from="1698170197615" duration="5111000" />
       <workItem from="1698230403489" duration="1000" />
-      <workItem from="1698329841659" duration="439000" />
+      <workItem from="1698329841659" duration="925000" />
+      <workItem from="1698499754791" duration="1264000" />
     </task>
     <servers />
   </component>
