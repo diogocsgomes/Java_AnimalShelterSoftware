@@ -30,4 +30,4 @@ COPY javafx-sdk /app/javafx-sdk
 ENV CLASSPATH /app/target/ShelterWise-1.0-SNAPSHOT.jar:/app/javafx-sdk/lib/*
 
 # Run the JavaFX application
-CMD ["java", "--module-path", "/app/javafx-sdk/lib", "--add-modules", "javafx.controls,javafx.fxml", "./javafx-sdk.ShelterWise.com.example.shelterwise/com.example.shelterwise.StarterApplication"]
+CMD ["java", "--module-path", "/app/javafx-sdk/lib", "--add-modules", "javafx.controls,javafx.fxml", "./javafx-sdk.GPS_G21.com.example.gps_g21/com.example.shelterwise.StarterApplication"]
