@@ -96,7 +96,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.example.shelterwise.StarterApplication</mainClass>
+              <mainClass>com.example.shelterwise/com.example.shelterwise.StarterApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
