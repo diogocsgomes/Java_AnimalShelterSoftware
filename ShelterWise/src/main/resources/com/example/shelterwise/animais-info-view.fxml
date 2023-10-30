@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AnimaisInfoApplication">
+    <children>
+        <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Text fill="WHITE" focusTraversable="true" layoutX="213.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Animal" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="580.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
+               <children>
+                  <Text fill="WHITE" layoutX="130.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="130.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Animal: Cão">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="130.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso: 13kg">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="130.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Género: M">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="319.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor do Pelo: Malhado">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="319.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Pelagem: N/A">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="319.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento: 06/10/2016">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="43.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 001">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="#09ff00" layoutX="428.0" layoutY="116.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="WHITE" layoutX="130.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentários:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea focusTraversable="false" layoutX="130.0" layoutY="155.0" prefHeight="84.0" prefWidth="407.0" promptText="Este campo serve para escrever algum tipo de comentário essencial acerca do animal" wrapText="true" />
+                  <ImageView fx:id="imgAnimal" fitHeight="120.0" fitWidth="133.0" layoutY="17.0" pickOnBounds="true">
+                     <clip>
+                        <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
+                     </clip>
+                     <image>
+                        <Image url="@../../../../../../imgUsingApp/dog.jpg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="329.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado Saude: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    </children>
+</VBox>
