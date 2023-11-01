@@ -62,7 +62,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 >   - Lista de veterinários e informações sobre o mesmos.
 > - **Gestão de Animais**
 >   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
->   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
+>   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde);
 >   - Adotar animal;
 > - **Gestão de Instalações**
 >   - Lista de casotas e informação da sua ocupação;
