@@ -42,18 +42,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.StarterController">
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.StarterController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #F6F6F3;" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="129.0" fitWidth="139.0" layoutX="250.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="129.0" fitWidth="139.0" layoutX="251.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../imgUsingApp/logo.png" />
+                  <Image url="@imgUsingApp/logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="loginButton" layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #506D68;" text="Login" textAlignment="CENTER" textFill="#171611" />
-            <TextField fx:id="usernameField" layoutX="209.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: white;" />
-            <PasswordField fx:id="passwordField" layoutX="209.0" layoutY="269.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: white;" />
+            <Button id="btnLogin" fx:id="loginButton" layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #506D68;" text="Login" textAlignment="CENTER" textFill="#171611">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField id="txtUsername" fx:id="usernameField" layoutX="209.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: white;" />
+            <PasswordField id="txtPassword" fx:id="passwordField" layoutX="209.0" layoutY="269.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: white;" />
             <Text fill="#171611" layoutX="171.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo ao ShelterWise!" textAlignment="CENTER" wrappingWidth="298.4000244140625">
                <font>
                   <Font name="System Bold" size="24.0" />
