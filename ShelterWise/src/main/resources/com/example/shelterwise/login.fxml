@@ -44,13 +44,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.example.shelterwise.StarterController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <Button layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" text="Login" textAlignment="CENTER" />
-            <TextField layoutX="209.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: white;" />
-            <PasswordField layoutX="209.0" layoutY="269.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: white;" />
+            <Button fx:id="loginButton" layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" text="Login" textAlignment="CENTER" style="-fx-background-color: purple;"/>
+            <TextField fx:id="usernameField" layoutX="209.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: white;" />
+            <PasswordField fx:id="passwordField" layoutX="209.0" layoutY="269.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: white;" />
             <Text fill="#893aff" layoutX="173.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo ao ShelterWise!" textAlignment="CENTER" wrappingWidth="296.0">
                <font>
                   <Font name="Warownia" size="24.0" />
