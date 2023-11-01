@@ -33,39 +33,32 @@
 -->
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="com.example.shelterwise.StarterController">
+<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.StarterController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #F6F6F3;" VBox.vgrow="ALWAYS">
       <children>
-            <Button fx:id="loginButton" layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" text="Login" textAlignment="CENTER" style="-fx-background-color: purple;"/>
+            <ImageView fitHeight="129.0" fitWidth="139.0" layoutX="250.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../imgUsingApp/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="loginButton" layoutX="209.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #506D68;" text="Login" textAlignment="CENTER" textFill="#171611" />
             <TextField fx:id="usernameField" layoutX="209.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: white;" />
             <PasswordField fx:id="passwordField" layoutX="209.0" layoutY="269.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: white;" />
-            <Text fill="#893aff" layoutX="173.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo ao ShelterWise!" textAlignment="CENTER" wrappingWidth="296.0">
+            <Text fill="#171611" layoutX="171.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo ao ShelterWise!" textAlignment="CENTER" wrappingWidth="298.4000244140625">
                <font>
-                  <Font name="Warownia" size="24.0" />
+                  <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Circle fill="#ce1fff" layoutX="320.0" layoutY="98.0" radius="53.0" stroke="BLACK" strokeType="INSIDE" />
-            <ImageView fitHeight="190.0" fitWidth="213.0" layoutX="240.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
-                <clip>
-                    <Circle centerX="75.0" centerY="75.0" radius="60.0" />
-                </clip>
-                <image>
-                  <Image url="@../../../../../../imgUsingApp/dog.jpg" />
-                </image>
-            </ImageView>
-            <CheckBox layoutX="248.0" layoutY="367.0" mnemonicParsing="false" text="Lembrar Username" />
       </children>
     </AnchorPane>
   </children>

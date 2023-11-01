@@ -6,7 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/ficheirosTxt/users.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-edit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/users.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/veterinarios-info-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/veterinarios-info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/veterinarios-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/veterinarios-list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-info-edit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-info-edit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-info-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/voluntarios-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +73,7 @@
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ficheirosTxt" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -85,6 +99,7 @@
       <workItem from="1698329841659" duration="925000" />
       <workItem from="1698499754791" duration="1402000" />
       <workItem from="1698663481580" duration="2908000" />
+      <workItem from="1698851451646" duration="6536000" />
     </task>
     <servers />
   </component>

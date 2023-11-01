@@ -45,7 +45,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
       <VBox prefHeight="400.0" prefWidth="640.0">
@@ -91,7 +91,7 @@
                                     <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
                                  </clip>
                                  <image>
-                                    <Image url="@GPS-projeto/gps_g21(1)/gps_g21/ShelterWise/imgUsingApp/users_icon.png" />
+                                    <Image url="@../../../../../../imgUsingApp/users_icon.png" />
                                  </image>
                               </ImageView>
                               <Text fill="WHITE" layoutX="127.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">

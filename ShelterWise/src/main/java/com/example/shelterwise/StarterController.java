@@ -46,8 +46,7 @@ public class StarterController {
     }
 
     public String isValidUser(String username, String password) {
-        //try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\diogo\\Documents\\lei\\3\\1\\gps\\tp\\gps_g21\\ShelterWise\\target\\classes\\com\\example\\shelterwise\\users.txt"))) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("target/classes/com/example/shelterwise/users.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("ShelterWise\\ficheirosTxt\\users.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -81,6 +80,11 @@ public class StarterController {
                 stage.setScene(scene);
             } else if("voluntario".equalsIgnoreCase(role)){
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("voluntarios-view.fxml"));
+                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+                stage.setScene(scene);
+            }
+            else if("veterinario".equalsIgnoreCase(role)){
+                FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("veterinarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
             }
