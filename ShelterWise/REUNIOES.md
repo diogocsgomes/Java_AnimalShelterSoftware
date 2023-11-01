@@ -57,7 +57,7 @@
 - Mover as US que são para fazer para os in progress backlog; ✅
 - Faltam os criterios de aceitação para a sprint 1;
 - Adicionar os criterios de aceitação no sprint backlog;
-- Fazer uma tabela com todos os utilizadores e vem como as tarefas que cada um pode desenvolver; :o:
+- Fazer uma tabela com todos os utilizadores e vem como as tarefas que cada um pode desenvolver; ✅
 - Clarificar sprint 1;
 - Clarificar US;
 - Substituir os nomes das labels; ✅
