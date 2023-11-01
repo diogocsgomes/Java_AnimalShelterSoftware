@@ -45,43 +45,43 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
       <VBox prefHeight="400.0" prefWidth="640.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #282828;">
+            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
                <children>
                   <AnchorPane prefHeight="400.0" prefWidth="600.0">
                      <children>
-                        <Text fill="WHITE" focusTraversable="true" layoutX="225.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Voluntário" textAlignment="CENTER">
+                        <Text fill="#171611" focusTraversable="true" layoutX="225.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Voluntário" textAlignment="CENTER">
                            <font>
                               <Font name="System Bold" size="24.0" />
                            </font>
                         </Text>
-                        <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="622.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
+                        <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="622.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                            <children>
-                              <Text fill="WHITE" layoutX="127.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                              <Text fill="#171611" layoutX="127.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="WHITE" layoutX="127.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada:">
+                              <Text fill="#171611" layoutX="126.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada:">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="WHITE" layoutX="127.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: ">
+                              <Text fill="#171611" layoutX="127.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: ">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="WHITE" layoutX="351.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+                              <Text fill="#171611" layoutX="351.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="WHITE" layoutX="351.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento:">
+                              <Text fill="#171611" layoutX="351.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento:">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
@@ -91,30 +91,30 @@
                                     <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
                                  </clip>
                                  <image>
-                                    <Image url="@../../../../../../imgUsingApp/users_icon.png" />
+                                    <Image url="@imgUsingApp/users_icon.png" />
                                  </image>
                               </ImageView>
-                              <Text fill="WHITE" layoutX="127.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">
+                              <Text fill="#171611" layoutX="126.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <TextField layoutX="171.0" layoutY="31.0" prefHeight="26.0" prefWidth="144.0" />
-                              <TextField layoutX="184.0" layoutY="71.0" prefHeight="26.0" prefWidth="134.0" />
-                              <TextField layoutX="192.0" layoutY="121.0" prefHeight="26.0" prefWidth="125.0" />
-                              <TextField layoutX="395.0" layoutY="71.0" prefHeight="26.0" prefWidth="213.0" />
+                              <TextField layoutX="179.0" layoutY="31.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: Gray;" />
+                              <TextField layoutX="190.0" layoutY="71.0" prefHeight="26.0" prefWidth="134.0" style="-fx-background-color: Gray;" />
+                              <TextField layoutX="195.0" layoutY="121.0" prefHeight="26.0" prefWidth="125.0" style="-fx-background-color: Gray;" />
+                              <TextField layoutX="395.0" layoutY="71.0" prefHeight="26.0" prefWidth="213.0" style="-fx-background-color: Gray;" />
                               <DatePicker layoutX="491.0" layoutY="31.0" prefHeight="25.0" prefWidth="117.0" />
-                              <ChoiceBox layoutX="258.0" layoutY="195.0" prefHeight="25.0" prefWidth="52.0" />
-                              <ChoiceBox layoutX="325.0" layoutY="195.0" prefHeight="25.0" prefWidth="52.0" />
-                              <Text layoutX="317.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                              <ChoiceBox layoutX="123.0" layoutY="208.0" prefHeight="25.0" prefWidth="52.0" />
+                              <ChoiceBox layoutX="205.0" layoutY="208.0" prefHeight="25.0" prefWidth="52.0" />
+                              <Text fill="#171611" layoutX="190.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
                            </children>
                         </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>

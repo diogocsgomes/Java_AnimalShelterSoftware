@@ -11,85 +11,91 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AnimaisInfoApplication">
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AnimaisInfoApplication">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Text fill="WHITE" focusTraversable="true" layoutX="213.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Animal" textAlignment="CENTER">
+            <Text fill="#171611" focusTraversable="true" layoutX="234.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Animal" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="580.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
+            <Pane fx:id="pnlInfoAnimal" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="580.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                <children>
-                  <Text fill="WHITE" layoutX="130.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
+                  <Text fill="#171611" layoutX="130.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bobi">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="130.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Animal: Cão">
+                  <Text fill="#171611" layoutX="130.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Animal: Cão">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="130.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso: 13kg">
+                  <Text fill="#171611" layoutX="130.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso: 13kg">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="130.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Género: M">
+                  <Text fill="#171611" layoutX="130.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Género: M">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="319.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor do Pelo: Malhado">
+                  <Text fill="#171611" layoutX="319.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor do Pelo: Malhado">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="319.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Pelagem: N/A">
+                  <Text fill="#171611" layoutX="319.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo Pelagem: N/A">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="319.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento: 06/10/2016">
+                  <Text fill="#171611" layoutX="319.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento: 06/10/2016">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Text fill="WHITE" layoutX="43.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 001">
+                  <Text fill="#171611" layoutX="36.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 001">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <Circle fill="#09ff00" layoutX="428.0" layoutY="116.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-                  <Text fill="WHITE" layoutX="130.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentários:">
+                  <Circle fill="#09ff00" layoutX="420.0" layoutY="117.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="#171611" layoutX="130.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentários:">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
-                  <TextArea focusTraversable="false" layoutX="130.0" layoutY="155.0" prefHeight="84.0" prefWidth="407.0" promptText="Este campo serve para escrever algum tipo de comentário essencial acerca do animal" wrapText="true" />
+                  <TextArea focusTraversable="false" layoutX="130.0" layoutY="155.0" prefHeight="84.0" prefWidth="407.0" promptText="Este campo serve para escrever algum tipo de comentário essencial acerca do animal" style="-fx-background-color: #506D68;" wrapText="true" />
                   <ImageView fx:id="imgAnimal" fitHeight="120.0" fitWidth="133.0" layoutY="17.0" pickOnBounds="true">
                      <clip>
                         <Circle fill="DODGERBLUE" layoutX="59.0" layoutY="61.0" radius="48.0" stroke="BLACK" strokeType="INSIDE" />
                      </clip>
                      <image>
-                        <Image url="@../../../../../../imgUsingApp/dog.jpg" />
+                        <Image url="@imgUsingApp/dog.jpg" />
                      </image>
                   </ImageView>
-                  <Text fill="WHITE" layoutX="329.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado Saude: ">
+                  <Text fill="#171611" layoutX="319.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado Saude: ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Circle fill="#09ff00" layoutX="409.0" layoutY="143.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Text fill="#171611" layoutX="319.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alimentado:">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Text>
                </children>
             </Pane>
-            <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" text="Guardar" textAlignment="CENTER">
+            <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" text="Voltar" textAlignment="CENTER">
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
