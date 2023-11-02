@@ -252,8 +252,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: Criar as funcionalidades básicas para os Administradores e Voluntários
 - Dates: from 26/Oct to 16/Nov, 3 weeks
 - Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
+  - Product Owner: **Ricardo Tavares**
+  - Scrum Master: **Diogo Fatia**
 - To do:
   - **US3 - Administrador (Gerir instalações)**
     - Task1: Visualizar informação sobre as boxes do estabelecimento.
