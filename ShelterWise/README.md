@@ -160,7 +160,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US14 - Voluntários (Editar e ver produtos)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/40)
 - [US15 - Voluntários (Informação casotas)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/41)
 - [US16 - Voluntários (Ver veterinários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/42)
-- [US17 - Doadores (Ver animasi)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/43)
+- [US17 - Doadores (Ver animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/43)
 
 ***
 
@@ -263,7 +263,8 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Visualizar uma lista com todos os animais.
     - Task2: Visualizar o historial da alimentação e banhos do animal. 
     - Task3: Visualizar o estado de saúde do animal. 
-    - Task4: Alterar, remover ou adicionar informações dos animais.  
+    - Task4: Visualizar o estado de alimentação do animal. 
+    - Task5: Alterar, remover ou adicionar informações dos animais.  
   - **US9 - Voluntários (Gerir adoções)** 
     - Task1: Visualizar uma lista com todos os animais não adotados.
     - Task2: Inserir os dados do adotante.
@@ -275,7 +276,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task2: Alterar, remover ou adicionar informações dos animais
 
 
-- Story Points: 4H+3H+4H+3H+8H+3H+4H+3H+4H+3H+4H+3H+4H = 50H
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H = 40H 
 - Analysis: 
 
 ##### Sprint Review
