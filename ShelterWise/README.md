@@ -161,6 +161,9 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US15 - Voluntários (Informação casotas)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/41)
 - [US16 - Voluntários (Ver veterinários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/42)
 - [US17 - Doadores (Ver animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/43)
+- [US18 - Administrador (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/47)
+- [US19 - Voluntários (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/48)
+- [US20 - Doadores (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/49)
 
 ***
 
@@ -274,9 +277,15 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US5 - Voluntários (Gerir animais)**
     - Task1: Visualizar uma lista com todos os animais.
     - Task2: Alterar, remover ou adicionar informações dos animais
+  - **US18 - Administrador (Login)**
+    - Task1: Efetuar o login na aplicação
+  - **US19 - Voluntários (Login)**
+    - Task1: Efetuar o login na aplicação
+  - **US20 - Doadores (Login)**
+    - Task1: Efetuar o login na aplicação
 
 
-- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H = 40H 
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H = 43H 
 - Analysis: 
 
 ##### Sprint Review
