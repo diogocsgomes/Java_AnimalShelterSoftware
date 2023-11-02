@@ -9,6 +9,7 @@
 - [Definition of Done](#definition-of-done)
 - [Architecture and Design](#architecture-and-design)
     - [Domain Model](#domain-model)
+    - [Tabela Tarefas](#tabela-tarefas)
     - [Risk Plan](#risk-plan)
 - [Pre Game](#pre-game)
   - [Sprin 0 Plan](#sprint-0-plan)
@@ -183,6 +184,9 @@ It is a collection of criteria that must be completed for a User Story to be con
 ## Architecture and Design
 #### Domain Model
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/ModeloDominio.png)
+
+#### Tabela Tarefas
+![Tabela de tarefas](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/TabelaDeTarefas.png)
 
 ***
 ### Risk Plan
