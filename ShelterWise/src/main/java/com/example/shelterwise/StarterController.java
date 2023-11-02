@@ -41,7 +41,6 @@ public class StarterController {
             if(role != null){
                 openApp(role);
             } //login fail
-
         });
     }
 

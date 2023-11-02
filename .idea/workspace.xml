@@ -5,14 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/cat.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/dog.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/search_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/users_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/imgUsingApp/vet_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AdminApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisInfoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/VoluntariosApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/admin-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_admin.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_admin.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_edit_animais.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_edit_animais.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_edit_voluntarios.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_edit_voluntarios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_animais.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_info_animais.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_veterinarios.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_info_veterinarios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_voluntarios.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_info_voluntarios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_animais.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_lista_animais.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_veterinarios.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_lista_veterinarios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_voluntarios.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_lista_voluntarios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_login.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_login.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_voluntario.png" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/imgMockups/mockup_voluntario.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testSQL/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/testSQL/DatabaseManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +82,8 @@
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ficheirosTxt" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise" />
+      <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ficheirosTxt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.shelterwise" />
@@ -93,6 +109,8 @@
       <workItem from="1698499754791" duration="1402000" />
       <workItem from="1698663481580" duration="2908000" />
       <workItem from="1698851451646" duration="9455000" />
+      <workItem from="1698941133494" duration="263000" />
+      <workItem from="1698955631934" duration="6927000" />
     </task>
     <servers />
   </component>

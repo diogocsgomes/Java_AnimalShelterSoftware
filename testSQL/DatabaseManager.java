@@ -4,8 +4,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class DatabaseManager {
-    //private static final String URL = "jdbc:sqlite:C:/Users/diogo/DataGripProjects/projetoDeTeste/identifier.sqlite";
-    private static final String URL = "jdbc:sqlite:C:\\Users\\diogo\\OneDrive\\Ambiente de Trabalho\\ISEC\\3ºano\\Gestão de Projeto de Software\\identifier2.sqlite";
+    private static final String URL = "jdbc:sqlite:\\testSQL\\identifier2.sqlite";
+    //private static final String URL = "jdbc:sqlite:C:\\Users\\diogo\\OneDrive\\Ambiente de Trabalho\\ISEC\\3ºano\\Gestão de Projeto de Software\\identifier2.sqlite";
 
     Connection conn = null;
     public DatabaseManager() throws SQLException, ClassNotFoundException {
