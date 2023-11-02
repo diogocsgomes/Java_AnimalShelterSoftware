@@ -283,9 +283,9 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Efetuar o login na aplicação
   - **US20 - Doadores (Login)**
     - Task1: Efetuar o login na aplicação
+  - Task1 - Criar uma base de dados
 
-
-- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H = 43H 
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H = 48H 
 - Analysis: 
 
 ##### Sprint Review
