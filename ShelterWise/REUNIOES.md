@@ -65,7 +65,15 @@
 - Criar os cartoes de criterios de aceitação;
 - Usar o método do planning pocker para estimar as US/TASK´S; (FAZER REUNIÃO PARA ESTIMAR AS US/TASK´S); ✅
 
-## Reunião 4 - ../../2023 ás 15h..:
+## Reunião 4 - 02/11/2023 ás 14h40:
+- Cartão para o login (US, Criterios de Aceitação); ✅
+- Fazer os testes para o login e para as restantes task´s (criar/editar/eliminar);
+- Criar uma labela para cada sprint e associar a cada US; ✅
+- Meter a tabela com as tarefas do excel criada no readme; ✅
+- Criar testes unitários para todas as task´s;
+- No final de cada US fazer teste de aceitação;
+- Criar a base de dados;
+
 ***
 
 ## Tópicos Reuniões
