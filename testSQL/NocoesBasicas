@@ -1,0 +1,5 @@
+Aqui podem encontrar um ficheiro base de dados SQLlite e dois ficheiros java com operações elementares(listar utilizadores, adicionar um utilizador) de exemplo.
+Creio que o codigo seja bastante simples, se o tentarem ler vão perceber o que faz, caso contario disponham as duvidas no discord
+Para que possam integrar a bd no vosso projeto (inteliJ) tem que adicionar 2 drivers aos modulos do projeto. Se não o souberem fazer contacem-me Diogo Gomes.
+
+
