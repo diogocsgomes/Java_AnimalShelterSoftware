@@ -58,12 +58,12 @@
 - Faltam os criterios de aceitação para a sprint 1;
 - Adicionar os criterios de aceitação no sprint backlog;
 - Fazer uma tabela com todos os utilizadores e vem como as tarefas que cada um pode desenvolver; ✅
-- Clarificar sprint 1;
-- Clarificar US;
+- Clarificar sprint 1; ✅
+- Clarificar US; ✅
 - Substituir os nomes das labels; ✅
 - US no backlog; ✅
 - Criar os cartoes de criterios de aceitação;
-- Usar o método do planning pocker para estimar as US/TASK´S; (FAZER REUNIÃO PARA ESTIMAR AS US/TASK´S);
+- Usar o método do planning pocker para estimar as US/TASK´S; (FAZER REUNIÃO PARA ESTIMAR AS US/TASK´S); ✅
 
 ## Reunião 4 - ../../2023 ás 15h..:
 ***
@@ -82,4 +82,11 @@
 - Datas dos 2 release plans corrijidas, objetivos definidos;
 - Sprint backlog da sprint 1 completo;
 - Product backlog colocado no sítio certo (Plan > Issue Boards);
-### Reunião ../..:
+### Reunião 02/11:
+- ReadMe atualizado;
+- Issues atualizados;
+- Boards atualizadas:
+    - Backlog;
+    - InProgressPB;
+    - ClosedPB;
+- Codigo adicionado;
