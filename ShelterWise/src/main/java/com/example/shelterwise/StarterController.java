@@ -13,76 +13,100 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.*;
 
 public class StarterController {
     @FXML
     private TextField usernameField;
-
     @FXML
     private PasswordField passwordField;
-
     @FXML
-    private Button loginButton;
-
+    private Button btnLogin;
     @FXML
-    private Text status;
-
+    private Text txtStatus;
+    int i = 0;
     private Stage stage;
-
+    Connection connection = null;
     public void setStage(Stage stage){
         this.stage = stage;
     }
 
     public void initialize(){
-        loginButton.setOnAction(event -> {
+        i = 0;
+        btnLogin.setOnAction(event -> {
             String username = usernameField.getText();
             String password = passwordField.getText();
             String role = isValidUser(username, password);
             if(role != null){
                 openApp(role);
-            } //login fail
+            }else{
+                txtStatus.setVisible(true);
+                txtStatus.setText("Dados inválidos (" + i + "x)");
+                i++;
+            }
         });
     }
 
     public String isValidUser(String username, String password) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("ShelterWise\\ficheirosTxt\\users.txt"))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
-                if(parts.length == 3) {
-                    String storedUsername = parts[0];
-                    String storedPassword = parts[1];
-                    String storedRole = parts[2];
-                    System.out.println(storedUsername);
-                    System.out.println(storedPassword);
-                    System.out.println(storedRole);
-
-                    if (username.equals(storedUsername) && password.equals(storedPassword)) {
-                        return storedRole;
-                    } else{
-                        System.out.println("Dados invalidos");
-                    }
-                }
-            }
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
+        String role = null;
+        connection = createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
         }
+        System.out.println("Connection successful");
+        String query = "select role from users where nome = ? and password = ?";
+        try {
+            System.out.println("user: " + username + " pass: " + password);
+            System.out.println("sqlQuery: " + query);
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
 
-        return null;
+            if (resultSet.next()) {
+                role = resultSet.getString("role");
+            }
+        } catch (SQLException ex) {
+            //ex.printStackTrace();
+        } finally {
+            closeDBConnection();
+        }
+        return role;
+    }
+
+    public Connection createDBConnection() {
+        try {
+            String dbPath = "jdbc:sqlite:ShelterWise\\ShelterWiseDB.sqlite";
+            return DriverManager.getConnection(dbPath);
+        } catch (Exception e) {
+            //e.printStackTrace();
+            return null;
+        }
+    }
+
+    public void closeDBConnection() {
+        try {
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException e) {
+            //e.printStackTrace();
+        }
     }
 
     public void openApp(String role){
         try{
-            if("admin".equalsIgnoreCase(role)){
+            if("1".equalsIgnoreCase(role)){
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
-            } else if("voluntario".equalsIgnoreCase(role)){
+            } else if("2".equalsIgnoreCase(role)){
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("voluntarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
             }
-            else if("veterinario".equalsIgnoreCase(role)){
+            else if("3".equalsIgnoreCase(role)){
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("veterinarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
