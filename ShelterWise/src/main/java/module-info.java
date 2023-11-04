@@ -9,4 +9,6 @@ module com.example.shelterwise {
 
     opens com.example.shelterwise to javafx.fxml;
     exports com.example.shelterwise;
+    exports com.example.shelterwise.Modelos;
+    opens com.example.shelterwise.Modelos to javafx.fxml;
 }

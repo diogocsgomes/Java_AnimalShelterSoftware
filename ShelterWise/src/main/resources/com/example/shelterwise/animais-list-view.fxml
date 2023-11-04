@@ -48,18 +48,19 @@
                </font>
             </Button>
             <ComboBox fx:id="typeAnimal" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Tipo Animal" style="-fx-background-color: Gray;" visibleRowCount="5" />
-            <TableView fx:id="tbAnimais" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
+            <TableView id="tbAnimais" fx:id="tbAnimais" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
-                <TableColumn prefWidth="61.0" text="Name" />
-                <TableColumn prefWidth="50.0" text="Weight" />
-                  <TableColumn prefWidth="58.0" text="Breed" />
-                  <TableColumn prefWidth="82.0" text="Type Animal" />
-                  <TableColumn prefWidth="57.0" text="Gender" />
-                  <TableColumn prefWidth="65.0" text="Fur Color" />
-                  <TableColumn prefWidth="63.0" text="Fur Type" />
-                  <TableColumn prefWidth="69.0" text="Birth Date" />
-                  <TableColumn prefWidth="68.0" text="Kennel Id" />
-                  <TableColumn prefWidth="177.0" text="Comments" />
+                  <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id" />
+                <TableColumn fx:id="nameColumn" prefWidth="61.0" text="Name" />
+                <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight" />
+                  <TableColumn fx:id="breedColumn" prefWidth="58.0" text="Breed" />
+                  <TableColumn fx:id="typeColumn" prefWidth="82.0" text="Type Animal" />
+                  <TableColumn fx:id="genderColumn" prefWidth="57.0" text="Gender" />
+                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" />
+                  <TableColumn fx:id="furTypeColumn" prefWidth="63.0" text="Fur Type" />
+                  <TableColumn fx:id="birthDateColumn" prefWidth="69.0" text="Birth Date" />
+                  <TableColumn fx:id="kennelIdColumn" prefWidth="68.0" text="Kennel Id" />
+                  <TableColumn fx:id="commentsColumn" prefWidth="177.0" text="Comments" />
               </columns>
             </TableView>
          </children></AnchorPane>

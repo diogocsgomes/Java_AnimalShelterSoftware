@@ -26,12 +26,14 @@ public class StarterController {
     private Text txtStatus;
     int i = 0;
     private Stage stage;
+    SqliteController sqliteController = new SqliteController();
     Connection connection = null;
     public void setStage(Stage stage){
         this.stage = stage;
     }
 
     public void initialize(){
+
         i = 0;
         btnLogin.setOnAction(event -> {
             String username = usernameField.getText();
@@ -49,7 +51,7 @@ public class StarterController {
 
     public String isValidUser(String username, String password) {
         String role = null;
-        connection = createDBConnection();
+        connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
             System.exit(1);
@@ -70,29 +72,9 @@ public class StarterController {
         } catch (SQLException ex) {
             //ex.printStackTrace();
         } finally {
-            closeDBConnection();
+            sqliteController.closeDBConnection(connection);
         }
         return role;
-    }
-
-    public Connection createDBConnection() {
-        try {
-            String dbPath = "jdbc:sqlite:ShelterWise\\ShelterWiseDB.sqlite";
-            return DriverManager.getConnection(dbPath);
-        } catch (Exception e) {
-            //e.printStackTrace();
-            return null;
-        }
-    }
-
-    public void closeDBConnection() {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (SQLException e) {
-            //e.printStackTrace();
-        }
     }
 
     public void openApp(String role){
