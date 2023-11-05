@@ -38,7 +38,7 @@
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="btnVoluntarios" alignment="CENTER" minWidth="100.0" style="-fx-background-color: #506D68;" text="Lista de Voluntários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Button fx:id="btnVoluntiers" onAction="#switchListaVoluntarios" alignment="CENTER" minWidth="100.0" style="-fx-background-color: #506D68;" text="Lista de Voluntários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>

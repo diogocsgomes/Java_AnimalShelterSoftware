@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="IU-232.10203.10">
+  <component name="dataSourceStorageLocal" created-in="IU-231.9392.1">
     <data-source name="ShelterWiseDB" uuid="25b48da2-b2b9-4bd4-9a37-d93a2de27af2">
+      <database-info product="SQLite" version="3.43.0" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.43.0.0" dbms="SQLITE" exact-version="3.43.0" exact-driver-version="3.43">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="ShelterWiseDB [2]" uuid="ddc4b4f6-4a0f-405b-af88-386295266a04">
       <database-info product="SQLite" version="3.43.0" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.43.0.0" dbms="SQLITE" exact-version="3.43.0" exact-driver-version="3.43">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

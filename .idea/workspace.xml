@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/SqliteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25b48da2-b2b9-4bd4-9a37-d93a2de27af2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/25b48da2-b2b9-4bd4-9a37-d93a2de27af2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25b48da2-b2b9-4bd4-9a37-d93a2de27af2/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/25b48da2-b2b9-4bd4-9a37-d93a2de27af2/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c47b61c-0956-4759-8771-879c7f496c19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3c47b61c-0956-4759-8771-879c7f496c19/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a552ecf6-ed27-4ce7-a19d-5bb6846a259d.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a552ecf6-ed27-4ce7-a19d-5bb6846a259d/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ee7d5334-df62-49bd-b622-94bb934802d2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ee7d5334-df62-49bd-b622-94bb934802d2/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efb2d2f0-985e-4e77-be5f-58e965b69c54.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/efb2d2f0-985e-4e77-be5f-58e965b69c54/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/25b48da2-b2b9-4bd4-9a37-d93a2de27af2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/StarterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +101,7 @@
       <workItem from="1699042597334" duration="8245000" />
       <workItem from="1699053721563" duration="50000" />
       <workItem from="1699106248157" duration="6517000" />
+      <workItem from="1699136302241" duration="55000" />
     </task>
     <servers />
   </component>

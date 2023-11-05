@@ -14,6 +14,8 @@ import java.io.IOException;
 public class AdminController {
     @FXML
     private Button btnAnimais;
+    @FXML
+    private Button btnVoluntiers;
 
     private Stage stage;
     private Scene scene;
