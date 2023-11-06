@@ -1,5 +1,7 @@
 package com.example.shelterwise.Modelos;
 
+import java.util.Date;
+
 public class Animal {
     public int id;
     public String birthDate;

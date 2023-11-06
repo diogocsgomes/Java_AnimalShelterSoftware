@@ -27,17 +27,12 @@
                   <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="402.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="473.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarAnimal" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminarAnimal" style="-fx-background-color: #506D68;" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarAnimal" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>

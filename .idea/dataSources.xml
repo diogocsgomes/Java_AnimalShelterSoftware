@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="ShelterWiseDB" uuid="b95f2d00-378d-4ea2-b420-44e70ee72f16">
+    <data-source source="LOCAL" name="ShelterWiseDB" uuid="a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\diogo\OneDrive\Ambiente de Trabalho\ISEC\3ºano\Gestão de Projeto de Software\projeto\teste\ShelterWise\ShelterWiseDB.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ShelterWiseDB.sqlite</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
