@@ -10,16 +10,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VoluntariosListController {
     @FXML
@@ -53,21 +55,28 @@ public class VoluntariosListController {
 
     private ObservableList<Users> dataVoluntiers;
 
+    @FXML
+    private ComboBox<String> typeVoluntier; //para depois
+
     public void initialize(){
+
+        ObservableList<String> options = FXCollections.observableArrayList("Nome", "Email", "Ativo", "Outro");
+        typeVoluntier.setItems(options);
+
+        List<Integer> idList = new ArrayList<>();
+
         connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
             System.exit(1);
         }
         System.out.println("Connection successful");
+
         dataVoluntiers = FXCollections.observableArrayList();
         nameColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("nome"));
-        birthColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("date_birth"));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<Users, Integer>("phone"));
-        emailColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("email"));
-        addressColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("address"));
-        nifColumn.setCellValueFactory(new PropertyValueFactory<Users, Integer>("nif"));
         activeColumn.setCellValueFactory(new PropertyValueFactory<Users, Boolean>("active"));
+        TableColumn<Users, Void> colBtn = new TableColumn("Visualizar Dados");
         String query = "select * from users where role = 2";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -76,14 +85,12 @@ public class VoluntariosListController {
             while (resultSet.next()){
                 Users vol = new Users();
                 vol.setName(resultSet.getString("nome"));
-                vol.setBirth(resultSet.getString("date_birth"));
                 vol.setPhone(resultSet.getInt("phone"));
-                vol.setEmail(resultSet.getString("email"));
-                vol.setAddress(resultSet.getString("address"));
-                vol.setNif(resultSet.getInt("nif"));
                 vol.setActive(resultSet.getBoolean("active"));
                 dataVoluntiers.add(vol);
+                idList.add(resultSet.getInt("id"));
             }
+            addButtonToTable(idList);
             tbVoluntiers.setItems(dataVoluntiers);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -91,13 +98,73 @@ public class VoluntariosListController {
             sqliteController.closeDBConnection(connection);
         }
     }
-    public void switchVoltar(ActionEvent event) throws IOException {
-        /*Parent root = preScene.getRoot();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(root.getScene());
-        stage.show();
 
-         */
+    private void addButtonToTable(List<Integer> idColumnName) {
+
+        TableColumn<Users, Void> colBtn = new TableColumn("Visualizar Dados");
+
+        Callback<TableColumn<Users, Void>, TableCell<Users, Void>> cellFactory = new Callback<TableColumn<Users, Void>, TableCell<Users, Void>>() {
+            @Override
+            public TableCell<Users, Void> call(final TableColumn<Users, Void> param) {
+                final TableCell<Users, Void> cell = new TableCell<Users, Void>() {
+
+                    Button btn = new Button("Visualizar");
+                    Integer id = null;
+
+                    {
+                        btn.setOnAction((ActionEvent event) -> {
+
+                            Parent root = null;
+                            try {
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("voluntarios-info-view.fxml"));
+
+                                loader.setControllerFactory(controllerClass -> {
+                                    if (controllerClass == VoluntariosViewDataController.class) {
+                                        return new VoluntariosViewDataController(id);
+                                    } else {
+                                        try {
+                                            return controllerClass.newInstance();
+                                        } catch (Exception e) {
+                                            throw new RuntimeException(e);
+                                        }
+                                    }
+                                });
+
+                                root = loader.load();
+                            } catch (IOException e) {
+                                throw new RuntimeException(e);
+                            }
+                            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                            preScene = stage.getScene();
+
+                            scene = new Scene(root);
+                            stage.setScene(scene);
+                            stage.show();
+
+                        });
+                    }
+
+                    @Override
+                    public void updateItem(Void item, boolean empty) {
+                        super.updateItem(item, empty);
+                        if (empty) {
+                            setGraphic(null);
+                        } else {
+                            setGraphic(btn);
+                            Users data = getTableView().getItems().get(getIndex());
+                            id = idColumnName.get(getIndex()); // Obtenha o ID correspondente
+                        }
+                    }
+                };
+                return cell;
+            }
+        };
+
+        colBtn.setCellFactory(cellFactory);
+        tbVoluntiers.getColumns().add(colBtn);
+    }
+
+    public void switchVoltar(ActionEvent event) throws IOException {
 
         if(StarterController.userType == UserTypes.ADMIN)
         {
@@ -115,15 +182,23 @@ public class VoluntariosListController {
 
     }
 
-    public void eliminarVol(ActionEvent actionEvent) {
-    }
 
-    public void switchEditarVol(ActionEvent actionEvent) {
-    }
+    public void switcharAdd(ActionEvent event) throws IOException {
 
-    public void switcharVol(ActionEvent actionEvent) {
-    }
+        if(StarterController.userType == UserTypes.ADMIN)
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("voluntarios-create.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
 
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else{
+            System.out.println("A OPERAÇÃO ADICIONAR VOLUNTÁRIO APENAS DEVE SER EFETUADA POR UM ADMIN");
+        }
+
+    }
 
     // Caso tentamos depois fazer com os panes em vez de tabelas
     /*@Override
@@ -159,6 +234,4 @@ public class VoluntariosListController {
 
         dynamicPaneContainer.getChildren().add(pane);
     }*/
-
-
 }

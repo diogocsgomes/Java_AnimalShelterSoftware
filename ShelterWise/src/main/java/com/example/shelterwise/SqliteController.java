@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class SqliteController {
     public Connection createDBConnection() {
         try {
-            String dbPath = "jdbc:sqlite:ShelterWise\\ShelterWiseDB.sqlite";
+            String dbPath = "jdbc:sqlite:ShelterWiseDB\\ShelterWiseDB.sqlite";
             return DriverManager.getConnection(dbPath);
         } catch (Exception e) {
             //e.printStackTrace();
