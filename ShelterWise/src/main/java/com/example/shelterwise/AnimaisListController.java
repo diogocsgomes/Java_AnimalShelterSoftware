@@ -1,6 +1,7 @@
 package com.example.shelterwise;
 
 import com.example.shelterwise.Modelos.Animal;
+import com.example.shelterwise.usertypes.UserTypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,7 +22,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class AnimaisController {
+public class AnimaisListController {
     @FXML
     private static Label lblTitulo;
     @FXML
@@ -105,10 +106,49 @@ public class AnimaisController {
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
-        Parent root = preScene.getRoot();
+
+        //Parent root = preScene.getRoot();
+       /* Parent root = FXMLLoader.load(getClass().getResource("voluntarios-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        preScene = stage.getScene();
+
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+        */ //O codigo comentado funciona mas não está preparado para liadar com varios tipos de utilizadores
+
+        /*Parent root = preScene.getRoot();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(root.getScene());
         stage.show();
+
+
+         */
+
+        if(StarterController.userType == UserTypes.ADMIN)
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("admin-view.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
+
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else if (StarterController.userType == UserTypes.VULUNTIER) {
+            Parent root = FXMLLoader.load(getClass().getResource("voluntarios-view.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
+
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else if (StarterController.userType == UserTypes.VET) {
+            //ainda nao existe uma vista exclusiva para veterinarios
+           System.out.println("FUNCIONALIDADE POR IMPLEMENTAR");
+        }
+
+
     }
     public void switchCriarAnimal(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("animais-info.fxml"));

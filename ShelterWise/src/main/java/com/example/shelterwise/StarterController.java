@@ -1,5 +1,6 @@
 package com.example.shelterwise;
 
+import com.example.shelterwise.usertypes.UserTypes;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -28,6 +29,9 @@ public class StarterController {
     private Stage stage;
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
+
+    public static UserTypes userType = null;
+
     public void setStage(Stage stage){
         this.stage = stage;
     }
@@ -80,15 +84,18 @@ public class StarterController {
     public void openApp(String role){
         try{
             if("1".equalsIgnoreCase(role)){
+                userType = UserTypes.ADMIN;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
             } else if("2".equalsIgnoreCase(role)){
+                userType = UserTypes.VULUNTIER;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("voluntarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
             }
             else if("3".equalsIgnoreCase(role)){
+                userType = UserTypes.VET;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("veterinarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
