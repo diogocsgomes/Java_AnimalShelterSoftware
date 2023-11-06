@@ -17,10 +17,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class AnimaisListController {
     @FXML
@@ -74,7 +71,7 @@ public class AnimaisListController {
         genderColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("gender"));
         furColorColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furColor"));
         furTypeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furType"));
-        birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("birthDate"));
+        birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
         String query = "select * from animals";
@@ -106,26 +103,6 @@ public class AnimaisListController {
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
-
-        //Parent root = preScene.getRoot();
-       /* Parent root = FXMLLoader.load(getClass().getResource("voluntarios-view.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        preScene = stage.getScene();
-
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-
-        */ //O codigo comentado funciona mas não está preparado para liadar com varios tipos de utilizadores
-
-        /*Parent root = preScene.getRoot();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        stage.setScene(root.getScene());
-        stage.show();
-
-
-         */
-
         if(StarterController.userType == UserTypes.ADMIN)
         {
             Parent root = FXMLLoader.load(getClass().getResource("admin-view.fxml"));
@@ -151,7 +128,7 @@ public class AnimaisListController {
 
     }
     public void switchCriarAnimal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("animais-info.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("animais-info-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         preScene = stage.getScene();
         scene = new Scene(root);
@@ -160,16 +137,21 @@ public class AnimaisListController {
         stage.show();
     }
     public void switchEditarAnimal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("animais-info.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        preScene = stage.getScene();
-        scene = new Scene(root);
-        stage.setTitle("Editar Animal");
-        //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void eliminarAnimal(ActionEvent event) throws IOException {
-
+        Animal selectedAnimalId = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
+        if (selectedAnimalId != null) {
+            System.out.println("Animal Selecionado: " + selectedAnimalId.getId());
+            //Parent root = FXMLLoader.load(getClass().getResource("animais-info-view.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(loader.load());
+            AnimaisInfoController infoController = loader.getController();
+            infoController.setAnimalId(selectedAnimalId.getId());
+            stage.setTitle("Editar Animal");
+            //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            System.out.println("No animal selected");
+        }
     }
 }

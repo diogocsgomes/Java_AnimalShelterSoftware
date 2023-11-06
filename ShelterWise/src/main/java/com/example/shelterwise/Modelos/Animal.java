@@ -1,7 +1,10 @@
 package com.example.shelterwise.Modelos;
 
+import java.util.Date;
+
 public class Animal {
     public int id;
+    public String image;
     public String birthDate;
     public String breed;
     public String comments ;
@@ -17,8 +20,9 @@ public class Animal {
         // Construtor vazio
     }
 
-    public Animal(int id, String birthDate, String breed, String comments, String furColor, String furType, String gender, int kennelId, String name, String type, double weight) {
+    public Animal(int id, String image, String birthDate, String breed, String comments, String furColor, String furType, String gender, int kennelId, String name, String type, double weight) {
         this.id = id;
+        this.image = image;
         this.birthDate = birthDate;
         this.breed = breed;
         this.comments = comments;
@@ -38,6 +42,10 @@ public class Animal {
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getImage() {return image;}
+
+    public void setImage(String image) {this.image = image;}
 
     public String getBirthDate() {
         return birthDate;
