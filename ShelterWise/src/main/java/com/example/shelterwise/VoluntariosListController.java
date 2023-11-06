@@ -1,10 +1,12 @@
 package com.example.shelterwise;
 
 import com.example.shelterwise.Modelos.Users;
+import com.example.shelterwise.usertypes.UserTypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -90,10 +92,27 @@ public class VoluntariosListController {
         }
     }
     public void switchVoltar(ActionEvent event) throws IOException {
-        Parent root = preScene.getRoot();
+        /*Parent root = preScene.getRoot();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         stage.setScene(root.getScene());
         stage.show();
+
+         */
+
+        if(StarterController.userType == UserTypes.ADMIN)
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("admin-view.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
+
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }else{
+            System.out.println("A OPERAÇÃO SAIR DA LISTA DE VOLUNTARIOS APENAS DEVE SER EFETUADA POR UM ADMIN");
+        }
+
+
     }
 
     public void eliminarVol(ActionEvent actionEvent) {
