@@ -4,6 +4,5 @@ public enum UserTypes {
     ADMIN,
     VULUNTIER,
     VET,
-
     DONATOR
 }

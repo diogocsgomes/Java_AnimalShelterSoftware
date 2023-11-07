@@ -58,6 +58,7 @@ public class StarterController {
         connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
+            System.err.println();
             System.exit(1);
         }
         System.out.println("Connection successful");
@@ -88,7 +89,8 @@ public class StarterController {
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("admin-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);
                 stage.setScene(scene);
-            } else if("2".equalsIgnoreCase(role)){
+            }
+            else if("2".equalsIgnoreCase(role)){
                 userType = UserTypes.VULUNTIER;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("voluntarios-view.fxml"));
                 Scene scene = new Scene(fxmlLoader.load(), 600, 400);

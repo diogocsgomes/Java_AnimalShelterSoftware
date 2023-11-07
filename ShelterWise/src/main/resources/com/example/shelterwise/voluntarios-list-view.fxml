@@ -65,21 +65,16 @@
                   <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="402.0" layoutY="361.0" mnemonicParsing="false" onAction="#switcharVol" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#switcharAdd" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
             </Button>
-            <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarVol" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+            <!--<Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarVol" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
-            </Button>
-            <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="520.0" layoutY="361.0" mnemonicParsing="false" onAction="#eliminarVol" style="-fx-background-color: #506D68;" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
+            </Button>-->
             <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
@@ -88,12 +83,8 @@
             <ComboBox fx:id="typeVoluntier" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbVoluntiers" fx:id="tbVoluntiers" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
                <columns>
-                  <TableColumn fx:id="nameColumn" prefWidth="50.0" text="Nome" />
-                  <TableColumn fx:id="birthColumn" prefWidth="61.0" text="Data de nascimento" />
-                  <TableColumn fx:id="phoneColumn" prefWidth="50.0" text="Número de telefone" />
-                  <TableColumn fx:id="emailColumn" prefWidth="58.0" text="Email" />
-                  <TableColumn fx:id="addressColumn" prefWidth="82.0" text="Morada" />
-                  <TableColumn fx:id="nifColumn" prefWidth="57.0" text="NIF" />
+                  <TableColumn fx:id="nameColumn" prefWidth="80.0" text="Nome" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="80.0" text="Número de telefone" />
                   <TableColumn fx:id="activeColumn" prefWidth="65.0" text="Ativo" />
                </columns>
             </TableView>

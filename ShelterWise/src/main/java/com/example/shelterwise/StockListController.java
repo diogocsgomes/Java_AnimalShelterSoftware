@@ -60,7 +60,7 @@ public class StockListController {
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("description"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expired_date"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("quantity"));
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("category"));
+        //categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("category"));
         String query = "select * from product";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -68,11 +68,11 @@ public class StockListController {
 
             while (resultSet.next()){
                 Stock prod = new Stock();
-                prod.setName(resultSet.getString("nome"));
+                prod.setName(resultSet.getString("name"));
                 prod.setDescription(resultSet.getString("description"));
-                prod.setExpiredDate(resultSet.getString("date_expired"));
+                prod.setExpiredDate(resultSet.getString("expired_date"));
                 prod.setQuantity(resultSet.getInt("quantity"));
-                prod.setCategory(resultSet.getString("category"));
+                //prod.setCategory(resultSet.getString("category"));
                 dataStock.add(prod);
             }
             tbStock.setItems(dataStock);
