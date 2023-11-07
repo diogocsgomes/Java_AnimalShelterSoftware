@@ -42,7 +42,11 @@ public class AdminController {
 
     }
     public void switchListaStock(ActionEvent event) throws IOException {
-
+        Parent root = FXMLLoader.load(getClass().getResource("stock-list-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     public void switchVerCalendario(ActionEvent event) throws IOException {
 

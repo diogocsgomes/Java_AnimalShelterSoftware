@@ -74,7 +74,7 @@ public class StarterController {
                 role = resultSet.getString("role");
             }
         } catch (SQLException ex) {
-            //ex.printStackTrace();
+            ex.printStackTrace();
         } finally {
             sqliteController.closeDBConnection(connection);
         }
