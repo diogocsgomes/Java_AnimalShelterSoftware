@@ -102,4 +102,5 @@
 ### Reunião 09/11
 -Adicionados Issues para os Criterios de Aceitação
 -Base de dados adicionada
+-Codigo atualizado
 
