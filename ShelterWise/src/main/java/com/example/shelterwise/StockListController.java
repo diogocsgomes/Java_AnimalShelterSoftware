@@ -31,7 +31,7 @@ public class StockListController {
     private TableColumn descriptionColumn;
 
     @FXML
-    private TableColumn dateColumn;
+    private TableColumn expired_dateColumn;
 
     @FXML
     private TableColumn quantityColumn;
@@ -48,6 +48,9 @@ public class StockListController {
 
     private ObservableList<Stock> dataStock;
 
+    public StockListController() {
+    }
+
     public void initialize(){
         connection = sqliteController.createDBConnection();
         if(connection == null){
@@ -58,10 +61,11 @@ public class StockListController {
         dataStock = FXCollections.observableArrayList();
         nameColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("name"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("description"));
-        dateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expired_date"));
+        expired_dateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expired_date"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("quantity"));
-        //categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("category"));
-        String query = "select * from product";
+        categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("category"));
+
+        String query = "SELECT p.name, p.description, p.expired_date, p.quantity, c.name AS category " + "FROM product p " + "INNER JOIN category_product c ON p.category = c.id";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -72,7 +76,7 @@ public class StockListController {
                 prod.setDescription(resultSet.getString("description"));
                 prod.setExpiredDate(resultSet.getString("expired_date"));
                 prod.setQuantity(resultSet.getInt("quantity"));
-                //prod.setCategory(resultSet.getString("category"));
+                prod.setCategory(resultSet.getString("category"));
                 dataStock.add(prod);
             }
             tbStock.setItems(dataStock);
@@ -119,6 +123,16 @@ public class StockListController {
         }
 
 
+    }
+
+    public void switcharAddProd(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("stock-create.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        preScene = stage.getScene();
+
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void eliminarProd(ActionEvent actionEvent) {

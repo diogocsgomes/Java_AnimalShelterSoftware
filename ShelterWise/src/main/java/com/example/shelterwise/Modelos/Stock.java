@@ -54,8 +54,8 @@ public class Stock {
         return expired_date;
     }
 
-    public void setExpiredDate(String expired_date){
-        this.expired_date = expired_date;
+    public void setExpiredDate(String expiredDate){
+        this.expired_date = expiredDate;
     }
 
     public String getCategory(String category){
