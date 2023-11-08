@@ -58,7 +58,7 @@ public class VoluntariosListController {
     @FXML
     private ComboBox<String> typeVoluntier; //para depois
 
-    public void initialize(){
+    public boolean initialize(){
 
         ObservableList<String> options = FXCollections.observableArrayList("Nome", "Email", "Ativo", "Outro");
         typeVoluntier.setItems(options);
@@ -69,6 +69,7 @@ public class VoluntariosListController {
         if(connection == null){
             System.out.println("Connection not successful");
             System.exit(1);
+            return false;
         }
         System.out.println("Connection successful");
 
@@ -94,9 +95,11 @@ public class VoluntariosListController {
             tbVoluntiers.setItems(dataVoluntiers);
         } catch (SQLException ex) {
             ex.printStackTrace();
+            return false;
         } finally {
             sqliteController.closeDBConnection(connection);
         }
+        return true;
     }
 
     private void addButtonToTable(List<Integer> idColumnName) {
@@ -164,7 +167,7 @@ public class VoluntariosListController {
         tbVoluntiers.getColumns().add(colBtn);
     }
 
-    public void switchVoltar(ActionEvent event) throws IOException {
+    public boolean switchVoltar(ActionEvent event) throws IOException {
 
         if(StarterController.userType == UserTypes.ADMIN)
         {
@@ -175,8 +178,10 @@ public class VoluntariosListController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
+            return true;
         }else{
             System.out.println("A OPERAÇÃO SAIR DA LISTA DE VOLUNTARIOS APENAS DEVE SER EFETUADA POR UM ADMIN");
+            return false;
         }
 
 
