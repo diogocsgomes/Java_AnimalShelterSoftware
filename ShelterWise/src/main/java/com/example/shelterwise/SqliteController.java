@@ -21,7 +21,7 @@ public class SqliteController {
             if(connection != null)
                 connection.close();
         } catch (SQLException ex) {
-            //ex.printStackTrace();
+            ex.printStackTrace();
         }
     }
 }

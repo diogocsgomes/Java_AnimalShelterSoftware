@@ -70,8 +70,9 @@ public class VoluntariosListController {
             System.out.println("Connection not successful");
             System.exit(1);
             return false;
+        }else{
+            System.out.println("Db aberta no VoluntariosListController");
         }
-        System.out.println("Connection successful");
 
         dataVoluntiers = FXCollections.observableArrayList();
         nameColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("nome"));
@@ -98,6 +99,7 @@ public class VoluntariosListController {
             return false;
         } finally {
             sqliteController.closeDBConnection(connection);
+            System.out.println("Db fechada no VoluntariosListController");
         }
         return true;
     }

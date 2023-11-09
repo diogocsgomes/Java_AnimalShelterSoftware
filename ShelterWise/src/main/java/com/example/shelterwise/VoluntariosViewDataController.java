@@ -55,30 +55,34 @@ public class VoluntariosViewDataController {
 
     public void initialize() throws SQLException {
 
-        connection = sqliteController.createDBConnection();
+        try{
+            connection = sqliteController.createDBConnection();
 
-        if(connection == null){
-            System.out.println("Erro de conexão à base de dados");
-            System.exit(1);
+            if(connection == null){
+                System.out.println("Erro de conexão à base de dados");
+                System.exit(1);
+            }
+
+            String query = "select * from users where id = " + id;
+
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            name.setText("Nome: "+resultSet.getString("nome"));
+            morada.setText("Morada: "+resultSet.getString("address"));
+            telefone.setText("Telefone: "+resultSet.getInt("phone"));
+            data_nas.setText("Data de nascimento: "+resultSet.getString("date_birth"));
+            //name.setText("Nome: "+resultSet.getString("nome"));
+            email_.setText("Email: "+resultSet.getString("email"));
+            id_.setText("NIF: "+resultSet.getInt("nif"));
+
+            if(resultSet.getBoolean("active"))
+                activo.setFill(Color.GREEN);
+            else
+                activo.setFill(Color.RED);
+        } finally {
+            sqliteController.closeDBConnection(connection);
         }
-
-        String query = "select * from users where id = " + id;
-
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        ResultSet resultSet = preparedStatement.executeQuery();
-
-        name.setText("Nome: "+resultSet.getString("nome"));
-        morada.setText("Morada: "+resultSet.getString("address"));
-        telefone.setText("Telefone: "+resultSet.getInt("phone"));
-        data_nas.setText("Data de nascimento: "+resultSet.getString("date_birth"));
-        //name.setText("Nome: "+resultSet.getString("nome"));
-        email_.setText("Email: "+resultSet.getString("email"));
-        id_.setText("NIF: "+resultSet.getInt("nif"));
-
-        if(resultSet.getBoolean("active"))
-           activo.setFill(Color.GREEN);
-        else
-           activo.setFill(Color.RED);
 
     }
 
