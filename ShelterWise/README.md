@@ -267,7 +267,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task2: Visualizar quais são os animais dentro de cada boxe.
     - Task3: Alterar, remover ou adicionar informações das boxes.  
   - **US4 - Voluntários (Gerir a atividade dos animais)**
-    - Task1: Visualizar uma lista com todos os animais.
+    - Task1: Visualizar uma lista com todos os animais não adotados. 
     - Task2: Visualizar o historial da alimentação e banhos do animal. 
     - Task3: Visualizar o estado de saúde do animal. 
     - Task4: Visualizar o estado de alimentação do animal. 
@@ -275,19 +275,20 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US9 - Voluntários (Gerir adoções)** 
     - Task1: Visualizar uma lista com todos os animais não adotados.
     - Task2: Inserir os dados do adotante.
+    - Task3: Criar uma nova adoção.
+    - Task4: Visualizar lista de adoções.
   - **US1 - Administrador (Gerir voluntários)**
-    - Task1: Visualizar a lista de voluntários
+    - Task1: Visualizar a lista de voluntários ✅
     - Task2: Alterar, remover ou adicionar informações dos voluntários
   - **US5 - Voluntários (Gerir animais)**
-    - Task1: Visualizar uma lista com todos os animais.
     - Task2: Alterar, remover ou adicionar informações dos animais
   - **US18 - Administrador (Login)**
-    - Task1: Efetuar o login na aplicação
+    - Task1: Efetuar o login na aplicação ✅
   - **US19 - Voluntários (Login)**
-    - Task1: Efetuar o login na aplicação
+    - Task1: Efetuar o login na aplicação ✅
   - **US20 - Doadores (Login)**
-    - Task1: Efetuar o login na aplicação
-  - Task1 - Criar uma base de dados
+    - Task1: Efetuar o login na aplicação ✅
+  - Task1 - Criar uma base de dados ✅
 
 - Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H = 48H 
 - Analysis: 
