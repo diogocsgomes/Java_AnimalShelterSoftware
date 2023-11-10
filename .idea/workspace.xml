@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/AnimaisListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/SqliteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-list-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +108,6 @@
       <workItem from="1699136302241" duration="55000" />
       <workItem from="1699290008721" duration="2819000" />
       <workItem from="1699293009460" duration="4610000" />
-      <workItem from="1699564954900" duration="545000" />
     </task>
     <servers />
   </component>

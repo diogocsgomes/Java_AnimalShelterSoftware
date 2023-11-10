@@ -10,18 +10,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.scene.control.TextField;
 
+import java.awt.*;
 import java.io.IOException;
 import java.sql.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class AnimaisListController {
     @FXML
     private static Label lblTitulo;
+    @FXML
+    private ComboBox typeAnimal;
+    @FXML
+    private TextField searchAnimal;
     @FXML
     private TableView tbAnimais;
     @FXML
@@ -48,20 +57,15 @@ public class AnimaisListController {
     private TableColumn commentsColumn;
     private Stage stage;
     private Scene scene;
-    private static Scene preScene;
-    private Parent root;
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
-
+    String query = "select * from animals";
     private ObservableList<Animal> dataAnimals;
+    List<String> AnimalType = Arrays.asList("All", "Dog", "Cat", "Other");
 
     public void initialize(){
-        connection = sqliteController.createDBConnection();
-        if(connection == null){
-            System.out.println("Connection not successful");
-            System.exit(1);
-        }
-        System.out.println("Connection successful");
+        typeAnimal.setItems(FXCollections.observableArrayList(AnimalType));
+        typeAnimal.getSelectionModel().selectFirst();
         dataAnimals = FXCollections.observableArrayList();
         idColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("name"));
@@ -74,8 +78,34 @@ public class AnimaisListController {
         birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
-        String query = "select * from animals";
+        loadInfoAnimals();
+    }
+
+    public void loadInfoAnimals(){
+        connection = sqliteController.createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
+        }
+        System.out.println("Connection successful");
+        String selectedType = typeAnimal.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchAnimal.getText().trim();
+        System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
+
+        if(!searchName.isEmpty() && !selectedType.equals("All")) {
+            query = "select * from animals where name like '%" + searchName + "%' and type = '" + selectedType + "'";
+        }else if(!searchName.isEmpty()){
+            query = "select * from animals where name like '%" + searchName + "%'";
+        } else if(selectedType.equals("All")){
+            query = "select * from animals";
+        } else if(selectedType.equals("Dog") || selectedType.equals("Cat")){
+            query = "select * from animals where type = '" + selectedType + "'";
+        }
+        else{
+            query = "select * from animals where type != 'Dog' and type != 'Cat'";
+        }
         try {
+            dataAnimals.clear();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -107,16 +137,12 @@ public class AnimaisListController {
         {
             Parent root = FXMLLoader.load(getClass().getResource("admin-view.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            preScene = stage.getScene();
-
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
         } else if (StarterController.userType == UserTypes.VULUNTIER) {
             Parent root = FXMLLoader.load(getClass().getResource("voluntarios-view.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            preScene = stage.getScene();
-
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
@@ -130,7 +156,6 @@ public class AnimaisListController {
     public void switchCriarAnimal(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("animais-info-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        preScene = stage.getScene();
         scene = new Scene(root);
         //stage.setTitle("Criar Animal");  Corrigir problema de não mudar o título
         stage.setScene(scene);
@@ -139,8 +164,6 @@ public class AnimaisListController {
     public void switchEditarAnimal(ActionEvent event) throws IOException {
         Animal selectedAnimalId = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
         if (selectedAnimalId != null) {
-            System.out.println("Animal Selecionado: " + selectedAnimalId.getId());
-            //Parent root = FXMLLoader.load(getClass().getResource("animais-info-view.fxml"));
             FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(loader.load());
