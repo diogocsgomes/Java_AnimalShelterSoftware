@@ -60,9 +60,14 @@ public class AnimaisInfoController {
     public int AnimalId;
     private Stage stage;
     private Scene scene;
+    byte[] imageBytes;
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
     List<String> genders = Arrays.asList("Male", "Female", "Other");
+
+    public void initialize(){
+
+    }
     public void switchVoltar(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("animais-list-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -114,9 +119,9 @@ public class AnimaisInfoController {
                 cbCasota.getItems().setAll(kennelIds);
 
 
-                //Codigo para convert a imagem de base64 para image
+                //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
-                    byte[] imageBytes = Base64.getDecoder().decode(base64Image);
+                    imageBytes = Base64.getDecoder().decode(base64Image);
                     ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imageBytes);
                     Image image = new Image(byteArrayInputStream);
                     imgAnimal.setImage(image);
@@ -150,6 +155,7 @@ public class AnimaisInfoController {
 
     public void switchGuardar(ActionEvent event) {
         String nome = txtNome.getText();
+        String imageConverter = Base64.getEncoder().encodeToString(imageBytes);
         double peso = Double.parseDouble(txtPeso.getText());
         String tipoPelagem = txtTipoPelagem.getText();
         String cor = txtCor.getText();
@@ -161,27 +167,11 @@ public class AnimaisInfoController {
         int casotaId = Integer.parseInt(cbCasota.getValue().toString());
 
         // Converta a imagem em base64
-        Image image = imgAnimal.getImage();
+        /*Image image = imgAnimal.getImage();
         String base64Image = null;
         if (image != null) {
-            int width = (int) image.getWidth();
-            int height = (int) image.getHeight();
-            PixelReader pixelReader = image.getPixelReader();
-            ByteBuffer byteBuffer = ByteBuffer.allocate(4 * width * height);
-
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
-                    Color color = pixelReader.getColor(x, y);
-                    byteBuffer.put((byte) (color.getRed() * 255));
-                    byteBuffer.put((byte) (color.getGreen() * 255));
-                    byteBuffer.put((byte) (color.getBlue() * 255));
-                    byteBuffer.put((byte) (color.getOpacity() * 255));
-                }
-            }
-
-            byte[] imageBytes = byteBuffer.array();
             base64Image = Base64.getEncoder().encodeToString(imageBytes);
-        }
+        }*/
 
         connection = sqliteController.createDBConnection();
         if (connection == null) {
@@ -203,7 +193,7 @@ public class AnimaisInfoController {
             updateStatement.setString(8, dataNascimento.toString());
             updateStatement.setString(9, genero);
             updateStatement.setInt(10, casotaId);
-            updateStatement.setString(11, base64Image);
+            updateStatement.setString(11, imageConverter);
             updateStatement.setInt(12, AnimalId);
 
             int rowsAffected = updateStatement.executeUpdate();
