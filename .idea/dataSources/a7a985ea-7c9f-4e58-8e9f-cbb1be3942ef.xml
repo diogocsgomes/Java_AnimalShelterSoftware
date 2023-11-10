@@ -446,8 +446,8 @@
     </routine>
     <schema id="177" parent="1" name="main">
       <Current>1</Current>
-      <IntrospectionTimestamp>2023-11-09.23:30:46.896</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-11-09.23:30:46</LocalIntrospectionTimestamp>
+      <IntrospectionTimestamp>2023-11-10.09:31:01.774</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-11-10.09:31:01</LocalIntrospectionTimestamp>
     </schema>
     <argument id="178" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1697,7 +1697,7 @@
       <Position>2</Position>
     </column>
     <column id="576" parent="524" name="description">
-      <DasType>integer|0s</DasType>
+      <DasType>TEXT|0s</DasType>
       <Position>3</Position>
     </column>
     <key id="577" parent="524" name="Kennel_pk">
