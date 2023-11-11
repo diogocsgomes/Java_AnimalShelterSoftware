@@ -82,6 +82,7 @@ public class AnimaisInfoController {
         cbCasota.getItems().setAll(kennelIds);
     }
     public void switchVoltar(ActionEvent event) throws IOException {
+        sqliteController.closeDBConnection(connection);
         Parent root = FXMLLoader.load(getClass().getResource("animais-list-view.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -121,11 +122,6 @@ public class AnimaisInfoController {
     }
 
     public void loadAnimalInfo() {
-        connection = sqliteController.createDBConnection();
-        if(connection == null){
-            System.out.println("Connection not successful");
-            System.exit(1);
-        }
         String query = "select * from animals where id = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -167,15 +163,10 @@ public class AnimaisInfoController {
                 dtNascimento.setValue(dataNascimento);
                 cbGenero.setValue(gender);
                 cbCasota.setValue(kennelId);
-
-                connection.close();
             }
         }
         catch (Exception e) {
             e.printStackTrace();
-        }
-        finally {
-            sqliteController.closeDBConnection(connection);
         }
     }
 
@@ -192,16 +183,9 @@ public class AnimaisInfoController {
         String genero = cbGenero.getValue().toString();
         int casotaId = Integer.parseInt(cbCasota.getValue().toString());
 
-        connection = sqliteController.createDBConnection();
-        if (connection == null) {
-            System.out.println("Connection not successful");
-            System.exit(1);
-        }
-
         try {
             String query;
             int val;
-            System.out.println(btnSelecImg.isDisable() + "Teste Botão");
             if(!btnSelecImg.isDisable()){
                 query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -233,14 +217,12 @@ public class AnimaisInfoController {
             int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Updated successfully.");
+                switchVoltar(event);
             } else {
                 System.out.println("Failed to update.");
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            sqliteController.closeDBConnection(connection);
         }
     }
-
 }

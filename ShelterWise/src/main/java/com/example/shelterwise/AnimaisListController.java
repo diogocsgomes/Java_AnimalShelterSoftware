@@ -1,6 +1,7 @@
 package com.example.shelterwise;
 
 import com.example.shelterwise.Modelos.Animal;
+import com.example.shelterwise.Modelos.Casotas;
 import com.example.shelterwise.usertypes.UserTypes;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,23 +11,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import javafx.scene.control.TextField;
+import javafx.util.Callback;
 
 import java.awt.*;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class AnimaisListController {
     @FXML
-    private static Label lblTitulo;
+    private Label lblTitulo;
     @FXML
     private ComboBox typeAnimal;
     @FXML
@@ -78,7 +80,51 @@ public class AnimaisListController {
         //birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
+        TableColumn<Animal, Boolean> colBtn = new TableColumn<>("Editar");
+        colBtn.setMinWidth(65);
+        colBtn.setCellFactory(new Callback<TableColumn<Animal, Boolean>, TableCell<Animal, Boolean>>() {
+            @Override
+            public TableCell<Animal, Boolean> call(TableColumn<Animal, Boolean> p) {
+                return new EditButton();
+            }
+        });
+        tbAnimais.getColumns().add(colBtn);
         loadInfoAnimals();
+    }
+    public class EditButton extends TableCell<Animal, Boolean> {
+        final Button colBtn = new Button("Editar");
+        EditButton() {
+            colBtn.setOnAction(event -> {
+                Animal selectedAnimalId = (Animal) getTableView().getItems().get(getIndex());
+                if (selectedAnimalId != null) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
+                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    try {
+                        scene = new Scene(loader.load());
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    AnimaisInfoController infoController = loader.getController();
+                    infoController.editAnimal(selectedAnimalId.getId());
+                    stage.setTitle("Editar Animal");
+                    //lblTitulo.setText("Editar Animal");
+                    stage.setScene(scene);
+                    stage.show();
+                } else {
+                    System.out.println("No animal selected");
+                }
+            });
+        }
+
+        @Override
+        protected void updateItem(Boolean t, boolean empty) {
+            super.updateItem(t, empty);
+            if (!empty) {
+                setGraphic(colBtn);
+            } else {
+                setGraphic(null);
+            }
+        }
     }
 
     public void loadInfoAnimals(){
@@ -150,8 +196,6 @@ public class AnimaisListController {
             //ainda nao existe uma vista exclusiva para veterinarios
            System.out.println("FUNCIONALIDADE POR IMPLEMENTAR");
         }
-
-
     }
     public void switchCriarAnimal(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
@@ -163,21 +207,5 @@ public class AnimaisListController {
         //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
         stage.setScene(scene);
         stage.show();
-    }
-    public void switchEditarAnimal(ActionEvent event) throws IOException {
-        Animal selectedAnimalId = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
-        if (selectedAnimalId != null) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(loader.load());
-            AnimaisInfoController infoController = loader.getController();
-            infoController.editAnimal(selectedAnimalId.getId());
-            stage.setTitle("Editar Animal");
-            //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
-            stage.setScene(scene);
-            stage.show();
-        } else {
-            System.out.println("No animal selected");
-        }
     }
 }

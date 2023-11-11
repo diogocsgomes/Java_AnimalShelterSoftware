@@ -27,12 +27,7 @@
                    <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="473.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="532.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarAnimal" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="530.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
@@ -45,17 +40,17 @@
             <ComboBox fx:id="typeAnimal" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo Animal" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbAnimais" fx:id="tbAnimais" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
-                  <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id" />
-                <TableColumn fx:id="nameColumn" prefWidth="61.0" text="Name" />
+                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" text="Id" />
+                <TableColumn fx:id="nameColumn" prefWidth="94.39996337890625" text="Name" />
+                  <TableColumn fx:id="typeColumn" prefWidth="52.00006103515625" text="Type" />
+                  <TableColumn fx:id="genderColumn" prefWidth="52.79998779296875" text="Gender" />
+                  <TableColumn fx:id="kennelIdColumn" minWidth="4.800048828125" prefWidth="52.0" text="Kennel" />
+                  <TableColumn fx:id="commentsColumn" prefWidth="223.20001220703125" text="Comments" />
                 <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight" visible="false" />
                   <TableColumn fx:id="breedColumn" prefWidth="58.0" text="Breed" visible="false" />
-                  <TableColumn fx:id="typeColumn" prefWidth="82.0" text="Type Animal" />
-                  <TableColumn fx:id="genderColumn" prefWidth="57.0" text="Gender" />
-                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" visible="false" />
                   <TableColumn fx:id="furTypeColumn" prefWidth="63.0" text="Fur Type" visible="false" />
+                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" visible="false" />
                   <TableColumn fx:id="birthDateColumn" prefWidth="69.0" text="Birth Date" visible="false" />
-                  <TableColumn fx:id="kennelIdColumn" prefWidth="68.0" text="Kennel Id" />
-                  <TableColumn fx:id="commentsColumn" prefWidth="177.0" text="Comments" />
               </columns>
             </TableView>
          </children></AnchorPane>
