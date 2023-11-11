@@ -7,29 +7,26 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.List;
+import java.util.*;
 
 public class AnimaisInfoController {
+    @FXML
+    private Button btnSelecImg;
     @FXML
     private TextField txtNome;
     @FXML
@@ -61,12 +58,28 @@ public class AnimaisInfoController {
     private Stage stage;
     private Scene scene;
     byte[] imageBytes;
+    String imageString;
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
     List<String> genders = Arrays.asList("Male", "Female", "Other");
 
-    public void initialize(){
+    public void initialize() throws SQLException {
+        connection = sqliteController.createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
+        }
+        cbGenero.getItems().setAll(genders);
 
+        //Codigo para dar load aos ids das casotas
+        List<Integer> kennelIds = new ArrayList<>();
+        String kennelQuery = "Select id from kennel";
+        PreparedStatement kennelStatement = connection.prepareStatement(kennelQuery);
+        ResultSet kennelResultSet = kennelStatement.executeQuery();
+        while (kennelResultSet.next()) {
+            kennelIds.add(kennelResultSet.getInt("id"));
+        }
+        cbCasota.getItems().setAll(kennelIds);
     }
     public void switchVoltar(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("animais-list-view.fxml"));
@@ -75,9 +88,34 @@ public class AnimaisInfoController {
         stage.setScene(scene);
         stage.show();
     }
+    public void createAnimal() {
+        btnSelecImg.setDisable(false);
+        btnSelecImg.setOnAction(e -> {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Open a file");
+            fileChooser.setInitialDirectory(new File(System.getProperty("user.home")+ "/Desktop"));
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All image files","*.jpg","*.png"));
+            Stage stage = (Stage) btnSelecImg.getScene().getWindow();
+            File selectedFile = fileChooser.showOpenDialog(stage);
+            if(selectedFile != null){
+                Image image = new Image(selectedFile.getPath());
+                try {
+                    FileInputStream imageStream = new FileInputStream(selectedFile.getPath());
+                    imageBytes = imageStream.readAllBytes();
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                imgAnimal.setImage(image);
+            }else{
+                System.out.println("No file has been selected");
+            }
+        });
 
-    public void setAnimalId(int selectedAnimalId) {
+    }
+
+    public void editAnimal(int selectedAnimalId) {
         AnimalId = selectedAnimalId;
+        btnSelecImg.setDisable(true);
         loadAnimalInfo();
         System.out.println("Animal ID: " + AnimalId);
     }
@@ -106,18 +144,6 @@ public class AnimaisInfoController {
                 String birthDate = resultSet.getString("birth_date");
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
-                cbGenero.getItems().setAll(genders);
-
-                //Codigo para dar load aos ids das casotas
-                List<Integer> kennelIds = new ArrayList<>();
-                String kennelQuery = "Select id from kennel";
-                PreparedStatement kennelStatement = connection.prepareStatement(kennelQuery);
-                ResultSet kennelResultSet = kennelStatement.executeQuery();
-                while (kennelResultSet.next()) {
-                    kennelIds.add(kennelResultSet.getInt("id"));
-                }
-                cbCasota.getItems().setAll(kennelIds);
-
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -166,13 +192,6 @@ public class AnimaisInfoController {
         String genero = cbGenero.getValue().toString();
         int casotaId = Integer.parseInt(cbCasota.getValue().toString());
 
-        // Converta a imagem em base64
-        /*Image image = imgAnimal.getImage();
-        String base64Image = null;
-        if (image != null) {
-            base64Image = Base64.getEncoder().encodeToString(imageBytes);
-        }*/
-
         connection = sqliteController.createDBConnection();
         if (connection == null) {
             System.out.println("Connection not successful");
@@ -180,30 +199,45 @@ public class AnimaisInfoController {
         }
 
         try {
-            String updateQuery = "UPDATE animals SET name=?, weight=?, fur_type=?, fur_color=?, type=?, " +
-                    "breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=? WHERE id=?";
-            PreparedStatement updateStatement = connection.prepareStatement(updateQuery);
-            updateStatement.setString(1, nome);
-            updateStatement.setDouble(2, peso);
-            updateStatement.setString(3, tipoPelagem);
-            updateStatement.setString(4, cor);
-            updateStatement.setString(5, tipoAnimal);
-            updateStatement.setString(6, raca);
-            updateStatement.setString(7, comentarios);
-            updateStatement.setString(8, dataNascimento.toString());
-            updateStatement.setString(9, genero);
-            updateStatement.setInt(10, casotaId);
-            updateStatement.setString(11, imageConverter);
-            updateStatement.setInt(12, AnimalId);
+            String query;
+            int val;
+            System.out.println(btnSelecImg.isDisable() + "Teste Botão");
+            if(!btnSelecImg.isDisable()){
+                query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image) " +
+                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                val = 1;
 
-            int rowsAffected = updateStatement.executeUpdate();
+            }
+            else{
+                query = "UPDATE animals SET name=?, weight=?, fur_type=?, fur_color=?, type=?, " +
+                        "breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=? WHERE id=?";
+                val = 0;
+            }
+            System.out.println("TESTE2: " + val);
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, nome);
+            statement.setDouble(2, peso);
+            statement.setString(3, tipoPelagem);
+            statement.setString(4, cor);
+            statement.setString(5, tipoAnimal);
+            statement.setString(6, raca);
+            statement.setString(7, comentarios);
+            statement.setString(8, dataNascimento.toString());
+            statement.setString(9, genero);
+            statement.setInt(10, casotaId);
+            statement.setString(11, imageConverter);
+            if(val == 0)
+                statement.setInt(12, AnimalId);
+
+            System.out.println(btnSelecImg.isDisable() + "Teste Botão3");
+            int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Updated successfully.");
             } else {
                 System.out.println("Failed to update.");
             }
         } catch (Exception e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         } finally {
             sqliteController.closeDBConnection(connection);
         }

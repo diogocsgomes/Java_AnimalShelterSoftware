@@ -12,7 +12,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<?import javafx.scene.control.TextArea?>
 <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AnimaisListController">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="600.0">
@@ -24,7 +23,7 @@
             </Text>
             <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
                <children>
-                   <TextField fx:id="searchAnimal" onAction="#loadInfoAnimals" prefHeight="25.0" prefWidth="196.0" promptText="Nome do Animal" style="-fx-background-color: Gray;"/>
+                   <TextField fx:id="searchAnimal" onAction="#loadInfoAnimals" prefHeight="25.0" prefWidth="196.0" promptText="Nome do Animal" style="-fx-background-color: Gray;" />
                    <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
@@ -48,13 +47,13 @@
               <columns>
                   <TableColumn fx:id="idColumn" prefWidth="50.0" text="Id" />
                 <TableColumn fx:id="nameColumn" prefWidth="61.0" text="Name" />
-                <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight" />
-                  <TableColumn fx:id="breedColumn" prefWidth="58.0" text="Breed" />
+                <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight" visible="false" />
+                  <TableColumn fx:id="breedColumn" prefWidth="58.0" text="Breed" visible="false" />
                   <TableColumn fx:id="typeColumn" prefWidth="82.0" text="Type Animal" />
                   <TableColumn fx:id="genderColumn" prefWidth="57.0" text="Gender" />
-                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" />
-                  <TableColumn fx:id="furTypeColumn" prefWidth="63.0" text="Fur Type" />
-                  <TableColumn fx:id="birthDateColumn" prefWidth="69.0" text="Birth Date" />
+                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" visible="false" />
+                  <TableColumn fx:id="furTypeColumn" prefWidth="63.0" text="Fur Type" visible="false" />
+                  <TableColumn fx:id="birthDateColumn" prefWidth="69.0" text="Birth Date" visible="false" />
                   <TableColumn fx:id="kennelIdColumn" prefWidth="68.0" text="Kennel Id" />
                   <TableColumn fx:id="commentsColumn" prefWidth="177.0" text="Comments" />
               </columns>

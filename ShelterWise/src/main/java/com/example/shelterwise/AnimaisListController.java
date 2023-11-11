@@ -69,13 +69,13 @@ public class AnimaisListController {
         dataAnimals = FXCollections.observableArrayList();
         idColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("name"));
-        weightColumn.setCellValueFactory(new PropertyValueFactory<Animal, Double>("weight"));
-        breedColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("breed"));
+        //weightColumn.setCellValueFactory(new PropertyValueFactory<Animal, Double>("weight"));
+        //breedColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("breed"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("type"));
         genderColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("gender"));
-        furColorColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furColor"));
-        furTypeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furType"));
-        birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
+        //furColorColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furColor"));
+        //furTypeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furType"));
+        //birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
         loadInfoAnimals();
@@ -112,16 +112,16 @@ public class AnimaisListController {
             while (resultSet.next()){
                 Animal animal = new Animal();
                 animal.setId(resultSet.getInt("id"));
-                animal.setBirthDate(resultSet.getString("birth_date"));
-                animal.setBreed(resultSet.getString("breed"));
+//                animal.setBirthDate(resultSet.getString("birth_date"));
+//                animal.setBreed(resultSet.getString("breed"));
                 animal.setComments(resultSet.getString("comments"));
-                animal.setFurColor(resultSet.getString("fur_color"));
-                animal.setFurType(resultSet.getString("fur_type"));
+//                animal.setFurColor(resultSet.getString("fur_color"));
+//                animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
                 animal.setKennelId(resultSet.getInt("kennel_id"));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
-                animal.setWeight(resultSet.getDouble("weight"));
+//                animal.setWeight(resultSet.getDouble("weight"));
                 dataAnimals.add(animal);
             }
             tbAnimais.setItems(dataAnimals);
@@ -154,10 +154,13 @@ public class AnimaisListController {
 
     }
     public void switchCriarAnimal(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("animais-info-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("animais-info-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        //stage.setTitle("Criar Animal");  Corrigir problema de não mudar o título
+        scene = new Scene(loader.load());
+        AnimaisInfoController infoController = loader.getController();
+        infoController.createAnimal();
+        stage.setTitle("Criar Animal");
+        //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
         stage.setScene(scene);
         stage.show();
     }
@@ -168,7 +171,7 @@ public class AnimaisListController {
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(loader.load());
             AnimaisInfoController infoController = loader.getController();
-            infoController.setAnimalId(selectedAnimalId.getId());
+            infoController.editAnimal(selectedAnimalId.getId());
             stage.setTitle("Editar Animal");
             //lblTitulo.setText("Editar Animal");  Corrigir problema de não mudar o título
             stage.setScene(scene);
