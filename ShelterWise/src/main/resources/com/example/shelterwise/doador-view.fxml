@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AdminApplication">
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.Administrador.AdminController">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="600.0">
          <Text fill="#506d68" layoutX="89.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:  Doador" textAlignment="CENTER">

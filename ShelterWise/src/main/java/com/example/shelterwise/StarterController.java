@@ -1,6 +1,7 @@
 package com.example.shelterwise;
 
-import com.example.shelterwise.usertypes.UserTypes;
+import com.example.shelterwise.Modelos.SqliteController;
+import com.example.shelterwise.Modelos.UserTypes;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,9 +11,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
 

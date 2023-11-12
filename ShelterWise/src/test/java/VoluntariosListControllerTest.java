@@ -1,4 +1,4 @@
-import com.example.shelterwise.VoluntariosListController;
+import com.example.shelterwise.Voluntarios.VoluntariosListController;
 import javafx.event.ActionEvent;
 import org.junit.jupiter.api.Test;
 

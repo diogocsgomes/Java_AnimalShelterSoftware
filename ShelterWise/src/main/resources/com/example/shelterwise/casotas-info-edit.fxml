@@ -40,7 +40,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.CasotasInfoEditController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.Casotas.CasotasInfoEditController">
    <children>
       <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
          <children>
