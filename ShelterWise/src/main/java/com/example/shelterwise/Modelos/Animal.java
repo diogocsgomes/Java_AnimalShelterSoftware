@@ -126,4 +126,22 @@ public class Animal {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "id=" + id +
+                ", image='" + image + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", breed='" + breed + '\'' +
+                ", comments='" + comments + '\'' +
+                ", furColor='" + furColor + '\'' +
+                ", furType='" + furType + '\'' +
+                ", gender='" + gender + '\'' +
+                ", kennelId=" + kennelId +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }
