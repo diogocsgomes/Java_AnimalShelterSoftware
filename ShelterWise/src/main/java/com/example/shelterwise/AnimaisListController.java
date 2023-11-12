@@ -68,6 +68,7 @@ public class AnimaisListController {
     public void initialize(){
         typeAnimal.setItems(FXCollections.observableArrayList(AnimalType));
         typeAnimal.getSelectionModel().selectFirst();
+
         dataAnimals = FXCollections.observableArrayList();
         idColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("name"));
@@ -127,6 +128,9 @@ public class AnimaisListController {
         }
     }
 
+
+
+
     public void loadInfoAnimals(){
         connection = sqliteController.createDBConnection();
         if(connection == null){
@@ -176,6 +180,16 @@ public class AnimaisListController {
         } finally {
             sqliteController.closeDBConnection(connection);
         }
+
+        /*tbAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
+            if(newValue != null)
+            {
+                Animal aSelected = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
+                System.out.println(aSelected.name);
+            }
+        });
+
+         */
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
