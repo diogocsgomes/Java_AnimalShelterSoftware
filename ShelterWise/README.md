@@ -12,10 +12,10 @@
     - [Tabela Tarefas](#tabela-tarefas)
     - [Risk Plan](#risk-plan)
 - [Pre Game](#pre-game)
-  - [Sprin 0 Plan](#sprint-0-plan)
-  - [Sprin 1 Plan](#sprint-1-plan)
-  - [Sprin 2 Plan](#sprint-2-plan)
-  - [Sprin 3 Plan](#sprint-3-plan)
+  - [Sprint 0](#sprint-0)
+  - [Sprint 1](#sprint-1)
+  - [Sprint 2](#sprint-2)
+  - [Sprint 3](#sprint-3)
 - [Release Plan](#release-plan)
     - [Release 1](#release-1)
     - [Release 2](#release-2)
@@ -278,20 +278,20 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task3: Criar uma nova adoção.
     - Task4: Visualizar lista de adoções.
   - **US1 - Administrador (Gerir voluntários)**
-    - Task1: Visualizar a lista de voluntários ✅
+    - Task1: Visualizar a lista de voluntários
     - Task2: Alterar, remover ou adicionar informações dos voluntários
   - **US5 - Voluntários (Gerir animais)**
     - Task2: Alterar, remover ou adicionar informações dos animais
   - **US18 - Administrador (Login)**
-    - Task1: Efetuar o login na aplicação ✅
+    - Task1: Efetuar o login na aplicação
   - **US19 - Voluntários (Login)**
-    - Task1: Efetuar o login na aplicação ✅
+    - Task1: Efetuar o login na aplicação
   - **US20 - Doadores (Login)**
-    - Task1: Efetuar o login na aplicação ✅
-  - Task1 - Criar uma base de dados ✅
+    - Task1: Efetuar o login na aplicação
+  - Task1 - Criar uma base de dados
 
 - Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H = 48H 
-- Analysis: 
+- Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
 - Analysis: what was not done or what was added (Link to US or Task from the PB)
@@ -302,18 +302,20 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 ##### Sprint Retrospective
 - What we did well:
-    - A
+    - Boa gestão de tempo por parte de cada elemento facilitou um pouco a parte do desenvolvimento de cada uma das tasks.
 - What we did less well:
-    - B
+    - Deveríamos ter pensado melhor acerca do design e de quais as informações que iriam ser demonstradas em cada view (interface), dependendo de cada utilizador.
 - How to improve to the next sprint:
-    - C
+    - Aquando da finalização de uma task realizar posteriormente os testes unitários relativos à mesma.
+    - Fazer uma melhor "distribuição" de tasks por todos os elementos do grupo.
+    - Melhorar um pouco a comunicação entre Product Owner e Scrum Master.
 
 ***
 
 #### Sprint 2
 ##### Sprint Plan
 - Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Dates: from 24/Oct to 7/Nov, 2 weeks
 - Roles:
   - Product Owner: **Por escolher**
   - Scrum Master: **Por escolher**
@@ -341,31 +343,4 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 #### Sprint 3
-##### Sprint Plan
-- Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
-- Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
-- To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
-  - Task1: Some task
-- Story Points: 2S+3M+3X+2H
-- Analysis: short analysis of the planning meeting
-
-##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
-- Story Points: 2S+1M+2X+2H
-- Version: 0.1 
-- Client analysis: client feedback
-- Conclusions: what to add/review
-
-##### Sprint Retrospective
-- What we did well:
-    - A
-- What we did less well:
-    - B
-- How to improve to the next sprint:
-    - C
 ***
