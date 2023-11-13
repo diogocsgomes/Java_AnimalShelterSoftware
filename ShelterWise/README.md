@@ -320,9 +320,24 @@ It is a collection of criteria that must be completed for a User Story to be con
   - Product Owner: **Por escolher**
   - Scrum Master: **Por escolher**
 - To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
-  - Task1: Some task
+  - **US2 - Administrador (Mostrar doações)**
+    - Task
+  - **US6 - Voluntários (Gerir informação do animal)**
+    - Task
+  - **US7 - Doadores (Gerir recursos organização)**
+   - Task
+  - **US8 - Doadores (Gerir historial das doações)**
+   - Task
+  - **US12 - Administrador (Gerir veterinários)**
+   - Task
+  - **US13 - Voluntários (Ver perfil)**
+   - Task
+  - **US15 - Voluntários (Informação casotas)** //ANALISAR POIS ACHO QUE JÁ FOI FEITA NA SPRINT 1
+   - Task
+  - **US16 - Voluntários (Ver veterinários)**
+   - Task
+  - **US17 - Doadores (Ver animais)**
+   - Task
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
 
