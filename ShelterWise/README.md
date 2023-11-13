@@ -101,47 +101,47 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 ### Mockups
 - **Painel de Login**
 
-![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_login.png)
+![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_login.png)
 
 - **Painel de Administrador**
 
-![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_admin.png)
+![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_admin.png)
 
 - **Painel de Voluntário**
 
-![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_voluntario.png)
+![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_voluntario.png)
 
 - **Lista de Voluntários**
 
-![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_voluntarios.png)
+![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_voluntarios.png)
 
 - **Info Voluntários**
 
-![Info Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_voluntarios.png)
+![Info Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_voluntarios.png)
 
 - **Edit Voluntário**
 
-![Edit Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_edit_voluntarios.png)
+![Edit Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_edit_voluntarios.png)
 
 - **Lista de Animais**
 
-![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_animais.png)
+![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_animais.png)
 
 - **Info Animais**
 
-![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_animais.png)
+![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_animais.png)
 
 - **Adicionar Animal**
 
-![Edit Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_edit_animais.png)
+![Edit Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_edit_animais.png)
 
 - **Lista de Veterinários**
 
-![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_veterinarios.png)
+![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_veterinarios.png)
 
 - **Info Veterinários**
 
-![Info Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_veterinarios.png)
+![Info Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_veterinarios.png)
 ***
 
 ### User Stories
