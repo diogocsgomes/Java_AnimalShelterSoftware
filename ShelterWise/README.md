@@ -325,19 +325,19 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US6 - Voluntários (Gerir informação do animal)**
     - Task
   - **US7 - Doadores (Gerir recursos organização)**
-   - Task
+    - Task
   - **US8 - Doadores (Gerir historial das doações)**
-   - Task
+    - Task
   - **US12 - Administrador (Gerir veterinários)**
-   - Task
+    - Task
   - **US13 - Voluntários (Ver perfil)**
-   - Task
+    - Task
   - **US15 - Voluntários (Informação casotas)** //ANALISAR POIS ACHO QUE JÁ FOI FEITA NA SPRINT 1
-   - Task
+    - Task
   - **US16 - Voluntários (Ver veterinários)**
-   - Task
+    - Task
   - **US17 - Doadores (Ver animais)**
-   - Task
+    - Task
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
 
