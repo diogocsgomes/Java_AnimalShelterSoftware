@@ -62,17 +62,27 @@
 - Clarificar US; ✅
 - Substituir os nomes das labels; ✅
 - US no backlog; ✅
-- Criar os cartoes de criterios de aceitação;
+- Criar os cartoes de criterios de aceitação; ✅
 - Usar o método do planning pocker para estimar as US/TASK´S; (FAZER REUNIÃO PARA ESTIMAR AS US/TASK´S); ✅
 
 ## Reunião 4 - 02/11/2023 ás 14h40:
 - Cartão para o login (US, Criterios de Aceitação); ✅
-- Fazer os testes para o login e para as restantes task´s (criar/editar/eliminar);
+- Fazer os testes para o login e para as restantes task´s (criar/editar/eliminar); ✅
 - Criar uma labela para cada sprint e associar a cada US; ✅
 - Meter a tabela com as tarefas do excel criada no readme; ✅
 - Criar testes unitários para todas as task´s;
 - No final de cada US fazer teste de aceitação;
-- Criar a base de dados;
+- Criar a base de dados; ✅
+
+## Reunião 5 - 09/11/2023 ás 15h50
+- Inserir utilizadores/animais/voluntarios = Unit Test´s;
+- Testes de aceitação para as interfaces (botões, etc) feitos à mão;
+- Fechar só os testes de aceitação quando as US tiverem completas ou seja close;
+- Associar os criterios de aceitação as milestone; ✅
+- Adicionar tempo aos criterios de aceitação;
+- Meter as labels dos criterios de aceitação corretas; ✅
+- Preparar a proposta para a proxima sprint (US, TASK´S, HORAS)
+
 
 ***
 
@@ -83,6 +93,7 @@
 - Atualizamos a Risk List;
 - Criamos uma issue para cada US;
 - Criamos as várias boards para cada sprint;
+
 ### Reunião 26/10:
 - Mockups completos com o novo modelo pedido - agora já existe uma lista extensa dos animais ou voluntários com uma caixa de pesquisa, também existe um campo para a saúde do animal e espaço para comentários;
 - Critérios de aceitação das US resolvidos - está na maneira correta do given/when/then;
@@ -90,6 +101,7 @@
 - Datas dos 2 release plans corrijidas, objetivos definidos;
 - Sprint backlog da sprint 1 completo;
 - Product backlog colocado no sítio certo (Plan > Issue Boards);
+
 ### Reunião 02/11:
 - ReadMe atualizado;
 - Issues atualizados;
