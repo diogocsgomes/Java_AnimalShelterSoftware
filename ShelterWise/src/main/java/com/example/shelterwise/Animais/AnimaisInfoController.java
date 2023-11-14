@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -140,6 +141,7 @@ public class AnimaisInfoController {
                 String birthDate = resultSet.getString("birth_date");
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
+                int healthStatus = resultSet.getInt("health");
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -163,6 +165,19 @@ public class AnimaisInfoController {
                 dtNascimento.setValue(dataNascimento);
                 cbGenero.setValue(gender);
                 cbCasota.setValue(kennelId);
+                if(healthStatus >= 0 && healthStatus < 25){
+                    System.out.println("Health Status: " + healthStatus);
+                    circleSaude.setFill(Color.GREEN);
+                }
+                else if(healthStatus >= 25 && healthStatus < 50){
+                    circleSaude.setFill(Color.ORANGE);
+                }
+                else if(healthStatus >= 50 && healthStatus < 75){
+                    circleSaude.setFill(Color.YELLOW);
+                }
+                else if(healthStatus >= 75){
+                    circleSaude.setFill(Color.GREEN);
+                }
             }
         }
         catch (Exception e) {

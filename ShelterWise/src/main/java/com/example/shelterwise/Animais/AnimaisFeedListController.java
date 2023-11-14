@@ -1,26 +1,29 @@
 package com.example.shelterwise.Animais;
 
-import com.example.shelterwise.Modelos.Casotas;
-import com.example.shelterwise.Modelos.RegistosAlimentacao;
-import com.example.shelterwise.Modelos.RegistosBanho;
-import com.example.shelterwise.Modelos.SqliteController;
+import com.example.shelterwise.Modelos.*;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import java.sql.Connection;
+import java.util.Objects;
 
 public class AnimaisFeedListController {
     @FXML
@@ -35,6 +38,7 @@ public class AnimaisFeedListController {
     private ObservableList<RegistosAlimentacao> RegistosAlimentacaoList = FXCollections.observableArrayList();
 
     private Stage stage;
+    private Scene scene;
     private Connection connection;
     private SqliteController sqliteController = new SqliteController();
     private int animal_id;
@@ -63,7 +67,15 @@ public class AnimaisFeedListController {
     public void switchCriarNovaAlimentacao(ActionEvent actionEvent) {
     }
 
-    public void switchVoltar(ActionEvent actionEvent) {
+    public void switchVoltar(ActionEvent event) throws IOException {
+        sqliteController.closeDBConnection(connection);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/shelterwise/animais-info-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loader.load());
+        AnimaisInfoController infoController = loader.getController();
+        infoController.editAnimal(animal_id);
+        stage.setScene(scene);
+        stage.show();
     }
 
     private void loadFeedingHistory() throws SQLException {

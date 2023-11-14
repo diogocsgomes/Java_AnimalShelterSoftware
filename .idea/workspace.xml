@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="" />
+    <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisBathListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisBathListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisFeedListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisFeedListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWiseDB.sqlite" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +115,12 @@
       <workItem from="1699659848414" duration="6105000" />
       <workItem from="1699697653957" duration="1797000" />
       <workItem from="1699711752349" duration="2690000" />
+      <workItem from="1699835330202" duration="1419000" />
+      <workItem from="1699872588504" duration="482000" />
+      <workItem from="1699873341393" duration="57000" />
+      <workItem from="1699876982541" duration="80000" />
+      <workItem from="1699877655469" duration="32000" />
+      <workItem from="1699991748201" duration="1122000" />
     </task>
     <servers />
   </component>
