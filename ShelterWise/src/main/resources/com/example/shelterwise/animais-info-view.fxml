@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.Animais.AnimaisInfoController">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.Animais.AnimaisInfoController">
   <children>
       <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
          <children>
@@ -112,6 +112,16 @@
                      </font>
                   </Text>
                   <TextArea fx:id="txtComentarios" layoutX="91.0" layoutY="216.0" prefHeight="62.0" prefWidth="494.0" promptText="Este campo serve para escrever algum tipo de comentário essencial acerca do animal" wrapText="true" />
+                  <Button fx:id="btnHistAlim" alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchHistoricoAlimentacao" style="-fx-background-color: #506D68;" text="Histórico Alimentação" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnHistBanh" alignment="CENTER" contentDisplay="CENTER" layoutX="449.0" layoutY="184.0" mnemonicParsing="false" onAction="#switchHistoricoBanhos" style="-fx-background-color: #506D68;" text="Histórico Banhos" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
                </children>
             </Pane>
             <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="532.0" layoutY="365.0" mnemonicParsing="false" onAction="#switchGuardar" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">

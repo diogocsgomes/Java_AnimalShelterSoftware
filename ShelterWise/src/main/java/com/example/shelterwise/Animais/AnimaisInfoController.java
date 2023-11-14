@@ -223,4 +223,33 @@ public class AnimaisInfoController {
             e.printStackTrace();
         }
     }
+
+    public void switchHistoricoAlimentacao(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/shelterwise/animais-feed-list-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loader.load());
+        //AnimaisInfoController infoController = loader.getController();
+        //infoController.createAnimal();
+        AnimaisFeedListController feedListController = loader.getController();
+        feedListController.setAnimal_id(AnimalId); // Set the animal_id
+        feedListController.initialize();
+        stage.setTitle("Histórico de Alimentação");
+        stage.setScene(scene);
+        stage.show();
+        System.out.println("aberta feed list");
+    }
+
+    public void switchHistoricoBanhos(ActionEvent event) throws IOException, SQLException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/shelterwise/animais-bath-list-view.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loader.load());
+        //AnimaisInfoController infoController = loader.getController();
+        //infoController.createAnimal();
+        AnimaisBathListController bathListController = loader.getController();
+        bathListController.setAnimal_id(AnimalId); // Set the animal_id
+        bathListController.initialize();
+        stage.setTitle("Histórico de Banhos");
+        stage.setScene(scene);
+        stage.show();
+    }
 }
