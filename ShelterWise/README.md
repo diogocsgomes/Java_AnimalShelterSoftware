@@ -297,7 +297,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Ver os produtos em stock
     - Task2: Editar um produto em stock
 
-- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H = 48H 
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H+2H+2H+1H+1H+1H = 55H 
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
@@ -312,10 +312,11 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Boa gestão de tempo por parte de cada elemento facilitou um pouco a parte do desenvolvimento de cada uma das tasks.
 - What we did less well:
     - Deveríamos ter pensado melhor acerca do design e de quais as informações que iriam ser demonstradas em cada view (interface), dependendo de cada utilizador.
+    - Falta de comunicação entre a execução das diversas tasks, para verificar se estamos todos "alinhados".
 - How to improve to the next sprint:
     - Aquando da finalização de uma task realizar posteriormente os testes unitários relativos à mesma.
     - Fazer uma melhor "distribuição" de tasks por todos os elementos do grupo.
-    - Melhorar um pouco a comunicação entre Product Owner e Scrum Master.
+    - Melhorar um pouco a comunicação entre Product Owner e Scrum Master, e o grupo em si.
 
 ***
 
@@ -324,8 +325,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: what’s the goal for this sprint
 - Dates: from 24/Oct to 7/Nov, 2 weeks
 - Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
+  - Product Owner: **Bruno Fonseca**
+  - Scrum Master: **Ana Cardoso**
 - To do:
   - **US2 - Administrador (Mostrar doações)**
     - Task
@@ -339,11 +340,13 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task
   - **US13 - Voluntários (Ver perfil)**
     - Task
-  - **US15 - Voluntários (Informação casotas)** //ANALISAR POIS ACHO QUE JÁ FOI FEITA NA SPRINT 1
+  - **US15 - Voluntários (Informação casotas)**
     - Task
   - **US16 - Voluntários (Ver veterinários)**
     - Task
   - **US17 - Doadores (Ver animais)**
+    - Task
+  - **US21 - Doadores (Inserir doações)**
     - Task
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
