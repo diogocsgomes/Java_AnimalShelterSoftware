@@ -329,25 +329,28 @@ It is a collection of criteria that must be completed for a User Story to be con
   - Scrum Master: **Ana Cardoso**
 - To do:
   - **US2 - Administrador (Mostrar doações)**
-    - Task
+    - Task1: Visualizar a lista de doações
   - **US6 - Voluntários (Gerir informação do animal)**
-    - Task
+    - Task1: Visualizar a informação de um animal
+    - Task2: Adicionar/editar informação de um animal
   - **US7 - Doadores (Gerir recursos organização)**
-    - Task
+    - Task1: Visualizar recursos da organização
+    - Task2: adicionar/alterar/remover recursos da organização
   - **US8 - Doadores (Gerir historial das doações)**
-    - Task
+    - Task1: Visualizar o historial de doações
   - **US12 - Administrador (Gerir veterinários)**
-    - Task
+    - Task1: Visualizar a lista de veterinários
+    - Task2: Alterar, remover ou adicionar informações dos veterinários
   - **US13 - Voluntários (Ver perfil)**
-    - Task
+    - Task1: Visualizar informação do Voluntário
   - **US15 - Voluntários (Informação casotas)**
-    - Task
+    - Task1: Visualizar lista de casotas
   - **US16 - Voluntários (Ver veterinários)**
-    - Task
+    - Task1: Visualizar informação de um veterinário
   - **US17 - Doadores (Ver animais)**
-    - Task
+    - Task1: Visualizar lista de animais não adotados
   - **US21 - Doadores (Inserir doações)**
-    - Task
+    - Task1: Adicionar doação
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
 
