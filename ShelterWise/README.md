@@ -289,6 +289,13 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US20 - Doadores (Login)**
     - Task1: Efetuar o login na aplicação
   - Task1 - Criar uma base de dados
+  - **US10 - Administrador (Gerir produtos)**
+    - Task1: Ver os produtos em stock
+    - Task2: Criar um novo produto no stock
+    - Task3: Editar um produto do stock
+  - **US14 - Voluntários (Gerir produtos)**  
+    - Task1: Ver os produtos em stock
+    - Task2: Editar um produto em stock
 
 - Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H = 48H 
 - Analysis: short analysis of the planning meeting
