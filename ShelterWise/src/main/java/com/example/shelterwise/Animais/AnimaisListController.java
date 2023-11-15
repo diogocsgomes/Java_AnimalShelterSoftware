@@ -79,7 +79,7 @@ public class AnimaisListController {
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
         TableColumn<Animal, Boolean> colBtn = new TableColumn<>("Editar");
-        colBtn.setMinWidth(65);
+        colBtn.setMinWidth(63);
         colBtn.setCellFactory(new Callback<TableColumn<Animal, Boolean>, TableCell<Animal, Boolean>>() {
             @Override
             public TableCell<Animal, Boolean> call(TableColumn<Animal, Boolean> p) {

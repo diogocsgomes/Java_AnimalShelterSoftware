@@ -202,6 +202,21 @@ public class AnimaisInfoController {
     }
 
     public void switchGuardar(ActionEvent event) {
+        if (sqliteController.verificaCampos(
+                txtNome.getText(),
+                txtPeso.getText(),
+                txtTipoPelagem.getText(),
+                txtCor.getText(),
+                txtTipoAnimal.getText(),
+                txtRaca.getText(),
+                dtNascimento.getValue() == null ? null : dtNascimento.getValue().toString(),
+                cbGenero.getValue() == null ? null : cbGenero.getValue().toString(),
+                cbCasota.getValue() == null ? null : cbCasota.getValue().toString(),
+                (imageBytes == null || imageBytes.length == 0) ? null : Base64.getEncoder().encodeToString(imageBytes))) {
+            System.out.println("Por favor, preencha todos os campos.");
+            return;
+        }
+
         String nome = txtNome.getText();
         String imageConverter = Base64.getEncoder().encodeToString(imageBytes);
         double peso = Double.parseDouble(txtPeso.getText());
@@ -218,17 +233,16 @@ public class AnimaisInfoController {
             String query;
             int val;
             if(!btnSelecImg.isDisable()){
-                query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image) " +
+                query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image, adopted, health, feed) " +
                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 val = 1;
 
             }
             else{
                 query = "UPDATE animals SET name=?, weight=?, fur_type=?, fur_color=?, type=?, " +
-                        "breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=? WHERE id=?";
+                        "breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=?, adopted=?, health=?, feed=? WHERE id=?";
                 val = 0;
             }
-            System.out.println("TESTE2: " + val);
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, nome);
             statement.setDouble(2, peso);
@@ -240,9 +254,13 @@ public class AnimaisInfoController {
             statement.setString(8, dataNascimento.toString());
             statement.setString(9, genero);
             statement.setInt(10, casotaId);
-            statement.setString(11, imageConverter);
             if(val == 0)
                 statement.setInt(12, AnimalId);
+            statement.setString(11, imageConverter);
+            statement.setBoolean(13, false);
+            statement.setInt(14, 100);
+            statement.setBoolean(15, true);
+
             int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Updated successfully.");

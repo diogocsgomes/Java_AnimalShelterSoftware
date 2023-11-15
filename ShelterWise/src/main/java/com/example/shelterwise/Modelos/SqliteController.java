@@ -16,6 +16,15 @@ public class SqliteController {
         }
     }
 
+    public boolean verificaCampos(String... campos) {
+        for (String campo : campos) {
+            if (campo == null || campo.trim().isEmpty()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void closeDBConnection(Connection connection) {
         try {
             if(connection != null)
