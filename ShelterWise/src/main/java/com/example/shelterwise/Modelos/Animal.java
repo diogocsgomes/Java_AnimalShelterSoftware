@@ -16,11 +16,13 @@ public class Animal {
     public String type;
     public double weight;
 
+    public int healthStatus;
+
     public Animal() {
         // Construtor vazio
     }
 
-    public Animal(int id, String image, String birthDate, String breed, String comments, String furColor, String furType, String gender, int kennelId, String name, String type, double weight) {
+    public Animal(int id, String image, String birthDate, String breed, String comments, String furColor, String furType, String gender, int kennelId, String name, String type, double weight, int healthStatus) {
         this.id = id;
         this.image = image;
         this.birthDate = birthDate;
@@ -33,6 +35,7 @@ public class Animal {
         this.name = name;
         this.type = type;
         this.weight = weight;
+        this.healthStatus = healthStatus;
     }
 
     public int getId() {
@@ -125,6 +128,12 @@ public class Animal {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public double getHealthStatus() {return healthStatus;}
+
+    public void setHealthStatus(int healthStatus) {
+        this.healthStatus = healthStatus;
     }
 
     @Override

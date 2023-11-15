@@ -141,6 +141,9 @@ public class AnimaisInfoController {
                 String birthDate = resultSet.getString("birth_date");
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
+                int healthStatus = resultSet.getInt("health");
+
+                int feedStatus = resultSet.getInt("feed");
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -164,6 +167,29 @@ public class AnimaisInfoController {
                 dtNascimento.setValue(dataNascimento);
                 cbGenero.setValue(gender);
                 cbCasota.setValue(kennelId);
+
+
+                if(feedStatus == 0){
+                    circleAlimentado.setFill(Color.RED);
+                }else{
+                    circleAlimentado.setFill(Color.GREEN);
+                }
+
+                //updateFeedStatus();
+
+                if(healthStatus >= 0 && healthStatus < 25){
+                    System.out.println("Health Status: " + healthStatus);
+                    circleSaude.setFill(Color.GREEN);
+                }
+                else if(healthStatus >= 25 && healthStatus < 50){
+                    circleSaude.setFill(Color.ORANGE);
+                }
+                else if(healthStatus >= 50 && healthStatus < 75){
+                    circleSaude.setFill(Color.YELLOW);
+                }
+                else if(healthStatus >= 75){
+                    circleSaude.setFill(Color.GREEN);
+                }
             }
         }
         catch (Exception e) {
