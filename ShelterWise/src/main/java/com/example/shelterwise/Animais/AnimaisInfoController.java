@@ -167,26 +167,33 @@ public class AnimaisInfoController {
                 cbGenero.setValue(gender);
                 cbCasota.setValue(kennelId);
 
-
+                Tooltip tooltipAlimentado = null, tooltipSaude = null;
                 if(feedStatus){
+                    tooltipAlimentado = new Tooltip("Alimentado");
                     circleAlimentado.setFill(Color.GREEN);
                 }else{
+                    tooltipAlimentado = new Tooltip("Não Alimentado");
                     circleAlimentado.setFill(Color.RED);
                 }
+                Tooltip.install(circleAlimentado, tooltipAlimentado);
 
                 if(healthStatus >= 0 && healthStatus < 25){
-                    System.out.println("Health Status: " + healthStatus);
+                    tooltipSaude = new Tooltip("Muito mau de saúde");
                     circleSaude.setFill(Color.GREEN);
                 }
                 else if(healthStatus >= 25 && healthStatus < 50){
+                    tooltipSaude = new Tooltip("Mau de saúde");
                     circleSaude.setFill(Color.ORANGE);
                 }
                 else if(healthStatus >= 50 && healthStatus < 75){
+                    tooltipSaude = new Tooltip("Em recuperação");
                     circleSaude.setFill(Color.YELLOW);
                 }
                 else if(healthStatus >= 75){
+                    tooltipSaude = new Tooltip("Saudável");
                     circleSaude.setFill(Color.GREEN);
                 }
+                Tooltip.install(circleSaude, tooltipSaude);
             }
         }
         catch (Exception e) {
