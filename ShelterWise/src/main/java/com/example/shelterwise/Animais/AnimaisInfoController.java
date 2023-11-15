@@ -142,8 +142,7 @@ public class AnimaisInfoController {
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
                 int healthStatus = resultSet.getInt("health");
-
-                int feedStatus = resultSet.getInt("feed");
+                boolean feedStatus = resultSet.getBoolean("feed");
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -169,13 +168,11 @@ public class AnimaisInfoController {
                 cbCasota.setValue(kennelId);
 
 
-                if(feedStatus == 0){
-                    circleAlimentado.setFill(Color.RED);
-                }else{
+                if(feedStatus){
                     circleAlimentado.setFill(Color.GREEN);
+                }else{
+                    circleAlimentado.setFill(Color.RED);
                 }
-
-                //updateFeedStatus();
 
                 if(healthStatus >= 0 && healthStatus < 25){
                     System.out.println("Health Status: " + healthStatus);
@@ -279,30 +276,4 @@ public class AnimaisInfoController {
         stage.setScene(scene);
         stage.show();
     }
-
-    public void updateFeedStatus() {
-        try {
-            String query = "SELECT feed FROM animals WHERE id = ?";
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setInt(1, AnimalId);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                int feedStatus = resultSet.getInt("feed");
-
-                // Assuming circleAlimentado is a JavaFX Circle element
-                if (feedStatus == 1) {
-                    // Set the circle to green
-                    circleAlimentado.setFill(Color.GREEN);
-                } else {
-                    // Set the circle to red
-                    circleAlimentado.setFill(Color.RED);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            // Handle the exception as needed
-        }
-    }
-
 }
