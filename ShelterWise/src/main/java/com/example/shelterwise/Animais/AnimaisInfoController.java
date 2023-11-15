@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -252,4 +253,30 @@ public class AnimaisInfoController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void updateFeedStatus() {
+        try {
+            String query = "SELECT feed FROM animals WHERE id = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, AnimalId);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                int feedStatus = resultSet.getInt("feed");
+
+                // Assuming circleAlimentado is a JavaFX Circle element
+                if (feedStatus == 1) {
+                    // Set the circle to green
+                    circleAlimentado.setFill(Color.GREEN);
+                } else {
+                    // Set the circle to red
+                    circleAlimentado.setFill(Color.RED);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the exception as needed
+        }
+    }
+
 }
