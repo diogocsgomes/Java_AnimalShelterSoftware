@@ -322,35 +322,39 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 #### Sprint 2
 ##### Sprint Plan
-- Goal: what’s the goal for this sprint
-- Dates: from 24/Oct to 7/Nov, 2 weeks
+- Goal: Adicionar funcionalidades aos voluntários, administradores e começar a desenvolver as funcionalidades dos doadores
+- Dates: from 23/Nov to 7/Dez, 2 weeks
 - Roles:
   - Product Owner: **Bruno Fonseca**
   - Scrum Master: **Ana Cardoso**
 - To do:
   - **US2 - Administrador (Mostrar doações)**
     - Task1: Visualizar a lista de doações
+    - Task2: Filtrar a lista de doações
   - **US6 - Voluntários (Gerir informação do animal)**
     - Task1: Visualizar a informação de um animal
-    - Task2: Adicionar/editar informação de um animal
+    - Task2: Adicionar e editar informação de um animal
   - **US7 - Doadores (Gerir recursos organização)**
-    - Task1: Visualizar recursos da organização necessarios 
-    - Task2: Adicionar recursos da organização
+    - Task1: Visualizar lista dos recursos da organização necessários 
   - **US8 - Doadores (Gerir historial das doações)**
-    - Task1: Visualizar o historial de doações
+    - Task1: Visualizar o seu historial de doações
   - **US12 - Administrador (Gerir veterinários)**
     - Task1: Visualizar a lista de veterinários
-    - Task2: Alterar, remover ou adicionar informações dos veterinários
+    - Task2: Alterar e adicionar informações dos veterinários
   - **US13 - Voluntários (Ver perfil)**
-    - Task1: Visualizar informação do Voluntário
+    - Task1: Visualizar informação do seu perfil
+    - Task2: Alterar informação do seu perfil
   - **US15 - Voluntários (Informação casotas)**
     - Task1: Visualizar lista de casotas
+    - Task2: Visualizar informação de uma casota
   - **US16 - Voluntários (Ver veterinários)**
-    - Task1: Visualizar informação de um veterinário
+    - Task1: Visualizar lista de veterinários
+    - Task2: Visualizar informação de um veterinário
   - **US17 - Doadores (Ver animais)**
     - Task1: Visualizar lista de animais não adotados
   - **US21 - Doadores (Inserir doações)**
     - Task1: Adicionar doação
+    
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
 
