@@ -334,8 +334,8 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Visualizar a informação de um animal
     - Task2: Adicionar/editar informação de um animal
   - **US7 - Doadores (Gerir recursos organização)**
-    - Task1: Visualizar recursos da organização
-    - Task2: adicionar/alterar/remover recursos da organização
+    - Task1: Visualizar recursos da organização necessarios 
+    - Task2: Adicionar recursos da organização
   - **US8 - Doadores (Gerir historial das doações)**
     - Task1: Visualizar o historial de doações
   - **US12 - Administrador (Gerir veterinários)**

@@ -9,10 +9,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.*;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.Modality;
 
 import java.io.*;
 import java.sql.Connection;
@@ -79,6 +81,7 @@ public class AnimaisInfoController {
             kennelIds.add(kennelResultSet.getInt("id"));
         }
         cbCasota.getItems().setAll(kennelIds);
+        connection.close();
     }
     public void switchVoltar(ActionEvent event) throws IOException {
         sqliteController.closeDBConnection(connection);
@@ -124,6 +127,7 @@ public class AnimaisInfoController {
 
     public void loadAnimalInfo() {
         String query = "select * from animals where id = ?";
+        connection = sqliteController.createDBConnection();
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setInt(1, AnimalId);
@@ -195,6 +199,7 @@ public class AnimaisInfoController {
                 }
                 Tooltip.install(circleSaude, tooltipSaude);
             }
+            connection.close();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -216,6 +221,7 @@ public class AnimaisInfoController {
             System.out.println("Por favor, preencha todos os campos.");
             return;
         }
+        connection = sqliteController.createDBConnection();
 
         String nome = txtNome.getText();
         String imageConverter = Base64.getEncoder().encodeToString(imageBytes);
@@ -268,6 +274,7 @@ public class AnimaisInfoController {
             } else {
                 System.out.println("Failed to update.");
             }
+            connection.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -300,5 +307,20 @@ public class AnimaisInfoController {
         stage.setTitle("Histórico de Banhos");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void openDialog(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/shelterwise/dialogbox-animais-info-view.fxml"));
+        Parent parent = fxmlLoader.load();
+        DialogBoxAnimaisInfoController dialogController = fxmlLoader.<DialogBoxAnimaisInfoController>getController();
+        dialogController.setId(AnimalId);
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.showAndWait();
+        loadAnimalInfo();
     }
 }
