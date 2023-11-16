@@ -50,56 +50,65 @@ public class VoluntariosAddController {
 
     public void addVoluntier(ActionEvent event) throws IOException {
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Adicionar Voluntário");
-        alert.setHeaderText(null);
-        alert.setContentText("Tem a certeza que deseja adicionar voluntário?");
+        if(nome.getText() == "" || password.getText() == "" || birth_date.getValue() == null || address.getText() == "" || phone.getText() == "" || nif.getText() == "" ){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Existem campos vazios!");
+            alert.setHeaderText(null);
+            alert.setContentText("Existem campos vazios! Por favor, preencha todos os campos para inserir novo utilizador.");
+            alert.showAndWait();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Adicionar Voluntário");
+            alert.setHeaderText(null);
+            alert.setContentText("Tem a certeza que deseja adicionar voluntário?");
 
-        ButtonType buttonTypeSim = new ButtonType("Adicionar");
-        ButtonType buttonTypeNao = new ButtonType("Cancelar");
-        alert.getButtonTypes().setAll(buttonTypeSim, buttonTypeNao);
+            ButtonType buttonTypeSim = new ButtonType("Adicionar");
+            ButtonType buttonTypeNao = new ButtonType("Cancelar");
+            alert.getButtonTypes().setAll(buttonTypeSim, buttonTypeNao);
 
-        Optional<ButtonType> resultado = alert.showAndWait();
+            Optional<ButtonType> resultado = alert.showAndWait();
 
-        if (resultado.isPresent() && resultado.get() == buttonTypeSim) {
+            if (resultado.isPresent() && resultado.get() == buttonTypeSim) {
 
-            try{
+                try {
 
-                connection = sqliteController.createDBConnection();
+                    connection = sqliteController.createDBConnection();
 
-                if(connection == null){
-                    System.out.println("Erro de conexão à base de dados");
-                    System.exit(1);
+                    if (connection == null) {
+                        System.out.println("Erro de conexão à base de dados");
+                        System.exit(1);
+                    }
+
+                    String sql = "INSERT INTO users (nome, password, date_birth, address, phone, active, nif, role, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+                    PreparedStatement pstmt = connection.prepareStatement(sql);
+                    pstmt.setString(1, nome.getText());
+                    pstmt.setString(2, password.getText());
+                    pstmt.setString(3, String.valueOf(birth_date.getValue()));
+                    pstmt.setString(4, address.getText());
+                    pstmt.setInt(5, Integer.parseInt(phone.getText()));
+                    pstmt.setBoolean(6, true);
+                    pstmt.setInt(7, Integer.parseInt(nif.getText()));
+                    pstmt.setInt(8, 2);
+                    pstmt.setString(9, email.getText());
+
+                    pstmt.executeUpdate();
+                    System.out.println("Dados inseridos com sucesso.");
+
+                } catch (SQLException e) {
+                    System.err.println("Erro ao inserir dados: " + e.getMessage());
                 }
 
-                String sql = "INSERT INTO users (nome, password, date_birth, address, phone, active, nif, role, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/shelterwise/voluntarios-list-view.fxml")));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                preScene = stage.getScene();
 
-                PreparedStatement pstmt = connection.prepareStatement(sql);
-                pstmt.setString(1, nome.getText());
-                pstmt.setString(2, password.getText());
-                pstmt.setString(3, String.valueOf(birth_date.getValue()));
-                pstmt.setString(4, address.getText());
-                pstmt.setInt(5, Integer.parseInt(phone.getText()));
-                pstmt.setBoolean(6, true);
-                pstmt.setInt(7, Integer.parseInt(nif.getText()));
-                pstmt.setInt(8, 2);
-                pstmt.setString(9, email.getText());
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
 
-                pstmt.executeUpdate();
-                System.out.println("Dados inseridos com sucesso.");
-
-            }catch (SQLException e) {
-                System.err.println("Erro ao inserir dados: " + e.getMessage());
             }
-
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/shelterwise/voluntarios-list-view.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            preScene = stage.getScene();
-
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-
         }
 
     }

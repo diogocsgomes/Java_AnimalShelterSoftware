@@ -2,6 +2,7 @@ package com.example.shelterwise.Casotas;
 
 import com.example.shelterwise.Modelos.Casotas;
 import com.example.shelterwise.Modelos.SqliteController;
+import com.example.shelterwise.Modelos.Users;
 import com.example.shelterwise.StarterController;
 import com.example.shelterwise.Modelos.UserTypes;
 import javafx.collections.FXCollections;
@@ -12,14 +13,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -47,9 +46,19 @@ public class CasotasListController {
     Connection connection = null;
     private ObservableList<Casotas> dataCasotas;
 
+    @FXML
+    private ComboBox typeCasota;
+    @FXML
+    private TextField searchBoxes;
+
     public boolean initialize() {
 
+        ObservableList<String> options = FXCollections.observableArrayList("ID", "Máximo", "Todos");
+        typeCasota.setItems(options);
+        typeCasota.getSelectionModel().selectLast();
+
         List<Integer> idList = new ArrayList<>();
+
 
         connection = sqliteController.createDBConnection();
         if(connection == null){
@@ -189,6 +198,73 @@ public class CasotasListController {
         };
 
         colBtn.setCellFactory(cellFactory);
-        tbCasota.getColumns().add(colBtn);
+        if (isTableColumnExists(colBtn.getText(), tbCasota)) {
+            System.out.println("A TableColumn existe na tabela.");
+            //tbVoluntiers.getColumns();
+        } else {
+            System.out.println("A TableColumn não existe na tabela.");
+            tbCasota.getColumns().add(colBtn);
+        }
+    }
+
+    public boolean isTableColumnExists(String columnName, javafx.scene.control.TableView<?> tableView) {
+        for (TableColumn<?, ?> column : tableView.getColumns()) {
+            if (column.getText().equals(columnName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void procurar(javafx.scene.input.MouseEvent mouseEvent) {
+        String selectedType = typeCasota.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchBoxes.getText().trim();
+        String query = null;
+        List<Integer> idList = new ArrayList<>();
+
+        connection = sqliteController.createDBConnection();
+        if (connection == null) {
+            System.out.println("Connection not successful");
+            System.exit(1);
+            return;
+        } else {
+            System.out.println("Db aberta no VoluntariosListController");
+        }
+
+       if (selectedType.equals("Todos") || (searchName.isEmpty() && selectedType.equals("ID")) || (searchName.isEmpty() && selectedType.equals("Máximo")) ) {
+            query = "select * from kennel;";
+        } else if (!searchName.isEmpty() && selectedType.equals("ID")) {
+            query = "select * from kennel where id like '%" + searchName + "%'";
+        } else if (!searchName.isEmpty() && selectedType.equals("Máximo")) {
+            query = "select * from kennel where max like '%" + searchName + "%'";
+        }
+
+
+        try {
+            dataCasotas.clear();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                Casotas casotas = new Casotas();
+                casotas.setId(resultSet.getInt("id"));
+                casotas.setMax(resultSet.getInt("max"));
+
+                String query2 = "select COUNT(*) AS total from animals where kennel_id = " + resultSet.getInt("id");
+                PreparedStatement preparedStatement2 = connection.prepareStatement(query2);
+                ResultSet resultSet2 = preparedStatement2.executeQuery();
+
+                casotas.setNum(resultSet2.getInt("total"));
+                dataCasotas.add(casotas);
+                idList.add(resultSet.getInt("id"));
+            }
+            addButtonToTable(idList);
+            tbCasota.setItems(dataCasotas);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            sqliteController.closeDBConnection(connection);
+        }
+
     }
 }
