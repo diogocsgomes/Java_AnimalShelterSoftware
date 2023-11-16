@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingClassTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingAnimalsClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/VoluntariosListControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingAnimalsClassTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,11 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -86,7 +93,7 @@
       <recent name="com.example.shelterwise" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestingClassTest.loadInfoAnimals">
+  <component name="RunManager" selected="Application.StarterApplication">
     <configuration name="StarterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.StarterApplication" />
       <module name="ShelterWise" />
@@ -100,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestingClassTest.loadInfoAnimals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestingAnimalsClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShelterWise" />
       <extension name="coverage">
         <pattern>
@@ -109,17 +116,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.example.shelterwise.TestMethods" />
-      <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.TestMethods.TestingClassTest" />
-      <option name="METHOD_NAME" value="loadInfoAnimals" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.TestMethods.TestingAnimalsClassTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestingClassTest.loadInfoAnimals" />
         <item itemvalue="Application.StarterApplication" />
+        <item itemvalue="JUnit.TestingAnimalsClassTest" />
       </list>
     </recent_temporary>
   </component>
@@ -164,6 +170,7 @@
       <workItem from="1699877655469" duration="32000" />
       <workItem from="1699991748201" duration="1122000" />
       <workItem from="1700072597341" duration="1244000" />
+      <workItem from="1700139609618" duration="1049000" />
     </task>
     <servers />
   </component>

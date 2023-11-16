@@ -131,7 +131,7 @@
             </Text>
             <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
                <children>
-                  <TextField fx:id="searchStock" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="Produto" style="-fx-background-color: Gray;" />
+                  <TextField fx:id="searchStock" onAction="#loadInfoStock" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="Produto" style="-fx-background-color: Gray;" />
                   <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
@@ -155,7 +155,7 @@
                   <Font name="Verdana" size="12.0" />
                </font>
             </Button>
-            <ComboBox fx:id="typeVoluntier" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
+            <ComboBox fx:id="typeStock" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbStock" fx:id="tbStock" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
                <columns>
                   <TableColumn fx:id="nameColumn" minWidth="85.0" text="Nome" />
