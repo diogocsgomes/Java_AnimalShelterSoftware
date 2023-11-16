@@ -9,15 +9,20 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #282828;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.AdminApplication">
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.shelterwise.Administrador.AdminController">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <Text fill="#893aff" layoutX="89.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role: Administrador" textAlignment="CENTER">
+         <Text fill="#171611" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo,  User" textAlignment="CENTER">
+            <font>
+               <Font name="Warownia" size="36.0" />
+            </font>
+         </Text>
+         <Text fill="#506d68" layoutX="89.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role: Administrador" textAlignment="CENTER">
             <font>
                <Font name="Warownia" size="16.0" />
             </font>
          </Text>
-            <GridPane alignment="CENTER" layoutX="76.0" layoutY="149.0" prefHeight="184.0" prefWidth="449.0" style="-fx-background-color: #555555; -fx-background-radius: 10;">
+            <GridPane alignment="CENTER" layoutX="76.0" layoutY="149.0" prefHeight="184.0" prefWidth="449.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                 <columnConstraints>
                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -26,40 +31,51 @@
                 <rowConstraints>
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 </rowConstraints>
                 <children>
-                    <Button fx:id="Animais" alignment="CENTER" contentDisplay="CENTER" minWidth="100.0" text="Lista de Animais" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <Button fx:id="btnAnimais" alignment="CENTER" contentDisplay="CENTER" minWidth="100.0" onAction="#switchListaAnimais" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Animais" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="Voluntarios" alignment="CENTER" minWidth="100.0" text="Lista de Voluntários" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <Button fx:id="btnVoluntiers" alignment="CENTER" minWidth="100.0" onAction="#switchListaVoluntarios" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Voluntários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="Veterinarios" alignment="CENTER" minWidth="100.0" text="Lista de Veterinários" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Button fx:id="btnVeterinarios" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Veterinários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="Doadores" alignment="CENTER" minWidth="100.0" text="Ver Doações" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Button fx:id="btnDoacoes" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Doações" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="Calendario" alignment="CENTER" minWidth="100.0" text="Ver Calendário" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Button fx:id="btnCalendario" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Calendário" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
+                   <Button fx:id="btnStock" alignment="CENTER" minWidth="100.0" onAction="#switchListaStock" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Stock" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                      <font>
+                         <Font name="Verdana" size="12.0" />
+                      </font>
+                   </Button>
+               <Button fx:id="Adocoes" alignment="CENTER" minWidth="100.0" onAction="#switchNovaAdocao" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Nova Adoção" textAlignment="CENTER" textFill="WHITE" GridPane.rowIndex="2">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+               </Button>
+               <Button fx:id="btnCasotas" alignment="CENTER" minWidth="100.0" onAction="#switchListaCasotas" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Casotas" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font name="Verdana" size="12.0" />
+                  </font>
+               </Button>
                 </children>
             </GridPane>
-         <Text fill="WHITE" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo,  User" textAlignment="CENTER">
-            <font>
-               <Font name="Warownia" size="36.0" />
-            </font>
-         </Text>
         </AnchorPane>
     </children>
 </VBox>

@@ -9,12 +9,13 @@
 - [Definition of Done](#definition-of-done)
 - [Architecture and Design](#architecture-and-design)
     - [Domain Model](#domain-model)
+    - [Tabela Tarefas](#tabela-tarefas)
     - [Risk Plan](#risk-plan)
 - [Pre Game](#pre-game)
-  - [Sprin 0 Plan](#sprint-0-plan)
-  - [Sprin 1 Plan](#sprint-1-plan)
-  - [Sprin 2 Plan](#sprint-2-plan)
-  - [Sprin 3 Plan](#sprint-3-plan)
+  - [Sprint 0](#sprint-0)
+  - [Sprint 1](#sprint-1)
+  - [Sprint 2](#sprint-2)
+  - [Sprint 3](#sprint-3)
 - [Release Plan](#release-plan)
     - [Release 1](#release-1)
     - [Release 2](#release-2)
@@ -62,7 +63,7 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 >   - Lista de veterinários e informações sobre o mesmos.
 > - **Gestão de Animais**
 >   - Plano de alimentação dos mesmos, tendo em conta o seu estado de saude e bem como a ultima vez que o mesmo comeu;
->   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde, voluntário encarregado do animal);
+>   - Lista e informações de cada animal (raça, onde se encontra, estado de saúde);
 >   - Adotar animal;
 > - **Gestão de Instalações**
 >   - Lista de casotas e informação da sua ocupação;
@@ -100,39 +101,47 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 ### Mockups
 - **Painel de Login**
 
-![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_login.png)
+![Login Page](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_login.png)
 
 - **Painel de Administrador**
 
-![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_admin.png)
+![Painel de Admin.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_admin.png)
 
 - **Painel de Voluntário**
 
-![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_voluntario.png)
+![Painel de Vol.](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_voluntario.png)
 
 - **Lista de Voluntários**
 
-![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_voluntarios.jpg)
+![Lista de Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_voluntarios.png)
 
 - **Info Voluntários**
 
-![Info Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_voluntarios.jpg)
+![Info Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_voluntarios.png)
+
+- **Edit Voluntário**
+
+![Edit Voluntários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_edit_voluntarios.png)
 
 - **Lista de Animais**
 
-![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_animais.png)
+![Lista de Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_animais.png)
 
 - **Info Animais**
 
-![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_animais.png)
+![Info Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_animais.png)
+
+- **Adicionar Animal**
+
+![Edit Animais](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_edit_animais.png)
 
 - **Lista de Veterinários**
 
-![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_lista_veterinarios.jpg)
+![Lista de Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_lista_veterinarios.png)
 
 - **Info Veterinários**
 
-![Info Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/src/main/resources/com/example/shelterwise/mockups_imgs/mockup_info_veterinarios.jpg)
+![Info Veterinários](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgMockups/mockup_info_veterinarios.png)
 ***
 
 ### User Stories
@@ -140,11 +149,22 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US2 - Administrador (Mostrar doações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/2)
 - [US3 - Administrador (Gerir instalações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/3)
 - [US4 - Voluntários (Gerir a atividade dos animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/4)
-- [US5 - Voluntários (Gerir animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
+- [US5 - Voluntários (Ver lista de animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/5)
 - [US6 - Voluntários (Gerir informação do animal)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/6)
 - [US7 - Doadores (Gerir recursos organização)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/7)
 - [US8 - Doadores (Gerir historial das doações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/8)
 - [US9 - Voluntários (Gerir adoações)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/22)
+- [US10 - Administrador (Gerir produtos)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/36)
+- [US11 - Administrador (Gerir animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/37)
+- [US12 - Administrador (Gerir veterinários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/38)
+- [US13 - Voluntários (Ver perfil)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/39)
+- [US14 - Voluntários (Editar e ver produtos)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/40)
+- [US15 - Voluntários (Informação casotas)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/41)
+- [US16 - Voluntários (Ver veterinários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/42)
+- [US17 - Doadores (Ver animais)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/43)
+- [US18 - Administrador (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/47)
+- [US19 - Voluntários (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/48)
+- [US20 - Doadores (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/49)
 
 ***
 
@@ -164,6 +184,9 @@ It is a collection of criteria that must be completed for a User Story to be con
 ## Architecture and Design
 #### Domain Model
 ![Use case diagram](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/ModeloDominio.png)
+
+#### Tabela Tarefas
+![Tabela de tarefas](https://gitlab.com/brun0f0nseca/gps_g21/-/raw/dev/ShelterWise/imgUseCase/TabelaDeTarefas.png)
 
 ***
 ### Risk Plan
@@ -236,31 +259,46 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: Criar as funcionalidades básicas para os Administradores e Voluntários
 - Dates: from 26/Oct to 16/Nov, 3 weeks
 - Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
+  - Product Owner: **Ricardo Tavares**
+  - Scrum Master: **Diogo Fatia**
 - To do:
   - **US3 - Administrador (Gerir instalações)**
     - Task1: Visualizar informação sobre as boxes do estabelecimento.
     - Task2: Visualizar quais são os animais dentro de cada boxe.
     - Task3: Alterar, remover ou adicionar informações das boxes.  
   - **US4 - Voluntários (Gerir a atividade dos animais)**
-    - Task1: Visualizar uma lista com todos os animais.
+    - Task1: Visualizar uma lista com todos os animais não adotados. 
     - Task2: Visualizar o historial da alimentação e banhos do animal. 
     - Task3: Visualizar o estado de saúde do animal. 
-    - Task4: Alterar, remover ou adicionar informações dos animais.  
+    - Task4: Visualizar o estado de alimentação do animal. 
+    - Task5: Alterar, remover ou adicionar informações dos animais.  
   - **US9 - Voluntários (Gerir adoções)** 
     - Task1: Visualizar uma lista com todos os animais não adotados.
     - Task2: Inserir os dados do adotante.
+    - Task3: Criar uma nova adoção.
+    - Task4: Visualizar lista de adoções.
   - **US1 - Administrador (Gerir voluntários)**
     - Task1: Visualizar a lista de voluntários
     - Task2: Alterar, remover ou adicionar informações dos voluntários
   - **US5 - Voluntários (Gerir animais)**
-    - Task1: Visualizar uma lista com todos os animais.
     - Task2: Alterar, remover ou adicionar informações dos animais
+  - **US18 - Administrador (Login)**
+    - Task1: Efetuar o login na aplicação
+  - **US19 - Voluntários (Login)**
+    - Task1: Efetuar o login na aplicação
+  - **US20 - Doadores (Login)**
+    - Task1: Efetuar o login na aplicação
+  - Task1 - Criar uma base de dados
+  - **US10 - Administrador (Gerir produtos)**
+    - Task1: Ver os produtos em stock
+    - Task2: Criar um novo produto no stock
+    - Task3: Editar um produto do stock
+  - **US14 - Voluntários (Gerir produtos)**  
+    - Task1: Ver os produtos em stock
+    - Task2: Editar um produto em stock
 
-
-- Story Points: 4H+3H+4H+3H+8H+3H+4H+3H+4H+3H+4H+3H+4H = 50H
-- Analysis: 
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H+2H+2H+1H+1H+1H = 55H 
+- Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
 - Analysis: what was not done or what was added (Link to US or Task from the PB)
@@ -271,25 +309,52 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 ##### Sprint Retrospective
 - What we did well:
-    - A
+    - Boa gestão de tempo por parte de cada elemento facilitou um pouco a parte do desenvolvimento de cada uma das tasks.
 - What we did less well:
-    - B
+    - Deveríamos ter pensado melhor acerca do design e de quais as informações que iriam ser demonstradas em cada view (interface), dependendo de cada utilizador.
+    - Falta de comunicação entre a execução das diversas tasks, para verificar se estamos todos "alinhados".
 - How to improve to the next sprint:
-    - C
+    - Aquando da finalização de uma task realizar posteriormente os testes unitários relativos à mesma.
+    - Fazer uma melhor "distribuição" de tasks por todos os elementos do grupo.
+    - Melhorar um pouco a comunicação entre Product Owner e Scrum Master, e o grupo em si.
 
 ***
 
 #### Sprint 2
 ##### Sprint Plan
-- Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
+- Goal: Adicionar funcionalidades aos voluntários, administradores e começar a desenvolver as funcionalidades dos doadores
+- Dates: from 23/Nov to 7/Dez, 2 weeks
 - Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
+  - Product Owner: **Bruno Fonseca**
+  - Scrum Master: **Ana Cardoso**
 - To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
-  - Task1: Some task
+  - **US2 - Administrador (Mostrar doações)**
+    - Task1: Visualizar a lista de doações
+    - Task2: Filtrar a lista de doações
+  - **US6 - Voluntários (Gerir informação do animal)**
+    - Task1: Visualizar a informação de um animal
+    - Task2: Adicionar e editar informação de um animal
+  - **US7 - Doadores (Gerir recursos organização)**
+    - Task1: Visualizar lista dos recursos da organização necessários 
+  - **US8 - Doadores (Gerir historial das doações)**
+    - Task1: Visualizar o seu historial de doações
+  - **US12 - Administrador (Gerir veterinários)**
+    - Task1: Visualizar a lista de veterinários
+    - Task2: Alterar e adicionar informações dos veterinários
+  - **US13 - Voluntários (Ver perfil)**
+    - Task1: Visualizar informação do seu perfil
+    - Task2: Alterar informação do seu perfil
+  - **US15 - Voluntários (Informação casotas)**
+    - Task1: Visualizar lista de casotas
+    - Task2: Visualizar informação de uma casota
+  - **US16 - Voluntários (Ver veterinários)**
+    - Task1: Visualizar lista de veterinários
+    - Task2: Visualizar informação de um veterinário
+  - **US17 - Doadores (Ver animais)**
+    - Task1: Visualizar lista de animais não adotados
+  - **US21 - Doadores (Inserir doações)**
+    - Task1: Adicionar doação
+    
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
 
@@ -310,31 +375,4 @@ It is a collection of criteria that must be completed for a User Story to be con
 ***
 
 #### Sprint 3
-##### Sprint Plan
-- Goal: what’s the goal for this sprint
-- Dates: from 24-27/Oct to 7-10/Nov | 14-17/Nov, 2 | 3 weeks
-- Roles:
-  - Product Owner: **Por escolher**
-  - Scrum Master: **Por escolher**
-- To do:
-  - (list of US or Tasks from the PB)
-  - US1: As … I want … so that …
-  - Task1: Some task
-- Story Points: 2S+3M+3X+2H
-- Analysis: short analysis of the planning meeting
-
-##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
-- Story Points: 2S+1M+2X+2H
-- Version: 0.1 
-- Client analysis: client feedback
-- Conclusions: what to add/review
-
-##### Sprint Retrospective
-- What we did well:
-    - A
-- What we did less well:
-    - B
-- How to improve to the next sprint:
-    - C
 ***
