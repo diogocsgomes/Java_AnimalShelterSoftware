@@ -164,7 +164,7 @@ public class VoluntariosListController {
                             setGraphic(null);
                         } else {
                             setGraphic(btn);
-                            Users data = getTableView().getItems().get(getIndex());
+                            //Users data = getTableView().getItems().get(getIndex());
                             id = idColumnName.get(getIndex()); // Obtenha o ID correspondente
                         }
                     }
@@ -181,6 +181,7 @@ public class VoluntariosListController {
             System.out.println("A TableColumn não existe na tabela.");
             tbVoluntiers.getColumns().add(colBtn);
         }
+        //idColumnName.clear();
 
     }
 
