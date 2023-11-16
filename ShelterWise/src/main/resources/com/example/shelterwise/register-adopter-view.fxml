@@ -39,8 +39,8 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="25.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchReturn" text="Return" />
-      <Button layoutX="510.0" layoutY="347.0" mnemonicParsing="false" onAction="#insertAdopter" text="Save" />
+      <Button layoutX="25.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchReturn" text="Return" textFill="WHITE" style="-fx-background-color: #506D68;"/>
+      <Button layoutX="510.0" layoutY="347.0" mnemonicParsing="false" onAction="#insertAdopter" text="Save" textFill="WHITE" style="-fx-background-color: #506D68;"/>
       <Text fx:id="errorMessage" fill="#d91414" layoutX="459.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>
