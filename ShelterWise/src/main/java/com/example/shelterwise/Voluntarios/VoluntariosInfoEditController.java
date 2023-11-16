@@ -109,7 +109,7 @@ public class VoluntariosInfoEditController {
             nome.setText(resultSet.getString("nome"));
             morada.setText(resultSet.getString("address"));
             telefone.setText(String.valueOf(resultSet.getInt("phone")));
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d-M-yyyy");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
             birth_date.setValue(LocalDate.parse(resultSet.getString("date_birth"), formatter));
             nif.setText(resultSet.getString("nif"));
             email.setText(resultSet.getString("email"));
