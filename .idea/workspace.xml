@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,7 @@
         <option value="FxmlFile" />
         <option value="JavaFXApplication" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -44,6 +50,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "dev",
     "last_directory_selection": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21/ShelterWise/src/main/java/com",
     "last_opened_file_path": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21",
@@ -65,12 +73,55 @@
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ficheirosTxt" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.shelterwise" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.shelterwise.TestMethods" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.shelterwise" />
     </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TestingClassTest.loadInfoAnimals">
+    <configuration name="StarterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.StarterApplication" />
+      <module name="ShelterWise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.shelterwise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestingClassTest.loadInfoAnimals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShelterWise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.shelterwise.TestMethods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.shelterwise.TestMethods" />
+      <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.TestMethods.TestingClassTest" />
+      <option name="METHOD_NAME" value="loadInfoAnimals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestingClassTest.loadInfoAnimals" />
+        <item itemvalue="Application.StarterApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

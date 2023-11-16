@@ -116,4 +116,5 @@
 - Base de dados adicionada;
 - Codigo atualizado;
 
-
+### Reunião 16/11:
+- Task3 e Task4 feitas;
