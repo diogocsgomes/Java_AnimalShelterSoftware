@@ -8,8 +8,8 @@ public class SqliteController {
     public Connection createDBConnection() {
         try {
             //String dbPath = "jdbc:sqlite:ShelterWiseDB.sqlite";
-            String dbPath = "jdbc:sqlite:ShelterWise\\ShelterWiseDB.sqlite";
-            //String dbPath = "jdbc:sqlite:./ShelterWiseDB.sqlite";
+            //String dbPath = "jdbc:sqlite:ShelterWise\\ShelterWiseDB.sqlite";
+            String dbPath = "jdbc:sqlite:./ShelterWiseDB.sqlite";
             //MUDAR A STRING dbPatth consoante o que se está a fazer, se estiverem a efetuar testes unitarios utilizem a ultima string
             return DriverManager.getConnection(dbPath);
         } catch (Exception e) {

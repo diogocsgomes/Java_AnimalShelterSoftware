@@ -1,5 +1,6 @@
 package com.example.shelterwise.Voluntarios;
 
+import com.example.shelterwise.Modelos.Animal;
 import com.example.shelterwise.Modelos.Users;
 import com.example.shelterwise.Modelos.SqliteController;
 import com.example.shelterwise.StarterController;
@@ -14,6 +15,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
@@ -29,6 +31,8 @@ import java.util.Objects;
 public class VoluntariosListController {
     @FXML
     private TableView tbVoluntiers;
+    @FXML
+    private TextField searchVoluntier;
     @FXML
     private TableColumn nameColumn;
     @FXML
@@ -61,19 +65,20 @@ public class VoluntariosListController {
     @FXML
     private ComboBox<String> typeVoluntier; //para depois
 
-    public boolean initialize(){
+    public boolean initialize() {
 
-        ObservableList<String> options = FXCollections.observableArrayList("Nome", "Email", "Ativo", "Outro");
+        ObservableList<String> options = FXCollections.observableArrayList("Nome", "Telefone", "Ativos", "Todos");
         typeVoluntier.setItems(options);
+        typeVoluntier.getSelectionModel().selectLast();
 
         List<Integer> idList = new ArrayList<>();
 
         connection = sqliteController.createDBConnection();
-        if(connection == null){
+        if (connection == null) {
             System.out.println("Connection not successful");
             System.exit(1);
             return false;
-        }else{
+        } else {
             System.out.println("Db aberta no VoluntariosListController");
         }
 
@@ -87,7 +92,7 @@ public class VoluntariosListController {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()){
+            while (resultSet.next()) {
                 Users vol = new Users();
                 vol.setName(resultSet.getString("nome"));
                 vol.setPhone(resultSet.getInt("phone"));
@@ -142,7 +147,7 @@ public class VoluntariosListController {
                             } catch (IOException e) {
                                 throw new RuntimeException(e);
                             }
-                            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             preScene = stage.getScene();
 
                             scene = new Scene(root);
@@ -169,22 +174,37 @@ public class VoluntariosListController {
         };
 
         colBtn.setCellFactory(cellFactory);
-        tbVoluntiers.getColumns().add(colBtn);
+        if (isTableColumnExists(colBtn.getText(), tbVoluntiers)) {
+            System.out.println("A TableColumn existe na tabela.");
+            //tbVoluntiers.getColumns();
+        } else {
+            System.out.println("A TableColumn não existe na tabela.");
+            tbVoluntiers.getColumns().add(colBtn);
+        }
+
+    }
+
+    public boolean isTableColumnExists(String columnName, javafx.scene.control.TableView<?> tableView) {
+        for (TableColumn<?, ?> column : tableView.getColumns()) {
+            if (column.getText().equals(columnName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean switchVoltar(ActionEvent event) throws IOException {
 
-        if(StarterController.userType == UserTypes.ADMIN)
-        {
+        if (StarterController.userType == UserTypes.ADMIN) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/shelterwise/admin-view.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             preScene = stage.getScene();
 
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
             return true;
-        }else{
+        } else {
             System.out.println("A OPERAÇÃO SAIR DA LISTA DE VOLUNTARIOS APENAS DEVE SER EFETUADA POR UM ADMIN");
             return false;
         }
@@ -195,20 +215,72 @@ public class VoluntariosListController {
 
     public void switcharAdd(ActionEvent event) throws IOException {
 
-        if(StarterController.userType == UserTypes.ADMIN)
-        {
+        if (StarterController.userType == UserTypes.ADMIN) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/shelterwise/voluntarios-create.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             preScene = stage.getScene();
 
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        }else{
+        } else {
             System.out.println("A OPERAÇÃO ADICIONAR VOLUNTÁRIO APENAS DEVE SER EFETUADA POR UM ADMIN");
         }
 
     }
+
+    public void procurar(MouseEvent mouseEvent) {
+        String selectedType = typeVoluntier.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchVoluntier.getText().trim();
+        String query = null;
+        List<Integer> idList = new ArrayList<>();
+        idList.clear();
+
+        connection = sqliteController.createDBConnection();
+        if (connection == null) {
+            System.out.println("Connection not successful");
+            System.exit(1);
+            return;
+        } else {
+            System.out.println("Db aberta no VoluntariosListController");
+        }
+
+        if (selectedType.equals("Ativos")) {
+            query = "select * from users where role = 2 and active = 1";
+        } else if (selectedType.equals("Todos")) {
+            query = "select * from users where role = 2";
+        } else if (!searchName.isEmpty() && selectedType.equals("Nome")) {
+            query = "select * from users where nome like '%" + searchName + "%' and role = 2";
+        } else if (!searchName.isEmpty() && selectedType.equals("Telefone")) {
+            query = "select * from users where phone like '%" + searchName + "%' and role = 2";
+        }
+
+
+            try {
+            dataVoluntiers.clear();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                Users user = new Users();
+                user.setId(resultSet.getInt("id"));
+                user.setActive(resultSet.getBoolean("active"));
+                user.setName(resultSet.getString("nome"));
+                user.setPhone(resultSet.getInt("phone"));
+                user.setEmail(resultSet.getString("email"));
+                dataVoluntiers.add(user);
+                idList.add(resultSet.getInt("id"));
+            }
+            addButtonToTable(idList);
+            tbVoluntiers.setItems(dataVoluntiers);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } finally {
+            sqliteController.closeDBConnection(connection);
+        }
+    }
+}
+
 
     // Caso tentamos depois fazer com os panes em vez de tabelas
     /*@Override
@@ -244,4 +316,4 @@ public class VoluntariosListController {
 
         dynamicPaneContainer.getChildren().add(pane);
     }*/
-}
+

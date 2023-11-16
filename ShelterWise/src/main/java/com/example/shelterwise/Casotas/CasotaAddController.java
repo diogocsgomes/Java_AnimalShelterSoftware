@@ -44,6 +44,13 @@ public class CasotaAddController {
             alert.setContentText("O máximo tem de ser um número!");
             alert.showAndWait();
         }
+        else if(description.getText() == ""){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Descrição");
+            alert.setHeaderText(null);
+            alert.setContentText("Indique uma descrição!");
+            alert.showAndWait();
+        }
         else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Adicionar Casota");

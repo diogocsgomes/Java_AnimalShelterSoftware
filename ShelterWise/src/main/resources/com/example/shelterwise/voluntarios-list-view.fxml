@@ -61,8 +61,8 @@
             </Text>
             <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
                <children>
-                  <TextField fx:id="searchVoluntier" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="Nome do Voluntário" style="-fx-background-color: Gray;" />
-                  <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
+                  <TextField fx:id="searchVoluntier" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="" style="-fx-background-color: Gray;" />
+                  <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#procurar" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
             <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#switcharAdd" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">

@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/DialogBoxAnimaisInfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/dialogbox-animais-info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/ShelterWiseDB.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Animais/AnimaisInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/resources/com/example/shelterwise/animais-info-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingAnimalsClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/VoluntariosListControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingAnimalsClassTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaFXApplication" />
-        <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -74,7 +76,6 @@
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main" />
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\ficheirosTxt" />
@@ -169,7 +170,7 @@
       <workItem from="1699877655469" duration="32000" />
       <workItem from="1699991748201" duration="1122000" />
       <workItem from="1700072597341" duration="1244000" />
-      <workItem from="1700139609618" duration="6324000" />
+      <workItem from="1700139609618" duration="1049000" />
     </task>
     <servers />
   </component>

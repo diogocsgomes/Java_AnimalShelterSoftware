@@ -31,4 +31,10 @@ class TestingAnimalsClassTest {
         boolean result = testingAnimalsClass.loadInfoAnimalsForNameAndType();
         assertTrue(result);
     }
+    @Test
+    void loadInfoAdopters(){
+        TestingAnimalsClass testingAnimalsClass = new TestingAnimalsClass();
+        boolean result = testingAnimalsClass.loadInfoAdopters();
+        assertTrue(result);
+    }
 }
