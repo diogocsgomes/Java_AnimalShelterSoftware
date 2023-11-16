@@ -12,17 +12,25 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class StockListController {
+    @FXML
+    private ComboBox typeStock;
+    @FXML
+    private TextField searchStock;
     @FXML
     private TableView tbStock;
     @FXML
@@ -40,32 +48,66 @@ public class StockListController {
     private Scene scene;
     private static Scene preScene;
     private Parent root;
+
+    String query = "select * from product";
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
 
     private ObservableList<Stock> dataStock;
 
+    List<String> ProductCategory = Arrays.asList("Todas", "Saude", "Higiene", "Lazer");
+
     public StockListController() {
     }
 
     public void initialize(){
-        connection = sqliteController.createDBConnection();
-        if(connection == null){
-            System.out.println("Connection not successful");
-            System.exit(1);
-        }
-        System.out.println("Connection successful");
+        typeStock.setItems(FXCollections.observableArrayList(ProductCategory));
+        typeStock.getSelectionModel().selectFirst();
         dataStock = FXCollections.observableArrayList();
         nameColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("name"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("description"));
         expiredDateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expiredDate"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("quantity"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("category"));
+    }
 
-        String query = "select * from product";
+    public void loadInfoStock(){
+        connection = sqliteController.createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
+        }
+        System.out.println("Connection successful");
+
+        String selectedType = typeStock.getSelectionModel().getSelectedItem().toString();
+
+        String searchName = searchStock.getText().trim();
+        System.out.println("Selected Type: " + selectedType + " / Search Name: " + searchName);
+
+
+        if (!searchName.isEmpty() && selectedType.equals("Todas")) {
+            query = "select * from product where name like '%" + searchName + "%'";
+        } else if (!searchName.isEmpty() && selectedType.equals("Saude")) {
+            query = "select * from product where name like '%" + searchName + "%' and category = '1'";
+        } else if (!searchName.isEmpty() && selectedType.equals("Higiene")) {
+            query = "select * from product where name like '%\" + searchName + \"%' and category = '2'";
+        } else if (!searchName.isEmpty() && selectedType.equals("Lazer")){
+            query = "select * from product where name like '%\" + searchName + \"%' and category = '3'";
+        } else if(searchName.isEmpty() && selectedType.equals("Todas")) {
+            query = "select * from product";
+        } else if (searchName.isEmpty() && selectedType.equals("Saude")) {
+            query = "select * from product where category = '1'";
+        } else if (searchName.isEmpty() && selectedType.equals("Higiene")) {
+            query = "select * from product where category = '2'";
+        } else if (searchName.isEmpty() && selectedType.equals("Lazer")){
+            query = "select * from product where category = '3'";
+        }
+
+        //String query = "select * from product";
         try {
             dataStock.clear();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
+
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()){
