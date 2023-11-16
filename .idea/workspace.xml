@@ -7,12 +7,14 @@
     <list default="true" id="b27c7d94-b58e-45ea-920c-c9bc9cc10c55" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/908e53d2-a887-45e7-a5db-19c3da2a8718.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a7a985ea-7c9f-4e58-8e9f-cbb1be3942ef/storage_v2/_src_/schema/main.uQUzAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/Modelos/SqliteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingAnimalsClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingAnimalsClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/main/java/com/example/shelterwise/TestMethods/TestingAnimalsClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/VoluntariosListControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingAnimalsClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingAnimalsClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ShelterWise/src/test/java/com/example/shelterwise/TestMethods/TestingAnimalsClassTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,33 +46,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "dev",
-    "last_directory_selection": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21/ShelterWise/src/main/java/com",
-    "last_opened_file_path": "C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21/ShelterWise/src/main/java/com&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bruno/Desktop/ISEC/2023_2024/1Semestre/GPS/gps_g21&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bruno\Desktop\ISEC\2023_2024\1Semestre\GPS\gps_g21\ShelterWise\src\main\resources\com\example\shelterwise" />
@@ -93,7 +95,7 @@
       <recent name="com.example.shelterwise" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StarterApplication">
+  <component name="RunManager" selected="JUnit.TestingAnimalsClassTest.loadInfoAdopters">
     <configuration name="StarterApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.StarterApplication" />
       <module name="ShelterWise" />
@@ -122,8 +124,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestingAnimalsClassTest.loadInfoAdopters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ShelterWise" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.shelterwise.TestMethods.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.shelterwise.TestMethods" />
+      <option name="MAIN_CLASS_NAME" value="com.example.shelterwise.TestMethods.TestingAnimalsClassTest" />
+      <option name="METHOD_NAME" value="loadInfoAdopters" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestingAnimalsClassTest.loadInfoAdopters" />
         <item itemvalue="Application.StarterApplication" />
         <item itemvalue="JUnit.TestingAnimalsClassTest" />
       </list>
