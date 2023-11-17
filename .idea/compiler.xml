@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ShelterWise" />
+        <module name="gps_g21" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ShelterWise" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
