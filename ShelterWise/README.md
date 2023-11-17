@@ -286,8 +286,6 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Efetuar o login na aplicação
   - **US19 - Voluntários (Login)**
     - Task1: Efetuar o login na aplicação
-  - **US20 - Doadores (Login)**
-    - Task1: Efetuar o login na aplicação
   - Task1 - Criar uma base de dados
   - **US10 - Administrador (Gerir produtos)**
     - Task1: Ver os produtos em stock
@@ -297,7 +295,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Ver os produtos em stock
     - Task2: Editar um produto em stock
 
-- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+1H+5H+2H+2H+1H+1H+1H = 55H 
+- Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+5H+2H+2H+1H+1H+1H = 54H 
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
@@ -334,10 +332,8 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US6 - Voluntários (Gerir informação do animal)**
     - Task1: Visualizar a informação de um animal
     - Task2: Adicionar e editar informação de um animal
-  - **US7 - Doadores (Gerir recursos organização)**
-    - Task1: Visualizar lista dos recursos da organização necessários 
-  - **US8 - Doadores (Gerir historial das doações)**
-    - Task1: Visualizar o seu historial de doações
+  - **US7 - Administrador (Gerir recursos organização)**
+    - Task1: Visualizar lista dos recursos da organização
   - **US12 - Administrador (Gerir veterinários)**
     - Task1: Visualizar a lista de veterinários
     - Task2: Alterar e adicionar informações dos veterinários
@@ -350,9 +346,7 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US16 - Voluntários (Ver veterinários)**
     - Task1: Visualizar lista de veterinários
     - Task2: Visualizar informação de um veterinário
-  - **US17 - Doadores (Ver animais)**
-    - Task1: Visualizar lista de animais não adotados
-  - **US21 - Doadores (Inserir doações)**
+  - **US20 - Administrador (Inserir doações)**
     - Task1: Adicionar doação
     
 - Story Points: 2S+3M+3X+2H
