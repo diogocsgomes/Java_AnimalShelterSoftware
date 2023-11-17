@@ -56,14 +56,11 @@ public class StarterController {
         connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
-            System.err.println();
             System.exit(1);
         }
         System.out.println("Connection successful");
         String query = "select role from users where nome = ? and password = ?";
         try {
-            System.out.println("user: " + username + " pass: " + password);
-            System.out.println("sqlQuery: " + query);
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);

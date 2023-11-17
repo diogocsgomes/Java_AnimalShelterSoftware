@@ -124,9 +124,6 @@ public class AnimaisListController {
         }
     }
 
-
-
-
     public void loadInfoAnimals(){
         connection = sqliteController.createDBConnection();
         if(connection == null){
@@ -176,16 +173,6 @@ public class AnimaisListController {
         } finally {
             sqliteController.closeDBConnection(connection);
         }
-
-        /*tbAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
-            if(newValue != null)
-            {
-                Animal aSelected = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
-                System.out.println(aSelected.name);
-            }
-        });
-
-         */
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {

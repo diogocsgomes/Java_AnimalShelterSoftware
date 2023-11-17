@@ -40,17 +40,17 @@
             <ComboBox fx:id="typeAnimal" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo Animal" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbAnimais" fx:id="tbAnimais" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
-                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" text="Id" />
-                <TableColumn fx:id="nameColumn" prefWidth="94.39996337890625" text="Name" />
-                  <TableColumn fx:id="typeColumn" prefWidth="52.00006103515625" text="Type" />
-                  <TableColumn fx:id="genderColumn" prefWidth="52.79998779296875" text="Gender" />
-                  <TableColumn fx:id="kennelIdColumn" minWidth="4.800048828125" prefWidth="52.0" text="Kennel" />
-                  <TableColumn fx:id="commentsColumn" prefWidth="223.20001220703125" text="Comments" />
-                <TableColumn fx:id="weightColumn" prefWidth="50.0" text="Weight" visible="false" />
-                  <TableColumn fx:id="breedColumn" prefWidth="58.0" text="Breed" visible="false" />
-                  <TableColumn fx:id="furTypeColumn" prefWidth="63.0" text="Fur Type" visible="false" />
-                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" text="Fur Color" visible="false" />
-                  <TableColumn fx:id="birthDateColumn" prefWidth="69.0" text="Birth Date" visible="false" />
+                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />
+                  <TableColumn fx:id="nameColumn" prefWidth="94.39996337890625" style="-fx-alignment: CENTER-LEFT;" text="Name" />
+                  <TableColumn fx:id="typeColumn" prefWidth="78.0" style="-fx-alignment: CENTER-LEFT;" text="Type" />
+                  <TableColumn fx:id="genderColumn" prefWidth="64.0" style="-fx-alignment: CENTER-LEFT;" text="Gender" />
+                  <TableColumn fx:id="kennelIdColumn" minWidth="4.800048828125" prefWidth="64.0" style="-fx-alignment: CENTER-LEFT;" text="Kennel" />
+                  <TableColumn fx:id="commentsColumn" prefWidth="176.0" style="-fx-alignment: CENTER-LEFT;" text="Comments" />
+                  <TableColumn fx:id="weightColumn" prefWidth="50.0" style="-fx-alignment: CENTER-LEFT;" text="Weight" visible="false" />
+                  <TableColumn fx:id="breedColumn" prefWidth="58.0" style="-fx-alignment: CENTER-LEFT;" text="Breed" visible="false" />
+                  <TableColumn fx:id="furTypeColumn" prefWidth="63.0" style="-fx-alignment: CENTER-LEFT;" text="Fur Type" visible="false" />
+                  <TableColumn fx:id="furColorColumn" prefWidth="65.0" style="-fx-alignment: CENTER-LEFT;" text="Fur Color" visible="false" />
+                  <TableColumn fx:id="birthDateColumn" prefWidth="69.0" style="-fx-alignment: CENTER-LEFT;" text="Birth Date" visible="false" />
               </columns>
             </TableView>
          </children></AnchorPane>
