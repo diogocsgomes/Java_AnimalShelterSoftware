@@ -18,7 +18,7 @@ ENV DISPLAY={$DISPLAY}
 WORKDIR /app
 
 # Copy the source code
-COPY ShelterWise /app
+COPY . /app
 
 # Build the JAR file
 RUN mvn clean package
