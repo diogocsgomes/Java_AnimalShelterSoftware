@@ -344,6 +344,7 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task1: Adicionar doação
   - **US.. - Administrador (Gerir recursos organização)**
     - Task1: Visualizar lista dos recursos da organização
+  -Task2 - Correção de bugs e alterações pedidas pelo cliente (Parte Animais)
     
 - Story Points: 2S+3M+3X+2H
 - Analysis: short analysis of the planning meeting
