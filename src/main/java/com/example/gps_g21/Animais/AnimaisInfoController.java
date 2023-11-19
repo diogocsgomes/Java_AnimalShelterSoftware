@@ -69,6 +69,8 @@ public class AnimaisInfoController {
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
     List<String> genders = Arrays.asList("Male", "Female", "Other");
+    int healthStatus, adopted;
+    boolean feedStatus;
 
     public void initialize() throws SQLException {
         connection = sqliteController.createDBConnection();
@@ -153,8 +155,9 @@ public class AnimaisInfoController {
                 String birthDate = resultSet.getString("birth_date");
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
-                int healthStatus = resultSet.getInt("health");
-                boolean feedStatus = resultSet.getBoolean("feed");
+                adopted = resultSet.getInt("adopted");
+                healthStatus = resultSet.getInt("health");
+                feedStatus = resultSet.getBoolean("feed");
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -191,7 +194,7 @@ public class AnimaisInfoController {
 
                 if(healthStatus >= 0 && healthStatus < 25){
                     tooltipSaude = new Tooltip("Muito mau de saúde");
-                    circleSaude.setFill(Color.GREEN);
+                    circleSaude.setFill(Color.RED);
                 }
                 else if(healthStatus >= 25 && healthStatus < 50){
                     tooltipSaude = new Tooltip("Mau de saúde");
@@ -266,11 +269,16 @@ public class AnimaisInfoController {
             statement.setString(9, genero);
             statement.setInt(10, casotaId);
             statement.setString(11, imageConverter);
-            statement.setBoolean(12, false);
-            statement.setInt(13, 100);
-            statement.setBoolean(14, true);
-            if(val == 0)
+            if(val == 0) {
+                statement.setInt(12, adopted);
+                statement.setInt(13, 100);
+                statement.setBoolean(14, feedStatus);
                 statement.setInt(15, AnimalId);
+            }else {
+                statement.setBoolean(12, false);
+                statement.setInt(13, 100);
+                statement.setBoolean(14, true);
+            }
 
             int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
