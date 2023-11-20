@@ -37,7 +37,7 @@
                   <Font name="Verdana" size="12.0" />
                </font>
             </Button>
-            <ComboBox fx:id="typeAnimal" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo Animal" style="-fx-background-color: Gray;" visibleRowCount="5" />
+            <ComboBox fx:id="typeCategory" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbAnimais" fx:id="tbAnimais" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
                   <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />

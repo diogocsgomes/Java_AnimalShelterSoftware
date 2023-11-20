@@ -27,7 +27,7 @@ import java.util.Objects;
 
 public class AnimaisListController {
     @FXML
-    private ComboBox typeAnimal;
+    private ComboBox typeCategory;
     @FXML
     private TextField searchAnimal;
     @FXML
@@ -60,11 +60,11 @@ public class AnimaisListController {
     Connection connection = null;
     String query = "select * from animals";
     private ObservableList<Animal> dataAnimals;
-    List<String> AnimalType = Arrays.asList("All", "Dog", "Cat", "Other");
+    List<String> SearchType = Arrays.asList("All", "Dog", "Cat", "Other", "Adopted", "Adoptable");
 
     public void initialize(){
-        typeAnimal.setItems(FXCollections.observableArrayList(AnimalType));
-        typeAnimal.getSelectionModel().selectFirst();
+        typeCategory.setItems(FXCollections.observableArrayList(SearchType));
+        typeCategory.getSelectionModel().selectFirst();
 
         dataAnimals = FXCollections.observableArrayList();
         idColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("id"));
@@ -131,21 +131,31 @@ public class AnimaisListController {
             System.exit(1);
         }
         System.out.println("Connection successful");
-        String selectedType = typeAnimal.getSelectionModel().getSelectedItem().toString();
+        String selectedType = typeCategory.getSelectionModel().getSelectedItem().toString();
         String searchName = searchAnimal.getText().trim();
         System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
 
-        if(!searchName.isEmpty() && !selectedType.equals("All")) {
+        if(!searchName.isEmpty() && (selectedType.equals("Dog") || selectedType.equals("Cat") || selectedType.equals("Other"))){
             query = "select * from animals where name like '%" + searchName + "%' and type = '" + selectedType + "'";
-        }else if(!searchName.isEmpty()){
+        } else if(!searchName.isEmpty() && selectedType.equals("Adopted")){
+            query = "select * from animals where name like '%" + searchName + "%' and adopted = 1";
+        } else if(!searchName.isEmpty() && selectedType.equals("Adoptable")){
+            query = "select * from animals where name like '%" + searchName + "%' and adopted = 0";
+        } else if(!searchName.isEmpty()){
             query = "select * from animals where name like '%" + searchName + "%'";
         } else if(selectedType.equals("All")){
             query = "select * from animals";
         } else if(selectedType.equals("Dog") || selectedType.equals("Cat")){
             query = "select * from animals where type = '" + selectedType + "'";
         }
-        else{
+        else if(selectedType.equals("Other")){
             query = "select * from animals where type != 'Dog' and type != 'Cat'";
+        }
+        else if(selectedType.equals("Adopted")){
+            query = "select * from animals where adopted = 1";
+        }
+        else if(selectedType.equals("Adoptable")){
+            query = "select * from animals where adopted = 0";
         }
         try {
             dataAnimals.clear();
