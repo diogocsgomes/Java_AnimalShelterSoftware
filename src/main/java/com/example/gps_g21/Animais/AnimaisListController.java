@@ -16,16 +16,32 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class AnimaisListController {
+    public Text tipoDeAnimalLabel;
+    public Text nomeLabel;
+    public Text generoLabel;
+    public Text comentariosLabel;
+    public Text casotaLabel;
+    public Text tipoDePelagemLabel;
+    public Text dataNascimentoLabel;
+    public Text pesoLabel;
+    public Text racaLabel;
+    public ImageView imgAnimal;
     @FXML
     private ComboBox typeCategory;
     @FXML
@@ -54,6 +70,12 @@ public class AnimaisListController {
     private TableColumn kennelIdColumn;
     @FXML
     private TableColumn commentsColumn;
+
+   
+    byte [] imageBytes;
+    String base64Image;
+
+
     private Stage stage;
     private Scene scene;
     SqliteController sqliteController = new SqliteController();
@@ -61,6 +83,9 @@ public class AnimaisListController {
     String query = "select * from animals";
     private ObservableList<Animal> dataAnimals;
     List<String> SearchType = Arrays.asList("All", "Dog", "Cat", "Other", "Adopted", "Adoptable");
+
+
+    private  Animal animalSelected = null;
 
     public void initialize(){
         typeCategory.setItems(FXCollections.observableArrayList(SearchType));
@@ -125,6 +150,7 @@ public class AnimaisListController {
     }
 
     public void loadInfoAnimals(){
+
         connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
@@ -165,17 +191,24 @@ public class AnimaisListController {
             while (resultSet.next()){
                 Animal animal = new Animal();
                 animal.setId(resultSet.getInt("id"));
-//                animal.setBirthDate(resultSet.getString("birth_date"));
-//                animal.setBreed(resultSet.getString("breed"));
+                animal.setBirthDate(resultSet.getString("birth_date"));
+                animal.setBreed(resultSet.getString("breed"));
                 animal.setComments(resultSet.getString("comments"));
-//                animal.setFurColor(resultSet.getString("fur_color"));
-//                animal.setFurType(resultSet.getString("fur_type"));
+                animal.setFurColor(resultSet.getString("fur_color"));
+                animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
                 animal.setKennelId(resultSet.getInt("kennel_id"));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
-//                animal.setWeight(resultSet.getDouble("weight"));
+                animal.setWeight(resultSet.getDouble("weight"));
+                animal.setComments(resultSet.getString("comments"));
+                animal.setImage( resultSet.getString("image"));
                 dataAnimals.add(animal);
+
+
+
+
+
             }
             tbAnimais.setItems(dataAnimals);
         } catch (SQLException ex) {
@@ -183,6 +216,35 @@ public class AnimaisListController {
         } finally {
             sqliteController.closeDBConnection(connection);
         }
+
+        tbAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
+            if(newValue != null)
+            {
+                animalSelected = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
+                //System.out.println(animalSelected.toString());
+                nomeLabel.setText(animalSelected.name);
+                tipoDeAnimalLabel.setText(animalSelected.type);
+                racaLabel.setText(animalSelected.breed);
+                pesoLabel.setText( Double.toString(animalSelected.weight));
+                generoLabel.setText(animalSelected.gender);
+                dataNascimentoLabel.setText(animalSelected.birthDate);
+                tipoDePelagemLabel.setText(animalSelected.furType);
+                casotaLabel.setText(Integer.toString(animalSelected.kennelId));
+                comentariosLabel.setText(animalSelected.comments);
+                base64Image = animalSelected.image;
+                if (base64Image != null) {
+                    imageBytes = Base64.getDecoder().decode(base64Image);
+                    ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imageBytes);
+                    Image image = new Image(byteArrayInputStream);
+                    imgAnimal.setImage(image);
+                }
+                else{
+                    imgAnimal.setImage(null);
+                }
+
+            }
+        });
+
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
