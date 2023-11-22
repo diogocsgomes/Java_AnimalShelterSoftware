@@ -46,18 +46,18 @@
       <children>
             <TableView fx:id="tbAdopters" layoutX="14.0" layoutY="110.0" prefHeight="226.0" prefWidth="298.0">
               <columns>
-                <TableColumn fx:id="idColumnAdopters" prefWidth="41.60003662109375" text="ID" />
-                <TableColumn fx:id="nameColumnAdopters" prefWidth="72.0" text="Name" />
-                  <TableColumn fx:id="phoneNumberColumnAdopters" prefWidth="91.20001220703125" text="Phone Number" />
-                  <TableColumn fx:id="emailColumnAdopters" prefWidth="138.39996337890625" text="email" />
+                <TableColumn fx:id="idColumnAdopters" prefWidth="75" text="Número" />
+                <TableColumn fx:id="nameColumnAdopters" prefWidth="72.0" text="Nome" />
+                  <TableColumn fx:id="phoneNumberColumnAdopters" prefWidth="91.20001220703125" text="Telefone" />
+                  <TableColumn fx:id="emailColumnAdopters" prefWidth="138.39996337890625" text="Email" />
               </columns>
             </TableView>
             <TableView fx:id="tbAnimais" layoutX="327.0" layoutY="110.0" prefHeight="225.0" prefWidth="298.0">
               <columns>
-                <TableColumn fx:id="idColumnAnimais" prefWidth="75.0" text="Id" />
-                <TableColumn fx:id="nameColumnAnimais" prefWidth="66.4000244140625" text="Name" />
-                  <TableColumn fx:id="typeColumnAnimais" text="Type" />
-                  <TableColumn fx:id="genderColumnAnimais" prefWidth="75.20001220703125" text="Gender" />
+                <TableColumn fx:id="idColumnAnimais" prefWidth="75.0" text="Número" />
+                <TableColumn fx:id="nameColumnAnimais" prefWidth="66.4000244140625" text="Nome" />
+                  <TableColumn fx:id="typeColumnAnimais" text="Tipo" />
+                  <TableColumn fx:id="genderColumnAnimais" prefWidth="75.20001220703125" text="Género" />
               </columns>
             </TableView>
             <Button layoutX="185.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchNewAdopter" style="-fx-background-color: #506D68;" text="Adicionar Adotante" textFill="WHITE">

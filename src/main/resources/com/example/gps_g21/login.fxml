@@ -56,11 +56,11 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <TextField id="txtUsername" fx:id="usernameField" layoutX="189.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-color: #D8D6CA;">
+            <TextField id="txtUsername" fx:id="usernameField" layoutX="189.0" layoutY="224.0" prefHeight="26.0" prefWidth="222.0" promptText="Nome de utilizador" style="-fx-background-color: #D8D6CA;">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></TextField>
-            <PasswordField id="txtPassword" fx:id="passwordField" layoutX="189.0" layoutY="268.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-color: #D8D6CA;">
+            <PasswordField id="txtPassword" fx:id="passwordField" layoutX="189.0" layoutY="268.0" prefHeight="26.0" prefWidth="222.0" promptText="Palavra-passe" style="-fx-background-color: #D8D6CA;">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></PasswordField>
@@ -69,10 +69,11 @@
                   <Font name="System Bold" size="11.0" />
                </font>
             </Text>
-            <Button id="btnLogin" fx:id="btnLogin" layoutX="189.0" layoutY="325.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #506D68;" text="Login" textAlignment="CENTER" textFill="WHITE">
+            <Button id="btnLogin" fx:id="btnLogin" layoutX="189.0" layoutY="325.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="222.0" style="-fx-background-color: #506D68;" text="Entrar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
-               </font></Button>
+               </font>
+            </Button>
       </children>
     </AnchorPane>
   </children>
