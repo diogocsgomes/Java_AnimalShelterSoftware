@@ -119,3 +119,11 @@
 ### Reunião 16/11:
 - Código atualizado;
 - Conclusão da Sprint1;
+
+### Reunião 23/11:
+- Correção de bugs;
+- Efetuadas as alterações sugeridas pelo professor(Linguagem usada, termos, etc);
+- Conclusão da Sprint 1 Review;
+- Atualização das US/Tasks´s da sprint 2;
+- Planning Poker efetuado para as task´s da sprint 2;
+- Iniciação da implementação de algumas US;
