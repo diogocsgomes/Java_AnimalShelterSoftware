@@ -292,14 +292,15 @@ It is a collection of criteria that must be completed for a User Story to be con
     - Task2: Editar um produto em stock
 
 - Story Points: 2H+2H+3H+2H+4H+3H+3H+3H+2H+3H+3H+4H+2H+4H+1H+1H+5H+2H+2H+1H+1H+1H = 54H 
-- Analysis: short analysis of the planning meeting
+- Analysis: O utilizador deve ter a possibilidade de efetuar uma adoção e veem como gerir os animais, instalações e das casotas. O mesmo também tem de ter uma interface de login, aberta a todos os utilizadores da aplicação.
 
 ##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
-- Story Points: 2S+1M+2X+2H
+- Analysis: 
+  - [US12 - Como voluntário quero poder editar e ver produtos no stock](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/40)(New US)
+- Story Points: 3S+5M+0X+0H = 9+35+0+0 = 44
 - Version: 0.1 
-- Client analysis: client feedback
-- Conclusions: what to add/review
+- Client analysis: O cliente aprovou o projeto.
+- Conclusions: O cliente pediu para fazermos algumas alterações em termos de interface, e para corrigir alguns bugs que surgiram durante a demonstração final da sprint. 
 
 ##### Sprint Retrospective
 - What we did well:
@@ -316,7 +317,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 #### Sprint 2
 ##### Sprint Plan
-- Goal: Adicionar funcionalidades aos voluntários, administradores e começar a desenvolver as funcionalidades dos doadores
+- Goal: Adicionar funcionalidades aos voluntários e administradores.
 - Dates: from 23/Nov to 7/Dez, 2 weeks
 - Roles:
   - Product Owner: **Bruno Fonseca**
@@ -340,14 +341,13 @@ It is a collection of criteria that must be completed for a User Story to be con
   - **US14 - Voluntários (Ver veterinários)**
     - Task1: Visualizar lista de veterinários
     - Task2: Visualizar informação de um veterinário
-  - **US.. - Administrador (Inserir doações)**
+  - **US17 - Administrador (Inserir doações)**
     - Task1: Adicionar doação
-  - **US.. - Administrador (Gerir recursos organização)**
-    - Task1: Visualizar lista dos recursos da organização
   - Task2 - Correção de bugs e alterações pedidas pelo cliente (Parte Animais)
+  - Task3 - Pedido do cliente para ter textos em português
     
-- Story Points: 2S+3M+3X+2H
-- Analysis: short analysis of the planning meeting
+- Story Points: 2H+2H+1H+1H+2H+2H+2H+2H+2H+1H+1H+1H+2H+2H+1H = 24H
+- Analysis: Existir a possibilidade dos voluntários terem várias tarefas associadas a desenvolver no estabelecimento, e ter a parte do administrador completa, exceto a parte do calendario de tarefas dos voluntários.
 
 ##### Sprint Review
 - Analysis: what was not done or what was added (Link to US or Task from the PB)
