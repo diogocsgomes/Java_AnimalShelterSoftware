@@ -2,8 +2,8 @@ package com.example.gps_g21.Casotas;
 
 import com.example.gps_g21.Modelos.Casotas;
 import com.example.gps_g21.Modelos.SqliteController;
-import com.example.gps_g21.StarterController;
 import com.example.gps_g21.Modelos.UserTypes;
+import com.example.gps_g21.StarterController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class CasotasListController {
+public class CasotasListControllerVol {
     @FXML
     private TableView tbCasota;
     @FXML
@@ -160,11 +160,11 @@ public class CasotasListController {
 
                             Parent root = null;
                             try {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/casotas-info-view.fxml"));
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/casotas-info-view-vol.fxml"));
 
                                 loader.setControllerFactory(controllerClass -> {
-                                    if (controllerClass == CasotasViewDataController.class) {
-                                        return new CasotasViewDataController(id);
+                                    if (controllerClass == CasotasViewDataControllerVol.class) {
+                                        return new CasotasViewDataControllerVol(id);
                                     } else {
                                         try {
                                             return controllerClass.newInstance();
@@ -214,7 +214,7 @@ public class CasotasListController {
         }
     }
 
-    public boolean isTableColumnExists(String columnName, javafx.scene.control.TableView<?> tableView) {
+    public boolean isTableColumnExists(String columnName, TableView<?> tableView) {
         for (TableColumn<?, ?> column : tableView.getColumns()) {
             if (column.getText().equals(columnName)) {
                 return true;

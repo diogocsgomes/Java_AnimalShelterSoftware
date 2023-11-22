@@ -11,8 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.text.Text;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,9 +23,7 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Optional;
 
-public class CasotasViewDataController {
-    @FXML
-    private Text id;
+public class CasotasViewDataControllerVol {
     @FXML
     private Text total;
     @FXML
@@ -57,8 +55,7 @@ public class CasotasViewDataController {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            if(StarterController.userType == UserTypes.ADMIN){
-                id.setText("ID: " + id_);
+            if(StarterController.userType == UserTypes.VULUNTIER){
                 max.setText("Número máximo de animais: "+resultSet.getInt("max"));
                 descricao.setText("Descrição: "+resultSet.getString("description"));
 
@@ -85,7 +82,7 @@ public class CasotasViewDataController {
 
     }
 
-    public CasotasViewDataController(int id) {
+    public CasotasViewDataControllerVol(int id) {
         this.id_ = id;
     }
 
@@ -121,7 +118,7 @@ public class CasotasViewDataController {
     }
 
     public void Back(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view-vol.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -176,7 +173,7 @@ public class CasotasViewDataController {
                 sqliteController.closeDBConnection(connection);
             }
 
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view-vol.fxml")));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
