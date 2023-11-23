@@ -182,14 +182,14 @@ public class VeterinariosListControllerAdmin {
             stage.show();
             return true;
         } else {
-            System.out.println("A OPERAÇÃO SAIR DA LISTA DE VETERINARIOS APENAS DEVE SER EFETUADA POR UM ADMIN");
+            System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
             return false;
         }
     }
 
     public void Add(ActionEvent event) throws IOException {
         if (StarterController.userType == UserTypes.ADMIN) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarians-create.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-create.fxml")));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             preScene = stage.getScene();
 
@@ -197,7 +197,7 @@ public class VeterinariosListControllerAdmin {
             stage.setScene(scene);
             stage.show();
         } else {
-            System.out.println("A OPERAÇÃO ADICIONAR VETERINÁRIO APENAS DEVE SER EFETUADA POR UM ADMIN");
+            System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
         }
     }
 

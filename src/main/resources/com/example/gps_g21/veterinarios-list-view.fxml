@@ -62,7 +62,7 @@
                   <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#procurar" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="510.0" layoutY="361.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="12.0" />
                </font>
