@@ -26,4 +26,6 @@ module com.example.shelterwise {
     opens com.example.gps_g21.Administrador to javafx.fxml;
     exports com.example.gps_g21.DoacoesAdocoes;
     opens com.example.gps_g21.DoacoesAdocoes to javafx.fxml;
+    exports com.example.gps_g21.Veterinarios;
+    opens com.example.gps_g21.Veterinarios to javafx.fxml;
 }
