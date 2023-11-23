@@ -82,7 +82,7 @@ public class AnimaisListController {
     Connection connection = null;
     String query = "select * from animals";
     private ObservableList<Animal> dataAnimals;
-    List<String> SearchType = Arrays.asList("All", "Dog", "Cat", "Other", "Adopted", "Adoptable");
+        List<String> SearchType = Arrays.asList("Todos", "Cao", "Gato", "Outro", "Adotado", "Adotavel");
 
 
     private  Animal animalSelected = null;
@@ -161,26 +161,26 @@ public class AnimaisListController {
         String searchName = searchAnimal.getText().trim();
         System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
 
-        if(!searchName.isEmpty() && (selectedType.equals("Dog") || selectedType.equals("Cat") || selectedType.equals("Other"))){
+        if(!searchName.isEmpty() && (selectedType.equals("Cao") || selectedType.equals("Gato") || selectedType.equals("Outro"))){
             query = "select * from animals where name like '%" + searchName + "%' and type = '" + selectedType + "'";
-        } else if(!searchName.isEmpty() && selectedType.equals("Adopted")){
+        } else if(!searchName.isEmpty() && selectedType.equals("Adotado")){
             query = "select * from animals where name like '%" + searchName + "%' and adopted = 1";
-        } else if(!searchName.isEmpty() && selectedType.equals("Adoptable")){
+        } else if(!searchName.isEmpty() && selectedType.equals("Adotavel")){
             query = "select * from animals where name like '%" + searchName + "%' and adopted = 0";
         } else if(!searchName.isEmpty()){
             query = "select * from animals where name like '%" + searchName + "%'";
-        } else if(selectedType.equals("All")){
+        } else if(selectedType.equals("Todos")){
             query = "select * from animals";
-        } else if(selectedType.equals("Dog") || selectedType.equals("Cat")){
+        } else if(selectedType.equals("Cao") || selectedType.equals("Gato")){
             query = "select * from animals where type = '" + selectedType + "'";
         }
-        else if(selectedType.equals("Other")){
-            query = "select * from animals where type != 'Dog' and type != 'Cat'";
+        else if(selectedType.equals("Outro")){
+            query = "select * from animals where type != 'Cao' and type != 'Gato'";
         }
-        else if(selectedType.equals("Adopted")){
+        else if(selectedType.equals("Adotado")){
             query = "select * from animals where adopted = 1";
         }
-        else if(selectedType.equals("Adoptable")){
+        else if(selectedType.equals("Adotavel")){
             query = "select * from animals where adopted = 0";
         }
         try {

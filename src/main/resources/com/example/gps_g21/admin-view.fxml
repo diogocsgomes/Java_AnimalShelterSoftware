@@ -44,7 +44,7 @@
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="btnVeterinarios" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Veterinários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Button fx:id="btnVeterinarios" alignment="CENTER" minWidth="100.0" onAction="#switchListaVeterinarios"  prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Veterinários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
