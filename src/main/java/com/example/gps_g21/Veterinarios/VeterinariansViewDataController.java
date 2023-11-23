@@ -76,7 +76,7 @@ public class VeterinariansViewDataController {
             sqliteController.closeDBConnection(connection);
         }
     }
-
+/*
     public void editData(ActionEvent event) {
         Parent root = null;
         try {
@@ -106,6 +106,8 @@ public class VeterinariansViewDataController {
         stage.setScene(scene);
         stage.show();
     }
+
+*/
 
     public void back(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarians-list-view.fxml")));

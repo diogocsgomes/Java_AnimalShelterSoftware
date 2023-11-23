@@ -190,7 +190,7 @@ public class VeterinariansListController {
             return false;
         }
     }
-
+/*
     public void switcharAdd(ActionEvent event) throws IOException {
         if (StarterController.userType == UserTypes.ADMIN) {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarians-create.fxml")));
@@ -204,7 +204,7 @@ public class VeterinariansListController {
             System.out.println("A OPERAÇÃO ADICIONAR VETERINÁRIO APENAS DEVE SER EFETUADA POR UM ADMIN");
         }
     }
-
+*/
     public void procurar(MouseEvent mouseEvent) {
         String selectedType = typeVeterinarian.getSelectionModel().getSelectedItem().toString();
         String searchName = searchVeterinarian.getText().trim();

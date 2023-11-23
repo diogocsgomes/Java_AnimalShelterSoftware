@@ -79,7 +79,7 @@ public class VeterinariansInfoEditController {
             System.out.println("Db fechada no VeterinariansInfoEditController (initialize)");
         }
     }
-
+/*
     public void save(ActionEvent event) throws SQLException, IOException {
         String sql = "UPDATE vets SET name = ?, address = ?, phone = ?, active = ?, email = ? WHERE id = ?";
 
@@ -107,7 +107,7 @@ public class VeterinariansInfoEditController {
             stage.show();
         }
     }
-
+*/
     public void back(ActionEvent event) throws IOException {
         sqliteController.closeDBConnection(connection);
 
