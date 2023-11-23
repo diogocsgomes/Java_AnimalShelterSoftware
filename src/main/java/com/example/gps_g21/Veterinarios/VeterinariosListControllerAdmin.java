@@ -89,7 +89,7 @@ public class VeterinariosListControllerAdmin {
                 dataVets.add(vet);
                 idList.add(resultSet.getInt("id"));
             }
-            addButtonToTable(idList);
+            //addButtonToTable(idList);
             tbVets.setItems(dataVets);
         } catch (SQLException ex) {
             ex.printStackTrace();
