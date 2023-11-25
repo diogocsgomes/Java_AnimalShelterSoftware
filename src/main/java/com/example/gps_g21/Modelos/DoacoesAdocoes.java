@@ -5,15 +5,21 @@ public class DoacoesAdocoes {
     public String nameAnimal;
     public String nameAdopter;
     public String adoptionDate;
+    public String donorName;
+    public String donorPhone;
+    public String donationDescription;
 
     public DoacoesAdocoes() {
         // Construtor vazio
     }
-    public DoacoesAdocoes(int id, String nameAnimal, String nameAdopter, String adoptionDate) {
+    public DoacoesAdocoes(int id, String nameAnimal, String nameAdopter, String adoptionDate, String donorName, String donorPhone, String donationDescription) {
         this.id = id;
         this.nameAnimal = nameAnimal;
         this.nameAdopter = nameAdopter;
         this.adoptionDate = adoptionDate;
+        this.donorName = donorName;
+        this.donorPhone = donorPhone;
+        this.donationDescription = donationDescription;
     }
 
     public int getId() {
@@ -46,5 +52,29 @@ public class DoacoesAdocoes {
 
     public void setAdoptionDate(String adoptionDate) {
         this.adoptionDate = adoptionDate;
+    }
+
+    public String getDonorName() {
+        return donorName;
+    }
+
+    public void setDonorName(String donorName) {
+        this.donorName = donorName;
+    }
+
+    public String getDonorPhone() {
+        return donorPhone;
+    }
+
+    public void setDonorPhone(String donorPhone) {
+        this.donorPhone = donorPhone;
+    }
+
+    public String getDonationDescription() {
+        return donationDescription;
+    }
+
+    public void setDonationDescription(String donationDescription) {
+        this.donationDescription = donationDescription;
     }
 }

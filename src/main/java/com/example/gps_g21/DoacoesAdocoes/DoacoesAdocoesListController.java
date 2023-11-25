@@ -43,6 +43,12 @@ public class DoacoesAdocoesListController {
     private TableColumn nameAdopterColumn;
     @FXML
     private TableColumn adoptionDateColumn;
+    @FXML
+    private TableColumn donorNameColumn;
+    @FXML
+    private TableColumn donorPhoneColumn;
+    @FXML
+    private TableColumn donationDescriptionColumn;
 
     private Stage stage;
     private Scene scene;
@@ -61,7 +67,10 @@ public class DoacoesAdocoesListController {
         nameAnimalColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, String>("nameAnimal"));
         nameAdopterColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, String>("nameAdopter"));
         adoptionDateColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, Date>("adoptionDate"));
-        TableColumn<DoacoesAdocoes, Boolean> colBtn = new TableColumn<>("Editar");
+        donorNameColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, String>("donorName"));
+        donorPhoneColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, String>("donorPhone"));
+        donationDescriptionColumn.setCellValueFactory(new PropertyValueFactory<DoacoesAdocoes, String>("donationDescription"));
+        /*TableColumn<DoacoesAdocoes, Boolean> colBtn = new TableColumn<>("Editar");
         colBtn.setMinWidth(63);
         colBtn.setCellFactory(new Callback<TableColumn<DoacoesAdocoes, Boolean>, TableCell<DoacoesAdocoes, Boolean>>() {
             @Override
@@ -69,7 +78,7 @@ public class DoacoesAdocoesListController {
                 return new EditButton();
             }
         });
-        tbDoacoesAdocoes.getColumns().add(colBtn);
+        tbDoacoesAdocoes.getColumns().add(colBtn);*/
         loadInfoDoacoesAdocoes();
     }
     public class EditButton extends TableCell<DoacoesAdocoes, Boolean> {
@@ -108,6 +117,7 @@ public class DoacoesAdocoesListController {
     }
 
     public void loadInfoDoacoesAdocoes() {
+        int don = 0, ado = 0;
         connection = sqliteController.createDBConnection();
         if (connection == null) {
             System.out.println("Connection not successful");
@@ -116,34 +126,78 @@ public class DoacoesAdocoesListController {
         System.out.println("Connection successful");
         String selectedType = typeCategory.getSelectionModel().getSelectedItem().toString();
 
-        String joinQuery = "select adoption_regist.id, animals.name as animal_name, " +
-                "adopters.name as adopter_name, adoption_regist.adoption_date " +
-                "from adoption_regist " +
-                "join animals on adoption_regist.animal_id = animals.id " +
-                "join adopters on adoption_regist.adopter_id = adopters.id";
+        // Query para carregar as informações de adoption_regist
+        String adoptionQuery = "SELECT adoption_regist.id, " +
+                "animals.name AS animal_name, " +
+                "adopters.name AS adopter_name, " +
+                "adoption_regist.adoption_date " +
+                "FROM adoption_regist " +
+                "JOIN animals ON adoption_regist.animal_id = animals.id " +
+                "JOIN adopters ON adoption_regist.adopter_id = adopters.id";
+
+        // Query para carregar as informações de donations
+        String donationsQuery = "SELECT * FROM donations";
 
         if (selectedType.equals("All")) {
-            query = joinQuery;
+            don = 1;
+            ado = 1;
         } else if (selectedType.equals("Doacoes")) {
-            query = joinQuery; // + " where is_donation = 1"; Completar com o nome da coluna
+            don = 1;
+            ado = 0;
         } else {
-            query = joinQuery; // + " where is_donation = 0"; Completar com o nome da coluna
+            don = 0;
+            ado = 1;
         }
 
         try {
             dataDoacoesAdocoes.clear();
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
-                DoacoesAdocoes doacoesadocoes = new DoacoesAdocoes();
-                doacoesadocoes.setId(resultSet.getInt("id"));
-                doacoesadocoes.setNameAnimal(resultSet.getString("animal_name"));
-                doacoesadocoes.setNameAdopter(resultSet.getString("adopter_name"));
-                doacoesadocoes.setAdoptionDate(resultSet.getString("adoption_date"));
-                dataDoacoesAdocoes.add(doacoesadocoes);
+            if(ado == 1){
+                nameAnimalColumn.setVisible(true);
+                nameAdopterColumn.setVisible(true);
+                adoptionDateColumn.setVisible(true);
+                if(don == 0){
+                    donorNameColumn.setVisible(false);
+                    donorPhoneColumn.setVisible(false);
+                    donationDescriptionColumn.setVisible(false);
+                }
+                PreparedStatement adoptionStatement = connection.prepareStatement(adoptionQuery);
+                ResultSet adoptionResultSet = adoptionStatement.executeQuery();
+
+                while (adoptionResultSet.next()) {
+                    DoacoesAdocoes doacoesadocoes = new DoacoesAdocoes();
+                    doacoesadocoes.setId(adoptionResultSet.getInt("id"));
+                    doacoesadocoes.setNameAnimal(adoptionResultSet.getString("animal_name"));
+                    doacoesadocoes.setNameAdopter(adoptionResultSet.getString("adopter_name"));
+                    doacoesadocoes.setAdoptionDate(adoptionResultSet.getString("adoption_date"));
+
+                    dataDoacoesAdocoes.add(doacoesadocoes);
+                }
             }
 
+            if(don == 1){
+                donorNameColumn.setVisible(true);
+                donorPhoneColumn.setVisible(true);
+                donationDescriptionColumn.setVisible(true);
+                if(ado == 0){
+                    nameAnimalColumn.setVisible(false);
+                    nameAdopterColumn.setVisible(false);
+                    adoptionDateColumn.setVisible(false);
+                }
+                PreparedStatement donationsStatement = connection.prepareStatement(donationsQuery);
+                ResultSet donationsResultSet = donationsStatement.executeQuery();
+
+                while (donationsResultSet.next()) {
+                    DoacoesAdocoes doacoesadocoes = new DoacoesAdocoes();
+                    doacoesadocoes.setId(donationsResultSet.getInt("id"));
+                    doacoesadocoes.setDonorName(donationsResultSet.getString("name"));
+                    doacoesadocoes.setDonorPhone(donationsResultSet.getString("phone_number"));
+                    doacoesadocoes.setDonationDescription(donationsResultSet.getString("description"));
+
+                    dataDoacoesAdocoes.add(doacoesadocoes);
+                }
+            }
+            // Atualizar a TableView
             tbDoacoesAdocoes.setItems(dataDoacoesAdocoes);
         } catch (SQLException ex) {
             ex.printStackTrace();

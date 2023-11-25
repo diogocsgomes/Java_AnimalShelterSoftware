@@ -26,10 +26,13 @@
             <ComboBox fx:id="typeCategory" editable="true" focusTraversable="false" layoutX="435.0" layoutY="24.0" onAction="#loadInfoDoacoesAdocoes" prefHeight="26.0" prefWidth="133.0" promptText="Tipo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbDoacoesAdocoes" fx:id="tbDoacoesAdocoes" layoutX="13.0" layoutY="61.0" prefHeight="291.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
-                  <TableColumn fx:id="idColumn" prefWidth="76" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Número" />
-                  <TableColumn fx:id="nameAnimalColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Animal" />
-                  <TableColumn fx:id="nameAdopterColumn" prefWidth="120.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Adotante" />
-                  <TableColumn fx:id="adoptionDateColumn" prefWidth="200.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Data Adoção" />
+                  <TableColumn fx:id="idColumn" prefWidth="58.39996337890625" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Número" />
+                  <TableColumn fx:id="nameAnimalColumn" prefWidth="70.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Animal" />
+                  <TableColumn fx:id="nameAdopterColumn" prefWidth="70.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Adotante" />
+                  <TableColumn fx:id="adoptionDateColumn" prefWidth="130.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Data Adoção" />
+                  <TableColumn fx:id="donorNameColumn" prefWidth="70.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Doador" />
+                  <TableColumn fx:id="donorPhoneColumn" maxWidth="96.79998779296875" prefWidth="70.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Telemovel" />
+                  <TableColumn fx:id="donationDescriptionColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Descrição" />
               </columns>
             </TableView>
          </children>
