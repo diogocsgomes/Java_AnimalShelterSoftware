@@ -1,7 +1,5 @@
 package com.example.gps_g21.DoacoesAdocoes;
 
-import com.example.gps_g21.Animais.AnimaisInfoController;
-import com.example.gps_g21.Modelos.Animal;
 import com.example.gps_g21.Modelos.DoacoesAdocoes;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.Modelos.UserTypes;
@@ -16,13 +14,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -218,5 +213,18 @@ public class DoacoesAdocoesListController {
         else{
             System.out.println("User type not recognized");
         }
+    }
+
+    @FXML
+    void novaDoacao(MouseEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/dialogbox-doacoesAdocoes-info-view.fxml"));
+        Parent parent = fxmlLoader.load();
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.showAndWait();
+        loadInfoDoacoesAdocoes();
     }
 }

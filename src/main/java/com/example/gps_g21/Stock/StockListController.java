@@ -151,14 +151,6 @@ public class StockListController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if(StarterController.userType == UserTypes.DONATOR){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/doador-view.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            preScene = stage.getScene();
-
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
         }
 
 

@@ -18,11 +18,6 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Text>
-            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
             <ComboBox fx:id="typeCategory" editable="true" focusTraversable="false" layoutX="435.0" layoutY="24.0" onAction="#loadInfoDoacoesAdocoes" prefHeight="26.0" prefWidth="133.0" promptText="Tipo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbDoacoesAdocoes" fx:id="tbDoacoesAdocoes" layoutX="13.0" layoutY="61.0" prefHeight="291.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
               <columns>
@@ -35,6 +30,16 @@
                   <TableColumn fx:id="donationDescriptionColumn" prefWidth="100.0" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Descrição" />
               </columns>
             </TableView>
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNovaDoacao" alignment="CENTER" contentDisplay="CENTER" layoutX="482.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#novaDoacao" style="-fx-background-color: #506D68;" text="Nova Doação" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="12.0" />
+               </font>
+            </Button>
          </children>
         </AnchorPane>
     </children>
