@@ -89,7 +89,7 @@ public class VeterinariosListControllerAdmin {
                 dataVets.add(vet);
                 idList.add(resultSet.getInt("id"));
             }
-            //addButtonToTable(idList);
+            addButtonToTable(idList);
             tbVets.setItems(dataVets);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -116,7 +116,7 @@ public class VeterinariosListControllerAdmin {
                         btn.setOnAction((ActionEvent event) -> {
                             Parent root = null;
                             try {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinari-info-view.fxml"));
+                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-view.fxml"));
                                 loader.setControllerFactory(controllerClass -> {
                                     if (controllerClass == VetsViewDataController.class) {
                                         return new VetsViewDataController(id);
