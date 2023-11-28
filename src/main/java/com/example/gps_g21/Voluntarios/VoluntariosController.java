@@ -24,6 +24,7 @@ public class VoluntariosController {
     private Scene scene;
     private Parent root;
 
+    private int loggedID = 0;
 
     public void switchListaAnimais(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/animais-list-view.fxml")));
@@ -59,5 +60,14 @@ public class VoluntariosController {
         }
     }
 
+    public void switchVerPerfil(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-profile-view.fxml")));
+
+        //VoluntariosViewProfileController profileController = load.
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.*;
 
 public class StarterController {
+    public static String loggedName;
     @FXML
     private TextField usernameField;
     @FXML
@@ -30,6 +31,7 @@ public class StarterController {
 
     public static UserTypes userType = null;
 
+
     public void setStage(Stage stage){
         this.stage = stage;
     }
@@ -42,6 +44,7 @@ public class StarterController {
             String password = passwordField.getText();
             String role = isValidUser(username, password);
             if(role != null){
+                loggedName = username;
                 openApp(role);
             }else{
                 txtStatus.setVisible(true);
