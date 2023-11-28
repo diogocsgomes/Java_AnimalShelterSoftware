@@ -1,6 +1,8 @@
 package com.example.gps_g21.Casotas;
 
 import com.example.gps_g21.Modelos.SqliteController;
+import com.example.gps_g21.Modelos.UserTypes;
+import com.example.gps_g21.StarterController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -55,24 +57,26 @@ public class CasotasViewDataController {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            id.setText("ID: " + id_);
-            max.setText("Número máximo de animais: "+resultSet.getInt("max"));
-            descricao.setText("Descrição: "+resultSet.getString("description"));
+            if(StarterController.userType == UserTypes.ADMIN){
+                id.setText("ID: " + id_);
+                max.setText("Número máximo de animais: "+resultSet.getInt("max"));
+                descricao.setText("Descrição: "+resultSet.getString("description"));
 
-            String query2 = "select COUNT(*) AS total from animals where kennel_id = " + id_;
-            PreparedStatement preparedStatement2 = connection.prepareStatement(query2);
-            ResultSet resultSet2 = preparedStatement2.executeQuery();
+                String query2 = "select COUNT(*) AS total from animals where kennel_id = " + id_;
+                PreparedStatement preparedStatement2 = connection.prepareStatement(query2);
+                ResultSet resultSet2 = preparedStatement2.executeQuery();
 
-            total.setText("Total de animais na casota: "+resultSet2.getInt("total"));
+                total.setText("Total de animais na casota: "+resultSet2.getInt("total"));
 
-            query2 = "select * from animals where kennel_id = " + id_;
-            preparedStatement2 = connection.prepareStatement(query2);
-            resultSet2 = preparedStatement2.executeQuery();
+                query2 = "select * from animals where kennel_id = " + id_;
+                preparedStatement2 = connection.prepareStatement(query2);
+                resultSet2 = preparedStatement2.executeQuery();
 
-            animais.setWrapText(true);
-            animais.appendText("Animais e tipo na casota\n");
-            while (resultSet2.next()){
-                animais.appendText(resultSet2.getString("name") + " - " + resultSet2.getString("type") + "\n");
+                animais.setWrapText(true);
+                animais.appendText("Animais e tipo na casota\n");
+                while (resultSet2.next()){
+                    animais.appendText(resultSet2.getString("name") + " - " + resultSet2.getString("type") + "\n");
+                }
             }
 
         } finally {

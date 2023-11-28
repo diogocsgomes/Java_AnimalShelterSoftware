@@ -2,35 +2,18 @@ stages:
   - build
   - test
 
-variables:
-  CI_REGISTRY_IMAGE: "brun0f0nseca/gps_g21"
-  CI_REGISTRY: "registry.gitlab.com"
-
-build-job:
+build:
   stage: build
-  image: docker:stable
-  services:
-    - docker:dind
+  image: maven:3.8.1-openjdk-17-slim
   script:
-    - docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD
-    - export DOCKER_TAG=$CI_COMMIT_REF_SLUG-$CI_PIPELINE_ID
-    - export DOCKER_TAG_LATEST=$CI_COMMIT_REF_SLUG-latest
-    - docker build -t $CI_REGISTRY/$CI_REGISTRY_IMAGE:$DOCKER_TAG .
-    - docker tag $CI_REGISTRY/$CI_REGISTRY_IMAGE:$DOCKER_TAG $CI_REGISTRY/$CI_REGISTRY_IMAGE:$DOCKER_TAG_LATEST
-    - docker push $CI_REGISTRY/$CI_REGISTRY_IMAGE:$DOCKER_TAG
-    - docker push $CI_REGISTRY/$CI_REGISTRY_IMAGE:$DOCKER_TAG_LATEST
+    - export NEW_VERSION=${CI_COMMIT_SHA:0:8}-${CI_COMMIT_REF_NAME}
+    - mvn versions:set -DnewVersion=1-$NEW_VERSION
+    - mvn -s ci_settings.xml deploy
   only:
     - qa
     - main
 
-unit-test-job:   # This job runs in the test stage.
-  image: maven:3.8.4-openjdk-17-slim
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - echo "Running unit tests... This will take about 60 seconds."
-    - mvn test
-
-sonarcloud-job:
+unit-test-job:
   stage: test
   script:
-    - echo "Replace with the script provided by sonarcloud"
+    - echo "Replace with the command to run unit tests"

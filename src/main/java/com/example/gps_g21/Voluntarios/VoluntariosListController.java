@@ -208,8 +208,6 @@ public class VoluntariosListController {
             System.out.println("A OPERAÇÃO SAIR DA LISTA DE VOLUNTARIOS APENAS DEVE SER EFETUADA POR UM ADMIN");
             return false;
         }
-
-
     }
 
 

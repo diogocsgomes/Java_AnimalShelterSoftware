@@ -12,12 +12,12 @@
 <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Administrador.AdminController">
     <children>
         <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <Text fill="#171611" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo,  User" textAlignment="CENTER">
+         <Text fill="#171611" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo," textAlignment="CENTER">
             <font>
                <Font name="Warownia" size="36.0" />
             </font>
          </Text>
-         <Text fill="#506d68" layoutX="89.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role: Administrador" textAlignment="CENTER">
+         <Text fill="#506d68" layoutX="89.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Permissão: Administrador" textAlignment="CENTER">
             <font>
                <Font name="Warownia" size="16.0" />
             </font>
@@ -44,12 +44,12 @@
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="btnVeterinarios" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Veterinários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                    <Button fx:id="btnVeterinarios" alignment="CENTER" minWidth="100.0" onAction="#switchListaVeterinarios"  prefWidth="140.0" style="-fx-background-color: #506D68;" text="Lista de Veterinários" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="0">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="btnDoacoes" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Doações" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <Button fx:id="btnDoacoesAdocoes" alignment="CENTER" minWidth="100.0" onAction="#switchVerDoacoesAdocoes" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Doações\Adoções" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="0" GridPane.rowIndex="1">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>

@@ -25,9 +25,16 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class AnimaisInfoController {
+    @FXML
+    public Label lblError;
+    @FXML
     public Label lblTitulo;
     @FXML
     private Button btnSelecImg;
+    @FXML
+    private Button btnHistAlim;
+    @FXML
+    private Button btnHistBanh;
     @FXML
     private TextField txtNome;
     @FXML
@@ -54,7 +61,6 @@ public class AnimaisInfoController {
     private Circle circleAlimentado;
     @FXML
     private Circle circleSaude;
-    @FXML
     public int AnimalId;
     private Stage stage;
     private Scene scene;
@@ -63,6 +69,8 @@ public class AnimaisInfoController {
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
     List<String> genders = Arrays.asList("Male", "Female", "Other");
+    int healthStatus, adopted;
+    boolean feedStatus;
 
     public void initialize() throws SQLException {
         connection = sqliteController.createDBConnection();
@@ -97,8 +105,8 @@ public class AnimaisInfoController {
         btnSelecImg.setOnAction(e -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Open a file");
-            fileChooser.setInitialDirectory(new File(System.getProperty("user.home")+ "/Desktop"));
-            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All image files","*.jpg","*.png"));
+            fileChooser.setInitialDirectory(new File(System.getProperty("user.home") + File.separator + "Downloads"));
+            fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All image files","*.jpg","*.jpeg","*.png"));
             Stage stage = (Stage) btnSelecImg.getScene().getWindow();
             File selectedFile = fileChooser.showOpenDialog(stage);
             if(selectedFile != null){
@@ -121,6 +129,8 @@ public class AnimaisInfoController {
         lblTitulo.setText("Editar Animal");
         AnimalId = selectedAnimalId;
         btnSelecImg.setDisable(true);
+        btnHistAlim.setDisable(false);
+        btnHistBanh.setDisable(false);
         loadAnimalInfo();
         System.out.println("Animal ID: " + AnimalId);
     }
@@ -145,8 +155,9 @@ public class AnimaisInfoController {
                 String birthDate = resultSet.getString("birth_date");
                 int kennelId = resultSet.getInt("kennel_id");
                 String gender = resultSet.getString("gender");
-                int healthStatus = resultSet.getInt("health");
-                boolean feedStatus = resultSet.getBoolean("feed");
+                adopted = resultSet.getInt("adopted");
+                healthStatus = resultSet.getInt("health");
+                feedStatus = resultSet.getBoolean("feed");
 
                 //Codigo para converter a imagem de base64 para image
                 if (base64Image != null) {
@@ -183,7 +194,7 @@ public class AnimaisInfoController {
 
                 if(healthStatus >= 0 && healthStatus < 25){
                     tooltipSaude = new Tooltip("Muito mau de saúde");
-                    circleSaude.setFill(Color.GREEN);
+                    circleSaude.setFill(Color.RED);
                 }
                 else if(healthStatus >= 25 && healthStatus < 50){
                     tooltipSaude = new Tooltip("Mau de saúde");
@@ -218,7 +229,7 @@ public class AnimaisInfoController {
                 cbGenero.getValue() == null ? null : cbGenero.getValue().toString(),
                 cbCasota.getValue() == null ? null : cbCasota.getValue().toString(),
                 (imageBytes == null || imageBytes.length == 0) ? null : Base64.getEncoder().encodeToString(imageBytes))) {
-            System.out.println("Por favor, preencha todos os campos.");
+            lblError.setVisible(true);
             return;
         }
         connection = sqliteController.createDBConnection();
@@ -239,14 +250,11 @@ public class AnimaisInfoController {
             String query;
             int val;
             if(!btnSelecImg.isDisable()){
-                query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image, adopted, health, feed) " +
-                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                query = "INSERT INTO animals (name, weight, fur_type, fur_color, type, breed, comments, birth_date, gender, kennel_id, image, adopted, health, feed) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 val = 1;
-
             }
             else{
-                query = "UPDATE animals SET name=?, weight=?, fur_type=?, fur_color=?, type=?, " +
-                        "breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=?, adopted=?, health=?, feed=? WHERE id=?";
+                query = "UPDATE animals SET name=?, weight=?, fur_type=?, fur_color=?, type=?, breed=?, comments=?, birth_date=?, gender=?, kennel_id=?, image=?, adopted=?, health=?, feed=? WHERE id=?";
                 val = 0;
             }
             PreparedStatement statement = connection.prepareStatement(query);
@@ -260,12 +268,17 @@ public class AnimaisInfoController {
             statement.setString(8, dataNascimento.toString());
             statement.setString(9, genero);
             statement.setInt(10, casotaId);
-            if(val == 0)
-                statement.setInt(12, AnimalId);
             statement.setString(11, imageConverter);
-            statement.setBoolean(13, false);
-            statement.setInt(14, 100);
-            statement.setBoolean(15, true);
+            if(val == 0) {
+                statement.setInt(12, adopted);
+                statement.setInt(13, 100);
+                statement.setBoolean(14, feedStatus);
+                statement.setInt(15, AnimalId);
+            }else {
+                statement.setBoolean(12, false);
+                statement.setInt(13, 100);
+                statement.setBoolean(14, true);
+            }
 
             int rowsAffected = statement.executeUpdate();
             if (rowsAffected > 0) {
@@ -284,23 +297,18 @@ public class AnimaisInfoController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/animais-feed-list-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(loader.load());
-        //AnimaisInfoController infoController = loader.getController();
-        //infoController.createAnimal();
         AnimaisFeedListController feedListController = loader.getController();
         feedListController.setAnimal_id(AnimalId); // Set the animal_id
         feedListController.initialize();
         stage.setTitle("Histórico de Alimentação");
         stage.setScene(scene);
         stage.show();
-        System.out.println("aberta feed list");
     }
 
     public void switchHistoricoBanhos(ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/animais-bath-list-view.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(loader.load());
-        //AnimaisInfoController infoController = loader.getController();
-        //infoController.createAnimal();
         AnimaisBathListController bathListController = loader.getController();
         bathListController.setAnimal_id(AnimalId); // Set the animal_id
         bathListController.initialize();
