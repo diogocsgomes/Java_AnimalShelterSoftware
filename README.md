@@ -351,8 +351,42 @@ It is a collection of criteria that must be completed for a User Story to be con
 
 ##### Sprint Review
 - Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Story Points: 2S+2M+0X+0H = 16+10+0+0 = 26
+- Version: 0.2
+- Client analysis: client feedback
+- Conclusions: what to add/review
+
+##### Sprint Retrospective
+- What we did well:
+    - Aquando da finalização das tasks das US, implementamos de imediato os testes unitários a serem efetuados.
+- What we did less well:
+    - Deveríamos esclarecer dúvidas entre os elementos do grupo, acerca de algumas questões que aparecem ao longo do desenvolvimento da tasks.
+- How to improve to the next sprint:
+    - Melhorar o esclarecimento em relação ao que cada taks tem como objetivo.
+***
+
+#### Sprint 3
+##### Sprint Plan
+- Goal: Realizar todas as US propostas pois essas vão gerar o produto final, fazer a verificação de bugs finais e realizar a proposta do cliente para a criação de um calendario de agendamento de tarefas para os voluntários.
+- Dates: from 30/Nov to 14/Dez, 2 weeks
+- Roles:
+  - Product Owner: **Por Escolher**
+  - Scrum Master: **Por Escolher**
+- To do:
+  - **US18 - Administrador (Gerir calendario de tarefas)**
+    - Task1: Visualizar o calendario
+    - Task2: Filtrar as diferentes tarefas a serem visiveis
+    - Task3: Adicionar e editar uma tarefa
+    - Task4: Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário)
+  -Task1: Filtrar os diferentes acessos a aplicação (aplicar as restricoes de visibilidade por cargos)
+    
+- Story Points: **Calcular antes da reunião**
+- Analysis: short analysis of the planning meeting
+
+##### Sprint Review
+- Analysis: what was not done or what was added (Link to US or Task from the PB)
 - Story Points: 2S+1M+2X+2H
-- Version: 0.1 
+- Version: 0.3
 - Client analysis: client feedback
 - Conclusions: what to add/review
 
@@ -363,7 +397,4 @@ It is a collection of criteria that must be completed for a User Story to be con
     - B
 - How to improve to the next sprint:
     - C
-***
-
-#### Sprint 3
 ***
