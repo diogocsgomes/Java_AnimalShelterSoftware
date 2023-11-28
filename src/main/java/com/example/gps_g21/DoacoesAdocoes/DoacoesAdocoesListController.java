@@ -29,6 +29,8 @@ public class DoacoesAdocoesListController {
     @FXML
     private ComboBox typeCategory;
     @FXML
+    private TextField searchAdotanteDoador;
+    @FXML
     private TableView tbDoacoesAdocoes;
     @FXML
     private TableColumn idColumn;
@@ -49,7 +51,7 @@ public class DoacoesAdocoesListController {
     private Scene scene;
     SqliteController sqliteController = new SqliteController();
     Connection connection = null;
-    String query = "select * from adoption_regist";
+    String adoptionQuery, donationsQuery;
     private ObservableList<DoacoesAdocoes> dataDoacoesAdocoes;
     List<String> SearchType = Arrays.asList("All", "Doacoes", "Adocoes");
 
@@ -120,18 +122,55 @@ public class DoacoesAdocoesListController {
         }
         System.out.println("Connection successful");
         String selectedType = typeCategory.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchAdotanteDoador.getText().trim();
+        System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
 
-        // Query para carregar as informações de adoption_regist
-        String adoptionQuery = "SELECT adoption_regist.id, " +
-                "animals.name AS animal_name, " +
-                "adopters.name AS adopter_name, " +
-                "adoption_regist.adoption_date " +
-                "FROM adoption_regist " +
-                "JOIN animals ON adoption_regist.animal_id = animals.id " +
-                "JOIN adopters ON adoption_regist.adopter_id = adopters.id";
-
-        // Query para carregar as informações de donations
-        String donationsQuery = "SELECT * FROM donations";
+        if(searchName.isEmpty() && selectedType.equals("All")){
+            adoptionQuery = "SELECT adoption_regist.id, " +
+                    "animals.name AS animal_name, " +
+                    "adopters.name AS adopter_name, " +
+                    "adoption_regist.adoption_date " +
+                    "FROM adoption_regist " +
+                    "JOIN animals ON adoption_regist.animal_id = animals.id " +
+                    "JOIN adopters ON adoption_regist.adopter_id = adopters.id";
+            donationsQuery = "SELECT * FROM donations";
+        }
+        else if(!searchName.isEmpty() && selectedType.equals("All")){
+            adoptionQuery = "SELECT adoption_regist.id, " +
+                    "animals.name AS animal_name, " +
+                    "adopters.name AS adopter_name, " +
+                    "adoption_regist.adoption_date " +
+                    "FROM adoption_regist " +
+                    "JOIN animals ON adoption_regist.animal_id = animals.id " +
+                    "JOIN adopters ON adoption_regist.adopter_id = adopters.id " +
+                    "WHERE adopters.name LIKE '%" + searchName + "%'";
+            donationsQuery = "SELECT * FROM donations WHERE name LIKE '%" + searchName + "%'";
+        }
+        else if(!searchName.isEmpty() && selectedType.equals("Doacoes")){
+            adoptionQuery = "SELECT adoption_regist.id, " +
+                    "animals.name AS animal_name, " +
+                    "adopters.name AS adopter_name, " +
+                    "adoption_regist.adoption_date " +
+                    "FROM adoption_regist " +
+                    "JOIN animals ON adoption_regist.animal_id = animals.id " +
+                    "JOIN adopters ON adoption_regist.adopter_id = adopters.id " +
+                    "WHERE adopters.name LIKE '%" + searchName + "%'";
+        }
+        else if(!searchName.isEmpty() && selectedType.equals("Adocoes")){
+            donationsQuery = "SELECT * FROM donations WHERE name LIKE '%" + searchName + "%'";
+        }
+        else if(searchName.isEmpty() && selectedType.equals("Doacoes")){
+            adoptionQuery = "SELECT adoption_regist.id, " +
+                    "animals.name AS animal_name, " +
+                    "adopters.name AS adopter_name, " +
+                    "adoption_regist.adoption_date " +
+                    "FROM adoption_regist " +
+                    "JOIN animals ON adoption_regist.animal_id = animals.id " +
+                    "JOIN adopters ON adoption_regist.adopter_id = adopters.id";
+        }
+        else if(searchName.isEmpty() && selectedType.equals("Adocoes")){
+            donationsQuery = "SELECT * FROM donations";
+        }
 
         if (selectedType.equals("All")) {
             don = 1;
