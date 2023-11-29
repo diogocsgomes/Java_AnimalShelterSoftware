@@ -17,7 +17,7 @@ import java.sql.*;
 public class StarterController {
     public static String loggedName;
     @FXML
-    private TextField usernameField;
+    private TextField emailField;
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -40,11 +40,10 @@ public class StarterController {
 
         i = 0;
         btnLogin.setOnAction(event -> {
-            String username = usernameField.getText();
+            String email = emailField.getText();
             String password = passwordField.getText();
-            String role = isValidUser(username, password);
+            String role = isValidUser(email, password);
             if(role != null){
-                loggedName = username;
                 openApp(role);
             }else{
                 txtStatus.setVisible(true);
@@ -54,7 +53,7 @@ public class StarterController {
         });
     }
 
-    public String isValidUser(String username, String password) {
+    public String isValidUser(String email, String password) {
         String role = null;
         connection = sqliteController.createDBConnection();
         if(connection == null){
@@ -62,15 +61,16 @@ public class StarterController {
             System.exit(1);
         }
         System.out.println("Connection successful");
-        String query = "select role from users where nome = ? and password = ?";
+        String query = "select * from users where email = ? and password = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, username);
+            preparedStatement.setString(1, email);
             preparedStatement.setString(2, password);
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if (resultSet.next()) {
                 role = resultSet.getString("role");
+                loggedName = resultSet.getString("nome");
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
