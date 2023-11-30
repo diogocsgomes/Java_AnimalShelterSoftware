@@ -379,19 +379,23 @@ It is a collection of criteria that must be completed for a User Story to be con
   - Scrum Master: **Diogo Fatia**
 - To do:
   - **US18 - Administrador (Gerir calendário de tarefas)**
-    - Task1: Visualizar o calendario   4h
-    - Task2: Filtrar as diferentes tarefas a serem visiveis 2h
-    - Task3: Adicionar e editar uma tarefa 3h
-    - Task4: Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário) 2h
+    - Task1: Visualizar o calendario
+    - Task2: Filtrar as diferentes tarefas a serem visiveis
+    - Task3: Adicionar e editar uma tarefa
+    - Task4: Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário)
   - **US19 - Voluntário (Gerir calendário de tarefas)**
-    - Task1: Visualizar o calendario 4h
-    - Task2: Filtrar as diferentes tarefas a serem visiveis 2h
-    - Task3: Inscrever-se numa tarefa 2h 30m
-    - Task4: Visualizar informações sobre a tarefa (Quantos voluntarios inseridos, informações adicionais) 2h
+    - Task1: Visualizar o calendario
+    - Task2: Filtrar as diferentes tarefas a serem visiveis
+    - Task3: Inscrever-se numa tarefa
+    - Task4: Visualizar informações sobre a tarefa (Quantos voluntarios inseridos, informações adicionais)
+  - **US20 - Administrador (Gerir beneméritos)**
+    - Task1: Visualizar lista de beneméritos
+    - Task2: Filtrar a lista de beneméritos
+    - Task3: Inserir e editar beneméritos
   
-  -Task1: Filtrar os diferentes acessos a aplicação (aplicar as restricoes de visibilidade por cargos) 2h 40m
+  -Task1: Filtrar os diferentes acessos a aplicação (aplicar as restricoes de visibilidade por cargos)
     
-- Story Points: 4H+2H+3H+2H+4H+2H+2H30M+2H+2H40M = 24H10M
+- Story Points: 4H+2H+3H+2H+4H+2H+2H30M+2H+2H40M+2H+1H+1H = 28H10M
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
