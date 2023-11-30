@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
@@ -34,6 +35,8 @@ public class VetsViewDataController {
     public Text email;
     @FXML
     public TextArea horarios;
+    @FXML
+    public Button btnGuardar;
 
     int id;
 
@@ -76,12 +79,16 @@ public class VetsViewDataController {
         }finally {
             sqliteController.closeDBConnection(connection);
         }
+        if (StarterController.userType != UserTypes.ADMIN) {
+            btnGuardar.setVisible(false);
+        }
     }
 
     public void Editar(ActionEvent actionEvent) {
-        Parent root = null;
-        try {
-            if (StarterController.userType == UserTypes.ADMIN) {
+        if (StarterController.userType == UserTypes.ADMIN) {
+            Parent root = null;
+            try {
+
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-edit.fxml"));
 
                 loader.setControllerFactory(controllerClass -> {
@@ -97,18 +104,20 @@ public class VetsViewDataController {
                 });
 
                 root = loader.load();
-            }else {
-                System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        preScene = stage.getScene();
 
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+            } catch(IOException e){
+                throw new RuntimeException(e);
+            }
+            stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
+
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        else{
+            System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
+        }
 
     }
 

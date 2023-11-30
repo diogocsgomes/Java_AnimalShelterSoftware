@@ -42,6 +42,8 @@ public class VeterinariosListControllerAdmin {
     private TableColumn<Vets, String> emailColumn;
     @FXML
     private TableColumn<Vets, String> addressColumn;
+    @FXML
+    private Button btnCriar;
 
     private Stage stage;
     private Scene scene;
@@ -97,6 +99,9 @@ public class VeterinariosListControllerAdmin {
         } finally {
             sqliteController.closeDBConnection(connection);
             //System.out.println("Db fechada");
+        }
+        if (StarterController.userType != UserTypes.ADMIN) {
+            btnCriar.setVisible(false);
         }
 
     }

@@ -2,6 +2,7 @@ package com.example.gps_g21.Voluntarios;
 
 import com.example.gps_g21.Modelos.UserTypes;
 import com.example.gps_g21.StarterController;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -79,4 +80,7 @@ public class VoluntariosController {
         stage.show();
     }
 
+    public void sair(ActionEvent actionEvent) {
+        Platform.exit();
+    }
 }
