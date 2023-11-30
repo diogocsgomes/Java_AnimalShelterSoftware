@@ -129,6 +129,7 @@ public class AnimaisListController {
                     }
                     AnimaisInfoController infoController = loader.getController();
                     infoController.editAnimal(selectedAnimalId.getId());
+                    System.out.println("ID selecionado"+selectedAnimalId.getId());
                     stage.setTitle("Editar Animal");
                     stage.setScene(scene);
                     stage.show();

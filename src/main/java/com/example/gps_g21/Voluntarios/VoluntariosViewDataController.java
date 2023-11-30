@@ -126,4 +126,8 @@ public class VoluntariosViewDataController {
         stage.show();
 
     }
+
+    public void viewUser(int id) {
+        this.id=id;
+    }
 }
