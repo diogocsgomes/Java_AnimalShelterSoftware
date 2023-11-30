@@ -73,7 +73,7 @@
 
                 </children>
             </GridPane>
-            <Text fx:id="BemVindoNome" fill="#171611" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo, " textAlignment="CENTER">
+            <Text fx:id="BemVindoNome" fill="#171611" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem-vindo " textAlignment="CENTER">
                 <font>
                     <Font name="Warownia" size="36.0" />
                 </font>
