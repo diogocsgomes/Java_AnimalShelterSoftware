@@ -182,8 +182,19 @@ public class VeterinariosListControllerAdmin {
             stage.show();
             return true;
         } else {
-            System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
-            return false;
+            if(StarterController.userType == UserTypes.VULUNTIER){
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-view.fxml")));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                preScene = stage.getScene();
+
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+                return true;
+            }else{
+                System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN/Voluntario");
+                return false;
+            }
         }
     }
 

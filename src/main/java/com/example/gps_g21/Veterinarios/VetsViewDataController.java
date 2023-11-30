@@ -1,6 +1,8 @@
 package com.example.gps_g21.Veterinarios;
 
 import com.example.gps_g21.Modelos.SqliteController;
+import com.example.gps_g21.Modelos.UserTypes;
+import com.example.gps_g21.StarterController;
 import com.example.gps_g21.Voluntarios.VoluntariosInfoEditController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -79,21 +81,25 @@ public class VetsViewDataController {
     public void Editar(ActionEvent actionEvent) {
         Parent root = null;
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-edit.fxml"));
+            if (StarterController.userType == UserTypes.ADMIN) {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-edit.fxml"));
 
-            loader.setControllerFactory(controllerClass -> {
-                if (controllerClass == VetsInfoEditController.class) {
-                    return new VetsInfoEditController(id);
-                } else {
-                    try {
-                        return controllerClass.newInstance();
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
+                loader.setControllerFactory(controllerClass -> {
+                    if (controllerClass == VetsInfoEditController.class) {
+                        return new VetsInfoEditController(id);
+                    } else {
+                        try {
+                            return controllerClass.newInstance();
+                        } catch (Exception e) {
+                            throw new RuntimeException(e);
+                        }
                     }
-                }
-            });
+                });
 
-            root = loader.load();
+                root = loader.load();
+            }else {
+                System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
