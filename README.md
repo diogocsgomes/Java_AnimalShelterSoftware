@@ -162,9 +162,9 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US15 - Administrador (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/47)
 - [US16 - Voluntários (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/48)
 - [US17 - Gerir doações ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/120)
-- [US18 - Administrador (Gerir Calendário) ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/128)
-- [US19 - Voluntário (Gerir Calendário) ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/130)
-
+- [US18 - Administrador (Gerir Calendário)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/128)
+- [US19 - Voluntário (Gerir Calendário)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/130)
+- [US20 - Administrador (Gerir beneméritos)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/140)
 
 ***
 
