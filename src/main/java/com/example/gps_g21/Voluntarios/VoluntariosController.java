@@ -2,6 +2,7 @@ package com.example.gps_g21.Voluntarios;
 
 import com.example.gps_g21.Modelos.UserTypes;
 import com.example.gps_g21.StarterController;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -70,4 +71,16 @@ public class VoluntariosController {
         stage.show();
     }
 
+    public void switchListaVeterinarios(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-list-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("Veterinários");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void sair(ActionEvent actionEvent) {
+        Platform.exit();
+    }
 }

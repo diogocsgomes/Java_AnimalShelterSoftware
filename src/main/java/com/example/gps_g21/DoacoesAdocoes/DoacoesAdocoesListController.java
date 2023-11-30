@@ -53,7 +53,7 @@ public class DoacoesAdocoesListController {
     Connection connection = null;
     String adoptionQuery, donationsQuery;
     private ObservableList<DoacoesAdocoes> dataDoacoesAdocoes;
-    List<String> SearchType = Arrays.asList("All", "Doacoes", "Adocoes");
+    List<String> SearchType = Arrays.asList("Todos", "Doacoes", "Adocoes");
 
     public void initialize(){
         typeCategory.setItems(FXCollections.observableArrayList(SearchType));
@@ -125,7 +125,7 @@ public class DoacoesAdocoesListController {
         String searchName = searchAdotanteDoador.getText().trim();
         System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
 
-        if(searchName.isEmpty() && selectedType.equals("All")){
+        if(searchName.isEmpty() && selectedType.equals("Todos")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
                     "adopters.name AS adopter_name, " +
@@ -135,7 +135,7 @@ public class DoacoesAdocoesListController {
                     "JOIN adopters ON adoption_regist.adopter_id = adopters.id";
             donationsQuery = "SELECT * FROM donations";
         }
-        else if(!searchName.isEmpty() && selectedType.equals("All")){
+        else if(!searchName.isEmpty() && selectedType.equals("Todos")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
                     "adopters.name AS adopter_name, " +
@@ -172,7 +172,7 @@ public class DoacoesAdocoesListController {
             donationsQuery = "SELECT * FROM donations";
         }
 
-        if (selectedType.equals("All")) {
+        if (selectedType.equals("Todos")) {
             don = 1;
             ado = 1;
         } else if (selectedType.equals("Doacoes")) {

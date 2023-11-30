@@ -161,6 +161,10 @@ Este projeto é um investimento para transformar a gestão de um abrigo de anima
 - [US14 - Voluntários (Ver veterinários)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/42)
 - [US15 - Administrador (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/47)
 - [US16 - Voluntários (Login)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/48)
+- [US17 - Gerir doações ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/120)
+- [US18 - Administrador (Gerir Calendário) ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/128)
+- [US19 - Voluntário (Gerir Calendário) ](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/130)
+
 
 ***
 
@@ -350,7 +354,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Analysis: Existir a possibilidade dos voluntários terem várias tarefas associadas a desenvolver no estabelecimento, e ter a parte do administrador completa, exceto a parte do calendario de tarefas dos voluntários.
 
 ##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Analysis:
+  - [Dado que o administrador quer editar uma adoção, quando seleciona o botão para editar adoção (botão que existe na página ao ver dados do animal), deve aparecer um formulário com os dados pré-definidos para depois serem editados.](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/105) Incompleto.
 - Story Points: 2S+2M+0X+0H = 16+10+0+0 = 26
 - Version: 0.2
 - Client analysis: client feedback
@@ -360,7 +365,7 @@ It is a collection of criteria that must be completed for a User Story to be con
 - What we did well:
     - Aquando da finalização das tasks das US, implementamos de imediato os testes unitários a serem efetuados.
 - What we did less well:
-    - Deveríamos esclarecer dúvidas entre os elementos do grupo, acerca de algumas questões que aparecem ao longo do desenvolvimento da tasks.
+    - Nada a apontar.
 - How to improve to the next sprint:
     - Melhorar o esclarecimento em relação ao que cada taks tem como objetivo.
 ***
@@ -370,17 +375,23 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Goal: Realizar todas as US propostas pois essas vão gerar o produto final, fazer a verificação de bugs finais e realizar a proposta do cliente para a criação de um calendario de agendamento de tarefas para os voluntários.
 - Dates: from 30/Nov to 14/Dez, 2 weeks
 - Roles:
-  - Product Owner: **Por Escolher**
-  - Scrum Master: **Por Escolher**
+  - Product Owner: **Diogo Gomes**
+  - Scrum Master: **Diogo Fatia**
 - To do:
-  - **US18 - Administrador (Gerir calendario de tarefas)**
-    - Task1: Visualizar o calendario
-    - Task2: Filtrar as diferentes tarefas a serem visiveis
-    - Task3: Adicionar e editar uma tarefa
-    - Task4: Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário)
-  -Task1: Filtrar os diferentes acessos a aplicação (aplicar as restricoes de visibilidade por cargos)
+  - **US18 - Administrador (Gerir calendário de tarefas)**
+    - Task1: Visualizar o calendario   4h
+    - Task2: Filtrar as diferentes tarefas a serem visiveis 2h
+    - Task3: Adicionar e editar uma tarefa 3h
+    - Task4: Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário) 2h
+  - **US19 - Voluntário (Gerir calendário de tarefas)**
+    - Task1: Visualizar o calendario 4h
+    - Task2: Filtrar as diferentes tarefas a serem visiveis 2h
+    - Task3: Inscrever-se numa tarefa 2h 30m
+    - Task4: Visualizar informações sobre a tarefa (Quantos voluntarios inseridos, informações adicionais) 2h
+  
+  -Task1: Filtrar os diferentes acessos a aplicação (aplicar as restricoes de visibilidade por cargos) 2h 40m
     
-- Story Points: **Calcular antes da reunião**
+- Story Points: 4H+2H+3H+2H+4H+2H+2H30M+2H+2H40M = 24H10M
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review

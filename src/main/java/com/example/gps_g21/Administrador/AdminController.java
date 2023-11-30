@@ -1,5 +1,6 @@
 package com.example.gps_g21.Administrador;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -83,5 +84,9 @@ public class AdminController {
         stage.setTitle("Adocao");
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void Sair(ActionEvent actionEvent) {
+        Platform.exit();
     }
 }

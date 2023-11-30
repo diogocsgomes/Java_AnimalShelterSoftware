@@ -54,6 +54,7 @@ public class VoluntariosViewProfileController {
     private int id;
 
     private String nameStarter = StarterController.loggedName;
+
     //private String nameLogged;
 
     public VoluntariosViewProfileController() {
@@ -100,8 +101,8 @@ public class VoluntariosViewProfileController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/voluntarios-profile-edit.fxml"));
 
             loader.setControllerFactory(controllerClass -> {
-                if (controllerClass == VoluntariosInfoEditController.class) {
-                    return new VoluntariosInfoEditController(id);
+                if (controllerClass == VoluntariosProfileEditController.class) {
+                    return new VoluntariosProfileEditController(nameStarter);
                 } else {
                     try {
                         return controllerClass.newInstance();

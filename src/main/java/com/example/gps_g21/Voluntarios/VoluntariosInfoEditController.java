@@ -122,6 +122,8 @@ public class VoluntariosInfoEditController {
             sqliteController.closeDBConnection(connection);
             System.out.println("Db fechada no VoluntariosInfoEditController (initialize)");
         }
+
+
     }
 
 
@@ -170,5 +172,9 @@ public class VoluntariosInfoEditController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void viewUser(int id) {
+        this.id=id;
     }
 }

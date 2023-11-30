@@ -49,9 +49,13 @@ public class VoluntariosProfileEditController {
     Connection connection = null;
 
     private int id;
+    private String nameStarter;
 
     public VoluntariosProfileEditController(int id) {
         this.id = id;
+    }
+    public VoluntariosProfileEditController(String nameLogged) {
+        this.nameStarter = nameLogged;
     }
 
     /*
@@ -101,7 +105,7 @@ public class VoluntariosProfileEditController {
                 System.out.println("Db aberta no VoluntariosInfoEditController");
             }
 
-            String query = "select * from users where id = " + id;
+            String query = "select * from users where nome like '%" + nameStarter + "%'";
 
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
@@ -109,8 +113,9 @@ public class VoluntariosProfileEditController {
             nome.setText(resultSet.getString("nome"));
             morada.setText(resultSet.getString("address"));
             telefone.setText(String.valueOf(resultSet.getInt("phone")));
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             birth_date.setValue(LocalDate.parse(resultSet.getString("date_birth"), formatter));
+
             nif.setText(resultSet.getString("nif"));
             email.setText(resultSet.getString("email"));
 
@@ -122,11 +127,15 @@ public class VoluntariosProfileEditController {
             sqliteController.closeDBConnection(connection);
             System.out.println("Db fechada no VoluntariosInfoEditController (initialize)");
         }
+
+
+
+
     }
 
 
     public void Save(ActionEvent event) throws SQLException, IOException {
-        String sql = "UPDATE users SET nome = ?, date_birth = ?, address = ?, phone = ?, active = ?, nif = ?, email = ? WHERE id = ?";
+        String sql = "UPDATE users SET nome = ?, date_birth = ?, address = ?, phone = ?, active = ?, nif = ?, email = ? WHERE nome = ?";
 
         try (Connection connection = sqliteController.createDBConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -137,7 +146,7 @@ public class VoluntariosProfileEditController {
             pstmt.setBoolean(5, "Sim".equals(ative.getValue()));
             pstmt.setInt(6, Integer.parseInt(nif.getText()));
             pstmt.setString(7, email.getText());
-            pstmt.setInt(8, id);
+            pstmt.setString(8, nameStarter);
 
             int linhasAfetadas = pstmt.executeUpdate();
             System.out.println("Linhas afetadas: " + linhasAfetadas);
@@ -148,7 +157,9 @@ public class VoluntariosProfileEditController {
             sqliteController.closeDBConnection(connection);
 
             // Move the stage initialization here
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-list-view.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-profile-view.fxml")));
+
+            //VoluntariosViewProfileController profileController = load.
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -164,8 +175,9 @@ public class VoluntariosProfileEditController {
 
     public void Back(ActionEvent event) throws IOException {
         sqliteController.closeDBConnection(connection);
-
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-profile-view.fxml")));
+
+        //VoluntariosViewProfileController profileController = load.
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

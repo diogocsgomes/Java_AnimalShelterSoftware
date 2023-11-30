@@ -5,6 +5,8 @@ import com.example.gps_g21.Modelos.UserTypes;
 import com.example.gps_g21.Modelos.Users;
 import com.example.gps_g21.Modelos.Vets;
 import com.example.gps_g21.StarterController;
+import com.example.gps_g21.Voluntarios.VoluntariosListController;
+import com.example.gps_g21.Voluntarios.VoluntariosViewDataController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -42,6 +44,10 @@ public class VeterinariosListControllerAdmin {
     private TableColumn<Vets, String> emailColumn;
     @FXML
     private TableColumn<Vets, String> addressColumn;
+    @FXML
+    private TableColumn idColumn;
+    @FXML
+    private Button btnCriar;
 
     private Stage stage;
     private Scene scene;
@@ -54,6 +60,7 @@ public class VeterinariosListControllerAdmin {
 
     @FXML
     private ComboBox<String> typeVets;
+    String query = "select * from vets";
 
     public void initialize() {
 
@@ -61,114 +68,117 @@ public class VeterinariosListControllerAdmin {
         typeVets.setItems(options);
         typeVets.getSelectionModel().selectLast();
 
-        List<Integer> idList = new ArrayList<>();
-
-        connection = sqliteController.createDBConnection();
-        if (connection == null) {
-            System.out.println("Connection not successful");
-            System.exit(1);
-            return;
-        }
-
         dataVets = FXCollections.observableArrayList();
+        idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<>("phone"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-        TableColumn<Users, Void> colBtn = new TableColumn("Visualizar Dados");
+        TableColumn<Vets, Boolean> colBtn = new TableColumn("Visualizar Dados");
 
-        String query = "select * from vets";
+        colBtn.setCellFactory(new Callback<TableColumn<Vets, Boolean>, TableCell<Vets, Boolean>>() {
+            @Override
+            public TableCell<Vets, Boolean> call(TableColumn<Vets, Boolean> p) {
+                return new EditButton();
+            }
+        });
+
+        tbVets.getColumns().add(colBtn);
+        loadInfo();
+
+    }
+
+    public class EditButton extends TableCell<Vets, Boolean> {
+
+        final Button colBtn = new Button("Ver Dados");
+        EditButton() {
+            colBtn.setOnAction(event -> {
+                Vets selectedVetId = (Vets) getTableView().getItems().get(getIndex());
+                if (selectedVetId != null) {
+
+                    Parent root = null;
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-view.fxml"));
+
+                        loader.setControllerFactory(controllerClass -> {
+                            if (controllerClass == VetsViewDataController.class) {
+                                return new VetsViewDataController(selectedVetId.getId());
+                            } else {
+                                try {
+                                    return controllerClass.newInstance();
+                                } catch (Exception e) {
+                                    throw new RuntimeException(e);
+                                }
+                            }
+                        });
+
+                        root = loader.load();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    preScene = stage.getScene();
+
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                } else {
+                    System.out.println("Não existe nenhum veterinário selecionado");
+                }
+            });
+        }
+
+        @Override
+        protected void updateItem(Boolean t, boolean empty) {
+            super.updateItem(t, empty);
+            if (!empty) {
+                setGraphic(colBtn);
+            } else {
+                setGraphic(null);
+            }
+        }
+    }
+
+
+    public void loadInfo(){
+
+        connection = sqliteController.createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
+        }
+        System.out.println("Connection successful");
+        String selectedType = typeVets.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchVet.getText().trim();
+        //System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
+
+        if (selectedType.equals("Todos")) {
+            query = "select * from vets;";
+        } else if (!searchName.isEmpty() && selectedType.equals("Nome")) {
+            query = "select * from vets where name like '%" + searchName + "%';";
+        } else if (!searchName.isEmpty() && selectedType.equals("Telefone")) {
+            query = "select * from vets where phone like '%" + searchName + "%';";
+        }
         try {
+            dataVets.clear();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            while (resultSet.next()){
                 Vets vet = new Vets();
+                vet.setId(resultSet.getInt("id"));
                 vet.setName(resultSet.getString("name"));
                 vet.setPhone(resultSet.getInt("phone"));
                 vet.setEmail(resultSet.getString("email"));
                 dataVets.add(vet);
-                idList.add(resultSet.getInt("id"));
+
             }
-            addButtonToTable(idList);
             tbVets.setItems(dataVets);
         } catch (SQLException ex) {
             ex.printStackTrace();
-            return;
         } finally {
             sqliteController.closeDBConnection(connection);
-            //System.out.println("Db fechada");
         }
 
-    }
-
-    private void addButtonToTable(List<Integer> idColumnName) {
-        TableColumn<Vets, Void> colBtn = new TableColumn<>("Visualizar Dados");
-
-        Callback<TableColumn<Vets, Void>, TableCell<Vets, Void>> cellFactory = new Callback<>() {
-            @Override
-            public TableCell<Vets, Void> call(final TableColumn<Vets, Void> param) {
-                final TableCell<Vets, Void> cell = new TableCell<>() {
-
-                    Button btn = new Button("Visualizar");
-                    Integer id = null;
-
-                    {
-                        btn.setOnAction((ActionEvent event) -> {
-                            Parent root = null;
-                            try {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/veterinarios-info-view.fxml"));
-                                loader.setControllerFactory(controllerClass -> {
-                                    if (controllerClass == VetsViewDataController.class) {
-                                        return new VetsViewDataController(id);
-                                    } else {
-                                        try {
-                                            return controllerClass.newInstance();
-                                        } catch (Exception e) {
-                                            throw new RuntimeException(e);
-                                        }
-                                    }
-                                });
-                                root = loader.load();
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
-                            }
-                            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                            preScene = stage.getScene();
-
-                            scene = new Scene(root);
-                            stage.setScene(scene);
-                            stage.show();
-                        });
-                    }
-
-                    @Override
-                    public void updateItem(Void item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (empty) {
-                            setGraphic(null);
-                        } else {
-                            setGraphic(btn);
-                            id = idColumnName.get(getIndex());
-                        }
-                    }
-                };
-                return cell;
-            }
-        };
-
-        colBtn.setCellFactory(cellFactory);
-        if (!isTableColumnExists(colBtn.getText(), tbVets))
-            tbVets.getColumns().add(colBtn);
-
-    }
-
-    public boolean isTableColumnExists(String columnName, TableView<?> tableView) {
-        for (TableColumn<?, ?> column : tableView.getColumns()) {
-            if (column.getText().equals(columnName)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public boolean switchVoltar(ActionEvent event) throws IOException {
@@ -182,8 +192,19 @@ public class VeterinariosListControllerAdmin {
             stage.show();
             return true;
         } else {
-            System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
-            return false;
+            if(StarterController.userType == UserTypes.VULUNTIER){
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-view.fxml")));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                preScene = stage.getScene();
+
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+                return true;
+            }else{
+                System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN/Voluntario");
+                return false;
+            }
         }
     }
 
@@ -200,57 +221,6 @@ public class VeterinariosListControllerAdmin {
             System.out.println("A OPERAÇÃO DEVE SER EFETUADA POR UM ADMIN");
         }
     }
-
-
-    public void procurar(MouseEvent mouseEvent) { // todo after
-
-        /*String selectedType = typeVets.getSelectionModel().getSelectedItem().toString();
-        String searchName = searchVet.getText().trim();
-        String query = null;
-        List<Integer> idList = new ArrayList<>();
-        idList.clear();
-
-        connection = sqliteController.createDBConnection();
-        if (connection == null) {
-            System.out.println("Connection not successful");
-            System.exit(1);
-            return;
-        } else {
-            System.out.println("Db aberta no VeterinariansListController");
-        }
-
-        if (selectedType.equals("Todos")) {
-            query = "select * from vets";
-        } else if (!searchName.isEmpty() && selectedType.equals("Nome")) {
-            query = "select * from vets where name like '%" + searchName + "%'";
-        } else if (!searchName.isEmpty() && selectedType.equals("Telefone")) {
-            query = "select * from vets where phone like '%" + searchName + "%'";
-        }
-
-        try {
-            dataVets.clear();
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                Vets vet = new Vets();
-                vet.setId(resultSet.getInt("id"));
-                vet.setName(resultSet.getString("name"));
-                vet.setPhone(resultSet.getInt("phone"));
-                vet.setEmail(resultSet.getString("email"));
-                vet.setAddress(resultSet.getString("address"));
-                dataVets.add(vet);
-                idList.add(resultSet.getInt("id"));
-            }
-            addButtonToTable(idList);
-            tbVets.setItems(dataVets);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } finally {
-            sqliteController.closeDBConnection(connection);
-        }*/
-    }
-
 
 }
 

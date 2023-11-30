@@ -68,6 +68,11 @@ public class StockListController {
         expiredDateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expiredDate"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("quantity"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("category"));
+
+        typeStock.setOnAction(event -> loadInfoStock());
+        //searchStock.textProperty().addListener((observable, oldValue, newValue) -> loadInfoStock());
+
+        loadInfoStock();
     }
 
     public void loadInfoStock(){
