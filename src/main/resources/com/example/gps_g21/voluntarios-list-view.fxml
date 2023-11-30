@@ -62,7 +62,7 @@
             <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
                <children>
                   <TextField fx:id="searchVoluntier" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="" style="-fx-background-color: #ededed;" />
-                  <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#procurar" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
+                  <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#loadInfo" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
                </children>
             </Pane>
             <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#switcharAdd" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
@@ -83,9 +83,10 @@
             <ComboBox fx:id="typeVoluntier" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
             <TableView id="tbVoluntiers" fx:id="tbVoluntiers" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
                <columns>
-                  <TableColumn fx:id="nameColumn" prefWidth="80.0" text="Nome" />
-                  <TableColumn fx:id="phoneColumn" prefWidth="80.0" text="Número de telefone" />
-                  <TableColumn fx:id="activeColumn" prefWidth="65.0" text="Ativo" />
+                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />
+                  <TableColumn fx:id="nameColumn" prefWidth="80.0" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="80.0" style="-fx-alignment: CENTER-LEFT;" text="Número de telefone" />
+                  <TableColumn fx:id="activeColumn" prefWidth="65.0" style="-fx-alignment: CENTER-LEFT;" text="Ativo" />
                </columns>
             </TableView>
          </children></AnchorPane>

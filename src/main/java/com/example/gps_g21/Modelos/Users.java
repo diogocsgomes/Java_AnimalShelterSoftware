@@ -4,11 +4,11 @@ public class Users {
 
     int id, phone, nif, iban, role;
     String nome, date_birth, address, email;
-    boolean active;
+    String active;
 
     public Users(){};
 
-    public Users(int id, int phone, int nif, int iban, int role, String nome, String date_birth, String address, String email, boolean active) {
+    public Users(int id, int phone, int nif, int iban, int role, String nome, String date_birth, String address, String email, String active) {
         this.id = id;
         this.date_birth = date_birth;
         this.phone = phone;
@@ -59,8 +59,8 @@ public class Users {
 
     }
 
-    public boolean getActive(){return active;}
-    public void setActive(boolean active) {
+    public String getActive(){return active;}
+    public void setActive(String active) {
         this.active = active;
     }
 

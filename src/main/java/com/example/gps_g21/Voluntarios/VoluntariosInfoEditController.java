@@ -173,4 +173,8 @@ public class VoluntariosInfoEditController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void viewUser(int id) {
+        this.id=id;
+    }
 }

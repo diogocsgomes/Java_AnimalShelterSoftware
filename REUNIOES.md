@@ -127,3 +127,10 @@
 - Atualização das US/Tasks´s da sprint 2;
 - Planning Poker efetuado para as task´s da sprint 2;
 - Iniciação da implementação de algumas US;
+
+### Reunião 30/11
+- Correção de bugs;
+- Efetuadas as US´s em falta;
+- Finalização da Sprint 2 Review;
+- Elaboração da US´s da sprint, bem como dos seus criterios de aceitação e tasks;
+- Planning Poker efetuado para as task´s da sprint 3;

@@ -354,7 +354,8 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Analysis: Existir a possibilidade dos voluntários terem várias tarefas associadas a desenvolver no estabelecimento, e ter a parte do administrador completa, exceto a parte do calendario de tarefas dos voluntários.
 
 ##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Analysis:
+  - [Dado que o administrador quer editar uma adoção, quando seleciona o botão para editar adoção (botão que existe na página ao ver dados do animal), deve aparecer um formulário com os dados pré-definidos para depois serem editados.](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/105) Incompleto.
 - Story Points: 2S+2M+0X+0H = 16+10+0+0 = 26
 - Version: 0.2
 - Client analysis: client feedback

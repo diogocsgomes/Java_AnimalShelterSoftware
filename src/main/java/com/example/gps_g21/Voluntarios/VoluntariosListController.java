@@ -1,5 +1,8 @@
 package com.example.gps_g21.Voluntarios;
 
+import com.example.gps_g21.Animais.AnimaisInfoController;
+import com.example.gps_g21.Animais.AnimaisListController;
+import com.example.gps_g21.Modelos.Animal;
 import com.example.gps_g21.Modelos.Users;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.StarterController;
@@ -14,16 +17,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import org.w3c.dom.ls.LSOutput;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,6 +53,8 @@ public class VoluntariosListController {
     private TableColumn nifColumn;
     @FXML
     private TableColumn activeColumn;
+    @FXML
+    private TableColumn idColumn;
 
   /*  @FXML
     private VBox dynamicPaneContainer; // Referência ao VBox no FXML
@@ -63,134 +72,129 @@ public class VoluntariosListController {
 
     @FXML
     private ComboBox<String> typeVoluntier; //para depois
+    String query = "select * from users where role = 2";
 
-    public boolean initialize() {
+    public void initialize() {
 
         ObservableList<String> options = FXCollections.observableArrayList("Nome", "Telefone", "Ativos", "Todos");
         typeVoluntier.setItems(options);
         typeVoluntier.getSelectionModel().selectLast();
 
-        List<Integer> idList = new ArrayList<>();
-
-        connection = sqliteController.createDBConnection();
-        if (connection == null) {
-            System.out.println("Connection not successful");
-            System.exit(1);
-            return false;
-        } else {
-            System.out.println("Db aberta no VoluntariosListController");
-        }
-
         dataVoluntiers = FXCollections.observableArrayList();
+        idColumn.setCellValueFactory(new PropertyValueFactory<Users, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Users, String>("nome"));
         phoneColumn.setCellValueFactory(new PropertyValueFactory<Users, Integer>("phone"));
         activeColumn.setCellValueFactory(new PropertyValueFactory<Users, Boolean>("active"));
-        TableColumn<Users, Void> colBtn = new TableColumn("Visualizar Dados");
-        String query = "select * from users where role = 2";
+        TableColumn<Users, Boolean> colBtn = new TableColumn("Visualizar Dados");
+
+        colBtn.setCellFactory(new Callback<TableColumn<Users, Boolean>, TableCell<Users, Boolean>>() {
+            @Override
+            public TableCell<Users, Boolean> call(TableColumn<Users, Boolean> p) {
+                return new EditButton();
+            }
+        });
+        tbVoluntiers.getColumns().add(colBtn);
+        loadInfo();
+
+    }
+
+    public void loadInfo(){
+
+        connection = sqliteController.createDBConnection();
+        if(connection == null){
+            System.out.println("Connection not successful");
+            System.exit(1);
+        }
+        System.out.println("Connection successful");
+        String selectedType = typeVoluntier.getSelectionModel().getSelectedItem().toString();
+        String searchName = searchVoluntier.getText().trim();
+        //System.out.println("Selected Type: " + selectedType + " Search Name: " + searchName);
+
+        if (selectedType.equals("Ativos")) {
+            query = "select * from users where role = 2 and active = 1";
+        } else if (selectedType.equals("Todos")) {
+            query = "select * from users where role = 2";
+        } else if (!searchName.isEmpty() && selectedType.equals("Nome")) {
+            query = "select * from users where nome like '%" + searchName + "%' and role = 2";
+        } else if (!searchName.isEmpty() && selectedType.equals("Telefone")) {
+            query = "select * from users where phone like '%" + searchName + "%' and role = 2";
+        }
         try {
+            dataVoluntiers.clear();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            while (resultSet.next()) {
+            while (resultSet.next()){
                 Users vol = new Users();
+                vol.setId(resultSet.getInt("id"));
                 vol.setName(resultSet.getString("nome"));
                 vol.setPhone(resultSet.getInt("phone"));
-                vol.setActive(resultSet.getBoolean("active"));
+                if(resultSet.getBoolean("active"))
+                    vol.setActive("Sim");
+                else
+                    vol.setActive("Não");
+                //vol.setActive(resultSet.getBoolean("active"));
                 dataVoluntiers.add(vol);
-                idList.add(resultSet.getInt("id"));
+
             }
-            addButtonToTable(idList);
             tbVoluntiers.setItems(dataVoluntiers);
         } catch (SQLException ex) {
             ex.printStackTrace();
-            return false;
         } finally {
             sqliteController.closeDBConnection(connection);
-            System.out.println("Db fechada no VoluntariosListController");
         }
-        return true;
+
     }
 
-    private void addButtonToTable(List<Integer> idColumnName) {
+    public class EditButton extends TableCell<Users, Boolean> {
 
-        TableColumn<Users, Void> colBtn = new TableColumn("Visualizar Dados");
+        final Button colBtn = new Button("Ver Dados");
+        EditButton() {
+            colBtn.setOnAction(event -> {
+                Users selectedUserId = (Users) getTableView().getItems().get(getIndex());
+                if (selectedUserId != null) {
 
-        Callback<TableColumn<Users, Void>, TableCell<Users, Void>> cellFactory = new Callback<TableColumn<Users, Void>, TableCell<Users, Void>>() {
-            @Override
-            public TableCell<Users, Void> call(final TableColumn<Users, Void> param) {
-                final TableCell<Users, Void> cell = new TableCell<Users, Void>() {
+                    Parent root = null;
+                    try {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/voluntarios-info-view.fxml"));
 
-                    Button btn = new Button("Visualizar");
-                    Integer id = null;
-
-                    {
-                        btn.setOnAction((ActionEvent event) -> {
-
-                            Parent root = null;
-                            try {
-                                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/voluntarios-info-view.fxml"));
-
-                                loader.setControllerFactory(controllerClass -> {
-                                    if (controllerClass == VoluntariosViewDataController.class) {
-                                        return new VoluntariosViewDataController(id);
-                                    } else {
-                                        try {
-                                            return controllerClass.newInstance();
-                                        } catch (Exception e) {
-                                            throw new RuntimeException(e);
-                                        }
-                                    }
-                                });
-
-                                root = loader.load();
-                            } catch (IOException e) {
-                                throw new RuntimeException(e);
+                        loader.setControllerFactory(controllerClass -> {
+                            if (controllerClass == VoluntariosViewDataController.class) {
+                                return new VoluntariosViewDataController(selectedUserId.getId());
+                            } else {
+                                try {
+                                    return controllerClass.newInstance();
+                                } catch (Exception e) {
+                                    throw new RuntimeException(e);
+                                }
                             }
-                            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                            preScene = stage.getScene();
-
-                            scene = new Scene(root);
-                            stage.setScene(scene);
-                            stage.show();
-
                         });
-                    }
 
-                    @Override
-                    public void updateItem(Void item, boolean empty) {
-                        super.updateItem(item, empty);
-                        if (empty) {
-                            setGraphic(null);
-                        } else {
-                            setGraphic(btn);
-                            //Users data = getTableView().getItems().get(getIndex());
-                            id = idColumnName.get(getIndex()); // Obtenha o ID correspondente
-                        }
+                        root = loader.load();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
                     }
-                };
-                return cell;
-            }
-        };
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    preScene = stage.getScene();
 
-        colBtn.setCellFactory(cellFactory);
-        if (isTableColumnExists(colBtn.getText(), tbVoluntiers)) {
-            System.out.println("A TableColumn existe na tabela.");
-            //tbVoluntiers.getColumns();
-        } else {
-            System.out.println("A TableColumn não existe na tabela.");
-            tbVoluntiers.getColumns().add(colBtn);
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                } else {
+                    System.out.println("Não existe nenhum voluntário selecionado");
+                }
+            });
         }
-        //idColumnName.clear();
 
-    }
-
-    public boolean isTableColumnExists(String columnName, javafx.scene.control.TableView<?> tableView) {
-        for (TableColumn<?, ?> column : tableView.getColumns()) {
-            if (column.getText().equals(columnName)) {
-                return true;
+        @Override
+        protected void updateItem(Boolean t, boolean empty) {
+            super.updateItem(t, empty);
+            if (!empty) {
+                setGraphic(colBtn);
+            } else {
+                setGraphic(null);
             }
         }
-        return false;
     }
 
     public boolean switchVoltar(ActionEvent event) throws IOException {
@@ -225,57 +229,6 @@ public class VoluntariosListController {
             System.out.println("A OPERAÇÃO ADICIONAR VOLUNTÁRIO APENAS DEVE SER EFETUADA POR UM ADMIN");
         }
 
-    }
-
-    public void procurar(MouseEvent mouseEvent) {
-        String selectedType = typeVoluntier.getSelectionModel().getSelectedItem().toString();
-        String searchName = searchVoluntier.getText().trim();
-        String query = null;
-        List<Integer> idList = new ArrayList<>();
-        idList.clear();
-
-        connection = sqliteController.createDBConnection();
-        if (connection == null) {
-            System.out.println("Connection not successful");
-            System.exit(1);
-            return;
-        } else {
-            System.out.println("Db aberta no VoluntariosListController");
-        }
-
-        if (selectedType.equals("Ativos")) {
-            query = "select * from users where role = 2 and active = 1";
-        } else if (selectedType.equals("Todos")) {
-            query = "select * from users where role = 2";
-        } else if (!searchName.isEmpty() && selectedType.equals("Nome")) {
-            query = "select * from users where nome like '%" + searchName + "%' and role = 2";
-        } else if (!searchName.isEmpty() && selectedType.equals("Telefone")) {
-            query = "select * from users where phone like '%" + searchName + "%' and role = 2";
-        }
-
-
-            try {
-            dataVoluntiers.clear();
-            PreparedStatement preparedStatement = connection.prepareStatement(query);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                Users user = new Users();
-                user.setId(resultSet.getInt("id"));
-                user.setActive(resultSet.getBoolean("active"));
-                user.setName(resultSet.getString("nome"));
-                user.setPhone(resultSet.getInt("phone"));
-                user.setEmail(resultSet.getString("email"));
-                dataVoluntiers.add(user);
-                idList.add(resultSet.getInt("id"));
-            }
-            addButtonToTable(idList);
-            tbVoluntiers.setItems(dataVoluntiers);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        } finally {
-            sqliteController.closeDBConnection(connection);
-        }
     }
 }
 
