@@ -54,7 +54,7 @@
                             <Font name="Verdana" size="12.0" />
                         </font>
                     </Button>
-                    <Button fx:id="btnCalendario" alignment="CENTER" disable="true" minWidth="100.0" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Calendário" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <Button fx:id="btnCalendario" alignment="CENTER" minWidth="100.0" onAction="#switchVerCalendario" prefWidth="140.0" style="-fx-background-color: #506D68;" text="Ver Calendário" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                         <font>
                             <Font name="Verdana" size="12.0" />
                         </font>

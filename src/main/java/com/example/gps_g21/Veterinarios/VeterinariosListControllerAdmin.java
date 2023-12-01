@@ -84,6 +84,9 @@ public class VeterinariosListControllerAdmin {
 
         tbVets.getColumns().add(colBtn);
         loadInfo();
+        if (StarterController.userType != UserTypes.ADMIN) {
+            btnCriar.setVisible(false);
+        }
 
     }
 

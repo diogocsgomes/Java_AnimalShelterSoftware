@@ -82,9 +82,7 @@ public class AnimaisListController {
     Connection connection = null;
     String query = "select * from animals";
     private ObservableList<Animal> dataAnimals;
-        List<String> SearchType = Arrays.asList("Todos", "Cao", "Gato", "Outro", "Adotado", "Adotavel");
-
-
+    List<String> SearchType = Arrays.asList("Todos", "Cao", "Gato", "Outro", "Adotado", "Adotavel");
     private  Animal animalSelected = null;
 
     public void initialize(){
@@ -151,7 +149,6 @@ public class AnimaisListController {
     }
 
     public void loadInfoAnimals(){
-
         connection = sqliteController.createDBConnection();
         if(connection == null){
             System.out.println("Connection not successful");
