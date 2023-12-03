@@ -14,6 +14,8 @@ public class Calendario {
     public boolean fullDay;
     public boolean recurring;
     public boolean recurrence;
+    public String idsVoluntiers;
+    public int maxVoluntiers;
 
     public Calendario() {
     }
@@ -141,5 +143,21 @@ public class Calendario {
 
     public void setRecurrence(boolean recurrence) {
         this.recurrence = recurrence;
+    }
+
+    public String getIdsVoluntiers() {
+        return idsVoluntiers;
+    }
+
+    public void setIdsVoluntiers(String idsVoluntiers) {
+        this.idsVoluntiers = idsVoluntiers;
+    }
+
+    public int getMaxVoluntiers() {
+        return maxVoluntiers;
+    }
+
+    public void setMaxVoluntiers(Integer maxVoluntiers) {
+        this.maxVoluntiers = maxVoluntiers;
     }
 }

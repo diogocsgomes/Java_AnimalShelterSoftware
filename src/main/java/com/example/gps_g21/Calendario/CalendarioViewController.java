@@ -69,6 +69,11 @@ public class CalendarioViewController {
                 entry.setFullDay(c.isFullDay());
                 entry.setRecurrenceRule(c.getRecurrenceRule());
                 entry.setId(c.getId());
+                if(c.getIdsVoluntiers() == null){
+                    System.out.println("Cor vermelha");
+                }else{
+                    System.out.println("Cor verde");
+                }
                 calendarView.getCalendars().get(0).addEntry(entry);
             }
         }
