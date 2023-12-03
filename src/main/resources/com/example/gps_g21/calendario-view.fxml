@@ -15,7 +15,7 @@
                <Font name="System Bold" size="24.0" />
             </font>
          </Text>
-            <CalendarView fx:id="calendarView" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" />
+            <CalendarView fx:id="calendarView" stylesheets="@style.css" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" />
          <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="547.0" mnemonicParsing="false" onAction="#switchVoltar" prefHeight="35.0" prefWidth="78.0" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                <Font name="Verdana Bold" size="15.0" />

@@ -70,6 +70,7 @@ public class CalendarioViewController {
                 entry.setRecurrenceRule(c.getRecurrenceRule());
                 entry.setId(c.getId());
                 if(c.getIdsVoluntiers() == null){
+                    entry.getStyleClass().add("custom");
                     System.out.println("Cor vermelha");
                 }else{
                     System.out.println("Cor verde");
