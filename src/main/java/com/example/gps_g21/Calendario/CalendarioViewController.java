@@ -3,6 +3,7 @@ package com.example.gps_g21.Calendario;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
@@ -28,15 +29,22 @@ public class CalendarioViewController {
     private static CalendarioController calendarioController;
     private Timer updateTimer;
     public void initialize() throws Exception {
+        Calendar lavar = new Calendar("Lavar");
+        lavar.setStyle(Calendar.Style.STYLE1);
+        Calendar alimentar = new Calendar("Alimentar");
+        alimentar.setStyle(Calendar.Style.STYLE2);
+        Calendar limpar = new Calendar("Limpar");
+        limpar.setStyle(Calendar.Style.STYLE3);
+
         calendarioController = CalendarioController.getInstance();
         CalendarSource calendarSource = new CalendarSource();
+        calendarSource.getCalendars().addAll(lavar, alimentar, limpar);
         calendarView.getCalendarSources().addAll(calendarSource);
         calendarView.setRequestedTime(LocalTime.now());
         //calendarView.setShowAddCalendarButton(false);
 
         EventHandler<CalendarEvent> handler = event -> handleEventCalendario(event);
         calendarView.getCalendars().forEach(calendar -> calendar.addEventHandler(handler));
-
         Thread updateTime = new Thread("Calendar: Update Time Thread") {
             @Override
             public void run() {
@@ -69,6 +77,11 @@ public class CalendarioViewController {
                 entry.setFullDay(c.isFullDay());
                 entry.setRecurrenceRule(c.getRecurrenceRule());
                 entry.setId(c.getId());
+                switch (c.getCalendarName()) {
+                    case "Lavar" -> entry.setCalendar(lavar);
+                    case "Alimentar" -> entry.setCalendar(alimentar);
+                    case "Limpar" -> entry.setCalendar(limpar);
+                }
                 if(c.getIdsVoluntiers() == null){
                     entry.getStyleClass().add("custom");
                     System.out.println("Cor vermelha");

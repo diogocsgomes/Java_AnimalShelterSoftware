@@ -16,11 +16,12 @@ public class Calendario {
     public boolean recurrence;
     public String idsVoluntiers;
     public int maxVoluntiers;
+    public String calendarName;
 
     public Calendario() {
     }
 
-    public Calendario(String id, String title, String startDate, String endDate, String startTime, String endTime, String zoneId, String recurrenceRule, boolean fullDay, boolean recurring, boolean recurrence) {
+    public Calendario(String id, String title, String startDate, String endDate, String startTime, String endTime, String zoneId, String recurrenceRule, boolean fullDay, boolean recurring, boolean recurrence, String calendarName) {
         this.id = id;
         this.title = title;
         this.startDate = startDate;
@@ -32,6 +33,7 @@ public class Calendario {
         this.fullDay = fullDay;
         this.recurring = recurring;
         this.recurrence = recurrence;
+        this.calendarName = calendarName;
     }
 
     public Calendario(String title, String startTime, String endTime, String startDate, String endDate){
@@ -54,6 +56,7 @@ public class Calendario {
         this.recurring = c.isRecurring();
         this.recurrenceRule = c.getRecurrenceRule();
         this.recurrence = c.isRecurrence();
+        this.calendarName = c.getCalendar().getName();
     }
 
 
@@ -160,4 +163,7 @@ public class Calendario {
     public void setMaxVoluntiers(Integer maxVoluntiers) {
         this.maxVoluntiers = maxVoluntiers;
     }
+
+    public String getCalendarName() {return calendarName;}
+    public void setCalendarName(String calendarName) {this.calendarName = calendarName;}
 }

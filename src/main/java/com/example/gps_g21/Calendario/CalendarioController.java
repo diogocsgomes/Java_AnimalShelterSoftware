@@ -45,6 +45,7 @@ public class CalendarioController {
                 calendario1.setRecurrence(resultSet.getBoolean("recurrence"));
                 calendario1.setIdsVoluntiers(resultSet.getString("idsVoluntiers"));
                 calendario1.setMaxVoluntiers(resultSet.getInt("maxVoluntiers"));
+                calendario1.setCalendarName(resultSet.getString("calendarName"));
                 System.out.println("Valores de Entrada: " + calendario1.getTitle() + " " + calendario1.getStartDate() + " " + calendario1.getEndDate() + " " + calendario1.getStartTime() + " " + calendario1.getEndTime() + " ");
                 calendarioData.add(calendario1);
             }
@@ -75,7 +76,7 @@ public class CalendarioController {
                 System.exit(1);
             }
             System.out.println("Connection successful");
-            String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers, calendarName, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             try{
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setString(1, calendario.getTitle());
@@ -90,6 +91,8 @@ public class CalendarioController {
                 statement.setBoolean(10, calendario.isRecurrence());
                 statement.setString(11, calendario.getIdsVoluntiers());
                 statement.setInt(12, calendario.getMaxVoluntiers());
+                statement.setString(13, calendario.getCalendarName());
+                statement.setString(14, calendario.getId());
                 int rowsAffected = statement.executeUpdate();
                 if (rowsAffected > 0) {
                     System.out.println("Updated successfully.");
@@ -130,7 +133,7 @@ public class CalendarioController {
                 System.exit(1);
             }
             System.out.println("Connection successful");
-            String query = "UPDATE calendar SET title = ?, startDate = ?, endDate = ?, startTime = ?, endTime = ?, zoneId = ?, recurrenceRule = ?, fullDay = ?, recurring = ?, recurrence = ?, idsVoluntiers = ?, maxVoluntiers = ? WHERE id = ?";
+            String query = "UPDATE calendar SET title = ?, startDate = ?, endDate = ?, startTime = ?, endTime = ?, zoneId = ?, recurrenceRule = ?, fullDay = ?, recurring = ?, recurrence = ?, idsVoluntiers = ?, maxVoluntiers = ?, calendarName = ? WHERE id = ?";
             try{
                 PreparedStatement statement = connection.prepareStatement(query);
                 statement.setString(1, calendario.getTitle());
@@ -145,7 +148,8 @@ public class CalendarioController {
                 statement.setBoolean(10, calendario.isRecurrence());
                 statement.setString(11, calendario.getIdsVoluntiers());
                 statement.setInt(12, calendario.getMaxVoluntiers());
-                statement.setString(13, calendario.getId());
+                statement.setString(13, calendario.getCalendarName());
+                statement.setString(14, calendario.getId());
                 int rowsAffected = statement.executeUpdate();
                 if (rowsAffected > 0) {
                     System.out.println("Updated successfully.");
