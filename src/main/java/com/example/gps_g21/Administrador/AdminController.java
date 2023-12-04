@@ -94,4 +94,13 @@ public class AdminController {
     public void Sair(ActionEvent actionEvent) {
         Platform.exit();
     }
+
+    public void onBenemeritos(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemeritos-list-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
+    }
 }

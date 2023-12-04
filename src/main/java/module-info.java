@@ -31,4 +31,6 @@ module com.example.shelterwise {
     opens com.example.gps_g21.Veterinarios to javafx.fxml;
     exports com.example.gps_g21.Calendario;
     opens com.example.gps_g21.Calendario to javafx.fxml;
+    exports com.example.gps_g21.Benemeritos;
+    opens com.example.gps_g21.Benemeritos to javafx.fxml;
 }
