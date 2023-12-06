@@ -15,6 +15,10 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.time.ZoneId;
@@ -26,6 +30,9 @@ import static com.calendarfx.model.CalendarEvent.*;
 public class CalendarioViewController {
     @FXML
     public CalendarView calendarView;
+    @FXML
+    private VBox buttonContainer;
+
     private static CalendarioController calendarioController;
     private Timer updateTimer;
     public void initialize() throws Exception {
@@ -101,7 +108,19 @@ public class CalendarioViewController {
             calendarioController.insertCalendarEvent(event.getEntry());
         } else if (type == ENTRY_INTERVAL_CHANGED || type == ENTRY_TITLE_CHANGED || type == ENTRY_FULL_DAY_CHANGED || type == ENTRY_LOCATION_CHANGED || type == ENTRY_RECURRENCE_RULE_CHANGED  || type == ENTRY_USER_OBJECT_CHANGED || type == ENTRY_CALENDAR_CHANGED) {
             scheduleUpdate(event.getEntry()); //Atrasa a atualização para evitar que muitas atualizações sejam executadas em um curto período de tempo
+            addInscreverButton(event.getEntry());
         }
+    }
+
+    private void addInscreverButton(Entry calendarEvent) {
+        Button inscreverButton = new Button("Inscrever");
+        //inscreverButton.setOnAction(event -> handleInscreverButton(calendarEvent));
+
+        Label eventLabel = new Label(calendarEvent.getTitle());
+        HBox entryBox = new HBox(eventLabel, inscreverButton);
+
+        // Add the button directly to the entry box
+        //calendarEvent.getControl().setGraphic(entryBox);
     }
 
     private void scheduleUpdate(Entry calendarEvent) {
