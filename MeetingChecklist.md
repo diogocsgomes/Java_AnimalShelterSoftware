@@ -1,3 +1,5 @@
+**Reunião Checklist - 30/11/2023** 
+
 - [x] Update the boards (move the cards) 
 - [x] Recording time spent  
 - [x] Check/update risk plan 
@@ -22,3 +24,54 @@ For the groups finishing Sprint 2:
     - [x] Sprint 2 retrospective meeting report 
     - [x] Tasks list + estimates 
     - [x] AC for every US 
+
+
+**Reunião Checklist - 06/12/2023** 
+- [x] Sprint 3 Backlog board has Tasks and AC cards with estimates/real
+- Pontos:
+- Comentários:
+
+- [x] Product Backlog board has US cards selected for current sprint 
+- Pontos:
+- Comentários:
+
+- [x] Code and unit tests are finished, according to cards 
+- Pontos:
+- Comentários:
+
+- [x] Run unit tests automatically at every commit 
+- Pontos:
+- Comentários:
+
+- [x] Merge request (from dev into qa) at the end of every  task. Code was reviewed 
+- Pontos:
+- Comentários:
+
+- [x] Acceptance test run at the end of every US 
+- Pontos:
+- Comentários:
+
+- [x] Create and run deployed code 
+- Pontos:
+- Comentários:
+
+- [x] Risk plan is updated 
+- Pontos:
+- Comentários:
+
+- [x] Control project - compare estimates (SP and Hours) vs real 
+- Pontos:
+- Comentários:
+
+- [x] Sprint 2 Review meeting report is updated 
+- Pontos:
+- Comentários:
+
+- [x] Sprint 2 Retrospective meeting report is updated 
+- Pontos:
+- Comentários:
+
+- [x] Sprint 3 plan has Sprint Goal and Selected US/Tasks/AC with estimates 
+- Pontos:
+- Comentários:
+
