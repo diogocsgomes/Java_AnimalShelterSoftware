@@ -1,5 +1,7 @@
 package com.example.gps_g21.Stock;
 
+import com.example.gps_g21.Animais.AnimaisInfoController;
+import com.example.gps_g21.Modelos.Animal;
 import com.example.gps_g21.Modelos.Stock;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.StarterController;
@@ -12,12 +14,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.sql.*;
@@ -32,6 +32,8 @@ public class StockListController {
     private TextField searchStock;
     @FXML
     private TableView tbStock;
+    @FXML
+    private TableColumn idColumn;
     @FXML
     private TableColumn nameColumn;
     @FXML
@@ -63,17 +65,71 @@ public class StockListController {
         typeStock.setItems(FXCollections.observableArrayList(ProductCategory));
         typeStock.getSelectionModel().selectFirst();
         dataStock = FXCollections.observableArrayList();
+        idColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("name"));
         descriptionColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("description"));
         expiredDateColumn.setCellValueFactory(new PropertyValueFactory<Stock, String>("expiredDate"));
         quantityColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("quantity"));
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Stock, Integer>("category"));
+        TableColumn<Stock, Boolean> colBtn = new TableColumn<>("Editar");
+        colBtn.setMinWidth(63);
+        colBtn.setCellFactory(new Callback<>() {
+            @Override
+            public TableCell<Stock, Boolean> call(TableColumn<Stock, Boolean> p) {
+                return new StockListController.EditButton();
+            }
+        });
+        tbStock.getColumns().add(colBtn);
 
         typeStock.setOnAction(event -> loadInfoStock());
         //searchStock.textProperty().addListener((observable, oldValue, newValue) -> loadInfoStock());
 
         loadInfoStock();
     }
+
+    public class EditButton extends TableCell<Stock, Boolean> {
+        final Button colBtn = new Button("Editar");
+
+        EditButton() {
+            colBtn.setOnAction(event -> {
+                Stock selectedStock = (Stock) getTableView().getItems().get(getIndex());
+                System.out.println("P: "+ selectedStock.getId());
+                if (selectedStock != null) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/stock-info-edit.fxml"));
+                    Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    try {
+                        Scene scene = new Scene(loader.load());
+                        StockInfoEditController stockInfoEditController = loader.getController();
+                        //stockInfoEditController.setId(selectedStock.getId()); // Set the selected stock ID
+                        stockInfoEditController.setId(selectedStock.getId());
+                        stockInfoEditController.initialize(selectedStock.getId());
+                        System.out.println("Produto: " + selectedStock.getId());
+                        stage.setTitle("Editar Produto");
+                        stage.setScene(scene);
+                        stage.show();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+                } else {
+                    System.out.println("No stock selected");
+                }
+            });
+        }
+
+        @Override
+        protected void updateItem(Boolean t, boolean empty) {
+            super.updateItem(t, empty);
+            if (!empty) {
+                setGraphic(colBtn);
+            } else {
+                setGraphic(null);
+            }
+        }
+    }
+
+
 
     public void loadInfoStock(){
         connection = sqliteController.createDBConnection();
@@ -116,6 +172,7 @@ public class StockListController {
 
             while (resultSet.next()){
                 Stock prod = new Stock();
+                prod.setId(resultSet.getInt("id"));
                 prod.setName(resultSet.getString("name"));
                 prod.setDescription(resultSet.getString("description"));
                 prod.setExpiredDate(resultSet.getString("expired_date"));

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+      <VBox prefHeight="400.0" prefWidth="640.0">
+         <children>
+            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
+            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+               <children>
+                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                     <children>
+                        <Text fill="#171611" focusTraversable="true" layoutX="205.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Veterinários" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
+                           <children>
+                              <TextField focusTraversable="false" layoutX="197.0" prefHeight="25.0" prefWidth="172.0" promptText="Nome" style="-fx-background-color: Gray;" />
+                              <ImageView fitHeight="25.0" fitWidth="179.0" layoutX="344.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imgUsingApp/search_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnlInfoAnimal" layoutX="11.0" layoutY="121.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#171611" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bob">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="332.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 991 801 116">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="48.0">
+                                 <image>
+                                    <Image url="@imgUsingApp/vet_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnlInfoAnimal1" layoutX="11.0" layoutY="174.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#171611" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Barbara">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="332.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 917 338 316">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="46.0">
+                                 <image>
+                                    <Image url="@imgUsingApp/vet_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnlInfoAnimal2" layoutX="11.0" layoutY="228.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#171611" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Beatriz">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="332.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 918 996 971">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="46.0">
+                                 <image>
+                                    <Image url="@imgUsingApp/vet_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="pnlInfoAnimal11" layoutX="10.0" layoutY="282.0" prefHeight="43.0" prefWidth="562.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                           <children>
+                              <Text fill="#171611" layoutX="140.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Bruno">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="332.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 971 316 338">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="47.0">
+                                 <image>
+                                    <Image url="@imgUsingApp/vet_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <ScrollBar layoutX="579.0" layoutY="122.0" orientation="VERTICAL" prefHeight="202.0" prefWidth="14.0" />
+                        <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="402.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="466.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="530.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+  </children>
+</VBox>

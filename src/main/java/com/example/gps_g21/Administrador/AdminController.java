@@ -66,7 +66,12 @@ public class AdminController {
         stage.show();
     }
     public void switchVerCalendario(ActionEvent event) throws IOException {
-
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/calendario-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("CalendarioViewController");
+        stage.setScene(scene);
+        stage.show();
     }
     public void switchListaCasotas(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
@@ -88,5 +93,14 @@ public class AdminController {
 
     public void Sair(ActionEvent actionEvent) {
         Platform.exit();
+    }
+
+    public void onBenemeritos(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemeritos-list-view.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.show();
     }
 }
