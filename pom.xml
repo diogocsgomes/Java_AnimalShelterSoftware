@@ -119,7 +119,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.example.gps_g21/com.example.gps_g21.StarterApplication</mainClass>
+              <mainClass>com.example.gps_g21.StarterApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
@@ -139,7 +139,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>com.example.gps_g21/com.example.gps_g21.StarterApplication</mainClass>
+              <mainClass>com.example.gps_g21.StarterApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -166,7 +166,7 @@
             <configuration>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>'your main class'</mainClass>
+                  <mainClass>com.example.gps_g21.StarterApplication</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -188,11 +188,14 @@
         <artifactId>javafx-maven-plugin</artifactId>
         <version>0.0.8</version>
         <configuration>
-          <mainClass>'your main class'</mainClass>
+          <mainClass>com.example.gps_g21.StarterApplication</mainClass>
         </configuration>
       </plugin>
-
-
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.1.2</version>
+      </plugin>
     </plugins>
   </build>
 </project>
