@@ -103,6 +103,14 @@ public class BenemeritosController {
         stage.show();
     }
 
+    public void onNovo(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemerito-create.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
     public void searchBenemerito(ActionEvent actionEvent) {
 
         String nameToSearch = searchAdotanteDoador.getText();
