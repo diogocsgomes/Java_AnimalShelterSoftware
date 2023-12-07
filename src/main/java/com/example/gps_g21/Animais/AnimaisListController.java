@@ -143,7 +143,6 @@ public class AnimaisListController {
                     alert.setContentText("O animal está adotado, não é possível editar os dados!");
                     alert.showAndWait();
                     System.out.println("Animal já adotado!");
-
                 }
             });
         }
