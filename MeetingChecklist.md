@@ -27,51 +27,50 @@ For the groups finishing Sprint 2:
 
 
 **Reunião Checklist - 06/12/2023** 
-- [x] Sprint 3 Backlog board has Tasks and AC cards with estimates/real
-- Pontos:
-- Comentários:
+- Sprint 3 Backlog board has Tasks and AC cards with estimates/real
+    - Pontos: 3
+    - Comentários:
 
-- [x] Product Backlog board has US cards selected for current sprint 
-- Pontos:
-- Comentários:
+- Product Backlog board has US cards selected for current sprint 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Code and unit tests are finished, according to cards 
-- Pontos:
-- Comentários:
+- Code and unit tests are finished, according to cards 
+    - Pontos: 2
+    - Comentários:
 
-- [x] Run unit tests automatically at every commit 
-- Pontos:
-- Comentários:
+- Run unit tests automatically at every commit 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Merge request (from dev into qa) at the end of every  task. Code was reviewed 
-- Pontos:
-- Comentários:
+- Merge request (from dev into qa) at the end of every task. Code was reviewed 
+    - Pontos: 2
+    - Comentários:
 
-- [x] Acceptance test run at the end of every US 
-- Pontos:
-- Comentários:
+- Acceptance test run at the end of every US 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Create and run deployed code 
-- Pontos:
-- Comentários:
+- Create and run deployed code 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Risk plan is updated 
-- Pontos:
-- Comentários:
+- Risk plan is updated 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Control project - compare estimates (SP and Hours) vs real 
-- Pontos:
-- Comentários:
+- Control project - compare estimates (SP and Hours) vs real 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Sprint 2 Review meeting report is updated 
-- Pontos:
-- Comentários:
+- Sprint 2 Review meeting report is updated 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Sprint 2 Retrospective meeting report is updated 
-- Pontos:
-- Comentários:
+- Sprint 2 Retrospective meeting report is updated 
+    - Pontos: 3
+    - Comentários:
 
-- [x] Sprint 3 plan has Sprint Goal and Selected US/Tasks/AC with estimates 
-- Pontos:
-- Comentários:
-
+- Sprint 3 plan has Sprint Goal and Selected US/Tasks/AC with estimates 
+    - Pontos: 3
+    - Comentários:
