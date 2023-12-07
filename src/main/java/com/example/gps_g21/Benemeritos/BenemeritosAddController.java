@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Optional;
 
@@ -45,7 +46,12 @@ public class BenemeritosAddController {
 
     @FXML
     public void addBen(ActionEvent event) throws IOException {
-        if(Objects.equals(nome.getText(), "") || Objects.equals(email.getText(), "") || Objects.equals(phone.getText(), "") || Objects.equals(nif.getText(), "")){
+        if(Objects.equals(nome.getText(), "")
+                || Objects.equals(email.getText(), "")
+                || Objects.equals(phone.getText(), "")
+                || Objects.equals(nif.getText(), "")
+                || Objects.equals(address.getText(), "")
+                || Objects.equals(birth_date.getValue().toString(), "")){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Dados por preencher");
             alert.setContentText("Existem dados por preencher! Por favor, preencha todos os dados");
@@ -71,7 +77,7 @@ public class BenemeritosAddController {
                         System.exit(1);
                     }
 
-                    String sql = "INSERT INTO adopters (name, email, phone, address, nif) VALUES (?, ?, ?, ?, ?)";
+                    String sql = "INSERT INTO adopters (name, email, phone_number, address, nif, birth_date) VALUES (?, ?, ?, ?, ?, ?)";
 
                     PreparedStatement pstmt = connection.prepareStatement(sql);
                     pstmt.setString(1, nome.getText());
@@ -79,6 +85,7 @@ public class BenemeritosAddController {
                     pstmt.setInt(3, Integer.parseInt(phone.getText()));
                     pstmt.setString(4, address.getText());
                     pstmt.setString(5, nif.getText());
+                    pstmt.setString(6, birth_date.getValue().toString());
                     pstmt.executeUpdate();
 
                 } catch (SQLException e) {
