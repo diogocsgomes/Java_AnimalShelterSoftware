@@ -118,7 +118,7 @@ public class NewAdoptionController {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -197,7 +197,7 @@ public class NewAdoptionController {
 
     public void switchAdopt(ActionEvent actionEvent) {
         String addAdoptionSQL = "INSERT INTO adoption_regist(animal_id,adopter_id,adoption_date) VALUES(?,?,?)";
-        String updateAnimalSQL = "UPDATE ANIMALS SET adopted = true where id = ?";
+        String updateAnimalSQL = "UPDATE ANIMALS SET adopted = true, kennel_id = 0 where id = ?";
         int animalId = animalToAdopt.getId();
         int adopterId = adopter.getId();
 

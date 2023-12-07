@@ -99,7 +99,7 @@ public class AnimaisListController {
         //furColorColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furColor"));
         //furTypeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furType"));
         //birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
-        kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("kennelId"));
+        kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
         TableColumn<Animal, Boolean> colBtn = new TableColumn<>("Editar");
         colBtn.setMinWidth(63);
@@ -117,22 +117,33 @@ public class AnimaisListController {
         EditButton() {
             colBtn.setOnAction(event -> {
                 Animal selectedAnimalId = (Animal) getTableView().getItems().get(getIndex());
-                if (selectedAnimalId != null) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/animais-info-view.fxml"));
-                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                    try {
-                        scene = new Scene(loader.load());
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
+                String kennel = selectedAnimalId.getKennelId();
+                if(!kennel.equals("-"))
+                    if (selectedAnimalId != null) {
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/animais-info-view.fxml"));
+                        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        try {
+                            scene = new Scene(loader.load());
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        AnimaisInfoController infoController = loader.getController();
+                        infoController.editAnimal(selectedAnimalId.getId());
+                        System.out.println("ID selecionado"+selectedAnimalId.getId());
+                        stage.setTitle("Editar Animal");
+                        stage.setScene(scene);
+                        stage.show();
+                    } else {
+                        System.out.println("No animal selected");
                     }
-                    AnimaisInfoController infoController = loader.getController();
-                    infoController.editAnimal(selectedAnimalId.getId());
-                    System.out.println("ID selecionado"+selectedAnimalId.getId());
-                    stage.setTitle("Editar Animal");
-                    stage.setScene(scene);
-                    stage.show();
-                } else {
-                    System.out.println("No animal selected");
+                else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("");
+                    alert.setHeaderText("Animal adotado!");
+                    alert.setContentText("O animal está adotado, não é possível editar os dados!");
+                    alert.showAndWait();
+                    System.out.println("Animal já adotado!");
+
                 }
             });
         }
@@ -195,7 +206,10 @@ public class AnimaisListController {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                if(resultSet.getBoolean("adopted"))
+                    animal.setKennelId("-");
+                else
+                    animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -227,7 +241,7 @@ public class AnimaisListController {
                 generoLabel.setText(animalSelected.gender);
                 dataNascimentoLabel.setText(animalSelected.birthDate);
                 tipoDePelagemLabel.setText(animalSelected.furType);
-                casotaLabel.setText(Integer.toString(animalSelected.kennelId));
+                casotaLabel.setText(animalSelected.kennelId);
                 comentariosLabel.setText(animalSelected.comments);
                 base64Image = animalSelected.image;
                 if (base64Image != null) {
