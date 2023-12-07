@@ -27,50 +27,18 @@ For the groups finishing Sprint 2:
 
 
 **Reunião Checklist - 06/12/2023** 
-- Sprint 3 Backlog board has Tasks and AC cards with estimates/real
-    - Pontos: 3
-    - Comentários:
 
-- Product Backlog board has US cards selected for current sprint 
-    - Pontos: 3
-    - Comentários:
-
-- Code and unit tests are finished, according to cards 
-    - Pontos: 2
-    - Comentários:
-
-- Run unit tests automatically at every commit 
-    - Pontos: 3
-    - Comentários:
-
-- Merge request (from dev into qa) at the end of every task. Code was reviewed 
-    - Pontos: 2
-    - Comentários:
-
-- Acceptance test run at the end of every US 
-    - Pontos: 3
-    - Comentários:
-
-- Create and run deployed code 
-    - Pontos: 3
-    - Comentários:
-
-- Risk plan is updated 
-    - Pontos: 3
-    - Comentários:
-
-- Control project - compare estimates (SP and Hours) vs real 
-    - Pontos: 3
-    - Comentários:
-
-- Sprint 2 Review meeting report is updated 
-    - Pontos: 3
-    - Comentários:
-
-- Sprint 2 Retrospective meeting report is updated 
-    - Pontos: 3
-    - Comentários:
-
-- Sprint 3 plan has Sprint Goal and Selected US/Tasks/AC with estimates 
-    - Pontos: 3
-    - Comentários:
+| Week 12: progress meeting, during sprint 3 | Points (0-3) | Comments | 
+| ------ | ------ | ------ | 
+|Sprint 3 Backlog board has Tasks and AC cards with estimates/real |3| |
+|Product Backlog board has US cards selected for current sprint |3| |
+|Code and unit tests are finished, according to cards |2| |
+|Run unit tests automatically at every commit |3| |
+|Merge request (from dev into qa) at the end of every task. Code was reviewed |2| |
+|Acceptance test run at the end of every US |3| |
+|Create and run deployed code |3| |
+|Risk plan is updated |3| |
+|Control project - compare estimates (SP and Hours) vs real |3| |
+|Sprint 2 Review meeting report is updated |3| |
+|Sprint 2 Retrospective meeting report is updated |3| |
+|Sprint 3 plan has Sprint Goal and Selected US/Tasks/AC with estimates |3| |
