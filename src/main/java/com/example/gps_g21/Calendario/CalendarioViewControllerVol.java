@@ -1,5 +1,6 @@
 package com.example.gps_g21.Calendario;
 
+import com.example.gps_g21.Modelos.Calendario;
 import com.calendarfx.model.Calendar;
 import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
@@ -12,16 +13,22 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.List;
+import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -32,6 +39,11 @@ public class CalendarioViewControllerVol {
     public WeekPage weekPage;
     @FXML
     private VBox buttonContainer;
+
+    private Stage stage;
+    private Scene scene;
+    private static Scene preScene;
+
 
     private static CalendarioController calendarioController;
     private Timer updateTimer;
@@ -141,6 +153,12 @@ public class CalendarioViewControllerVol {
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        preScene = stage.getScene();
 
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
