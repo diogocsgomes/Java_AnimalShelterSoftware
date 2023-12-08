@@ -235,19 +235,22 @@ public class CalendarioViewControllerVol {
      */
     public boolean registerAttendance(String eventId, String userEmail) throws SQLException {
         String selectUserSql = "SELECT id FROM users WHERE nome = ?";
-        String selectNAttendancesSql = "SELECT n_attendances FROM attendances WHERE event_id = ?";
+        String selectNAttendancesSql = "SELECT nAttendances FROM calendar WHERE id = ?";
         String selectMaxAttendancesSql = "SELECT maxVoluntiers FROM calendar WHERE id = ?";
-        String insertAttendanceSql = "INSERT INTO attendances (event_id, user_id, n_attendances) VALUES (?, ?, ?)";
-        String updateAttendanceSql = "UPDATE attendances SET n_attendances = ? WHERE event_id = ? AND user_id = ?";
+        String insertAttendanceSql = "INSERT INTO attendances (event_id, user_id) VALUES (?, ?)";
+        String insertNAttendanceSql = "INSERT INTO calendar (nAttendances) VALUES (?)";
+        //String updateAttendanceSql = "UPDATE attendances SET n_attendances = ? WHERE event_id = ? AND user_id = ?";
 
         PreparedStatement selectUserStmt = null;
         PreparedStatement selectNAttendancesStmt = null;
         PreparedStatement selectMaxAttendancesStmt = null;
         PreparedStatement insertAttendanceStmt = null;
-        PreparedStatement updateAttendance = null;
+        PreparedStatement insertNAttendanceStmt = null;
+        //PreparedStatement updateAttendance = null;
         ResultSet resultSet = null;
         ResultSet resNAttendances = null;
         ResultSet resMaxAttendances = null;
+        ResultSet resInsNAttendances = null;
 
         System.out.println("estou no inicio do registerattendance");
 
@@ -276,7 +279,7 @@ public class CalendarioViewControllerVol {
                 int nAttendances = 0;
 
                 if (resNAttendances.next()) {
-                    nAttendances = resNAttendances.getInt("n_attendances");
+                    nAttendances = resNAttendances.getInt("nAttendances");
                 }
 
                 //guarda o máx de voluntários para um evento
@@ -294,12 +297,17 @@ public class CalendarioViewControllerVol {
                     insertAttendanceStmt.setString(1, eventId);
                     insertAttendanceStmt.setInt(2, userId);
 
-                    nAttendances = nAttendances + 1;
-                    insertAttendanceStmt.setInt(3, nAttendances);
-
                     int rowsAffected = insertAttendanceStmt.executeUpdate();
 
-                    System.out.println("meti na tabela");
+                    System.out.println("meti na tabela attendances");
+
+                    nAttendances = nAttendances + 1;
+                    //insertAttendanceStmt.setInt(3, nAttendances);
+                    insertNAttendanceStmt = connection.prepareStatement(insertNAttendanceSql);
+                    insertNAttendanceStmt.setInt(1, nAttendances);
+
+                    System.out.println("meti na tabela calendar");
+
 
                     return rowsAffected > 0;
                 } else {
@@ -338,6 +346,9 @@ public class CalendarioViewControllerVol {
                 }
                 if (insertAttendanceStmt != null) {
                     insertAttendanceStmt.close();
+                }
+                if (insertNAttendanceStmt != null) {
+                    insertNAttendanceStmt.close();
                 }
                 if (connection != null) {
                     connection.close();
