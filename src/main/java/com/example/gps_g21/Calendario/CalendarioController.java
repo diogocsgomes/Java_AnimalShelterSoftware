@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CalendarioController {
     private static CalendarioController instance;
@@ -147,6 +148,17 @@ public class CalendarioController {
                 statement.setBoolean(9, calendario.isRecurring());
                 statement.setBoolean(10, calendario.isRecurrence());
                 statement.setString(11, calendario.getIdsVoluntiers());
+                if(calendario.getCalendarName().equals("Lavar")){
+                    calendario.setMaxVoluntiers(4);
+                }else if(calendario.getCalendarName().equals("Alimentar")){
+                    calendario.setMaxVoluntiers(2);
+                }
+                else if(calendario.getCalendarName().equals("Limpar")){
+                    calendario.setMaxVoluntiers(5);
+                }
+                else if(calendario.getCalendarName().equals("Passear")){
+                    calendario.setMaxVoluntiers(1);
+                }
                 statement.setInt(12, calendario.getMaxVoluntiers());
                 statement.setString(13, calendario.getCalendarName());
                 statement.setString(14, calendario.getId());

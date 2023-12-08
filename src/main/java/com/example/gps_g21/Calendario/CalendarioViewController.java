@@ -52,10 +52,12 @@ public class CalendarioViewController {
         alimentar.setStyle(Calendar.Style.STYLE2);
         Calendar limpar = new Calendar("Limpar");
         limpar.setStyle(Calendar.Style.STYLE3);
+        Calendar passear = new Calendar("Passear");
+        passear.setStyle(Calendar.Style.STYLE4);
 
         calendarioController = CalendarioController.getInstance();
         CalendarSource calendarSource = new CalendarSource();
-        calendarSource.getCalendars().addAll(lavar, alimentar, limpar);
+        calendarSource.getCalendars().addAll(lavar, alimentar, limpar, passear);
         calendarView.getCalendarSources().addAll(calendarSource);
         calendarView.setRequestedTime(LocalTime.now());
         //calendarView.setShowAddCalendarButton(false);
@@ -98,12 +100,21 @@ public class CalendarioViewController {
                     case "Lavar" -> entry.setCalendar(lavar);
                     case "Alimentar" -> entry.setCalendar(alimentar);
                     case "Limpar" -> entry.setCalendar(limpar);
+                    case "Passear" -> entry.setCalendar(passear);
                 }
-                if(c.getIdsVoluntiers() == null){
-                    entry.getStyleClass().add("custom");
-                    System.out.println("Cor vermelha");
-                }else{
+                if(c.getIdsVoluntiers() == null || c.getIdsVoluntiers().equals(" ")){
+                    entry.getStyleClass().add("custom-verde");
                     System.out.println("Cor verde");
+                }else{
+                    String[] ids = c.getIdsVoluntiers().split(";");
+                    if(ids.length < c.getMaxVoluntiers() && ids.length > 0) {
+                        entry.getStyleClass().add("custom-amarelo");
+                        System.out.println("Cor amarelo");
+                    }
+                    else if(ids.length == c.getMaxVoluntiers()) {
+                        entry.getStyleClass().add("custom-vermelho");
+                        System.out.println("Cor vermelho");
+                    }
                 }
                 calendarView.getCalendars().get(0).addEntry(entry);
             }
