@@ -35,12 +35,12 @@ public class AnimaisListController {
     public Text tipoDeAnimalLabel;
     public Text nomeLabel;
     public Text generoLabel;
-    public Text comentariosLabel;
     public Text casotaLabel;
     public Text tipoDePelagemLabel;
     public Text dataNascimentoLabel;
     public Text pesoLabel;
     public Text racaLabel;
+    public TextArea comentariosLabel;
     public ImageView imgAnimal;
     @FXML
     private ComboBox typeCategory;
@@ -53,19 +53,9 @@ public class AnimaisListController {
     @FXML
     private TableColumn nameColumn;
     @FXML
-    private TableColumn weightColumn;
-    @FXML
-    private TableColumn breedColumn;
-    @FXML
     private TableColumn typeColumn;
     @FXML
     private TableColumn genderColumn;
-    @FXML
-    private TableColumn furColorColumn;
-    @FXML
-    private TableColumn furTypeColumn;
-    @FXML
-    private TableColumn birthDateColumn;
     @FXML
     private TableColumn kennelIdColumn;
     @FXML
@@ -88,17 +78,11 @@ public class AnimaisListController {
     public void initialize(){
         typeCategory.setItems(FXCollections.observableArrayList(SearchType));
         typeCategory.getSelectionModel().selectFirst();
-
         dataAnimals = FXCollections.observableArrayList();
         idColumn.setCellValueFactory(new PropertyValueFactory<Animal, Integer>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("name"));
-        //weightColumn.setCellValueFactory(new PropertyValueFactory<Animal, Double>("weight"));
-        //breedColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("breed"));
         typeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("type"));
         genderColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("gender"));
-        //furColorColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furColor"));
-        //furTypeColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("furType"));
-        //birthDateColumn.setCellValueFactory(new PropertyValueFactory<Animal, Date>("birthDate"));
         kennelIdColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("kennelId"));
         commentsColumn.setCellValueFactory(new PropertyValueFactory<Animal, String>("comments"));
         TableColumn<Animal, Boolean> colBtn = new TableColumn<>("Editar");
@@ -215,11 +199,6 @@ public class AnimaisListController {
                 animal.setComments(resultSet.getString("comments"));
                 animal.setImage( resultSet.getString("image"));
                 dataAnimals.add(animal);
-
-
-
-
-
             }
             tbAnimais.setItems(dataAnimals);
         } catch (SQLException ex) {
@@ -232,7 +211,6 @@ public class AnimaisListController {
             if(newValue != null)
             {
                 animalSelected = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
-                //System.out.println(animalSelected.toString());
                 nomeLabel.setText(animalSelected.name);
                 tipoDeAnimalLabel.setText(animalSelected.type);
                 racaLabel.setText(animalSelected.breed);
@@ -252,10 +230,8 @@ public class AnimaisListController {
                 else{
                     imgAnimal.setImage(null);
                 }
-
             }
         });
-
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
@@ -272,9 +248,6 @@ public class AnimaisListController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if (StarterController.userType == UserTypes.VET) {
-            //ainda nao existe uma vista exclusiva para veterinarios
-           System.out.println("FUNCIONALIDADE POR IMPLEMENTAR");
         }
     }
     public void switchCriarAnimal(ActionEvent event) throws IOException {

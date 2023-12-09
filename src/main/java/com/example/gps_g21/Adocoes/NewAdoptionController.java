@@ -248,9 +248,6 @@ public class NewAdoptionController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if (StarterController.userType == UserTypes.VET) {
-            //ainda nao existe uma vista exclusiva para veterinarios
-            System.out.println("FUNCIONALIDADE POR IMPLEMENTAR");
         }
     }
 

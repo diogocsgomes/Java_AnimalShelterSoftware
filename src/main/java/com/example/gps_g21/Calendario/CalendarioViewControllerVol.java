@@ -17,13 +17,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.controlsfx.control.PopOver;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -37,7 +33,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static com.calendarfx.model.CalendarEvent.*;
 
@@ -69,13 +64,13 @@ public class CalendarioViewControllerVol {
         alimentar.setStyle(Calendar.Style.STYLE2);
         Calendar limpar = new Calendar("Limpar");
         limpar.setStyle(Calendar.Style.STYLE3);
+        Calendar passear = new Calendar("Passear");
+        passear.setStyle(Calendar.Style.STYLE4);
 
         calendarioController = CalendarioController.getInstance();
-        CalendarSource calendarSource = new CalendarSource();
-        calendarSource.getCalendars().addAll(lavar, alimentar, limpar);
+        CalendarSource calendarSource = new CalendarSource("Tarefas");
+        calendarSource.getCalendars().addAll(lavar, alimentar, limpar, passear);
         weekPage.getCalendarSources().addAll(calendarSource);
-        weekPage.setRequestedTime(LocalTime.now());
-        //calendarView.setShowAddCalendarButton(false);
 
         EventHandler<CalendarEvent> handler = event -> handleEventCalendario(event);
         weekPage.getCalendars().forEach(calendar -> calendar.addEventHandler(handler));
@@ -103,7 +98,7 @@ public class CalendarioViewControllerVol {
         //AtomicReference<String> idEntry = null;
         if (calendario != null) {
             for (Calendario c : calendario) {
-                Entry<String> entry = new Entry<>(c.getTitle());
+                Entry<Calendario> entry = new Entry<>(c.getTitle());
                 LocalDate startDate = LocalDate.parse(c.getStartDate());
                 LocalDate endDate = LocalDate.parse(c.getEndDate());
                 entry.setInterval(startDate.atTime(LocalTime.parse(c.getStartTime())), endDate.atTime(LocalTime.parse(c.getEndTime())));
@@ -112,20 +107,31 @@ public class CalendarioViewControllerVol {
                 entry.setFullDay(c.isFullDay());
                 entry.setRecurrenceRule(c.getRecurrenceRule());
                 entry.setId(c.getId());
-                //System.out.println("Id da entry: " + idEntry);
-
+                entry.setUserObject(c);
                 switch (c.getCalendarName()) {
                     case "Lavar" -> entry.setCalendar(lavar);
                     case "Alimentar" -> entry.setCalendar(alimentar);
                     case "Limpar" -> entry.setCalendar(limpar);
                 }
-                if (c.getIdsVoluntiers() == null) {
-                    entry.getStyleClass().add("custom");
-                    System.out.println("Cor vermelha");
-                } else {
+                if(c.getIdsVoluntiers() == null || c.getIdsVoluntiers().equals(" ")){
+                    entry.getStyleClass().add("custom-verde");
                     System.out.println("Cor verde");
+                }else{
+                    String[] ids = c.getIdsVoluntiers().split(";");
+                    if(ids.length < c.getMaxVoluntiers() && ids.length > 0) {
+                        entry.getStyleClass().add("custom-amarelo");
+                        System.out.println("Cor amarelo");
+                    }
+                    else if(ids.length == c.getMaxVoluntiers()) {
+                        entry.getStyleClass().add("custom-vermelho");
+                        System.out.println("Cor vermelho");
+                    }
                 }
-                weekPage.getCalendars().get(0).addEntry(entry);
+                weekPage.getCalendars().forEach(calendar -> {
+                    if(calendar.getName().equals(c.getCalendarName())){
+                        calendar.addEntry(entry);
+                    }
+                });
             }
         }
 

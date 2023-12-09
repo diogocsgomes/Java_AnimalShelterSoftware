@@ -85,20 +85,16 @@ public class StarterController {
             if("1".equalsIgnoreCase(role)){
                 userType = UserTypes.ADMIN;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("admin-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+                Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
                 stage.setScene(scene);
+                stage.centerOnScreen();
             }
             else if("2".equalsIgnoreCase(role)){
                 userType = UserTypes.VULUNTIER;
                 FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("voluntarios-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+                Scene scene = new Scene(fxmlLoader.load(), 1000, 600);
                 stage.setScene(scene);
-            }
-            else if("3".equalsIgnoreCase(role)){
-                userType = UserTypes.VET;
-                FXMLLoader fxmlLoader = new FXMLLoader(StarterApplication.class.getResource("veterinarios-view.fxml"));
-                Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-                stage.setScene(scene);
+                stage.centerOnScreen();
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
