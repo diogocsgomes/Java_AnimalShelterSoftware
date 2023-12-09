@@ -76,9 +76,7 @@ public class Calendario {
         this.title = title;
     }
 
-    public String getStartDate() {
-        return startDate;
-    }
+    public String getStartDate() {return startDate;}
 
     public void setStartDate(String startDate) {
         this.startDate = startDate;

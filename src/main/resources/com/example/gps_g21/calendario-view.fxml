@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Calendario.CalendarioViewController">
+<VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Calendario.CalendarioViewController">
     <AnchorPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
         <children>
          <Text fill="#171611" focusTraversable="true" layoutX="26.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calendario" textAlignment="CENTER">
@@ -15,7 +15,7 @@
                <Font name="System Bold" size="24.0" />
             </font>
          </Text>
-            <CalendarView fx:id="calendarView" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" stylesheets="@style.css" />
+            <CalendarView fx:id="calendarView" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showAddCalendarButton="false" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" stylesheets="@style.css" />
          <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchVoltar" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
             <font>
                <Font name="Verdana Bold" size="12.0" />
