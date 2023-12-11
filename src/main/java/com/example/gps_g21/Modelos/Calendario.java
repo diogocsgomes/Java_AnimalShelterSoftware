@@ -3,7 +3,7 @@ package com.example.gps_g21.Modelos;
 import com.calendarfx.model.Entry;
 
 public class Calendario {
-    private int nAttendances;
+    public int nAttendances;
 
     public String id;
     public String title;

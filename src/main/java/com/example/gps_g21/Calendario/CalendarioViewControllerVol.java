@@ -150,8 +150,9 @@ public class CalendarioViewControllerVol {
             int nAttendances = calendarioPop.getNAttendances();
             int maxAttendances = calendarioPop.getMaxVoluntiers();
             //return "N Attendances: " + nAttendances;
-            Label label = new Label("Pessoas inscritas: " + nAttendances + "/" + maxAttendances);
-            label.setStyle("-fx-padding: 10px;"); // Add padding if needed
+            System.out.println(nAttendances);
+            Label label = new Label("Voluntários inscritos: " + nAttendances + "/" + maxAttendances);
+            label.setStyle("-fx-padding: 10px;");
 
             return label;
 
@@ -331,6 +332,9 @@ public class CalendarioViewControllerVol {
                     updateAttendanceStmt.setString(2, eventId);
                     updateAttendanceStmt.executeUpdate();
 
+                    Platform.runLater(() -> {
+                        weekPage.refreshData();
+                    });
 
 
                     System.out.println("meti na tabela calendar");
@@ -373,9 +377,6 @@ public class CalendarioViewControllerVol {
                 }
                 if (insertAttendanceStmt != null) {
                     insertAttendanceStmt.close();
-                }
-                if (insertNAttendanceStmt != null) {
-                    insertNAttendanceStmt.close();
                 }
                 if (connection != null) {
                     connection.close();

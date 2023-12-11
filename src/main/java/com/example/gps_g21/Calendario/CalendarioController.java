@@ -47,6 +47,7 @@ public class CalendarioController {
                 calendario1.setIdsVoluntiers(resultSet.getString("idsVoluntiers"));
                 calendario1.setMaxVoluntiers(resultSet.getInt("maxVoluntiers"));
                 calendario1.setCalendarName(resultSet.getString("calendarName"));
+                calendario1.setNAttendances(resultSet.getInt("nAttendances"));
                 calendarioData.add(calendario1);
             }
         } catch (SQLException ex) {
