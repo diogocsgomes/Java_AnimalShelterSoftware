@@ -72,7 +72,7 @@ public class CalendarioController {
             System.exit(1);
         }
         System.out.println("Connection successful");
-        String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers, calendarName, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers, calendarName, id, nAttendances) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
         try{
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, calendario.getTitle());

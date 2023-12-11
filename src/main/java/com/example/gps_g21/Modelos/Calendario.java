@@ -3,6 +3,8 @@ package com.example.gps_g21.Modelos;
 import com.calendarfx.model.Entry;
 
 public class Calendario {
+    private int nAttendances;
+
     public String id;
     public String title;
     public String startDate;
@@ -21,7 +23,7 @@ public class Calendario {
     public Calendario() {
     }
 
-    public Calendario(String id, String title, String startDate, String endDate, String startTime, String endTime, String zoneId, String recurrenceRule, boolean fullDay, boolean recurring, boolean recurrence, String calendarName) {
+    public Calendario(String id, String title, String startDate, String endDate, String startTime, String endTime, String zoneId, String recurrenceRule, boolean fullDay, boolean recurring, boolean recurrence, String calendarName, int nAttendances) {
         this.id = id;
         this.title = title;
         this.startDate = startDate;
@@ -34,6 +36,7 @@ public class Calendario {
         this.recurring = recurring;
         this.recurrence = recurrence;
         this.calendarName = calendarName;
+        this.nAttendances = nAttendances;
     }
 
     public Calendario(String title, String startTime, String endTime, String startDate, String endDate){
@@ -164,4 +167,12 @@ public class Calendario {
 
     public String getCalendarName() {return calendarName;}
     public void setCalendarName(String calendarName) {this.calendarName = calendarName;}
+
+    public void setNAttendances(int nAttendances){
+        this.nAttendances = nAttendances;
+    }
+
+    public int getNAttendances(){
+        return nAttendances;
+    }
 }
