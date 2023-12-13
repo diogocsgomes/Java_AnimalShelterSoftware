@@ -6,51 +6,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Adocoes.RegisterAdoptionController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Adocoes.RegisterAdoptionController">
    <children>
-      <TextField fx:id="nameField" layoutX="231.0" layoutY="91.0" prefHeight="25.0" prefWidth="288.0" />
-      <TextField fx:id="addressField" layoutX="230.0" layoutY="143.0" prefHeight="25.0" prefWidth="288.0" />
-      <TextField fx:id="phoneNumberField" layoutX="231.0" layoutY="189.0" prefHeight="25.0" prefWidth="288.0" />
-      <TextField fx:id="emailField" layoutX="230.0" layoutY="232.0" prefHeight="25.0" prefWidth="288.0" />
-      <TextField fx:id="birthDateField" layoutX="231.0" layoutY="283.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="nameField" layoutX="410.0" layoutY="176.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="addressField" layoutX="409.0" layoutY="228.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="phoneNumberField" layoutX="410.0" layoutY="274.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="emailField" layoutX="409.0" layoutY="317.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="birthDateField" layoutX="410.0" layoutY="368.0" prefHeight="25.0" prefWidth="288.0" />
 
-      <Text layoutX="164.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome">
+      <Text layoutX="343.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="151.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada">
+      <Text layoutX="330.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="144.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone">
+      <Text layoutX="323.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="167.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
+      <Text layoutX="346.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="50.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento" wrappingWidth="162.3173828125">
+      <Text layoutX="229.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento" wrappingWidth="162.3173828125">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Button layoutX="25.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchReturn" style="-fx-background-color: #506D68;" text="Voltar" textFill="WHITE">
+      <Button layoutX="166.0" layoutY="490.0" mnemonicParsing="false" onAction="#switchReturn" style="-fx-background-color: #506D68;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
-      <Button layoutX="510.0" layoutY="347.0" mnemonicParsing="false" onAction="#insertAdopter" style="-fx-background-color: #506D68;" text="Guardar" textFill="WHITE">
+      <Button layoutX="709.0" layoutY="490.0" mnemonicParsing="false" onAction="#insertAdopter" style="-fx-background-color: #506D68;" text="Guardar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Text fx:id="errorMessage" fill="#d91414" layoutX="459.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" />
-      <Text layoutX="194.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registar Adotante">
+      <Text layoutX="339.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registar Adotante">
          <font>
-            <Font name="System Bold Italic" size="25.0" />
+            <Font name="System Bold Italic" size="39.0" />
          </font>
       </Text>
    </children>

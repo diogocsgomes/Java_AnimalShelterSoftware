@@ -42,21 +42,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Stock.StockAddController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Stock.StockAddController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
-      <VBox prefHeight="400.0" prefWidth="640.0">
+      <VBox prefHeight="600.0" prefWidth="1000.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+            <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
                <children>
-                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0">
                      <children>
-                        <Text fill="#171611" focusTraversable="true" layoutX="203.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Produto" textAlignment="CENTER">
+                        <Text fill="#171611" focusTraversable="true" layoutX="331.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Produto" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="System Bold" size="39.0" />
                            </font>
                         </Text>
-                        <Pane fx:id="" layoutX="10.0" layoutY="62.0" prefHeight="289.0" prefWidth="622.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                        <Pane fx:id="" layoutX="102.0" layoutY="155.0" prefHeight="289.0" prefWidth="796.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                            <children>
                               <Text fill="#171611" layoutX="223.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
                                  <font>
@@ -78,24 +78,24 @@
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="name" layoutX="288.0" layoutY="27.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #ededed;" />
+                              <TextField fx:id="name" layoutX="288.0" layoutY="27.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
                               <TextField fx:id="description" layoutX="287.0" layoutY="72.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="quantity" layoutX="289.0" layoutY="171.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #ededed;" />
-                              <DatePicker fx:id="expired_date" layoutX="287.0" layoutY="123.0" prefHeight="25.0" prefWidth="144.0" />
+                              <TextField fx:id="quantity" layoutX="289.0" layoutY="171.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
+                              <DatePicker fx:id="expired_date" layoutX="287.0" layoutY="123.0" prefHeight="25.0" prefWidth="193.0" />
                               <Text fill="#171611" layoutX="147.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de expiração:">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <ComboBox fx:id="category" layoutX="287.0" layoutY="223.0" prefWidth="150.0" />
+                              <ComboBox fx:id="category" layoutX="287.0" layoutY="223.0" prefHeight="25.0" prefWidth="193.0" />
                            </children>
                         </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" onAction="#addProd" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="826.0" layoutY="489.0" mnemonicParsing="false" onAction="#addProd" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#backProd" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="102.0" layoutY="489.0" mnemonicParsing="false" onAction="#backProd" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>
