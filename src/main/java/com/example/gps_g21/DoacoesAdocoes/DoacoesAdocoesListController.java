@@ -1,5 +1,7 @@
 package com.example.gps_g21.DoacoesAdocoes;
 
+import com.example.gps_g21.Adocoes.NewAdoptionController;
+import com.example.gps_g21.Animais.AnimaisInfoController;
 import com.example.gps_g21.Modelos.DoacoesAdocoes;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.Modelos.UserTypes;
@@ -55,6 +57,8 @@ public class DoacoesAdocoesListController {
     private ObservableList<DoacoesAdocoes> dataDoacoesAdocoes;
     List<String> SearchType = Arrays.asList("Todos", "Doacoes", "Adocoes");
 
+    private DoacoesAdocoes selectedDoacoesAdocoes;
+
     public void initialize(){
         typeCategory.setItems(FXCollections.observableArrayList(SearchType));
         typeCategory.getSelectionModel().selectFirst();
@@ -78,11 +82,41 @@ public class DoacoesAdocoesListController {
         tbDoacoesAdocoes.getColumns().add(colBtn);*/
         loadInfoDoacoesAdocoes();
     }
+
+    public void editar(ActionEvent actionEvent) {
+        if(selectedDoacoesAdocoes == null)
+            return;
+        if(selectedDoacoesAdocoes.nameAnimal != null){
+            //ir para campo de adocao animal
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/edit-adoption-view.fxml"));
+            stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+            try {
+                scene = new Scene(loader.load());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            //AnimaisInfoController infoController = loader.getController();
+            NewAdoptionController infoController = loader.getController();
+            infoController.idAdocao = selectedDoacoesAdocoes.getId();
+            //infoController.editAnimal(selectedDoacoesAdocoes.getId());
+            System.out.println("ID selecionado"+selectedDoacoesAdocoes.getId());
+            stage.setTitle("Editar Animal");
+            stage.setScene(scene);
+            stage.show();
+
+
+        }
+        if(selectedDoacoesAdocoes.nameAdopter != null){
+            //ir para campo de editar adotante
+        }
+    }
+
     public class EditButton extends TableCell<DoacoesAdocoes, Boolean> {
         final Button colBtn = new Button("Editar");
         EditButton() {
             colBtn.setOnAction(event -> {
                 DoacoesAdocoes selectedDoacoesAdocoes = (DoacoesAdocoes) getTableView().getItems().get(getIndex());
+                System.out.println("yaaa" + selectedDoacoesAdocoes.donorName + "  " + selectedDoacoesAdocoes.nameAnimal);
                 if (selectedDoacoesAdocoes != null) {
 //                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/animais-info-view.fxml"));
 //                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -233,6 +267,12 @@ public class DoacoesAdocoesListController {
             }
             // Atualizar a TableView
             tbDoacoesAdocoes.setItems(dataDoacoesAdocoes);
+
+            tbDoacoesAdocoes.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
+                selectedDoacoesAdocoes = (DoacoesAdocoes) newValue;
+                System.out.println("Selected Doacoes or Adocoes: " + selectedDoacoesAdocoes.donorName + "  " + selectedDoacoesAdocoes.nameAnimal);
+            });
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         } finally {
