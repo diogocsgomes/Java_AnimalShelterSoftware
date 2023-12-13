@@ -39,10 +39,14 @@
 
             <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/dev
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Button fx:id="btnAdotante" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchViewAdopter" disable="true" style="-fx-background-color: #506D68;" text="Dados adoção" textAlignment="CENTER" textFill="WHITE">
 =======
@@ -53,6 +57,9 @@
             </Button>
 <<<<<<< HEAD
             <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+=======
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0">
+>>>>>>> origin/dev
 =======
             <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="17.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0">
 >>>>>>> origin/dev

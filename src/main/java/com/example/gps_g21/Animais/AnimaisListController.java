@@ -238,10 +238,6 @@ public class AnimaisListController {
                 animal.setComments(resultSet.getString("comments"));
                 animal.setImage( resultSet.getString("image"));
                 dataAnimals.add(animal);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/dev
             }
             tbAnimais.setItems(dataAnimals);
         } catch (SQLException ex) {
@@ -271,7 +267,6 @@ public class AnimaisListController {
                 } else {
                     imgAnimal.setImage(null);
                 }
-
 
                 if (animalSelected.getKennelId().equals("-")) {
                     btnAdotante.setDisable(false);
