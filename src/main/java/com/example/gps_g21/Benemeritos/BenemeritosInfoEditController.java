@@ -46,11 +46,14 @@ public class BenemeritosInfoEditController {
 
         private SqliteController sqliteController = new SqliteController();
         private Connection connection = null;
-        private int id; // You should set this value when initializing the controller
+        public static int id; // You should set this value when initializing the controller
+        public static boolean cameToEditFromAdcoesDoacoes = false;
 
         public BenemeritosInfoEditController(int id) {
             this.id = id;
         }
+        public BenemeritosInfoEditController(){}
+
 
     public void initialize() {
         try {
@@ -62,6 +65,7 @@ public class BenemeritosInfoEditController {
             } else {
                 System.out.println("Database connected in BenemeritosInfoEditController");
             }
+            System.out.println("ID: " + this.id);
 
             String query = "SELECT * FROM adopters WHERE id = " + this.id;
 
@@ -120,11 +124,22 @@ public class BenemeritosInfoEditController {
             sqliteController.closeDBConnection(connection);
 
             // Move the stage initialization here
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemeritos-list-view.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            if(cameToEditFromAdcoesDoacoes)
+            {
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/doacoesAdocoes-list-view.fxml")));
+                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+                cameToEditFromAdcoesDoacoes = false;
+            }
+            else {
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemeritos-list-view.fxml")));
+                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
         }
     }
 
