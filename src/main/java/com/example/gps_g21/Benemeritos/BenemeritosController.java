@@ -1,7 +1,9 @@
 package com.example.gps_g21.Benemeritos;
 
 import com.example.gps_g21.Modelos.Adopter;
+import com.example.gps_g21.Modelos.Animal;
 import com.example.gps_g21.Modelos.SqliteController;
+import com.example.gps_g21.Voluntarios.VoluntariosInfoEditController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,10 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -43,6 +42,8 @@ public class BenemeritosController {
     Adopter benemerito;
     private Stage stage;
     private Scene scene;
+
+    private Scene preScene;
     public void initialize() {
 
 
@@ -102,6 +103,43 @@ public class BenemeritosController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void onNovo(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemerito-create.fxml")));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void onEditar(ActionEvent actionEvent) throws IOException {
+        if (benemerito != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/benemeritos-info-edit.fxml"));
+
+            // Set the controller factory to create an instance of BenemeritosInfoEditController
+            loader.setControllerFactory(controllerClass -> {
+                if (controllerClass == BenemeritosInfoEditController.class) {
+                    return new BenemeritosInfoEditController(benemerito.getId());
+                } else {
+                    try {
+                        return controllerClass.newInstance();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+
+            Parent root = loader.load();
+            stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            preScene = stage.getScene();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
+
+
+
 
     public void searchBenemerito(ActionEvent actionEvent) {
 

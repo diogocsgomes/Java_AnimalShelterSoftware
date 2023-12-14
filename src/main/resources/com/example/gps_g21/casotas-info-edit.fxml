@@ -40,46 +40,46 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Casotas.CasotasInfoEditController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Casotas.CasotasInfoEditController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+      <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <AnchorPane prefHeight="600.0" prefWidth="1000.0">
                <children>
-                  <Text fill="#171611" focusTraversable="true" layoutX="247.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Casota" textAlignment="CENTER">
+                  <Text fill="#171611" focusTraversable="true" layoutX="380.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Casota" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="39.0" />
                      </font>
                   </Text>
-                  <Pane fx:id="" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="622.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                  <Pane fx:id="" layoutX="113.0" layoutY="140.0" prefHeight="320.0" prefWidth="773.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                      <children>
-                        <Text fx:id="id_" fill="#171611" layoutX="259.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
+                        <Text fx:id="id_" fill="#171611" layoutX="384.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:">
                            <font>
-                              <Font name="System Bold" size="14.0" />
+                              <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <Text fill="#171611" layoutX="88.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número máximo de animais:">
+                        <Text fill="#171611" layoutX="174.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número máximo de animais:" wrappingWidth="251.7822265625">
                            <font>
-                              <Font name="System Bold" size="14.0" />
+                              <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <Text fill="#171611" layoutX="206.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" wrappingWidth="71.33333333333348">
+                        <Text fill="#171611" layoutX="337.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:" wrappingWidth="93.33333333333337">
                            <font>
-                              <Font name="System Bold" size="14.0" />
+                              <Font name="System Bold" size="18.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="max" layoutX="301.0" layoutY="94.0" style="-fx-background-color: #ededed;"/>
-                        <TextField fx:id="descricao" layoutX="301.0" layoutY="133.0" style="-fx-background-color: #ededed;"/>
+                        <TextField fx:id="max" layoutX="426.0" layoutY="128.0" prefHeight="25.0" prefWidth="169.0" style="-fx-background-color: #ededed;" />
+                        <TextField fx:id="descricao" layoutX="430.0" layoutY="187.0" prefHeight="58.0" prefWidth="169.0" style="-fx-background-color: #ededed;" />
                      </children>
                   </Pane>
-                  <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="361.0" mnemonicParsing="false" onAction="#editData" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="769.0" layoutY="485.0" mnemonicParsing="false" onAction="#editData" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Verdana" size="12.0" />
+                        <Font name="Verdana" size="15.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="485.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="Verdana" size="12.0" />
+                        <Font name="Verdana" size="15.0" />
                      </font>
                   </Button>
                </children>

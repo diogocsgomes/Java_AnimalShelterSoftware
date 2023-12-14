@@ -199,12 +199,10 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Permitir a gestão dos animais, voluntários, instalações, da atividade dos animais e o estado de adoção do animal.
 
 **Risk List**
-- RSK1 - PxI: 4x5=20; Devido à falta de experiência da equipa com este tipo de projetos pode acontecer uma falha na conclusão das metas propostas.
-- RSK2 - PxI: 2x5=10; Devido a possíveis falhas de segurança na implementação do projeto podem acontecer vulnerabilidades que comprometam a segurança da informação dos utilizadores.
-- RSK3 - PxI: 2x5=10; Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto pode surgir a necessidade de refazer parte do código.
-- RSK4 - PxI = 2x5=10; Devido à falta de testes suficientes o programa pode não aguentar o overload de utilizadores quando em uso.
+- RSK1 - PxI: 3x5=15; Devido à falta de experiência da equipa com este tipo de projetos pode acontecer uma falha na conclusão das metas propostas.
+- RSK3 - PxI: 1x5=5; Devido a possíveis erros técnicos em fases críticas de desenvolvimento do projeto pode surgir a necessidade de refazer parte do código.
 - RSK5 - PxI = 2x5=10; Dificuldades na parte da apredizagem do funcionamento da aplicação, por parte dos elementos da organização.
-- RSK6 - PxI: 2x4=8; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas podem surgir erros de compatibilidade com o nosso planeamento.
+- RSK6 - PxI: 1x4=4; Devido a potenciais problemas de compatibilidade no desenvolvimento do projeto devido às tecnologias usadas podem surgir erros de compatibilidade com o nosso planeamento.
 
 **Mitigation Actions (threats>=20)**
 - RSK1 - MS: Verificar durante os sprints se as metas propostas estão a ser cumpridas e se necessário falar com o cliente para negociar melhor as US a serem desenvolvidas.

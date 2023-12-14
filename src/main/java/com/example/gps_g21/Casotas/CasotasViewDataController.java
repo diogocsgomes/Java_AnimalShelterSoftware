@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
@@ -31,7 +32,7 @@ public class CasotasViewDataController {
     @FXML
     private Text max;
     @FXML
-    private Text descricao;
+    private Label descricao;
     @FXML
     private TextArea animais;
 

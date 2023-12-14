@@ -40,56 +40,56 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Veterinarios.VeterinariosAddController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Veterinarios.VeterinariosAddController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
-      <VBox prefHeight="400.0" prefWidth="640.0">
+      <VBox prefHeight="600.0" prefWidth="1000.0">
          <children>
-            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+            <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
                <children>
-                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0">
                      <children>
-                        <Text fill="#171611" focusTraversable="true" layoutX="203.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Veterinário" textAlignment="CENTER">
+                        <Text fill="#171611" focusTraversable="true" layoutX="303.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Veterinário" textAlignment="CENTER">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="System Bold" size="39.0" />
                            </font>
                         </Text>
-                        <Pane fx:id="" layoutX="68.0" layoutY="76.0" prefHeight="247.0" prefWidth="512.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                        <Pane fx:id="" layoutX="131.0" layoutY="117.0" prefHeight="339.0" prefWidth="737.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                            <children>
-                              <Text fill="#171611" layoutX="127.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                              <Text fill="#171611" layoutX="240.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
                                  <font>
-                                    <Font name="System Bold" size="14.0" />
+                                    <Font name="System Bold" size="17.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="130.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada:">
+                              <Text fill="#171611" layoutX="220.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada:">
                                  <font>
-                                    <Font name="System Bold" size="14.0" />
+                                    <Font name="System Bold" size="17.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="126.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: ">
+                              <Text fill="#171611" layoutX="214.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: ">
                                  <font>
-                                    <Font name="System Bold" size="14.0" />
+                                    <Font name="System Bold" size="17.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="127.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
+                              <Text fill="#171611" layoutX="240.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: ">
                                  <font>
-                                    <Font name="System Bold" size="14.0" />
+                                    <Font name="System Bold" size="17.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="nome" layoutX="200.0" layoutY="48.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="address" layoutX="200.0" layoutY="182.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="phone" layoutX="200.0" layoutY="136.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="email" layoutX="200.0" layoutY="93.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
+                              <TextField fx:id="nome" layoutX="313.0" layoutY="81.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
+                              <TextField fx:id="address" layoutX="313.0" layoutY="215.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
+                              <TextField fx:id="phone" layoutX="313.0" layoutY="169.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
+                              <TextField fx:id="email" layoutX="313.0" layoutY="126.0" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #ededed;" />
                            </children>
                         </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="508.0" layoutY="349.0" mnemonicParsing="false" onAction="#addVets" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="772.0" layoutY="509.0" mnemonicParsing="false" onAction="#addVets" style="-fx-background-color: #506D68;" text="Adicionar" textAlignment="CENTER" textFill="WHITE">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Verdana" size="16.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="349.0" mnemonicParsing="false" onAction="#backVol" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="509.0" mnemonicParsing="false" onAction="#backVol" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="Verdana" size="16.0" />
                            </font>
                         </Button>
                      </children>

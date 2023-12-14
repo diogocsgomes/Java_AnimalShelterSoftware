@@ -13,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -27,6 +28,7 @@ import java.util.Calendar;
 import java.util.Objects;
 
 public class NewAdoptionController {
+
 
     //FXML fields for animals
     @FXML
@@ -60,6 +62,8 @@ public class NewAdoptionController {
 
     @FXML
     private TableColumn emailColumnAdopters;
+
+    public static int idAdocao;
 
 
 
@@ -118,7 +122,7 @@ public class NewAdoptionController {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -197,7 +201,7 @@ public class NewAdoptionController {
 
     public void switchAdopt(ActionEvent actionEvent) {
         String addAdoptionSQL = "INSERT INTO adoption_regist(animal_id,adopter_id,adoption_date) VALUES(?,?,?)";
-        String updateAnimalSQL = "UPDATE ANIMALS SET adopted = true where id = ?";
+        String updateAnimalSQL = "UPDATE ANIMALS SET adopted = true, kennel_id = 0 where id = ?";
         int animalId = animalToAdopt.getId();
         int adopterId = adopter.getId();
 
@@ -213,7 +217,7 @@ public class NewAdoptionController {
             pstm.setInt(2,adopterId);
             Calendar c = Calendar.getInstance();
             pstm.setString(3,c.getTime().toString());
-           pstm.executeUpdate();
+            pstm.executeUpdate();
 
 
         } catch (SQLException e) {
@@ -229,7 +233,7 @@ public class NewAdoptionController {
             throw new RuntimeException(e);
         }
 
-    loadInfoAnimals();
+        loadInfoAnimals();
 
     }
 
@@ -248,9 +252,6 @@ public class NewAdoptionController {
             scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
-        } else if (StarterController.userType == UserTypes.VET) {
-            //ainda nao existe uma vista exclusiva para veterinarios
-            System.out.println("FUNCIONALIDADE POR IMPLEMENTAR");
         }
     }
 
@@ -260,5 +261,39 @@ public class NewAdoptionController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void switchEditAdoption(ActionEvent actionEvent) {
+
+        //editar o a tabela adoption regist identificada por IdAdocao com os dados do animal e do adopter
+
+        String sql = "UPDATE adoption_regist SET animal_id = ?, adopter_id = ? WHERE id = ?";
+        int animalId = animalToAdopt.getId();
+        int adopterId = adopter.getId();
+        connection = sqliteController.createDBConnection();
+        try(PreparedStatement pstm = connection.prepareStatement(sql)) {
+            pstm.setInt(1, animalId);
+            pstm.setInt(2, adopterId);
+            pstm.setInt(3, idAdocao);
+            pstm.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        //voltar para a vista doacoesAdocoes-list-view.fxml
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/doacoesAdocoes-list-view.fxml"));
+        stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        try {
+            scene = new Scene(loader.load());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+        stage.setScene(scene);
+        stage.show();
+
+
     }
 }

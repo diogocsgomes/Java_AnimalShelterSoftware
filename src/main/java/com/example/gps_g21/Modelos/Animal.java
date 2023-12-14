@@ -9,7 +9,7 @@ public class Animal {
     public String furColor;
     public String furType;
     public String gender;
-    public int kennelId;
+    public String kennelId;
     public String name;
     public String type;
     public double weight;
@@ -20,7 +20,7 @@ public class Animal {
         // Construtor vazio
     }
 
-    public Animal(int id, String image, String birthDate, String breed, String comments, String furColor, String furType, String gender, int kennelId, String name, String type, double weight, int healthStatus) {
+    public Animal(int id, String image, String birthDate, String breed, String comments, String furColor, String furType, String gender, String kennelId, String name, String type, double weight, int healthStatus) {
         this.id = id;
         this.image = image;
         this.birthDate = birthDate;
@@ -96,11 +96,11 @@ public class Animal {
         this.gender = gender;
     }
 
-    public int getKennelId() {
+    public String getKennelId() {
         return kennelId;
     }
 
-    public void setKennelId(int kennelId) {
+    public void setKennelId(String kennelId) {
         this.kennelId = kennelId;
     }
 

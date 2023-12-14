@@ -33,7 +33,7 @@ public class TestingAnimalsClass {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -71,7 +71,7 @@ public class TestingAnimalsClass {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -109,7 +109,7 @@ public class TestingAnimalsClass {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));
@@ -147,7 +147,7 @@ public class TestingAnimalsClass {
                 animal.setFurColor(resultSet.getString("fur_color"));
                 animal.setFurType(resultSet.getString("fur_type"));
                 animal.setGender(resultSet.getString("gender"));
-                animal.setKennelId(resultSet.getInt("kennel_id"));
+                animal.setKennelId(String.valueOf(resultSet.getInt("kennel_id")));
                 animal.setName(resultSet.getString("name"));
                 animal.setType(resultSet.getString("type"));
                 animal.setWeight(resultSet.getDouble("weight"));

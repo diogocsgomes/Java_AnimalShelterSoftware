@@ -8,23 +8,22 @@ import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
-import com.example.gps_g21.Animais.AnimaisInfoController;
 import com.example.gps_g21.Modelos.Calendario;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.HBox;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.ZoneId;
-import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 import static com.calendarfx.model.CalendarEvent.*;
 public class CalendarioViewController {
@@ -32,8 +31,11 @@ public class CalendarioViewController {
     public CalendarView calendarView;
     @FXML
     private VBox buttonContainer;
-
+    private Stage stage;
+    private Scene scene;
+    private static Scene preScene;
     private static CalendarioController calendarioController;
+    List<Calendario> calendario = new ArrayList<>();
     private Timer updateTimer;
     public void initialize() throws Exception {
         Calendar lavar = new Calendar("Lavar");
@@ -42,13 +44,14 @@ public class CalendarioViewController {
         alimentar.setStyle(Calendar.Style.STYLE2);
         Calendar limpar = new Calendar("Limpar");
         limpar.setStyle(Calendar.Style.STYLE3);
+        Calendar passear = new Calendar("Passear");
+        passear.setStyle(Calendar.Style.STYLE4);
 
         calendarioController = CalendarioController.getInstance();
-        CalendarSource calendarSource = new CalendarSource();
-        calendarSource.getCalendars().addAll(lavar, alimentar, limpar);
+        CalendarSource calendarSource = new CalendarSource("Tarefas");
+        calendarSource.getCalendars().addAll(lavar, alimentar, limpar, passear);
+        calendarView.getCalendarSources().remove(0);
         calendarView.getCalendarSources().addAll(calendarSource);
-        calendarView.setRequestedTime(LocalTime.now());
-        //calendarView.setShowAddCalendarButton(false);
 
         EventHandler<CalendarEvent> handler = event -> handleEventCalendario(event);
         calendarView.getCalendars().forEach(calendar -> calendar.addEventHandler(handler));
@@ -72,10 +75,10 @@ public class CalendarioViewController {
         updateTime.setDaemon(true);
         updateTime.start();
 
-        List<Calendario> calendario = calendarioController.loadCalendar();
-        if(calendario != null){
+        if(calendario.isEmpty()){
+            calendario = calendarioController.loadCalendar();
             for (Calendario c : calendario) {
-                Entry<String> entry = new Entry<>(c.getTitle());
+                Entry<Calendario> entry = new Entry<>(c.getTitle());
                 LocalDate startDate = LocalDate.parse(c.getStartDate());
                 LocalDate endDate = LocalDate.parse(c.getEndDate());
                 entry.setInterval(startDate.atTime(LocalTime.parse(c.getStartTime())),endDate.atTime(LocalTime.parse(c.getEndTime())));
@@ -84,18 +87,32 @@ public class CalendarioViewController {
                 entry.setFullDay(c.isFullDay());
                 entry.setRecurrenceRule(c.getRecurrenceRule());
                 entry.setId(c.getId());
+                entry.setUserObject(c);
                 switch (c.getCalendarName()) {
                     case "Lavar" -> entry.setCalendar(lavar);
                     case "Alimentar" -> entry.setCalendar(alimentar);
                     case "Limpar" -> entry.setCalendar(limpar);
+                    case "Passear" -> entry.setCalendar(passear);
                 }
-                if(c.getIdsVoluntiers() == null){
-                    entry.getStyleClass().add("custom");
-                    System.out.println("Cor vermelha");
-                }else{
+                if(c.getIdsVoluntiers() == null || c.getIdsVoluntiers().equals(" ")){
+                    entry.getStyleClass().add("custom-verde");
                     System.out.println("Cor verde");
+                }else{
+                    String[] ids = c.getIdsVoluntiers().split(";");
+                    if(ids.length < c.getMaxVoluntiers() && ids.length > 0) {
+                        entry.getStyleClass().add("custom-amarelo");
+                        System.out.println("Cor amarelo");
+                    }
+                    else if(ids.length == c.getMaxVoluntiers()) {
+                        entry.getStyleClass().add("custom-vermelho");
+                        System.out.println("Cor vermelho");
+                    }
                 }
-                calendarView.getCalendars().get(0).addEntry(entry);
+                calendarView.getCalendars().forEach(calendar -> {
+                    if(calendar.getName().equals(c.getCalendarName())){
+                        calendar.addEntry(entry);
+                    }
+                });
             }
         }
     }
@@ -108,19 +125,7 @@ public class CalendarioViewController {
             calendarioController.insertCalendarEvent(event.getEntry());
         } else if (type == ENTRY_INTERVAL_CHANGED || type == ENTRY_TITLE_CHANGED || type == ENTRY_FULL_DAY_CHANGED || type == ENTRY_LOCATION_CHANGED || type == ENTRY_RECURRENCE_RULE_CHANGED  || type == ENTRY_USER_OBJECT_CHANGED || type == ENTRY_CALENDAR_CHANGED) {
             scheduleUpdate(event.getEntry()); //Atrasa a atualização para evitar que muitas atualizações sejam executadas em um curto período de tempo
-            addInscreverButton(event.getEntry());
         }
-    }
-
-    private void addInscreverButton(Entry calendarEvent) {
-        Button inscreverButton = new Button("Inscrever");
-        //inscreverButton.setOnAction(event -> handleInscreverButton(calendarEvent));
-
-        Label eventLabel = new Label(calendarEvent.getTitle());
-        HBox entryBox = new HBox(eventLabel, inscreverButton);
-
-        // Add the button directly to the entry box
-        //calendarEvent.getControl().setGraphic(entryBox);
     }
 
     private void scheduleUpdate(Entry calendarEvent) {
@@ -141,6 +146,25 @@ public class CalendarioViewController {
     }
 
     public void switchVoltar(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/admin-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        preScene = stage.getScene();
+
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void switchCriarDados(ActionEvent actionEvent) {
+        
+        
+    }
+
+    public void switchVerDados(ActionEvent actionEvent) {
+    }
+
+    public void switchEditarDados(ActionEvent actionEvent) {
+
 
     }
 }
