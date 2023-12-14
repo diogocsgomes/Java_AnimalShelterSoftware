@@ -217,7 +217,7 @@ public class NewAdoptionController {
             pstm.setInt(2,adopterId);
             Calendar c = Calendar.getInstance();
             pstm.setString(3,c.getTime().toString());
-           pstm.executeUpdate();
+            pstm.executeUpdate();
 
 
         } catch (SQLException e) {
@@ -233,7 +233,7 @@ public class NewAdoptionController {
             throw new RuntimeException(e);
         }
 
-    loadInfoAnimals();
+        loadInfoAnimals();
 
     }
 

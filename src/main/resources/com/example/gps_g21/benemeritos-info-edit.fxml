@@ -69,7 +69,7 @@
                                           <TextField fx:id="nif" layoutX="236.0" layoutY="219.0" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #ededed;" text="nif" />
                                        </children>
                                     </Pane>
-                                    <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" onAction="#addVoluntier" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+                                    <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
                                        <font>
                                           <Font name="Verdana" size="12.0" />
                                        </font>
