@@ -8,13 +8,14 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.TextField?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Benemeritos.BenemeritosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Benemeritos.BenemeritosController">
     <children>
         <TextField fx:id="searchAdotanteDoador" focusTraversable="false" onAction="#searchBenemerito" prefHeight="25.0" prefWidth="140.0" promptText="Adotante/Doador" style="-fx-background-color: #ededed;" layoutX="121.0" layoutY="45.0"/>
         <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="247.0" layoutY="62.0" textAlignment="CENTER" />
     </children>
     <children>
       <Button layoutX="43.0" layoutY="381.0" mnemonicParsing="false" text="Novo" fx:id="btnNovo" onAction="#onNovo" style="-fx-background-color: #506D68;" textFill="WHITE"/>
+        <Button layoutY="381.0" layoutX="100.0" mnemonicParsing="false" text="Editar" fx:id="btnEditar" onAction="#onEditar" style="-fx-background-color: #506D68;" textFill="WHITE"/>
       <Button layoutX="534.0" layoutY="381.0" mnemonicParsing="false" text="Sair" fx:id="btnSair" onAction="#onSair" style="-fx-background-color: #506D68;" textFill="WHITE"/>
       <TableView layoutX="121.0" layoutY="76.0" prefHeight="271.0" prefWidth="371.0" fx:id="tbBenemeritos">
         <columns>

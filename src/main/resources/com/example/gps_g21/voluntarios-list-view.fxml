@@ -31,68 +31,17 @@
   (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
-
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TableColumn?>
-
-
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Voluntarios.VoluntariosListController">
-   <children>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <Text fill="#171611" focusTraversable="true" layoutX="200.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Voluntários" textAlignment="CENTER">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Text>
-            <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0">
-               <children>
-                  <TextField fx:id="searchVoluntier" focusTraversable="false" prefHeight="25.0" prefWidth="196.0" promptText="" style="-fx-background-color: #ededed;" />
-                  <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#loadInfo" layoutX="176.0" layoutY="17.0" textAlignment="CENTER" />
-               </children>
-            </Pane>
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="361.0" mnemonicParsing="false" onAction="#switcharAdd" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
-            <!--<Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarVol" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>-->
-            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font name="Verdana" size="12.0" />
-               </font>
-            </Button>
-            <ComboBox fx:id="typeVoluntier" editable="true" focusTraversable="false" layoutX="437.0" layoutY="79.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
-            <TableView id="tbVoluntiers" fx:id="tbVoluntiers" layoutX="10.0" layoutY="116.0" prefHeight="238.0" prefWidth="574.0" style="-fx-background-color: #D8D6CA;">
-               <columns>
-                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />
-                  <TableColumn fx:id="nameColumn" prefWidth="80.0" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
-                  <TableColumn fx:id="phoneColumn" prefWidth="80.0" style="-fx-alignment: CENTER-LEFT;" text="Número de telefone" />
-                  <TableColumn fx:id="activeColumn" prefWidth="65.0" style="-fx-alignment: CENTER-LEFT;" text="Ativo" />
-               </columns>
-            </TableView>
-         </children></AnchorPane>
-   </children>
-</VBox>
-
 
 <!--
 
@@ -169,3 +118,44 @@
   </children>
 </VBox>
 -->
+
+<VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Voluntarios.VoluntariosListController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Text fill="#171611" focusTraversable="true" layoutX="319.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Voluntários" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+            <Pane layoutX="223.0" layoutY="80.0" prefHeight="25.0" prefWidth="196.0" />
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="771.0" layoutY="502.0" mnemonicParsing="false" onAction="#switcharAdd" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+            <!--<Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="461.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchEditarVol" style="-fx-background-color: #506D68;" text="Editar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>-->
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="typeVoluntier" editable="true" focusTraversable="false" layoutX="682.0" layoutY="105.0" prefHeight="26.0" prefWidth="133.0" promptText="Campo" style="-fx-background-color: Gray;" visibleRowCount="5" />
+            <TableView id="tbVoluntiers" fx:id="tbVoluntiers" layoutX="120.0" layoutY="171.0" prefHeight="283.0" prefWidth="697.0" style="-fx-background-color: #D8D6CA;">
+               <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />
+                  <TableColumn fx:id="nameColumn" prefWidth="179.99999523162842" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
+                  <TableColumn fx:id="phoneColumn" minWidth="0.0" prefWidth="185.3333282470703" style="-fx-alignment: CENTER-LEFT;" text="Número de telefone" />
+                  <TableColumn fx:id="activeColumn" prefWidth="137.33334350585938" style="-fx-alignment: CENTER-LEFT;" text="Ativo" />
+               </columns>
+            </TableView>
+            <TextField fx:id="searchVoluntier" focusTraversable="false" layoutX="469.0" layoutY="105.0" prefHeight="25.0" prefWidth="196.0" promptText="" style="-fx-background-color: #ededed;" />
+            <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" onMouseClicked="#loadInfo" layoutX="645.0" layoutY="121.0" textAlignment="CENTER" />
+
+         </children></AnchorPane>
+   </children>
+</VBox>

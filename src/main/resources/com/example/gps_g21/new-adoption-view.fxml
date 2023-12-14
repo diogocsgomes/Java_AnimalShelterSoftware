@@ -40,48 +40,53 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Adocoes.NewAdoptionController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Adocoes.NewAdoptionController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <TableView fx:id="tbAdopters" layoutX="14.0" layoutY="110.0" prefHeight="226.0" prefWidth="298.0">
+            <TableView fx:id="tbAdopters" layoutX="53.0" layoutY="163.0" prefHeight="304.0" prefWidth="475.0">
               <columns>
-                <TableColumn fx:id="idColumnAdopters" prefWidth="75" text="Número" />
-                <TableColumn fx:id="nameColumnAdopters" prefWidth="72.0" text="Nome" />
-                  <TableColumn fx:id="phoneNumberColumnAdopters" prefWidth="91.20001220703125" text="Telefone" />
-                  <TableColumn fx:id="emailColumnAdopters" prefWidth="138.39996337890625" text="Email" />
+                <TableColumn fx:id="idColumnAdopters" prefWidth="50.666659355163574" text="Número" />
+                <TableColumn fx:id="nameColumnAdopters" prefWidth="125.33333587646484" text="Nome" />
+                  <TableColumn fx:id="phoneNumberColumnAdopters" prefWidth="118.00001525878906" text="Telefone" />
+                  <TableColumn fx:id="emailColumnAdopters" prefWidth="177.33328247070312" text="Email" />
               </columns>
             </TableView>
-            <TableView fx:id="tbAnimais" layoutX="327.0" layoutY="110.0" prefHeight="225.0" prefWidth="298.0">
+            <TableView fx:id="tbAnimais" layoutX="530.0" layoutY="163.0" prefHeight="304.0" prefWidth="417.0">
               <columns>
-                <TableColumn fx:id="idColumnAnimais" prefWidth="75.0" text="Número" />
-                <TableColumn fx:id="nameColumnAnimais" prefWidth="66.4000244140625" text="Nome" />
-                  <TableColumn fx:id="typeColumnAnimais" text="Tipo" />
-                  <TableColumn fx:id="genderColumnAnimais" prefWidth="75.20001220703125" text="Género" />
+                <TableColumn fx:id="idColumnAnimais" prefWidth="55.333343505859375" text="Número" />
+                <TableColumn fx:id="nameColumnAnimais" prefWidth="122.66668701171875" text="Nome" />
+                  <TableColumn fx:id="typeColumnAnimais" prefWidth="118.0" text="Tipo" />
+                  <TableColumn fx:id="genderColumnAnimais" prefWidth="116.6666259765625" text="Género" />
               </columns>
             </TableView>
-            <Button layoutX="185.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchNewAdopter" style="-fx-background-color: #506D68;" text="Adicionar Adotante" textFill="WHITE">
+            <Button layoutX="401.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchNewAdopter" style="-fx-background-color: #506D68;" text="Adicionar Adotante" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Button layoutX="569.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchAdopt" style="-fx-background-color: #506D68;" text="Adotar" textFill="WHITE">
+            <Button layoutX="891.0" layoutY="507.0" mnemonicParsing="false" onAction="#switchAdopt" style="-fx-background-color: #506D68;" text="Adotar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
-            <Text layoutX="41.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Adotantes">
+            <Text layoutX="159.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Adotantes">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Text layoutX="369.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Animais">
+            <Text layoutX="618.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Animais">
                <font>
                   <Font size="30.0" />
                </font>
             </Text>
-            <Button layoutX="14.0" layoutY="352.0" mnemonicParsing="false" onAction="#switchReturn" style="-fx-background-color: #506D68;" text="Voltar" textFill="WHITE">
+            <Button layoutX="53.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchReturn" style="-fx-background-color: #506D68;" text="Voltar" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Button>
+            <Text layoutX="429.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adotar animal">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
       </children>
     </AnchorPane>
   </children>

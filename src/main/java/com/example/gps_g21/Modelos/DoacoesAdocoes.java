@@ -2,6 +2,10 @@ package com.example.gps_g21.Modelos;
 
 public class DoacoesAdocoes {
     public int id;
+
+
+
+    public int AdopterId;
     public String nameAnimal;
     public String nameAdopter;
     public String adoptionDate;
@@ -77,4 +81,15 @@ public class DoacoesAdocoes {
     public void setDonationDescription(String donationDescription) {
         this.donationDescription = donationDescription;
     }
+
+    public int getAdopterId() {
+        return AdopterId;
+    }
+
+    public void setAdopterId(int adopterId) {
+        AdopterId = adopterId;
+    }
+
+
+
 }

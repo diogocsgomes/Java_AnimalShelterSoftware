@@ -47,6 +47,7 @@ public class CalendarioController {
                 calendario1.setIdsVoluntiers(resultSet.getString("idsVoluntiers"));
                 calendario1.setMaxVoluntiers(resultSet.getInt("maxVoluntiers"));
                 calendario1.setCalendarName(resultSet.getString("calendarName"));
+                calendario1.setNAttendances(resultSet.getInt("nAttendances"));
                 calendarioData.add(calendario1);
             }
         } catch (SQLException ex) {
@@ -72,7 +73,7 @@ public class CalendarioController {
             System.exit(1);
         }
         System.out.println("Connection successful");
-        String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers, calendarName, id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO calendar (title, startDate, endDate, startTime, endTime, zoneId, recurrenceRule, fullDay, recurring, recurrence, idsVoluntiers, maxVoluntiers, calendarName, id, nAttendances) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
         try{
             PreparedStatement statement = connection.prepareStatement(query);
             statement.setString(1, calendario.getTitle());

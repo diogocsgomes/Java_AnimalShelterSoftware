@@ -42,73 +42,72 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Stock.StockInfoEditController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Stock.StockInfoEditController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS" />
-      <VBox prefHeight="400.0" prefWidth="640.0">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="1000.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+            <AnchorPane layoutY="2.0" prefHeight="600.0" prefWidth="1000.0">
                <children>
-                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                  <Text fill="#171611" focusTraversable="true" layoutX="365.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Produto" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="39.0" />
+                     </font>
+                  </Text>
+                  <Pane fx:id="" layoutX="117.0" layoutY="145.0" prefHeight="369.0" prefWidth="731.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                      <children>
-                        <Text fill="#171611" focusTraversable="true" layoutX="238.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar Produto" textAlignment="CENTER">
+                        <Text fill="#171611" layoutX="275.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
                            <font>
-                              <Font name="System Bold" size="24.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Pane fx:id="" layoutX="10.0" layoutY="62.0" prefHeight="289.0" prefWidth="622.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
-                           <children>
-                              <Text fill="#171611" layoutX="223.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fill="#171611" layoutX="199.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fill="#171611" layoutX="199.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <Text fill="#171611" layoutX="188.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="name" layoutX="288.0" layoutY="27.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="description" layoutX="287.0" layoutY="72.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
-                              <TextField fx:id="quantity" layoutX="289.0" layoutY="171.0" prefHeight="26.0" prefWidth="144.0" style="-fx-background-color: #ededed;" />
-                              <DatePicker fx:id="expired_date" layoutX="287.0" layoutY="123.0" prefHeight="25.0" prefWidth="144.0" />
-                              <Text fill="#171611" layoutX="147.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de expiração:">
-                                 <font>
-                                    <Font name="System Bold" size="14.0" />
-                                 </font>
-                              </Text>
-                              <ComboBox fx:id="category" layoutX="287.0" layoutY="223.0" prefWidth="150.0" />
-                           </children>
-                        </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="560.0" layoutY="361.0" mnemonicParsing="false" onAction="#Save" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+                        <Text fill="#171611" layoutX="251.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categoria:">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
-                        </Button>
-                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                        </Text>
+                        <Text fill="#171611" layoutX="251.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
-                        </Button>
-                        <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="486.0" layoutY="361.0" mnemonicParsing="false" onAction="#Delete" style="-fx-background-color: #506D68;" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                        </Text>
+                        <Text fill="#171611" layoutX="240.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantidade:">
                            <font>
-                              <Font name="Verdana" size="12.0" />
+                              <Font name="System Bold" size="14.0" />
                            </font>
-                        </Button>
+                        </Text>
+                        <TextField fx:id="name" layoutX="340.0" layoutY="77.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
+                        <TextField fx:id="description" layoutX="339.0" layoutY="122.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
+                        <TextField fx:id="quantity" layoutX="341.0" layoutY="221.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" />
+                        <DatePicker fx:id="expired_date" layoutX="339.0" layoutY="173.0" prefHeight="25.0" prefWidth="193.0" />
+                        <Text fill="#171611" layoutX="199.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de expiração:">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="category" layoutX="339.0" layoutY="273.0" prefHeight="25.0" prefWidth="193.0" />
                      </children>
-                  </AnchorPane>
+                  </Pane>
+                  <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="776.0" layoutY="530.0" mnemonicParsing="false" onAction="#Save" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="530.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="CENTER" contentDisplay="CENTER" layoutX="702.0" layoutY="530.0" mnemonicParsing="false" onAction="#Delete" style="-fx-background-color: #506D68;" text="Eliminar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="12.0" />
+                     </font>
+                  </Button>
                </children>
-            </VBox>
+            </AnchorPane>
+         </children></AnchorPane>
+      <VBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;" />
          </children>
       </VBox>
   </children>

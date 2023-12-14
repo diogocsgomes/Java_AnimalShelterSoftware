@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -137,13 +138,25 @@ public class CalendarioViewControllerVol {
 
 
         weekPage.setEntryDetailsPopOverContentCallback(param -> {
-            Entry<String> selectedEntry = (Entry<String>) param.getEntry();
+            //Entry<String> selectedEntry = (Entry<String>) param.getEntry();
+            Entry<Calendario> selectedEntry = (Entry<Calendario>) param.getEntry();
+
+            Calendario calendarioPop = selectedEntry.getUserObject();
             String entryId = selectedEntry.getId();
             System.out.println("Clicked Entry ID: " + entryId);
 
             idEntry = entryId;
 
-            return null;
+            int nAttendances = calendarioPop.getNAttendances();
+            int maxAttendances = calendarioPop.getMaxVoluntiers();
+            //return "N Attendances: " + nAttendances;
+            System.out.println(nAttendances);
+            Label label = new Label("Voluntários inscritos: " + nAttendances + "/" + maxAttendances);
+            label.setStyle("-fx-padding: 10px;");
+
+            return label;
+
+            //return null;
         });
 
 
@@ -245,14 +258,14 @@ public class CalendarioViewControllerVol {
         String selectMaxAttendancesSql = "SELECT maxVoluntiers FROM calendar WHERE id = ?";
         String insertAttendanceSql = "INSERT INTO attendances (event_id, user_id) VALUES (?, ?)";
         String insertNAttendanceSql = "INSERT INTO calendar (nAttendances) VALUES (?)";
-        //String updateAttendanceSql = "UPDATE attendances SET n_attendances = ? WHERE event_id = ? AND user_id = ?";
+        String updateAttendanceSql = "UPDATE calendar SET nAttendances = ? WHERE id = ?";
 
         PreparedStatement selectUserStmt = null;
         PreparedStatement selectNAttendancesStmt = null;
         PreparedStatement selectMaxAttendancesStmt = null;
         PreparedStatement insertAttendanceStmt = null;
         PreparedStatement insertNAttendanceStmt = null;
-        //PreparedStatement updateAttendance = null;
+        PreparedStatement updateAttendanceStmt = null;
         ResultSet resultSet = null;
         ResultSet resNAttendances = null;
         ResultSet resMaxAttendances = null;
@@ -299,6 +312,7 @@ public class CalendarioViewControllerVol {
                 }
 
                 if (nAttendances < maxAttendances) {
+                    //check p saber se n existe
                     insertAttendanceStmt = connection.prepareStatement(insertAttendanceSql);
                     insertAttendanceStmt.setString(1, eventId);
                     insertAttendanceStmt.setInt(2, userId);
@@ -307,10 +321,21 @@ public class CalendarioViewControllerVol {
 
                     System.out.println("meti na tabela attendances");
 
+                    System.out.println(nAttendances);
                     nAttendances = nAttendances + 1;
+                    System.out.println(nAttendances);
                     //insertAttendanceStmt.setInt(3, nAttendances);
-                    insertNAttendanceStmt = connection.prepareStatement(insertNAttendanceSql);
-                    insertNAttendanceStmt.setInt(1, nAttendances);
+                    //insertNAttendanceStmt = connection.prepareStatement(insertNAttendanceSql);
+                    //insertNAttendanceStmt.setInt(1, nAttendances);
+                    updateAttendanceStmt =  connection.prepareStatement(updateAttendanceSql);
+                    updateAttendanceStmt.setInt(1,nAttendances);
+                    updateAttendanceStmt.setString(2, eventId);
+                    updateAttendanceStmt.executeUpdate();
+
+                    Platform.runLater(() -> {
+                        weekPage.refreshData();
+                    });
+
 
                     System.out.println("meti na tabela calendar");
 
@@ -352,9 +377,6 @@ public class CalendarioViewControllerVol {
                 }
                 if (insertAttendanceStmt != null) {
                     insertAttendanceStmt.close();
-                }
-                if (insertNAttendanceStmt != null) {
-                    insertNAttendanceStmt.close();
                 }
                 if (connection != null) {
                     connection.close();

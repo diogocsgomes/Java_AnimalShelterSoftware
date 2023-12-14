@@ -8,60 +8,62 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Veterinarios.VetsInfoEditController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Veterinarios.VetsInfoEditController">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="0.0" prefWidth="640.0" VBox.vgrow="ALWAYS" />
-      <VBox prefHeight="400.0" prefWidth="640.0">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="1000.0" VBox.vgrow="ALWAYS">
          <children>
-            <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+            <Text fill="#171611" focusTraversable="true" layoutX="341.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar veterinário" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="39.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+      <VBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
                <children>
-                  <AnchorPane prefHeight="400.0" prefWidth="600.0">
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0">
                      <children>
-                        <Text fill="#171611" focusTraversable="true" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Editar veterinário" textAlignment="CENTER">
-                           <font>
-                              <Font name="System Bold" size="24.0" />
-                           </font>
-                        </Text>
-                        <Pane fx:id="pnlInfoVet" layoutX="77.0" layoutY="65.0" prefHeight="248.0" prefWidth="485.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                        <Pane fx:id="pnlInfoVet" layoutX="103.0" layoutY="-117.0" prefHeight="365.0" prefWidth="769.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                            <children>
-                              <Text fill="#171611" layoutX="63.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " wrappingWidth="52.0">
+                              <Text fill="#171611" layoutX="109.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " wrappingWidth="52.0">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="63.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: " wrappingWidth="61.6217041015625">
+                              <Text fill="#171611" layoutX="109.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: " wrappingWidth="61.6217041015625">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="63.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: " wrappingWidth="221.6217041015625">
+                              <Text fill="#171611" layoutX="109.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: " wrappingWidth="221.6217041015625">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="63.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="259.3359375">
+                              <Text fill="#171611" layoutX="109.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="259.3359375">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fill="#171611" layoutX="314.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">
+                              <Text fill="#171611" layoutX="513.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="name" layoutX="125.0" layoutY="34.0" promptText="Nome" />
-                              <TextField fx:id="address" layoutX="125.0" layoutY="67.0" promptText="Morada" />
-                              <TextField fx:id="phone" layoutX="125.0" layoutY="151.0" promptText="Telefone" />
-                              <TextField fx:id="email" layoutX="125.0" layoutY="184.0" promptText="Email" />
-                              <TextField fx:id="horario" layoutX="305.0" layoutY="116.0" promptText="Horario" />
+                              <TextField fx:id="name" layoutX="171.0" layoutY="90.0" prefHeight="25.0" prefWidth="207.0" promptText="Nome" />
+                              <TextField fx:id="address" layoutX="171.0" layoutY="123.0" prefHeight="25.0" prefWidth="207.0" promptText="Morada" />
+                              <TextField fx:id="phone" layoutX="171.0" layoutY="207.0" prefHeight="25.0" prefWidth="207.0" promptText="Telefone" />
+                              <TextField fx:id="email" layoutX="171.0" layoutY="240.0" prefHeight="25.0" prefWidth="207.0" promptText="Email" />
+                              <TextField fx:id="horario" layoutX="504.0" layoutY="172.0" promptText="Horario" />
                            </children>
                         </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="349.0" mnemonicParsing="false" onAction="#Editar" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="806.0" layoutY="276.0" mnemonicParsing="false" onAction="#Editar" style="-fx-background-color: #506D68;" text="Guardar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>
                         </Button>
-                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="349.0" mnemonicParsing="false" onAction="#Voltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="276.0" mnemonicParsing="false" onAction="#Voltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>

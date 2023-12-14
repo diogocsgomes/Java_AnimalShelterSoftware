@@ -1,9 +1,11 @@
 package com.example.gps_g21.Animais;
 
 import com.example.gps_g21.Modelos.Animal;
+import com.example.gps_g21.Modelos.DoacoesAdocoes;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.StarterController;
 import com.example.gps_g21.Modelos.UserTypes;
+import com.example.gps_g21.Voluntarios.VoluntariosViewDataController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -61,11 +63,12 @@ public class AnimaisListController {
     @FXML
     private TableColumn commentsColumn;
 
-   
+    @FXML
+    private Button btnAdotante;
     byte [] imageBytes;
     String base64Image;
 
-
+    private static Scene preScene;
     private Stage stage;
     private Scene scene;
     SqliteController sqliteController = new SqliteController();
@@ -96,6 +99,42 @@ public class AnimaisListController {
         tbAnimais.getColumns().add(colBtn);
         loadInfoAnimals();
     }
+
+    public void switchViewAdopter(ActionEvent actionEvent) {
+
+        Animal selectedAnimal = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
+        int id = selectedAnimal.getId();
+
+
+        Parent root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/adopter-animal-info-view.fxml"));
+
+            loader.setControllerFactory(controllerClass -> {
+                if (controllerClass == AdopterAnimalInfoController.class) {
+                    return new AdopterAnimalInfoController(id);
+                } else {
+                    try {
+                        return controllerClass.newInstance();
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+            });
+
+            root = loader.load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        preScene = stage.getScene();
+
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
     public class EditButton extends TableCell<Animal, Boolean> {
         final Button colBtn = new Button("Editar");
         EditButton() {
@@ -207,14 +246,13 @@ public class AnimaisListController {
             sqliteController.closeDBConnection(connection);
         }
 
-        tbAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
-            if(newValue != null)
-            {
+        tbAnimais.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)-> {
+            if (newValue != null) {
                 animalSelected = (Animal) tbAnimais.getSelectionModel().getSelectedItem();
                 nomeLabel.setText(animalSelected.name);
                 tipoDeAnimalLabel.setText(animalSelected.type);
                 racaLabel.setText(animalSelected.breed);
-                pesoLabel.setText( Double.toString(animalSelected.weight));
+                pesoLabel.setText(Double.toString(animalSelected.weight));
                 generoLabel.setText(animalSelected.gender);
                 dataNascimentoLabel.setText(animalSelected.birthDate);
                 tipoDePelagemLabel.setText(animalSelected.furType);
@@ -226,10 +264,16 @@ public class AnimaisListController {
                     ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(imageBytes);
                     Image image = new Image(byteArrayInputStream);
                     imgAnimal.setImage(image);
-                }
-                else{
+                } else {
                     imgAnimal.setImage(null);
                 }
+
+                if (animalSelected.getKennelId().equals("-")) {
+                    btnAdotante.setDisable(false);
+                } else {
+                    btnAdotante.setDisable(true);
+                }
+
             }
         });
     }
