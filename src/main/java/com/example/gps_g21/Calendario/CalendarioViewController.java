@@ -154,4 +154,17 @@ public class CalendarioViewController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void switchCriarDados(ActionEvent actionEvent) {
+        
+        
+    }
+
+    public void switchVerDados(ActionEvent actionEvent) {
+    }
+
+    public void switchEditarDados(ActionEvent actionEvent) {
+
+
+    }
 }

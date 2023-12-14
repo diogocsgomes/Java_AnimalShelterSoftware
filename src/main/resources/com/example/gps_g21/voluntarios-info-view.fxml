@@ -42,73 +42,68 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Voluntarios.VoluntariosViewDataController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Voluntarios.VoluntariosViewDataController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F6F6F3;">
+      <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
          <children>
-            <AnchorPane prefHeight="400.0" prefWidth="600.0">
+            <AnchorPane prefHeight="600.0" prefWidth="1000.0">
                <children>
-                  <Text fill="#171611" focusTraversable="true" layoutX="234.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info Voluntário" textAlignment="CENTER">
+                  <Text fill="#171611" focusTraversable="true" layoutX="292.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informação Voluntário" textAlignment="CENTER">
                      <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="39.0" />
                      </font>
                   </Text>
-                  <Pane fx:id="" layoutX="10.0" layoutY="62.0" prefHeight="248.0" prefWidth="622.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                  <Pane fx:id="" layoutX="88.0" layoutY="111.0" prefHeight="322.0" prefWidth="824.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
                      <children>
-                        <Text fx:id="name" fill="#171611" layoutX="132.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Rui Cardoso">
+                        <Text fx:id="name" fill="#171611" layoutX="187.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: Rui Cardoso">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="morada" fill="#171611" layoutX="132.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: 3000-225">
+                        <Text fx:id="morada" fill="#171611" layoutX="187.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: 3000-225">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="telefone" fill="#171611" layoutX="132.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 987 801 116">
+                        <Text fx:id="telefone" fill="#171611" layoutX="187.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: 987 801 116">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="id_" fill="#171611" layoutX="351.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 008">
+                        <Text fx:id="id_" fill="#171611" layoutX="496.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID: 008">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="email_" fill="#171611" layoutX="351.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: voluntario@gmail.com">
+                        <Text fx:id="email_" fill="#171611" layoutX="496.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: voluntario@gmail.com">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="data_nas" fill="#171611" layoutX="351.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento: 01/01/2000">
+                        <Text fx:id="data_nas" fill="#171611" layoutX="496.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento: 01/01/2000">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="horario" fill="#171611" layoutX="132.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: 18h-20h">
+                        <Text fill="#171611" layoutX="496.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ativo:">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="#171611" layoutX="351.0" layoutY="211.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ativo:">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                        </Text>
-                        <Circle fx:id="activo" fill="RED" layoutX="400.0" layoutY="207.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
-                        <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="14.0" layoutY="22.0">
+                        <Circle fx:id="activo" fill="RED" layoutX="545.0" layoutY="225.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+                        <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="53.0" layoutY="97.0">
                            <image>
                               <Image url="@imgUsingApp/users_icon.png" />
                            </image>
                         </ImageView>
                      </children>
                   </Pane>
-                  <Button fx:id="btnEditar" onAction="#editData" alignment="CENTER" contentDisplay="CENTER" layoutX="535.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="btnEditar" alignment="CENTER" contentDisplay="CENTER" layoutX="715.0" layoutY="483.0" mnemonicParsing="false" onAction="#editData" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Verdana" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="btnVoltar" onAction="#Back" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="190.0" layoutY="483.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Verdana" size="12.0" />
                      </font>

@@ -80,11 +80,6 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="horario" fill="#171611" layoutX="236.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: 18h-20h">
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                        </Text>
                         <Text fill="#171611" layoutX="478.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ativo:">
                            <font>
                               <Font name="System Bold" size="14.0" />
