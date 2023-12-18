@@ -17,6 +17,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
@@ -320,6 +321,16 @@ public class CalendarioViewControllerVol {
                     int rowsAffected = insertAttendanceStmt.executeUpdate();
 
                     System.out.println("meti na tabela attendances");
+                    Platform.runLater(() -> {
+                        // Display a notification when the attendance is successfully registered
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Sucesso");
+                        //alert.setHeaderText("Voluntário inscrito");
+                        alert.setContentText("Voluntário inscrito na atividade");
+                        alert.showAndWait();
+
+                        weekPage.refreshData();
+                    });
 
                     System.out.println(nAttendances);
                     nAttendances = nAttendances + 1;
@@ -343,6 +354,16 @@ public class CalendarioViewControllerVol {
                     return rowsAffected > 0;
                 } else {
                     System.out.println("Lotação máxima do evento atingida");
+                    Platform.runLater(() -> {
+                        // Display a notification when the attendance is successfully registered
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Erro");
+                        //alert.setHeaderText("Voluntário inscrito");
+                        alert.setContentText("Lotação máxima do evento atingida");
+                        alert.showAndWait();
+
+                        weekPage.refreshData();
+                    });
                     return false;
                 }
             } else {
