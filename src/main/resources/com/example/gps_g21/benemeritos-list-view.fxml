@@ -8,16 +8,25 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Font?>
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Benemeritos.BenemeritosController">
+    <Pane layoutX="590.0" layoutY="20.0" prefHeight="31.0" prefWidth="239.0">
+        <children>
+            <TextField fx:id="searchAdotanteDoador" onAction="#searchBenemerito" promptText="Adotante/Doador"  layoutX="-10.0"  prefHeight="34.0" prefWidth="251.0"  style="-fx-background-color: #ededed;">
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font></TextField>
+            <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="215.0" layoutY="23.0" size="20" textAlignment="CENTER">
+                <font>
+                    <Font size="15.0" />
+                </font></FontAwesomeIconView>
+        </children>
+    </Pane>
     <children>
-        <TextField fx:id="searchAdotanteDoador" focusTraversable="false" onAction="#searchBenemerito" prefHeight="25.0" prefWidth="140.0" promptText="Adotante/Doador" style="-fx-background-color: #ededed;" layoutX="121.0" layoutY="45.0"/>
-        <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="247.0" layoutY="62.0" textAlignment="CENTER" />
-    </children>
-    <children>
-      <Button layoutX="43.0" layoutY="381.0" mnemonicParsing="false" text="Novo" fx:id="btnNovo" onAction="#onNovo" style="-fx-background-color: #506D68;" textFill="WHITE"/>
-        <Button layoutY="381.0" layoutX="100.0" mnemonicParsing="false" text="Editar" fx:id="btnEditar" onAction="#onEditar" style="-fx-background-color: #506D68;" textFill="WHITE"/>
-      <Button layoutX="534.0" layoutY="381.0" mnemonicParsing="false" text="Sair" fx:id="btnSair" onAction="#onSair" style="-fx-background-color: #506D68;" textFill="WHITE"/>
-      <TableView layoutX="121.0" layoutY="76.0" prefHeight="271.0" prefWidth="371.0" fx:id="tbBenemeritos">
+      <Button fx:id="btnNovo" onAction="#onNovo" text="Novo" alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="555.0" mnemonicParsing="false"  style="-fx-background-color: #506D68;" textAlignment="CENTER" textFill="WHITE"/>
+        <Button fx:id="btnEditar" onAction="#onEditar" text="Editar" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="555.0" mnemonicParsing="false" style="-fx-background-color: #506D68;"  textAlignment="CENTER" textFill="WHITE"/>
+      <Button fx:id="btnSair" onAction="#onSair" text="Sair" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="555.0" mnemonicParsing="false"  style="-fx-background-color: #506D68;"  textAlignment="CENTER" textFill="WHITE"/>
+      <TableView fx:id="tbBenemeritos" layoutX="13.0" layoutY="66.0" prefHeight="355.0" prefWidth="960.0" style="-fx-background-color: #D8D6CA;" >
         <columns>
           <TableColumn prefWidth="112.79998016357422" text="Nome" fx:id="nameColumnBenemeritos"/>
           <TableColumn prefWidth="132.79998779296875" text="Telefone" fx:id="phoneNumberColumnBenemeritos"/>

@@ -25,7 +25,7 @@
             </Text>
             <Pane layoutX="590.0" layoutY="20.0" prefHeight="31.0" prefWidth="239.0">
                <children>
-                   <TextField fx:id="searchAnimal" layoutX="-10.0" onAction="#loadInfoAnimals" prefHeight="34.0" prefWidth="251.0" promptText="Nome do Animal" style="-fx-background-color: #ededed;">
+                   <TextField fx:id="searchAnimal" onAction="#loadInfoAnimals" promptText="Nome do Animal" layoutX="-10.0"  prefHeight="34.0" prefWidth="251.0"  style="-fx-background-color: #ededed;">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font></TextField>
@@ -37,17 +37,17 @@
             </Pane>
             <ComboBox fx:id="typeCategory" editable="true" focusTraversable="false" layoutX="821.0" layoutY="23.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo" style="-fx-background-color: Gray;" visibleRowCount="5" AnchorPane.rightAnchor="20.0" />
 
-            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0">
+            <Button fx:id="btnCriar" onAction="#switchCriarAnimal" text="Criar" alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="555.0" mnemonicParsing="false"  style="-fx-background-color: #506D68;" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btnAdotante" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchViewAdopter" disable="true" style="-fx-background-color: #506D68;" text="Dados adoção" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnAdotante" onAction="#switchViewAdopter" text="Dados adoção" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="555.0" mnemonicParsing="false"  disable="true" style="-fx-background-color: #506D68;"  textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="btnVoltar" onAction="#switchVoltar" text="Voltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="555.0" mnemonicParsing="false"  style="-fx-background-color: #506D68;"  textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
