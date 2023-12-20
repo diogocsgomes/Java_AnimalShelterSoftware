@@ -100,7 +100,7 @@ public class DoacoesAdocoesListController {
             infoController.idAdocao = selectedDoacoesAdocoes.getId();
             //infoController.editAnimal(selectedDoacoesAdocoes.getId());
             System.out.println("ID selecionado"+selectedDoacoesAdocoes.getId());
-            stage.setTitle("Editar Animal");
+            stage.setTitle("ShelterWise");
             stage.setScene(scene);
             stage.show();
 

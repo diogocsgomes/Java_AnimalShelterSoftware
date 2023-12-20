@@ -62,17 +62,7 @@
                               </Text>
                            </children>
                         </Pane>
-                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="756.0" layoutY="506.0" mnemonicParsing="false" onAction="#Editar" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
-                        </Button>
                         <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="149.0" layoutY="506.0" mnemonicParsing="false" onAction="#Voltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana" size="12.0" />
-                           </font>
-                        </Button>
-                        <Button fx:id="btnGuardar1" alignment="CENTER" contentDisplay="CENTER" layoutX="632.0" layoutY="506.0" mnemonicParsing="false" onAction="#Editar" style="-fx-background-color: #506D68;" text="Eliminar adoção" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font name="Verdana" size="12.0" />
                            </font>

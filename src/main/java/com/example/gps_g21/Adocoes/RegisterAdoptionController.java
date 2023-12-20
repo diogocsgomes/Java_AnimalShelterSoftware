@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -16,6 +17,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Objects;
+
+import static com.example.gps_g21.Voluntarios.VoluntariosAddController.isValidEmailAddressRegex;
 
 
 public class RegisterAdoptionController {
@@ -59,8 +62,20 @@ public class RegisterAdoptionController {
         if(name.length() == 0 || address.length() == 0 || email.length() == 0 || birthDate.length() == 0
                 || phoneNumberField.getText().length() == 0 )
         {
-            errorMessage.setText("Non sucedded operation");
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Existem campos vazios!");
+            alert.setHeaderText(null);
+            alert.setContentText("Por favor, preencha os campos todos os campos.");
+            alert.showAndWait();
 
+            return;
+        }
+        else if(!isValidEmailAddressRegex(emailField.getText())) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Existem campos inválidos!");
+            alert.setHeaderText(null);
+            alert.setContentText("Por favor, preencha os campos de forma a serem válidos.");
+            alert.showAndWait();
             return;
         }
         phoneNumber =Integer.parseInt( phoneNumberField.getText());

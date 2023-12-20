@@ -21,6 +21,8 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Optional;
 
+import static com.example.gps_g21.Casotas.CasotaAddController.isNumeric;
+
 public class VeterinariosAddController {
     
     @FXML
@@ -50,45 +52,53 @@ public class VeterinariosAddController {
             alert.showAndWait();
         }
         else {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle("Adicionar Veterinário");
-            alert.setHeaderText(null);
-            alert.setContentText("Tem a certeza que deseja adicionar veterinário?");
+            if(!isNumeric(phone.getText())){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Telefone inválido!");
+                alert.setContentText("Insira um número de telefone válido!");
+                alert.showAndWait();
+            }
+            else {
+                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                alert.setTitle("Adicionar Veterinário");
+                alert.setHeaderText(null);
+                alert.setContentText("Tem a certeza que deseja adicionar veterinário?");
 
-            ButtonType buttonTypeSim = new ButtonType("Adicionar");
-            ButtonType buttonTypeNao = new ButtonType("Cancelar");
-            alert.getButtonTypes().setAll(buttonTypeSim, buttonTypeNao);
+                ButtonType buttonTypeSim = new ButtonType("Adicionar");
+                ButtonType buttonTypeNao = new ButtonType("Cancelar");
+                alert.getButtonTypes().setAll(buttonTypeSim, buttonTypeNao);
 
-            Optional<ButtonType> resultado = alert.showAndWait();
+                Optional<ButtonType> resultado = alert.showAndWait();
 
-            if (resultado.isPresent() && resultado.get() == buttonTypeSim) {
-                try {
-                    connection = sqliteController.createDBConnection();
-                    if (connection == null) {
-                        System.out.println("Erro de conexão à base de dados");
-                        System.exit(1);
+                if (resultado.isPresent() && resultado.get() == buttonTypeSim) {
+                    try {
+                        connection = sqliteController.createDBConnection();
+                        if (connection == null) {
+                            System.out.println("Erro de conexão à base de dados");
+                            System.exit(1);
+                        }
+
+                        String sql = "INSERT INTO vets (name, email, phone, address) VALUES (?, ?, ?, ?)";
+
+                        PreparedStatement pstmt = connection.prepareStatement(sql);
+                        pstmt.setString(1, nome.getText());
+                        pstmt.setString(2, email.getText());
+                        pstmt.setInt(3, Integer.parseInt(phone.getText()));
+                        pstmt.setString(4, address.getText());
+                        pstmt.executeUpdate();
+                        //System.out.println("Dados inseridos com sucesso.");
+
+                    } catch (SQLException e) {
+                        System.err.println("Erro ao inserir dados: " + e.getMessage());
                     }
 
-                    String sql = "INSERT INTO vets (name, email, phone, address) VALUES (?, ?, ?, ?)";
-
-                    PreparedStatement pstmt = connection.prepareStatement(sql);
-                    pstmt.setString(1, nome.getText());
-                    pstmt.setString(2, email.getText());
-                    pstmt.setInt(3, Integer.parseInt(phone.getText()));
-                    pstmt.setString(4, address.getText());
-                    pstmt.executeUpdate();
-                    //System.out.println("Dados inseridos com sucesso.");
-
-                } catch (SQLException e) {
-                    System.err.println("Erro ao inserir dados: " + e.getMessage());
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-list-view.fxml")));
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    preScene = stage.getScene();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
                 }
-
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-list-view.fxml")));
-                stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                preScene = stage.getScene();
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
             }
         }
     }

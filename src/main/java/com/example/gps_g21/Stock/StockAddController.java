@@ -21,6 +21,8 @@
     import java.util.Objects;
     import java.util.Optional;
 
+    import static com.example.gps_g21.Casotas.CasotaAddController.isNumeric;
+
     public class StockAddController {
         @FXML
         private TextField name;
@@ -91,41 +93,58 @@
             Optional<ButtonType> resultado = alert.showAndWait();
 
             if (resultado.isPresent() && resultado.get() == buttonTypeSim) {
-                CategoryProduct selectedCategory = category.getValue(); // Get the selected category
-                int categoryId = selectedCategory.getId(); // Assuming there's an 'id' field in CategoryProduct
+                if(name.getText() == null || description.getText() == null || expired_date.getValue() == null || quantity.getText() == null ){
+                    Alert alert1 = new Alert(Alert.AlertType.WARNING);
+                    alert1.setTitle("Existem campos vazios!");
+                    alert1.setHeaderText(null);
+                    alert1.setContentText("Existem campos vazios! Por favor, preencha todos os campos para inserir novo utilizador.");
+                    alert1.showAndWait();
 
-                try{
+                }
+                else if(!isNumeric(quantity.getText())){
+                    Alert alert2 = new Alert(Alert.AlertType.WARNING);
+                    alert2.setTitle("Existem campos inválidos!");
+                    alert2.setHeaderText(null);
+                    alert2.setContentText("Por favor, preencha os campos de forma a serem válidos.");
+                    alert2.showAndWait();
+                }
+                else {
+                    CategoryProduct selectedCategory = category.getValue(); // Get the selected category
+                    int categoryId = selectedCategory.getId(); // Assuming there's an 'id' field in CategoryProduct
 
-                    connection = sqliteController.createDBConnection();
+                    try {
 
-                    if(connection == null){
-                        System.out.println("Erro de conexão à base de dados");
-                        System.exit(1);
+                        connection = sqliteController.createDBConnection();
+
+                        if (connection == null) {
+                            System.out.println("Erro de conexão à base de dados");
+                            System.exit(1);
+                        }
+
+                        String sql = "INSERT INTO product (name, description, expired_date, quantity, category) VALUES (?, ?, ?, ?, ?)";
+
+                        PreparedStatement pstmt = connection.prepareStatement(sql);
+                        pstmt.setString(1, name.getText());
+                        pstmt.setString(2, description.getText());
+                        pstmt.setString(3, String.valueOf(expired_date.getValue()));
+                        pstmt.setInt(4, Integer.parseInt(quantity.getText()));
+                        pstmt.setInt(5, categoryId); //category
+
+                        pstmt.executeUpdate();
+                        System.out.println("Dados inseridos com sucesso.");
+
+                    } catch (SQLException e) {
+                        System.err.println("Erro ao inserir dados: " + e.getMessage());
                     }
 
-                    String sql = "INSERT INTO product (name, description, expired_date, quantity, category) VALUES (?, ?, ?, ?, ?)";
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/stock-list-view.fxml")));
+                    stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    preScene = stage.getScene();
 
-                    PreparedStatement pstmt = connection.prepareStatement(sql);
-                    pstmt.setString(1, name.getText());
-                    pstmt.setString(2, description.getText());
-                    pstmt.setString(3, String.valueOf(expired_date.getValue()));
-                    pstmt.setInt(4, Integer.parseInt(quantity.getText()));
-                    pstmt.setInt(5, categoryId); //category
-
-                    pstmt.executeUpdate();
-                    System.out.println("Dados inseridos com sucesso.");
-
-                }catch (SQLException e) {
-                    System.err.println("Erro ao inserir dados: " + e.getMessage());
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
                 }
-
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/stock-list-view.fxml")));
-                stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-                preScene = stage.getScene();
-
-                scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
 
             }
 

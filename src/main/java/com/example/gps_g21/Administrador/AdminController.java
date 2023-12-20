@@ -29,7 +29,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/animais-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Animais");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -37,7 +37,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/voluntarios-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Voluntarios");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -45,7 +45,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Veterinários");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -53,7 +53,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/doacoesAdocoes-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Stock");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -61,7 +61,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/stock-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Stock");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -69,7 +69,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/calendario-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("CalendarioViewController");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -77,7 +77,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Casotas");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -86,7 +86,7 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/new-adoption-view.fxml")));
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Adocao");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -99,7 +99,6 @@ public class AdminController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/benemeritos-list-view.fxml")));
         stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }

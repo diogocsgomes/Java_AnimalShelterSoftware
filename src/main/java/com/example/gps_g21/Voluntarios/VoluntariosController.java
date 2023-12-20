@@ -48,14 +48,14 @@ public class VoluntariosController {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            stage.setTitle("Casotas");
+            stage.setTitle("ShelterWise");
             stage.setScene(scene);
             stage.show();
         } else if(StarterController.userType == UserTypes.VULUNTIER){
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view-vol.fxml")));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
-            stage.setTitle("Casotas");
+            stage.setTitle("ShelterWise");
             stage.setScene(scene);
             stage.show();
         }
@@ -75,7 +75,7 @@ public class VoluntariosController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/veterinarios-list-view.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Veterinários");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
@@ -84,7 +84,7 @@ public class VoluntariosController {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/calendario-view-vol.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        stage.setTitle("Calendário");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }

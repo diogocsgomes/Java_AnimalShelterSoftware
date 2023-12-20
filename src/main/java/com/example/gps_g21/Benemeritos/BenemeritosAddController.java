@@ -18,6 +18,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Optional;
 
+import static com.example.gps_g21.Voluntarios.VoluntariosAddController.isValidEmailAddressRegex;
+
 public class BenemeritosAddController {
 
     @FXML
@@ -57,11 +59,18 @@ public class BenemeritosAddController {
             alert.setContentText("Existem dados por preencher! Por favor, preencha todos os dados");
             alert.showAndWait();
         }
+        else if(!isValidEmailAddressRegex(email.getText())){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Existem campos inválidos!");
+            alert.setHeaderText(null);
+            alert.setContentText("Por favor, preencha os campos de forma a serem válidos.");
+            alert.showAndWait();
+        }
         else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Adicionar Benemerito");
             alert.setHeaderText(null);
-            alert.setContentText("Tem a certeza que deseja adicionar Benemerito?");
+            alert.setContentText("Tem a certeza que deseja adicionar Benemérito?");
 
             ButtonType buttonTypeSim = new ButtonType("Adicionar");
             ButtonType buttonTypeNao = new ButtonType("Cancelar");
