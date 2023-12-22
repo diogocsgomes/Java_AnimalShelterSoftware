@@ -8,10 +8,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TableColumn?>
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Benemeritos.BenemeritosController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Benemeritos.BenemeritosController">
     <Pane layoutX="590.0" layoutY="20.0" prefHeight="31.0" prefWidth="239.0">
         <children>
-            <TextField fx:id="searchAdotanteDoador" layoutX="-10.0" onAction="#searchBenemerito" prefHeight="34.0" prefWidth="251.0" promptText="Adotante/Doador" style="-fx-background-color: #ededed;">
+            <TextField fx:id="searchAdotanteDoador" focusTraversable="false" layoutX="-10.0" onAction="#searchBenemerito" prefHeight="34.0" prefWidth="251.0" promptText="Adotante/Doador" style="-fx-background-color: #ededed;">
                 <font>
                     <Font name="System Bold" size="14.0" />
                 </font></TextField>

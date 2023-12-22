@@ -90,7 +90,7 @@ public class BenemeritosInfoEditController {
                 }
 
                 // Set nif value
-                nif.setText(String.valueOf(resultSet.getInt("nif")));
+                //nif.setText(String.valueOf(resultSet.getInt("nif")));
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -102,7 +102,7 @@ public class BenemeritosInfoEditController {
 
     @FXML
     public void save(ActionEvent event) throws IOException {
-        String sql = "UPDATE adopters SET name = ?, birth_date = ?, address = ?, phone_number = ?, email = ?, nif = ? WHERE id = ?";
+        String sql = "UPDATE adopters SET name = ?, birth_date = ?, address = ?, phone_number = ?, email = ? WHERE id = ?";
 
         try (Connection connection = sqliteController.createDBConnection();
              PreparedStatement pstmt = connection.prepareStatement(sql)) {
@@ -111,8 +111,8 @@ public class BenemeritosInfoEditController {
             pstmt.setString(3, address.getText());
             pstmt.setInt(4, Integer.parseInt(phone.getText()));
             pstmt.setString(5, email.getText());
-            pstmt.setInt(6, Integer.parseInt(nif.getText()));
-            pstmt.setInt(7,id);
+            //pstmt.setInt(6, Integer.parseInt(nif.getText()));
+            pstmt.setInt(6,id);
 
 
             int linhasAfetadas = pstmt.executeUpdate();

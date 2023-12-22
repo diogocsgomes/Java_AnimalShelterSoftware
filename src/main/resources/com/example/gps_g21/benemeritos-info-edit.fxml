@@ -50,12 +50,6 @@
                   <TextField fx:id="phone" layoutX="262.0" layoutY="149.0" prefHeight="26.0" prefWidth="193.0" style="-fx-background-color: #ededed;" text="telefone" />
                   <TextField fx:id="email" layoutX="248.0" layoutY="112.0" prefHeight="26.0" prefWidth="205.0" style="-fx-background-color: #ededed;" text="email" />
                   <DatePicker fx:id="birth_date" layoutX="336.0" layoutY="76.0" prefHeight="25.0" prefWidth="117.0" />
-                  <Text fill="#171611" layoutX="195.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NIF: ">
-                     <font>
-                        <Font name="System Bold" size="14.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="nif" layoutX="236.0" layoutY="219.0" prefHeight="26.0" prefWidth="220.0" style="-fx-background-color: #ededed;" text="nif" />
                </children>
             </Pane>
          </children></AnchorPane>

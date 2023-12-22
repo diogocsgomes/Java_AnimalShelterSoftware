@@ -44,21 +44,12 @@ public class VoluntariosController {
     }
 
     public void switchListaCasotas(ActionEvent event) throws IOException {
-        if(StarterController.userType == UserTypes.ADMIN){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setTitle("ShelterWise");
-            stage.setScene(scene);
-            stage.show();
-        } else if(StarterController.userType == UserTypes.VULUNTIER){
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view-vol.fxml")));
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setTitle("ShelterWise");
-            stage.setScene(scene);
-            stage.show();
-        }
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/com/example/gps_g21/casotas-list-view.fxml")));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setTitle("ShelterWise");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void switchVerPerfil(ActionEvent event) throws IOException{
