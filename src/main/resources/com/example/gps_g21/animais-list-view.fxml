@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Animais.AnimaisListController">
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <Text fill="#171611" focusTraversable="true" layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Animais" textAlignment="CENTER" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Pane layoutX="590.0" layoutY="20.0" prefHeight="31.0" prefWidth="239.0">
+               <children>
+                   <TextField fx:id="searchAnimal" layoutX="-10.0" onAction="#loadInfoAnimals" prefHeight="34.0" prefWidth="251.0" promptText="Nome do Animal" style="-fx-background-color: #ededed;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></TextField>
+                   <FontAwesomeIconView fill="#506d68" glyphName="SEARCH" layoutX="215.0" layoutY="23.0" size="20" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font></FontAwesomeIconView>
+               </children>
+            </Pane>
+            <ComboBox fx:id="typeCategory" focusTraversable="false" layoutX="821.0" layoutY="23.0" onAction="#loadInfoAnimals" prefHeight="26.0" prefWidth="133.0" promptText="Tipo" style="-fx-background-color: Gray;" visibleRowCount="5" AnchorPane.rightAnchor="20.0" />
+
+            <Button fx:id="btnCriar" alignment="CENTER" contentDisplay="CENTER" layoutX="537.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchCriarAnimal" style="-fx-background-color: #506D68;" text="Criar" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAdotante" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="800.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchViewAdopter" style="-fx-background-color: #506D68;" text="Dados adoção" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="555.0" mnemonicParsing="false" onAction="#switchVoltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <TableView id="tbAnimais" fx:id="tbAnimais" layoutX="13.0" layoutY="66.0" prefHeight="355.0" prefWidth="960.0" style="-fx-background-color: #D8D6CA;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+              <columns>
+                  <TableColumn fx:id="idColumn" prefWidth="31.20001220703125" style="-fx-alignment: CENTER-LEFT;" text="Id" visible="false" />
+                  <TableColumn fx:id="nameColumn" prefWidth="129.5999698638916" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Nome" />
+                  <TableColumn fx:id="typeColumn" prefWidth="107.19998168945312" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Tipo" />
+                  <TableColumn fx:id="genderColumn" prefWidth="117.59994506835938" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Género" />
+                  <TableColumn fx:id="kennelIdColumn" minWidth="4.800048828125" prefWidth="84.53335571289062" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Casota" />
+                  <TableColumn fx:id="commentsColumn" prefWidth="448.2665710449219" resizable="false" style="-fx-alignment: CENTER-LEFT;" text="Comentário" />
+              </columns>
+            </TableView>
+            <Pane layoutX="51.0" layoutY="439.0" prefHeight="103.0" prefWidth="865.0" style="-fx-background-color: #D8D6CA;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+               <children>
+                  <ImageView fx:id="imgAnimal" fitHeight="90.0" fitWidth="90.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" />
+                  <Text layoutX="128.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="nomeLabel" layoutX="182.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="127.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de animal:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="tipoDeAnimalLabel" layoutX="239.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="127.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Raça:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="racaLabel" layoutX="172.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="127.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="pesoLabel" layoutX="172.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="318.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Género:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="generoLabel" layoutX="380.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text id="dataNascimentoLabel" layoutX="318.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="dataNascimentoLabel" layoutX="466.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="320.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de Pelagem:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="tipoDePelagemLabel" layoutX="445.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="320.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Casota:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="casotaLabel" layoutX="378.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="585.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Comentários:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextArea fx:id="comentariosLabel" editable="false" layoutX="585.0" layoutY="30.0" prefHeight="63.0" prefWidth="363.0" wrapText="true" />
+               </children>
+            </Pane>
+         </children></AnchorPane>
+    </children>
+</VBox>

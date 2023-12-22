@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Adocoes.NewAdoptionController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TableView fx:id="tbAdopters" layoutX="53.0" layoutY="163.0" prefHeight="304.0" prefWidth="475.0">
+              <columns>
+                <TableColumn fx:id="idColumnAdopters" prefWidth="50.666659355163574" text="Número" />
+                <TableColumn fx:id="nameColumnAdopters" prefWidth="125.33333587646484" text="Nome" />
+                  <TableColumn fx:id="phoneNumberColumnAdopters" prefWidth="118.00001525878906" text="Telefone" />
+                  <TableColumn fx:id="emailColumnAdopters" prefWidth="177.33328247070312" text="Email" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tbAnimais" layoutX="530.0" layoutY="163.0" prefHeight="304.0" prefWidth="417.0">
+              <columns>
+                <TableColumn fx:id="idColumnAnimais" prefWidth="55.333343505859375" text="Número" />
+                <TableColumn fx:id="nameColumnAnimais" prefWidth="122.66668701171875" text="Nome" />
+                  <TableColumn fx:id="typeColumnAnimais" prefWidth="118.0" text="Tipo" />
+                  <TableColumn fx:id="genderColumnAnimais" prefWidth="116.6666259765625" text="Género" />
+              </columns>
+            </TableView>
+            <Button layoutX="401.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchNewAdopter" style="-fx-background-color: #506D68;" text="Adicionar Adotante" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="891.0" layoutY="507.0" mnemonicParsing="false" onAction="#switchAdopt" style="-fx-background-color: #506D68;" text="Adotar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text layoutX="159.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Adotantes">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Text layoutX="618.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lista de Animais">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <Button layoutX="53.0" layoutY="508.0" mnemonicParsing="false" onAction="#switchReturn" style="-fx-background-color: #506D68;" text="Voltar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Text layoutX="429.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adotar animal">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

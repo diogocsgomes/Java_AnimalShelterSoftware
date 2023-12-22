@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gps_g21.Veterinarios.VetsViewDataController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="0.0" prefWidth="640.0" VBox.vgrow="ALWAYS" />
+      <VBox prefHeight="600.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #F6F6F3;">
+               <children>
+                  <AnchorPane prefHeight="600.0" prefWidth="1000.0">
+                     <children>
+                        <Text fill="#171611" focusTraversable="true" layoutX="289.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informação veterinário" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="39.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="pnlInfoAnimal" layoutX="161.0" layoutY="113.0" prefHeight="309.0" prefWidth="677.0" style="-fx-background-color: #D8D6CA; -fx-background-radius: 10;">
+                           <children>
+                              <Text fx:id="nome" fill="#171611" layoutX="110.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome: " wrappingWidth="221.6217041015625">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="morada" fill="#171611" layoutX="110.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Morada: " wrappingWidth="221.6217041015625">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="telefone" fill="#171611" layoutX="110.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone: " wrappingWidth="221.6217041015625">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="email" fill="#171611" layoutX="110.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email: " wrappingWidth="259.3359375">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="460.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horario Disponivel: ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#171611" layoutX="135.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contactos:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                              <TextArea fx:id="horaios" layoutX="460.0" layoutY="100.0" prefHeight="78.0" prefWidth="131.0" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="btnGuardar" alignment="CENTER" contentDisplay="CENTER" layoutX="648.0" layoutY="476.0" mnemonicParsing="false" onAction="#Editar" style="-fx-background-color: #506D68;" text="Editar Dados" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="257.0" layoutY="476.0" mnemonicParsing="false" onAction="#Voltar" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+  </children>
+</VBox>
