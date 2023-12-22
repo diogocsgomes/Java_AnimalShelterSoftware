@@ -195,7 +195,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 **Threshhold of Sucess**
 - Concluir ≥ 50% das US planeadas até ao primeiro release.
 - Garantir que o programa na sua primeira release já é intuitivo o suficiente com a informação do feedback para maior parte dos utilizadores.
-- Garantir que o programa na release final está protegido contra todas as vulnerabilidades conhecidas para o tipo de tecnologias que o programa usa.
 - Permitir a gestão dos animais, voluntários, instalações, da atividade dos animais e o estado de adoção do animal.
 
 **Risk List**
