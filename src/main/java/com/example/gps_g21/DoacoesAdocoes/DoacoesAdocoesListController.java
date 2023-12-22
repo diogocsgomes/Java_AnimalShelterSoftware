@@ -2,6 +2,7 @@ package com.example.gps_g21.DoacoesAdocoes;
 
 import com.example.gps_g21.Adocoes.NewAdoptionController;
 import com.example.gps_g21.Animais.AnimaisInfoController;
+import com.example.gps_g21.Benemeritos.BenemeritosInfoEditController;
 import com.example.gps_g21.Modelos.DoacoesAdocoes;
 import com.example.gps_g21.Modelos.SqliteController;
 import com.example.gps_g21.Modelos.UserTypes;
@@ -100,14 +101,57 @@ public class DoacoesAdocoesListController {
             infoController.idAdocao = selectedDoacoesAdocoes.getId();
             //infoController.editAnimal(selectedDoacoesAdocoes.getId());
             System.out.println("ID selecionado"+selectedDoacoesAdocoes.getId());
-            stage.setTitle("ShelterWise");
+            stage.setTitle("Editar Animal");
             stage.setScene(scene);
             stage.show();
 
 
         }
-        if(selectedDoacoesAdocoes.nameAdopter != null){
-            //ir para campo de editar adotante
+
+    }
+
+    public void eleminarAdocao(ActionEvent actionEvent) {
+        if(selectedDoacoesAdocoes.nameAnimal != null)
+        {
+            connection = sqliteController.createDBConnection();
+            if (connection == null) {
+                System.out.println("Connection not successful");
+                System.exit(1);
+            }
+
+            String sql = "DELETE FROM adoption_regist WHERE id = ?";
+            try ( PreparedStatement pstmt = connection.prepareStatement(sql)) {
+                pstmt.setInt(1, selectedDoacoesAdocoes.getId());
+                pstmt.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                sqliteController.closeDBConnection(connection);
+                selectedDoacoesAdocoes = null;
+                loadInfoDoacoesAdocoes();
+            }
+        }
+
+    }
+
+    public void editarAdotante(ActionEvent actionEvent) {
+        if(selectedDoacoesAdocoes != null) {
+            BenemeritosInfoEditController.id = selectedDoacoesAdocoes.AdopterId;
+            BenemeritosInfoEditController.cameToEditFromAdcoesDoacoes = true;
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/benemeritos-info-edit.fxml"));
+            stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            try {
+                scene = new Scene(loader.load());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            //infoController.editAnimal(selectedDoacoesAdocoes.getId());
+            System.out.println("ID selecionado" + selectedDoacoesAdocoes.getId());
+            stage.setTitle("Editar Animal");
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
@@ -162,6 +206,7 @@ public class DoacoesAdocoesListController {
         if(searchName.isEmpty() && selectedType.equals("Todos")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
+                    "adopters.id AS adopter_id, " +
                     "adopters.name AS adopter_name, " +
                     "adoption_regist.adoption_date " +
                     "FROM adoption_regist " +
@@ -172,6 +217,7 @@ public class DoacoesAdocoesListController {
         else if(!searchName.isEmpty() && selectedType.equals("Todos")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
+                    "adopters.id AS adopter_id, " +
                     "adopters.name AS adopter_name, " +
                     "adoption_regist.adoption_date " +
                     "FROM adoption_regist " +
@@ -183,6 +229,7 @@ public class DoacoesAdocoesListController {
         else if(!searchName.isEmpty() && selectedType.equals("Doacoes")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
+                    "adopters.id AS adopter_id, " +
                     "adopters.name AS adopter_name, " +
                     "adoption_regist.adoption_date " +
                     "FROM adoption_regist " +
@@ -196,6 +243,7 @@ public class DoacoesAdocoesListController {
         else if(searchName.isEmpty() && selectedType.equals("Doacoes")){
             adoptionQuery = "SELECT adoption_regist.id, " +
                     "animals.name AS animal_name, " +
+                    "adopters.id AS adopter_id, " +
                     "adopters.name AS adopter_name, " +
                     "adoption_regist.adoption_date " +
                     "FROM adoption_regist " +
@@ -238,6 +286,7 @@ public class DoacoesAdocoesListController {
                     doacoesadocoes.setNameAnimal(adoptionResultSet.getString("animal_name"));
                     doacoesadocoes.setNameAdopter(adoptionResultSet.getString("adopter_name"));
                     doacoesadocoes.setAdoptionDate(adoptionResultSet.getString("adoption_date"));
+                    doacoesadocoes.setAdopterId(adoptionResultSet.getInt("adopter_id"));
 
                     dataDoacoesAdocoes.add(doacoesadocoes);
                 }
@@ -270,7 +319,7 @@ public class DoacoesAdocoesListController {
 
             tbDoacoesAdocoes.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue)->{
                 selectedDoacoesAdocoes = (DoacoesAdocoes) newValue;
-                System.out.println("Selected Doacoes or Adocoes: " + selectedDoacoesAdocoes.donorName + "  " + selectedDoacoesAdocoes.nameAnimal);
+                //System.out.println("Selected Doacoes or Adocoes: " + selectedDoacoesAdocoes.donorName + "  " + selectedDoacoesAdocoes.nameAnimal);
             });
 
         } catch (SQLException ex) {
