@@ -15,27 +15,17 @@
                <Font name="System Bold" size="24.0" />
             </font>
          </Text>
-            <CalendarView fx:id="calendarView" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showAddCalendarButton="false" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" stylesheets="@style.css" />
-         <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchVoltar" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE">
+            <CalendarView fx:id="calendarView" enableHyperlinks="false" layoutX="17.0" layoutY="77.0" prefHeight="463.0" prefWidth="951.0" showAddCalendarButton="false" showPageToolBarControls="false" showPrintButton="false" showSearchField="false" stylesheets="@style.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+         <Button fx:id="btnVoltar" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchVoltar" prefHeight="32.0" prefWidth="90.0" style="-fx-background-color: #506D68;" text="Voltar" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0">
             <font>
-               <Font name="Verdana Bold" size="12.0" />
+               <Font name="Verdana Bold" size="15.0" />
             </font>
          </Button>
-            <Button fx:id="btnCriarDados" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchCriarDados" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #506D68;" text="Criar Dados do evento" textAlignment="CENTER" textFill="WHITE">
-                <font>
-                    <Font name="Verdana Bold" size="12.0" />
-                </font>
-            </Button>
-            <Button fx:id="btnEditarDados" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchEditarDados" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #506D68;" text="Editar Dados do evento" textAlignment="CENTER" textFill="WHITE">
-                <font>
-                    <Font name="Verdana Bold" size="12.0" />
-                </font>
-            </Button>
-            <Button fx:id="btnVerDados" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="551.0" mnemonicParsing="false" onAction="#switchVerDados" prefHeight="32.0" prefWidth="61.0" style="-fx-background-color: #506D68;" text="Ver Dados do evento" textAlignment="CENTER" textFill="WHITE">
-                <font>
-                    <Font name="Verdana Bold" size="12.0" />
-                </font>
-            </Button>
+         <Button fx:id="btnDetalhes" alignment="CENTER" contentDisplay="CENTER" layoutX="827.0" layoutY="551.0" mnemonicParsing="false" onAction="#openDialog" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #506D68;" text="Detalhes" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="20.0">
+            <font>
+               <Font name="Verdana Bold" size="15.0" />
+            </font>
+         </Button>
         </children>
     </AnchorPane>
 

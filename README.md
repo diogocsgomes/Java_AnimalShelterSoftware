@@ -195,7 +195,6 @@ It is a collection of criteria that must be completed for a User Story to be con
 **Threshhold of Sucess**
 - Concluir ≥ 50% das US planeadas até ao primeiro release.
 - Garantir que o programa na sua primeira release já é intuitivo o suficiente com a informação do feedback para maior parte dos utilizadores.
-- Garantir que o programa na release final está protegido contra todas as vulnerabilidades conhecidas para o tipo de tecnologias que o programa usa.
 - Permitir a gestão dos animais, voluntários, instalações, da atividade dos animais e o estado de adoção do animal.
 
 **Risk List**
@@ -356,8 +355,8 @@ It is a collection of criteria that must be completed for a User Story to be con
   - [Dado que o administrador quer editar uma adoção, quando seleciona o botão para editar adoção (botão que existe na página ao ver dados do animal), deve aparecer um formulário com os dados pré-definidos para depois serem editados.](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/105) Incompleto.
 - Story Points: 2S+2M+0X+0H = 16+10+0+0 = 26
 - Version: 0.2
-- Client analysis: client feedback
-- Conclusions: what to add/review
+- Client analysis: O cliente aprovou o projeto.
+- Conclusions: Devem ser feitas algumas alterações relativas ao planeamento do projeto.
 
 ##### Sprint Retrospective
 - What we did well:
@@ -397,17 +396,16 @@ It is a collection of criteria that must be completed for a User Story to be con
 - Analysis: short analysis of the planning meeting
 
 ##### Sprint Review
-- Analysis: what was not done or what was added (Link to US or Task from the PB)
+- Analysis:
+  - [US 18 - Visualizar informações sobre a tarefa (Quais voluntarios inseridos, notas caso seja necessário)](https://gitlab.com/brun0f0nseca/gps_g21/-/issues/134)
 - Story Points: 2S+1M+2X+2H
 - Version: 0.3
-- Client analysis: client feedback
-- Conclusions: what to add/review
+- Client analysis:
+- Conclusions: Foram concluídas todas as User Stories propostas para o projeto. 
 
 ##### Sprint Retrospective
 - What we did well:
-    - A
+    - Identificação e correção de problemas existentes no código anterior 
 - What we did less well:
-    - B
-- How to improve to the next sprint:
-    - C
+    - Gestão do tempo durante a sprint
 ***

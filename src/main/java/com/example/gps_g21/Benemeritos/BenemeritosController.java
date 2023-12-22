@@ -147,7 +147,6 @@ public class BenemeritosController {
         boolean sqlFlag = true;
         String sqlBenemeritos = "SELECT * FROM adopters WHERE name == ?";
         if(nameToSearch.isEmpty() || isAllWhiteSpaces(nameToSearch)) {
-            System.out.println("é nulo caralho");
             sqlBenemeritos = "SELECT  * FROM adopters";
             sqlFlag = false;
         }

@@ -8,6 +8,7 @@ import com.calendarfx.model.CalendarEvent;
 import com.calendarfx.model.CalendarSource;
 import com.calendarfx.model.Entry;
 import com.calendarfx.view.CalendarView;
+import com.example.gps_g21.Animais.DialogBoxAnimaisInfoController;
 import com.example.gps_g21.Modelos.Calendario;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -18,7 +19,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -37,6 +40,7 @@ public class CalendarioViewController {
     private static CalendarioController calendarioController;
     List<Calendario> calendario = new ArrayList<>();
     private Timer updateTimer;
+    private String idSelectedCalendar;
     public void initialize() throws Exception {
         Calendar lavar = new Calendar("Lavar");
         lavar.setStyle(Calendar.Style.STYLE1);
@@ -155,16 +159,17 @@ public class CalendarioViewController {
         stage.show();
     }
 
-    public void switchCriarDados(ActionEvent actionEvent) {
-        
-        
-    }
-
-    public void switchVerDados(ActionEvent actionEvent) {
-    }
-
-    public void switchEditarDados(ActionEvent actionEvent) {
-
-
+    public void openDialog(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/example/gps_g21/dialogbox-calendario-info-view.fxml"));
+        Parent parent = fxmlLoader.load();
+        DialogBoxCalendarioInfoController dialogController = fxmlLoader.<DialogBoxCalendarioInfoController>getController();
+        dialogController.setId("AnimalId");
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setResizable(false);
+        stage.setScene(scene);
+        stage.showAndWait();
+        //loadAnimalInfo();
     }
 }

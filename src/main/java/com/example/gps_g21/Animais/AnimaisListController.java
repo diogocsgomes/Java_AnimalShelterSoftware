@@ -300,7 +300,7 @@ public class AnimaisListController {
         scene = new Scene(loader.load());
         AnimaisInfoController infoController = loader.getController();
         infoController.createAnimal();
-        stage.setTitle("Criar Animal");
+        stage.setTitle("ShelterWise");
         stage.setScene(scene);
         stage.show();
     }
